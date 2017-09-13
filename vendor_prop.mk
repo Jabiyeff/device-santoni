@@ -12,6 +12,7 @@ persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
 persist.vendor.audio.speaker.prot.enable=false \
 persist.vendor.bt.enable.splita2dp=false \
+ro.af.client_heap_size_kbyte=7168 \
 ro.qc.sdk.audio.fluencetype=fluence \
 ro.vendor.audio.sdk.fluencetype=fluence \
 ro.vendor.audio.sdk.ssr=false \
