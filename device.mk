@@ -143,10 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8937 \
-    libmm-qcamera \
-    mm-qcamera-app \
-    Snap
+    camera.msm8937
 
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
