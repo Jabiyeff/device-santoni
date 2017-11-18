@@ -32,6 +32,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    device/xiaomi/santoni/configs/apns-full-conf.xml:system/etc/apns-conf.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
