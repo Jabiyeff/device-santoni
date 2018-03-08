@@ -1027,3 +1027,8 @@ service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootde
 # Logdumpd is enabled only for userdebug non-perf build
 on property:ro.logdumpd.enabled=1
     start logdumpd
+
+service goodix_script /vendor/bin/init.goodix.sh
+    class late_start
+    user root
+    oneshot
