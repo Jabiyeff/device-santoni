@@ -16,6 +16,7 @@
 
 #define LOG_TAG "android.biometrics.fingerprint@2.0-service.custom"
 
+#include <binder/IPCThreadState.h>
 #include <binder/IServiceManager.h>
 #include <binder/PermissionCache.h>
 #include <utils/String16.h>
@@ -62,7 +63,7 @@ int main() {
 
     if (!strcmp(vend, "goodix")) {
         /* process Binder transaction as a double-threaded program. */
-        configureRpcThreadpool(2, true /* callerWillJoin */);
+        configureRpcThreadpool(1, false /* callerWillJoin */);
     } else {
         /* process Binder transaction as a single-threaded program. */
         configureRpcThreadpool(1, true /* callerWillJoin */);
@@ -76,7 +77,11 @@ int main() {
         ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
     }
 
-    joinRpcThreadpool();
+    if (!strcmp(vend, "goodix")) {
+        android::IPCThreadState::self()->joinThreadPool();   // run binder service fingerprintd part
+    } else {
+        joinRpcThreadpool();
+    }
 
     return 0; // should never get here
 }
