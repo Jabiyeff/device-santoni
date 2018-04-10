@@ -567,11 +567,11 @@ service tftp_server /vendor/bin/tftp_server
    user root
    writepid /dev/cpuset/system-background/tasks
 
-on property:wc_transport.start_hci=true
-    start start_hci_filter
+on property:vendor.wc_transport.start_hci=true
+    start vendor.start_hci_filter
 
-on property:wc_transport.start_hci=false
-    stop start_hci_filter
+on property:vendor.wc_transport.start_hci=false
+    stop vendor.start_hci_filter
 
 on property:wc_transport.start_fmhci=true
     start fmhal_service
@@ -579,7 +579,7 @@ on property:wc_transport.start_fmhci=true
 on property:wc_transport.start_fmhci=false
     stop fmhal_service
 
-service start_hci_filter /vendor/bin/wcnss_filter
+service vendor.start_hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system wakelock
