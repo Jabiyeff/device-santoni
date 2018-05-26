@@ -35,7 +35,6 @@ etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Speaker_cal.acdb:vendor/etc/acdb
 
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-lib64/libmm-omxcore.so:vendor/lib64/libmm-omxcore.so
 lib64/libmorpho_memory_allocator.so:vendor/lib64/libmorpho_memory_allocator.so
 lib64/libmorpho_panorama.so:vendor/lib64/libmorpho_panorama.so
 vendor/lib/libChamomilePA.so
