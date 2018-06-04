@@ -386,6 +386,9 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # VNDK-SP:
 PRODUCT_PACKAGES += \
     vndk-sp

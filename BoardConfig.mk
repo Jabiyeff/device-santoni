@@ -204,9 +204,6 @@ BLOCK_BASED_OTA := true
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# Properties
-TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
-
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
