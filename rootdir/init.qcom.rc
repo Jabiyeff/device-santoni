@@ -223,6 +223,9 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
+    # Create hvdcp_opti directory
+    mkdir /persist/hvdcp_opti 0770 root system
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
