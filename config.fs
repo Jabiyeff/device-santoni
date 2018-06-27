@@ -7,6 +7,9 @@ user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: BLOCK_SUSPEND
 
+[AID_VENDOR_ADPL_ODL]
+value:2905
+
 [system/vendor/bin/wcnss_filter]
 mode: 0755
 user: AID_BLUETOOTH
