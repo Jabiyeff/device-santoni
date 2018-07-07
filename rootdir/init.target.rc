@@ -50,9 +50,6 @@ on post-fs-data
     mkdir /persist/data/tz 0700 system system
     mkdir /persist/qti_fp 0700 system system
 
-    #Create folder for mm-qcamera-daemon
-    mkdir /data/misc/camera 0770 camera camera
-
 #start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
