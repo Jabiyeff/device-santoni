@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2015,2018, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -49,10 +49,13 @@
 #include "performance.h"
 #include "power-common.h"
 
+#define MIN_VAL(X,Y) ((X>Y)?(Y):(X))
+
 static int saved_interactive_mode = -1;
 static int display_hint_sent;
 static int video_encode_hint_sent;
-
+pthread_mutex_t camera_hint_mutex = PTHREAD_MUTEX_INITIALIZER;
+static int camera_hint_ref_count;
 static void process_video_encode_hint(void *metadata);
 
 int  power_hint_override(struct power_module *module, power_hint_t hint,
@@ -76,7 +79,7 @@ int  set_interactive_override(struct power_module *module, int on)
     char governor[80];
     char tmp_str[NODE_MAX];
     struct video_encode_metadata_t video_encode_metadata;
-    int rc;
+    int rc = 0;
 
     ALOGI("Got set_interactive hint");
 
@@ -122,7 +125,9 @@ int  set_interactive_override(struct power_module *module, int on)
 /* Video Encode Hint */
 static void process_video_encode_hint(void *metadata)
 {
-    char governor[80];
+    char governor[80]={0};
+    int resource_values[20]={0};
+    int num_resources = 0;
     struct video_encode_metadata_t video_encode_metadata;
 
     ALOGI("Got process_video_encode_hint");
@@ -158,39 +163,69 @@ static void process_video_encode_hint(void *metadata)
     }
 
     if (video_encode_metadata.state == 1) {
-        if ((strncmp(governor, INTERACTIVE_GOVERNOR,
+        if((strncmp(governor, SCHEDUTIL_GOVERNOR,
+            strlen(SCHEDUTIL_GOVERNOR)) == 0) &&
+            (strlen(governor) == strlen(SCHEDUTIL_GOVERNOR))) {
+            /* sample_ms = 10mS */
+            int res[] = {0x41820000, 0xa,
+                        };
+            memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
+            num_resources = sizeof(res)/sizeof(res[0]);
+            pthread_mutex_lock(&camera_hint_mutex);
+            camera_hint_ref_count++;
+            if (camera_hint_ref_count == 1) {
+                if (!video_encode_hint_sent) {
+                    perform_hint_action(video_encode_metadata.hint_id,
+                    resource_values, num_resources);
+                    video_encode_hint_sent = 1;
+                }
+            }
+            pthread_mutex_unlock(&camera_hint_mutex);
+        }
+        else if ((strncmp(governor, INTERACTIVE_GOVERNOR,
             strlen(INTERACTIVE_GOVERNOR)) == 0) &&
             (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            /* Sched_load and migration_notif*/
-            int resource_values[] = {INT_OP_CLUSTER0_USE_SCHED_LOAD,
-                                     0x1,
-                                     INT_OP_CLUSTER1_USE_SCHED_LOAD,
-                                     0x1,
-                                     INT_OP_CLUSTER0_USE_MIGRATION_NOTIF,
-                                     0x1,
-                                     INT_OP_CLUSTER1_USE_MIGRATION_NOTIF,
-                                     0x1,
-                                     INT_OP_CLUSTER0_TIMER_RATE,
-                                     BIG_LITTLE_TR_MS_40,
-                                     INT_OP_CLUSTER1_TIMER_RATE,
-                                     BIG_LITTLE_TR_MS_40
-                                     };
+           /* Sched_load and migration_notif*/
+            int res[] = {INT_OP_CLUSTER0_USE_SCHED_LOAD,
+                         0x1,
+                         INT_OP_CLUSTER1_USE_SCHED_LOAD,
+                         0x1,
+                         INT_OP_CLUSTER0_USE_MIGRATION_NOTIF,
+                         0x1,
+                         INT_OP_CLUSTER1_USE_MIGRATION_NOTIF,
+                         0x1,
+                         INT_OP_CLUSTER0_TIMER_RATE,
+                         BIG_LITTLE_TR_MS_40,
+                         INT_OP_CLUSTER1_TIMER_RATE,
+                         BIG_LITTLE_TR_MS_40
+                         };
+            memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
+            num_resources = sizeof(res)/sizeof(res[0]);
+            pthread_mutex_lock(&camera_hint_mutex);
+            camera_hint_ref_count++;
             if (!video_encode_hint_sent) {
                 perform_hint_action(video_encode_metadata.hint_id,
-                resource_values,
-                sizeof(resource_values)/sizeof(resource_values[0]));
+                resource_values,num_resources);
                 video_encode_hint_sent = 1;
             }
+            pthread_mutex_unlock(&camera_hint_mutex);
         }
     } else if (video_encode_metadata.state == 0) {
-        if ((strncmp(governor, INTERACTIVE_GOVERNOR,
+        if (((strncmp(governor, INTERACTIVE_GOVERNOR,
             strlen(INTERACTIVE_GOVERNOR)) == 0) &&
-            (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            undo_hint_action(video_encode_metadata.hint_id);
-            video_encode_hint_sent = 0;
+            (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) ||
+            ((strncmp(governor, SCHEDUTIL_GOVERNOR,
+            strlen(SCHEDUTIL_GOVERNOR)) == 0) &&
+            (strlen(governor) == strlen(SCHEDUTIL_GOVERNOR)))) {
+            pthread_mutex_lock(&camera_hint_mutex);
+            camera_hint_ref_count--;
+            if (!camera_hint_ref_count) {
+                undo_hint_action(video_encode_metadata.hint_id);
+                video_encode_hint_sent = 0;
+            }
+            pthread_mutex_unlock(&camera_hint_mutex);
             return ;
         }
     }
     return;
 }
-
