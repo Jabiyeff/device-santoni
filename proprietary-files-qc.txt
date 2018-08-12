@@ -579,9 +579,8 @@ vendor/radio/qcril_database/qcril.db
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-qmi-1.so
 
-# Radio - IMS - from TA-1021 - OPR1.170623.026
+# Radio - IMS - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
 -app/ims/ims.apk
--app/imssettings/imssettings.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/qti-vzw-ims-internal.xml
 lib/com.qualcomm.qti.imscmservice@1.0.so
