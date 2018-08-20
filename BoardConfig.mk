@@ -47,9 +47,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_CONFIG := santoni_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # Audio
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
