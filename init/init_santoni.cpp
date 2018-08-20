@@ -37,7 +37,6 @@
 #include <android-base/logging.h>
 #include "vendor_init.h"
 #include "property_service.h"
-#include "util.h"
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
