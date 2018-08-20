@@ -310,6 +310,10 @@ else
     else
         soc_id=`cat /sys/devices/system/soc/soc0/id`
     fi
+    
+    if [ $MemTotal -le 2097152 ]; then
+        setprop ro.config.low_ram true
+    fi
 
     # Enable swap initially only for 1 GB targets
     if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
