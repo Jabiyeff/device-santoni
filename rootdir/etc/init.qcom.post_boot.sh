@@ -314,6 +314,10 @@ else
     if [ $MemTotal -le 2097152 ]; then
         setprop ro.config.low_ram true
     fi
+    
+    if [ $MemTotal -le 2097152 ]; then
+        setprop ro.config.low_ram true
+    fi
 
     # Enable swap initially only for 1 GB targets
     if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
