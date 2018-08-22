@@ -397,6 +397,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    libwifi-hal-qcom \
     libcld80211 \
     libqsap_sdk \
     libQWiFiSoftApCfg \
