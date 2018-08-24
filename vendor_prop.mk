@@ -88,8 +88,7 @@ debug.gralloc.enable_fb_ubwc=1 \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
 ro.qualcomm.svi=0 \
-ro.sf.lcd_density=320 \
-sys.display-size=3840x2160
+ro.sf.lcd_density=310
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
