@@ -57,10 +57,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
 camera.display.umax=1920x1080 \
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
-persist.camera.gyro.android=1 \
-persist.camera.is_type=1 \
+persist.camera.gyro.disable=0 \
+persist.camera.imglib.cac3=2 \
+camera.lowpower.record.enable=1 \
+persist.camera.isp.clock.optmz=0 \
+vidc.enc.dcvs.extra-buff-count=2 \
 vendor.vidc.enc.narrow.searchrange=1 \
-persist.vendor.qti.telephony.vt_cam_interface=1
+persist.vendor.qti.telephony.vt_cam_interface=1 \
+media.camera.ts.monotonic=1 \
+persist.camera.HAL3.enabled=1
+
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -185,9 +191,10 @@ ril.subscription.types=NV,RUIM \
 rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
-ro.telephony.default_network=20 \
 service.qti.ims.enabled=1 \
-telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=1 \
+ro.telephony.default_network=22,20
+
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
