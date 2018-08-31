@@ -138,13 +138,6 @@ service wcnss-service /vendor/bin/wcnss_service
     group system wifi radio
     oneshot
 
-service imsstarter /system/bin/sh /system/etc/init.qti.ims.sh
-    class main
-    oneshot
-
-on property:vold.decrypt=trigger_restart_framework
-    start imsstarter
-
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
