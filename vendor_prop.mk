@@ -106,6 +106,7 @@ ro.qualcomm.svi=0 \
 ro.sf.lcd_density=300 \
 persist.debug.wfd.enable=1 \
 persist.hwc.enable_vds=1 \
+debug.sdm.support_writeback=0 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=0 \
 vendor.display.rotator_downscale=1 \
