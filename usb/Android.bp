@@ -1,0 +1,27 @@
+cc_binary {
+
+    relative_install_path: "hw",
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libutils",
+        "libhardware",
+        "android.hardware.usb.gadget@1.0",
+        "libcutils",
+    ],
+    srcs: [
+        "service.cpp",
+        "UsbGadget.cpp",
+    ],
+
+    name: "android.hardware.usb.gadget@1.0-service-qti",
+    init_rc: ["android.hardware.usb.gadget@1.0-service-qti.rc"],
+
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+    ],
+    vendor: true,
+}
