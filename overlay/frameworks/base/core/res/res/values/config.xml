@@ -38,13 +38,17 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>8</item>
-        <item>80</item>
-        <item>150</item>
-        <item>350</item>
-        <item>1500</item>
-        <item>3500</item>
-        <item>7000</item>
+        <item>10</item>     <!-- twilight -->
+        <item>50</item>     <!-- dim indoor -->
+        <item>100</item>    <!-- home -->
+        <item>200</item>    <!-- office --> 
+        <item>400</item>    
+        <item>500</item>    <!-- sunrise -->
+        <item>800</item>
+        <item>1000</item>   <!-- overcast -->
+        <item>1600</item>   
+        <item>3000</item>   <!-- indirect sun -->
+        <item>10000</item>  <!-- daylight -->
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -53,14 +57,18 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>4</item>
-        <item>12</item>
-        <item>25</item>
-        <item>60</item>
-        <item>95</item>
-        <item>160</item>
-        <item>200</item>
-        <item>255</item>
+        <item>18</item>   <!-- 0-10 -->
+        <item>28</item>   <!-- 10-50 -->
+        <item>37</item>   <!-- 50-100 -->
+        <item>51</item>   <!-- 100-200 -->
+        <item>71</item>   <!-- 200-400 -->
+        <item>80</item>   <!-- 400-500 -->
+        <item>96</item>   <!-- 500-800 -->
+        <item>108</item>  <!-- 800-1000 -->
+        <item>144</item>  <!-- 1000-1600 -->
+        <item>181</item>  <!-- 1600-3000 -->
+        <item>254</item>  <!-- 3000-10000 -->
+        <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
     <!-- Screen brightness used to dim the screen when the user activity
