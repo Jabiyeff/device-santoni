@@ -87,6 +87,7 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
+	stop vendor.ims_rtp_daemon
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -243,4 +244,3 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
-
