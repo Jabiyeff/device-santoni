@@ -59,6 +59,7 @@ on init
     chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/bms 0700 root system
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/display 0770 system graphics
     restorecon_recursive /mnt/vendor/persist
 
 on post-fs
@@ -169,9 +170,6 @@ on boot
     chown root system /sys/class/leds/infrared/brightness  
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
-
-    # Create directory used for display
-    mkdir /persist/display 0770 system graphics
 
     # Create hvdcp_opti directory
     mkdir /persist/hvdcp_opti 0770 root system
