@@ -148,6 +148,10 @@ TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware \
+    /vendor/bt_firmware:/bt_firmware
 
 # FM
 BOARD_HAVE_QCOM_FM := true
