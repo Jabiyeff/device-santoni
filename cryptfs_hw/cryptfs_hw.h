@@ -33,12 +33,18 @@
 extern "C" {
 #endif
 
+/*This is equivalent of MAX_CRYPTO_TYPE_NAME_LEN*/
+#define CRYPTO_ALGO_LENGTH 64
+#define START_ENC 0x1
+#define START_ENCDEC 0x3
+
 int set_hw_device_encryption_key(const char*, const char*);
 int update_hw_device_encryption_key(const char*, const char*, const char*);
 int clear_hw_device_encryption_key();
 unsigned int is_hw_disk_encryption(const char*);
 int is_ice_enabled(void);
 int should_use_keymaster();
+int set_ice_param(int flag);
 
 #ifdef __cplusplus
 }
