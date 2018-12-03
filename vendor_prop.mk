@@ -106,13 +106,11 @@ ro.qualcomm.svi=0 \
 ro.sf.lcd_density=300 \
 persist.debug.wfd.enable=1 \
 persist.hwc.enable_vds=1 \
-debug.sdm.support_writeback=0 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=0 \
 vendor.display.rotator_downscale=1 \
 vendor.display.perf_hint_window=50 \
-vendor.gralloc.enable_fb_ubwc=1 \
-debug.hwui.use_buffer_age=false
+vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -145,13 +143,23 @@ vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 video.disable.ubwc=1
 
+# Rendering
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.sdm.support_writeback=0
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.sys.fw.dex2oat_thread_count=4 \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.qti.am.reschedule_service=true \
 ro.vendor.qti.core_ctl_min_cpu=2 \
 ro.vendor.qti.core_ctl_max_cpu=4
+
+# art
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.boot-dex2oat-threads=8 \
+ro.sys.fw.dex2oat_thread_count=6 \
+dalvik.vm.bg-dex2oat-threads=2 \
+dalvik.vm.dex2oat-threads=6
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
