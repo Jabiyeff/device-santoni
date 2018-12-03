@@ -3137,12 +3137,6 @@ case "$target" in
         echo 256 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
         echo 256 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
         setprop sys.post_boot.parsed 1
-
-        low_ram_enable=`getprop ro.config.low_ram`
-
-        if [ "$low_ram_enable" != "true" ]; then
-        start gamed
-        fi
     ;;
     "msm8974")
         start mpdecision
