@@ -1,13 +1,7 @@
-BOARD_PLATFORM_LIST := msm8909
-BOARD_PLATFORM_LIST += msm8916
-BOARD_PLATFORM_LIST += msm8917
-BOARD_PLATFORM_LIST += msm8937
-BOARD_PLATFORM_LIST += msm8976
-BOARD_PLATFORM_LIST += msm8952
 BOARD_IPAv3_LIST := msm8998
-ifneq ($(call is-board-platform-in-list,$(BOARD_PLATFORM_LIST)),true)
-ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
-ifneq (, $(filter aarch64 arm arm64, $(TARGET_ARCH)))
+BOARD_IPAv3_LIST += sdm845
+BOARD_IPAv3_LIST += sdm710
+BOARD_IPAv3_LIST += msmnile
 
 LOCAL_PATH := $(call my-dir)
 
@@ -33,9 +27,10 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_CFLAGS := -v
 LOCAL_CFLAGS += -DFEATURE_IPA_ANDROID
 LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-LOCAL_CFLAGS += -DDEBUG
-endif
+
+#ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+#LOCAL_CFLAGS += -DDEBUG
+#endif
 
 ifeq ($(call is-board-platform-in-list,$(BOARD_IPAv3_LIST)),true)
 LOCAL_CFLAGS += -DFEATURE_IPA_V3
@@ -118,6 +113,3 @@ LOCAL_SRC_FILES := $(LOCAL_MODULE)
 LOCAL_MODULE_OWNER := ipacm
 include $(BUILD_PREBUILT)
 
-endif # $(TARGET_ARCH)
-endif
-endif
