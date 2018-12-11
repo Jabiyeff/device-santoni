@@ -436,6 +436,22 @@ vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.hardware.perf@1.0.so
 
+# Perf QPerformance - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+bin/perfservice
+etc/init/perfservice.rc
+etc/perf/whitelistedapps.xml
+-framework/QPerformance.jar
+-framework/UxPerformance.jar
+lib/libqti-iopd-client_system.so
+lib/libqti-perfd-client_system.so
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib64/libqti-iopd-client_system.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-util_system.so
+lib64/libqti_performance.so
+
+
 # Peripheral manager - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
 vendor/bin/pm-proxy|3a6e03b81206ac445f70bd04309131e2e6757a53
 vendor/bin/pm-service|d115b6d3e3113e36cf78f9c5e1128bcb6686d528
