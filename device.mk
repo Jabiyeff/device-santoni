@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
 # Charger
 include $(LOCAL_PATH)/rootdir/charger/charger.mk
 
+# Xiaomi Shit
+PRODUCT_PACKAGES += \
+    XiaomiShit
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \

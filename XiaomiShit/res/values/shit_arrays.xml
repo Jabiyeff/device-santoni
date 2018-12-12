@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>Disabled</item>
+        <item>Sweep right</item>
+        <item>Sweep left</item>
+        <item>Sweep right or left</item>
+    </string-array>
+    <string-array name="s2sValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- spectrum profiles -->
+    <string-array name="spectrum_profiles">
+        <item>Balance</item>
+        <item>Battery</item>
+        <item>Ultra-Battery</item>
+        <item>Performance</item>
+        <item>Gaming</item>
+    </string-array>
+    <string-array name="spectrum_values">
+        <item>0</item>
+        <item>2</item>
+        <item>4</item>
+        <item>1</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

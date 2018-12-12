@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014-2016 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/category_system">
+        <com.xiaomi.shit.VibratorStrengthPreference
+            android:key="vib_strength"
+            android:title="@string/vib_strength_title_head" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+        <PreferenceScreen
+                 android:key="kcal"
+                 android:fragment="com.xiaomi.shit.DisplayCalibration"
+                 android:summary="@string/kcal_summary"
+                 android:title="@string/kcal_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="spectrum_profile"
+        android:title="@string/spectrum_profile_title" >
+
+        <ListPreference
+            android:key="spectrum"
+            android:title="@string/spectrum_title"
+            android:summary="@string/spectrum_summary"
+            android:defaultValue="0"
+            android:entries="@array/spectrum_profiles"
+            android:entryValues="@array/spectrum_values"
+            android:dialogTitle="@string/spectrum_dialogTitle" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/s2s_title">
+        <ListPreference
+            android:title="@string/s2s_title"
+            android:key="sweep2sleep"
+            android:defaultValue="0"
+            android:entries="@array/s2sArray"
+            android:entryValues="@array/s2sValues" />
+         <com.xiaomi.shit.S2SVibratorStrengthPreference
+            android:key="s2s_vib_strength"
+            android:title="@string/s2s_vib_strength_title_head" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
