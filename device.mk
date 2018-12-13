@@ -14,6 +14,20 @@
 # limitations under the License.
 #
 
+#GAPPS config
+GAPPS_VARIANT := mini
+
+GAPPS_EXCLUDED_PACKAGES += \
+    PlusOne \
+    Hangouts
+
+GAPPS_PRODUCT_PACKAGES += \
+    Chrome \
+    GoogleDialer \
+    GoogleContacts \
+    PrebuiltBugle \
+    LatinImeGoogle
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 $(call inherit-product, vendor/xiaomi/santoni/santoni-vendor.mk)
@@ -427,3 +441,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
