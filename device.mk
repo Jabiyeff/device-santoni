@@ -26,7 +26,8 @@ GAPPS_PRODUCT_PACKAGES += \
     GoogleDialer \
     GoogleContacts \
     PrebuiltBugle \
-    LatinImeGoogle
+    LatinImeGoogle \
+    DigitalWellbeing
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
