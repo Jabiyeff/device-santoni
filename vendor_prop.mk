@@ -91,7 +91,6 @@ dalvik.vm.heapmaxfree=8m
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.hw=0 \
-debug.sf.latch_unsignaled=1 \
 debug.egl.hw=0 \
 persist.hwc.mdpcomp.enable=true \
 debug.mdpcomp.logs=0 \
