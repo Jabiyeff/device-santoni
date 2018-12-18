@@ -296,9 +296,15 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
+<<<<<<< HEAD
 # Graphics (Vulkan) - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/hw/vulkan.msm8937.so
 vendor/lib64/hw/vulkan.msm8937.so
+=======
+# Graphics (Vulkan) - from jasmine - PKQ1.180904.001 V10.0.1.0.PDIMIFJ
+vendor/lib/hw/vulkan.msm8937.so|1426694ac179ddd26d0dadf9cc54305cad0386a4
+vendor/lib64/hw/vulkan.msm8937.so|82b72990a737799894c291f8a3515d7d668a5423
+>>>>>>> 7306a71... santoni: kang vulkan blob from jasmine
 
 # Keystore - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/hw/keystore.msm8937.so
