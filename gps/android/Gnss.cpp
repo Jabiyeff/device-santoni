@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017, The Linux Foundation. All rights reserved.
  * Not a Contribution
  */
 /*
@@ -20,13 +20,9 @@
 
 #define LOG_TAG "LocSvc_GnssInterface"
 
-#include <fstream>
 #include <log_util.h>
 #include <dlfcn.h>
-#include <cutils/properties.h>
 #include "Gnss.h"
-#include <LocationUtil.h>
-
 typedef void* (getLocationInterface)();
 
 namespace android {
@@ -111,7 +107,7 @@ GnssInterface* Gnss::getGnssInterface() {
     return mGnssInterface;
 }
 
-Return<bool> Gnss::setCallback(const sp<V1_0::IGnssCallback>& callback)  {
+Return<bool> Gnss::setCallback(const sp<IGnssCallback>& callback)  {
     ENTRY_LOG_CALLFLOW();
     if (mGnssCbIface != nullptr) {
         mGnssCbIface->unlinkToDeath(mGnssDeathRecipient);
@@ -255,7 +251,7 @@ Return<bool> Gnss::injectTime(int64_t timeMs, int64_t timeReferenceMs,
     }
 }
 
-Return<void> Gnss::deleteAidingData(V1_0::IGnss::GnssAidingData aidingDataFlags)  {
+Return<void> Gnss::deleteAidingData(IGnss::GnssAidingData aidingDataFlags)  {
     ENTRY_LOG_CALLFLOW();
     GnssAPIClient* api = getApi();
     if (api) {
@@ -264,8 +260,8 @@ Return<void> Gnss::deleteAidingData(V1_0::IGnss::GnssAidingData aidingDataFlags)
     return Void();
 }
 
-Return<bool> Gnss::setPositionMode(V1_0::IGnss::GnssPositionMode mode,
-                                   V1_0::IGnss::GnssPositionRecurrence recurrence,
+Return<bool> Gnss::setPositionMode(IGnss::GnssPositionMode mode,
+                                   IGnss::GnssPositionRecurrence recurrence,
                                    uint32_t minIntervalMs,
                                    uint32_t preferredAccuracyMeters,
                                    uint32_t preferredTimeMs)  {
@@ -279,49 +275,48 @@ Return<bool> Gnss::setPositionMode(V1_0::IGnss::GnssPositionMode mode,
     return retVal;
 }
 
-Return<sp<V1_0::IAGnss>> Gnss::getExtensionAGnss()  {
+Return<sp<IAGnss>> Gnss::getExtensionAGnss()  {
     ENTRY_LOG_CALLFLOW();
     mAGnssIface = new AGnss(this);
     return mAGnssIface;
 }
 
-Return<sp<V1_0::IGnssNi>> Gnss::getExtensionGnssNi()  {
+Return<sp<IGnssNi>> Gnss::getExtensionGnssNi()  {
     ENTRY_LOG_CALLFLOW();
     mGnssNi = new GnssNi(this);
     return mGnssNi;
 }
 
-Return<sp<V1_0::IGnssMeasurement>> Gnss::getExtensionGnssMeasurement() {
+Return<sp<IGnssMeasurement>> Gnss::getExtensionGnssMeasurement() {
     ENTRY_LOG_CALLFLOW();
-    if (mGnssMeasurement == nullptr)
-        mGnssMeasurement = new GnssMeasurement();
+    mGnssMeasurement = new GnssMeasurement();
     return mGnssMeasurement;
 }
 
-Return<sp<V1_0::IGnssConfiguration>> Gnss::getExtensionGnssConfiguration()  {
+Return<sp<IGnssConfiguration>> Gnss::getExtensionGnssConfiguration()  {
     ENTRY_LOG_CALLFLOW();
     mGnssConfig = new GnssConfiguration(this);
     return mGnssConfig;
 }
 
-Return<sp<V1_0::IGnssGeofencing>> Gnss::getExtensionGnssGeofencing()  {
+Return<sp<IGnssGeofencing>> Gnss::getExtensionGnssGeofencing()  {
     ENTRY_LOG_CALLFLOW();
     mGnssGeofencingIface = new GnssGeofencing();
     return mGnssGeofencingIface;
 }
 
-Return<sp<V1_0::IGnssBatching>> Gnss::getExtensionGnssBatching()  {
+Return<sp<IGnssBatching>> Gnss::getExtensionGnssBatching()  {
     mGnssBatching = new GnssBatching();
     return mGnssBatching;
 }
 
-Return<sp<V1_0::IGnssDebug>> Gnss::getExtensionGnssDebug() {
+Return<sp<IGnssDebug>> Gnss::getExtensionGnssDebug() {
     ENTRY_LOG_CALLFLOW();
     mGnssDebug = new GnssDebug(this);
     return mGnssDebug;
 }
 
-Return<sp<V1_0::IAGnssRil>> Gnss::getExtensionAGnssRil() {
+Return<sp<IAGnssRil>> Gnss::getExtensionAGnssRil() {
     mGnssRil = new AGnssRil(this);
     return mGnssRil;
 }

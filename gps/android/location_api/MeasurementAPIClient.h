@@ -1,4 +1,4 @@
-/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -42,6 +42,7 @@ namespace gnss {
 namespace V1_0 {
 namespace implementation {
 
+using ::android::hardware::gnss::V1_0::IGnssMeasurement;
 using ::android::sp;
 
 class MeasurementAPIClient : public LocationAPIClientBase
@@ -53,18 +54,16 @@ public:
     MeasurementAPIClient& operator=(const MeasurementAPIClient&) = delete;
 
     // for GpsMeasurementInterface
-    Return<V1_0::IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback(
-            const sp<V1_0::IGnssMeasurementCallback>& callback);
+    Return<IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback(
+            const sp<IGnssMeasurementCallback>& callback);
     void measurementClose();
-    Return<IGnssMeasurement::GnssMeasurementStatus> startTracking();
 
     // callbacks we are interested in
     void onGnssMeasurementsCb(GnssMeasurementsNotification gnssMeasurementsNotification) final;
 
 private:
+    sp<IGnssMeasurementCallback> mGnssMeasurementCbIface;
     std::mutex mMutex;
-    sp<V1_0::IGnssMeasurementCallback> mGnssMeasurementCbIface;
-
     bool mTracking;
 };
 

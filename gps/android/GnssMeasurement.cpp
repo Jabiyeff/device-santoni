@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017, The Linux Foundation. All rights reserved.
  * Not a Contribution
  */
 /*
@@ -52,9 +52,8 @@ GnssMeasurement::~GnssMeasurement() {
 }
 
 // Methods from ::android::hardware::gnss::V1_0::IGnssMeasurement follow.
-
 Return<IGnssMeasurement::GnssMeasurementStatus> GnssMeasurement::setCallback(
-        const sp<V1_0::IGnssMeasurementCallback>& callback)  {
+        const sp<IGnssMeasurementCallback>& callback)  {
 
     Return<IGnssMeasurement::GnssMeasurementStatus> ret =
         IGnssMeasurement::GnssMeasurementStatus::ERROR_GENERIC;
@@ -73,10 +72,9 @@ Return<IGnssMeasurement::GnssMeasurementStatus> GnssMeasurement::setCallback(
     }
 
     mGnssMeasurementCbIface = callback;
-    mGnssMeasurementCbIface->linkToDeath(mGnssMeasurementDeathRecipient, 0);
+    mGnssMeasurementCbIface->linkToDeath(mGnssMeasurementDeathRecipient, 0 /*cookie*/);
 
     return mApi->measurementSetCallback(callback);
-
 }
 
 Return<void> GnssMeasurement::close()  {

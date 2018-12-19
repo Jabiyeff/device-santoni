@@ -1,4 +1,4 @@
-/* Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -42,8 +42,6 @@ namespace gnss {
 namespace V1_0 {
 namespace implementation {
 
-using ::android::hardware::gnss::V1_0::IGnssGeofenceCallback;
-using ::android::hardware::gnss::V1_0::GnssLocation;
 
 GeofenceAPIClient::GeofenceAPIClient(const sp<IGnssGeofenceCallback>& callback) :
     LocationAPIClientBase(),
@@ -160,7 +158,7 @@ void GeofenceAPIClient::onGeofenceBreachCb(GeofenceBreachNotification geofenceBr
 
             auto r = mGnssGeofencingCbIface->gnssGeofenceTransitionCb(
                     geofenceBreachNotification.ids[i], gnssLocation, transition,
-                    static_cast<V1_0::GnssUtcTime>(geofenceBreachNotification.timestamp));
+                    static_cast<GnssUtcTime>(geofenceBreachNotification.timestamp));
             if (!r.isOk()) {
                 LOC_LOGE("%s] Error from gnssGeofenceTransitionCb description=%s",
                     __func__, r.description().c_str());

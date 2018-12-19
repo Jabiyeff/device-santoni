@@ -34,8 +34,7 @@
 #include <list>
 #include <MsgTask.h>
 #include <gps_extended_c.h>
-#include <loc_pla.h>
-#include <log_util.h>
+#include <platform_lib_log_util.h>
 
 /* ATL callback function pointers
  * Passed in by Adapter to AgpsManager */
@@ -278,27 +277,32 @@ public:
         mAgnssNif(NULL), mInternetNif(NULL), mDsNif(NULL) {}
 
     /* Register callbacks */
-    inline void registerATLCallbacks(AgpsAtlOpenStatusCb  atlOpenStatusCb,
+    void registerCallbacks(
+            AgnssStatusIpV4Cb                   frameworkStatusV4Cb,
+
+            AgpsAtlOpenStatusCb                 atlOpenStatusCb,
             AgpsAtlCloseStatusCb                atlCloseStatusCb,
+
             AgpsDSClientInitFn                  dsClientInitFn,
             AgpsDSClientOpenAndStartDataCallFn  dsClientOpenAndStartDataCallFn,
             AgpsDSClientStopDataCallFn          dsClientStopDataCallFn,
             AgpsDSClientCloseDataCallFn         dsClientCloseDataCallFn,
             AgpsDSClientReleaseFn               dsClientReleaseFn,
-            SendMsgToAdapterMsgQueueFn          sendMsgToAdapterQueueFn) {
+
+            SendMsgToAdapterMsgQueueFn          sendMsgToAdapterQueueFn ){
+
+        mFrameworkStatusV4Cb = frameworkStatusV4Cb;
 
         mAtlOpenStatusCb = atlOpenStatusCb;
         mAtlCloseStatusCb = atlCloseStatusCb;
+
         mDSClientInitFn = dsClientInitFn;
         mDSClientOpenAndStartDataCallFn = dsClientOpenAndStartDataCallFn;
         mDSClientStopDataCallFn = dsClientStopDataCallFn;
         mDSClientCloseDataCallFn = dsClientCloseDataCallFn;
         mDSClientReleaseFn = dsClientReleaseFn;
-        mSendMsgToAdapterQueueFn = sendMsgToAdapterQueueFn;
-    }
 
-    inline void registerFrameworkStatusCallback(AgnssStatusIpV4Cb frameworkStatusV4Cb) {
-        mFrameworkStatusV4Cb = frameworkStatusV4Cb;
+        mSendMsgToAdapterQueueFn = sendMsgToAdapterQueueFn;
     }
 
     /* Create all AGPS state machines */
