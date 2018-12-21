@@ -444,4 +444,7 @@
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- Fix for Goodix Reset on Every Reboot -->
+    <bool name="config_cleanupUnusedFingerprints">false</bool>
 </resources>
