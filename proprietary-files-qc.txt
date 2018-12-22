@@ -23,14 +23,7 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
 # ANT+ - from TA-1024
--lib/libantradio.so
-lib/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib/com.qualcomm.qti.ant@1.0.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Audio libraries - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 etc/permissions/audiosphere.xml
