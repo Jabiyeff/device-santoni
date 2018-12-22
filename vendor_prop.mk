@@ -139,6 +139,10 @@ video.disable.ubwc=1
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.sdm.support_writeback=0
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so \
