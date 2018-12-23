@@ -19,7 +19,8 @@ GAPPS_VARIANT := mini
 
 GAPPS_EXCLUDED_PACKAGES += \
     PlusOne \
-    Hangouts
+    Hangouts \
+    Maps
 
 GAPPS_PRODUCT_PACKAGES += \
     Chrome \
