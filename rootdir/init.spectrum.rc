@@ -1,0 +1,105 @@
+# SPECTRUM KERNEL MANAGER
+# Ramdisk file for profile based kernel management
+# Implimentation inspired by Franco's fku profiles
+
+# Initialization
+on property:sys.boot_completed=1
+
+   # Set default profile on first boot
+    exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
+    exec u:r:magisk:s0 root root -- /vendor/bin/init.spectrum.sh
+    exec u:r:su:s0 root root -- /vendor/bin/init.spectrum.sh
+   
+   # Enable Spectrum support
+   setprop spectrum.support 1
+   
+   # Add kernel name
+   setprop persist.spectrum.kernel perf
+
+# Balance (default profile)
+on property:persist.spectrum.profile=0
+
+	# CPU
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400 
+	write /sys/module/msm_performance/parameters/touchboost 0
+	write /sys/moduIe/cpu_boost/parameters/input_boost_enabled 0
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 1
+
+	# GPU
+	write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
+	write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 216000000
+	write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 475000000
+
+	# Fast Charging
+	write /sys/kernel/fast_charge/force_fast_charge 1
+
+# Performance (based on DrunkSauce Lite)
+on property:persist.spectrum.profile=1
+    
+	# CPU
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1094400
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 960000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
+	write /sys/module/msm_performance/parameters/touchboost 1
+	write /sys/moduIe/cpu_boost/parameters/input_boost_enabled 1
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 2
+
+	# GPU
+	write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
+	write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 475000000
+	write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 375000000
+
+	# Fast Charging
+	write /sys/kernel/fast_charge/force_fast_charge 1
+
+# Battery
+on property:persist.spectrum.profile=2
+
+	# CPU
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor alucard
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor alucard
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
+	write /sys/module/msm_performance/parameters/touchboost 0
+	write /sys/moduIe/cpu_boost/parameters/input_boost_enabled 0
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 1
+
+	# GPU
+	write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
+	write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 450000000
+	write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 216000000
+
+	# Fast Charging
+	write /sys/kernel/fast_charge/force_fast_charge 1
+
+# Gaming
+on property:persist.spectrum.profile=3
+
+	# CPU
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1401000
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1094400
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
+	write /sys/module/msm_performance/parameters/touchboost 1
+	write /sys/moduIe/cpu_boost/parameters/input_boost_enabled 1
+	write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 4
+
+	# GPU
+	write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
+	write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 475000000
+	write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 475000000    
+
+	# Fast Charging
+	write /sys/kernel/fast_charge/force_fast_charge 1
