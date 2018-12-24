@@ -632,4 +632,42 @@ vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 # Wi-Fi - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/bin/wcnss_service
+vendor/bin/wcnss_service|183c15394d1d6df2e5f6d712df80b2b2aa9f5ea6
+
+# APTX - from Onyx_00WW-user - PKQ1.180712.001 00WW_3_150 release-keys
+vendor/lib/libldacBT_enc.so|7a5ced9eb3fcc5745a76ed1c94611af75abd5cd1
+vendor/lib/libldacBT_abr.so|0b22afcc8e3b49c5af67b8957ac9e08ea158ab20
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|867e374575edf2a445ed9fa774f5566f763f0756
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|7b13cf50e7a5fa7cd59e28e54c6b7dc06889bcf7
+vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
+vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
+vendor/lib64/libldacBT_enc.so|a5fb63c23a748ed3e1ddf39c6da353f3d2da88f1
+vendor/lib64/libldacBT_abr.so|26aa6bf2bac014ba80f09f835354093fbc209037
+vendor/lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
+vendor/lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
+
+# Wi-Fi Display
+-priv-app/WfdService/WfdService.apk
+-framework/WfdCommon.jar
+bin/wfdservice
+etc/init/wfdservice.rc
+etc/wfdconfig.xml
+etc/wfdconfigsink.xml
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+lib/libFileMux.so
+lib/extractors/libmmparser.so
+lib/libmmparser_lite.so
+lib64/libFileMux.so
+lib64/libmmparser_lite.so
+lib64/extractors/libmmparser.so
+vendor/bin/wifidisplayhalservice
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdhaldsmanager.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdmmservice.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib64/libwfdhdcpcp.so
+vendor/lib64/libwfdhdcpcp.so
