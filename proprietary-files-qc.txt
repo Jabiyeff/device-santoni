@@ -20,12 +20,11 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# Audio libraries - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# Audio libraries - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 etc/permissions/audiosphere.xml
 framework/audiosphere.jar
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
-vendor/lib/libacdbmapper.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
@@ -37,12 +36,11 @@ vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcreverb.so|733e30f646b87e4f5ee90baea0ce5e7982d607c9
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
+vendor/lib/soundfx/libshoebox.so|538dc7ed2d3066ca956a1722e147808f96c0224b
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbmapper.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
@@ -51,9 +49,9 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcreverb.so|8bdd74d69593cd838e4b92d9b2884e0c4140226f
 vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 
 # Bluetooth - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -125,11 +123,11 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 # Charger - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
 vendor/bin/hvdcp_opti
 
-# DPM - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# DPM - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/bin/dpmQmiMgr
-vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib/libdpmqmihal.so
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
 # DRM - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
@@ -296,15 +294,9 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
-<<<<<<< HEAD
-# Graphics (Vulkan) - from marmite - OPM5.171019.017 - UOS273C
-vendor/lib/hw/vulkan.msm8937.so
-vendor/lib64/hw/vulkan.msm8937.so
-=======
 # Graphics (Vulkan) - from jasmine - PKQ1.180904.001 V10.0.1.0.PDIMIFJ
 vendor/lib/hw/vulkan.msm8937.so|1426694ac179ddd26d0dadf9cc54305cad0386a4
 vendor/lib64/hw/vulkan.msm8937.so|82b72990a737799894c291f8a3515d7d668a5423
->>>>>>> 7306a71... santoni: kang vulkan blob from jasmine
 
 # Keystore - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/hw/keystore.msm8937.so
@@ -606,25 +598,25 @@ vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Thermal - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# Thermal - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# Time services - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 -vendor/lib64/libtime_genoff.so
 
-# TUI - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# TUI - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 lib/vendor.qti.hardware.tui_comm@1.0.so
 lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Widevine DRM - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine
