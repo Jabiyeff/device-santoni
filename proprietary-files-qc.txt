@@ -10,15 +10,15 @@ vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # ADSP modules - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
-vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
+vendor/lib/rfsa/adsp/libdspCV_skel.so|628985174b0088bed21c866d7984d23855e5e150
+vendor/lib/rfsa/adsp/libexternal_dog_skel.so|02b69c54437fb5a6f7ad88c3f58e7c4adfea9ede
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb4f7
+vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
+vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
+vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b30409241ab6
+vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
 # Audio libraries - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 etc/permissions/audiosphere.xml
@@ -582,21 +582,21 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Sensors - from marmite - OPM5.171019.017 - UOS273C
-vendor/bin/sensors.qcom
--vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
--vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
-vendor/lib/hw/activity_recognition.msm8937.so
-vendor/lib/libsensor1.so
-vendor/lib/libsensor_reg.so
-vendor/lib/sensors.ssc.so
-vendor/lib/vendor.qti.hardware.alarm@1.0.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/activity_recognition.msm8937.so
-vendor/lib64/libsensor1.so
-vendor/lib64/libsensor_reg.so
-vendor/lib64/sensors.ssc.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/bin/sensors.qcom|ac4219584168f4d19dbce0375b9955969275e31c
+-vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar|f77a472e0c9bd6030eea3d7d7e60678a052d7fe0
+-vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|cbc37993a423de1de97114bf7de105d2aa792101
+vendor/lib/hw/activity_recognition.msm8937.so|471c0c7d52f1ada4b5cca3565fb2e4137487cd17
+vendor/lib/libsensor1.so|8b4a1fba125011709b764e3bb3f959e78056a013
+vendor/lib/libsensor_reg.so|b38a48d9d0c0cb2f98b274b93e45730826814b0c
+vendor/lib/sensors.ssc.so|4c593afd059b132eb25f3c89a6f192c178b0f914
+vendor/lib/vendor.qti.hardware.alarm@1.0.so|c0e5ac50d43dc3c6aec918a346dc6f08cad0610c
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|50b2f47e31c65af5261812026855eed7e62f5c57
+vendor/lib64/hw/activity_recognition.msm8937.so|3b5ace9dc2565eb46a14293464718a773cead56a
+vendor/lib64/libsensor1.so|3bb8fc9d64e9314fffde62021019f769c9c67e01
+vendor/lib64/libsensor_reg.so|ed67fe926d547e385a1e24fa9173a9fd53cd57bb
+vendor/lib64/sensors.ssc.so|4a3735ff6b4196774233210713eb1c62f9dfa095
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|92f85112ffd180a00591f2e310517b169e00f4bb
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|743635a4dcb3c67eb32d874b261b12f6b1a19204
 
 # Thermal - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/bin/thermal-engine
