@@ -644,8 +644,8 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
 
-# Wi-Fi - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/bin/wcnss_service|183c15394d1d6df2e5f6d712df80b2b2aa9f5ea6
+# Wi-Fi - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+vendor/bin/wcnss_service
 
 # APTX - from Onyx_00WW-user - PKQ1.180712.001 00WW_3_150 release-keys
 vendor/lib/libldacBT_enc.so|7a5ced9eb3fcc5745a76ed1c94611af75abd5cd1
