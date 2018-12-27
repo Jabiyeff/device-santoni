@@ -65,14 +65,14 @@ vendor/lib64/soundfx/libqcreverb.so|8bdd74d69593cd838e4b92d9b2884e0c4140226f
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 
-# Bluetooth - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|6a1f31ef0b626ca5fd51400195743416949eb7b9
-vendor/bin/hci_qcomm_init|bb2a52dac8b0cd86f4cdbb9c49b6745f05dac6ac
-vendor/bin/wcnss_filter|c00bfd553410e2093d7dab3f066c8e745e9aa7ae
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c13ad14b3cbdf35737735
-vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
-vendor/lib64/libbt-hidlclient.so|c2358e54949c8b6cd267d34c6b8f3df92a90a490
+# Bluetooth - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/bin/hci_qcomm_init
+vendor/bin/wcnss_filter
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libbt-hidlclient.so
 
 # Bluetooth a2dp (calling) - from
 vendor/lib64/libbluetooth_jni.so|c57158675b9f2f65aaf550392376ba775d71ebc1
@@ -139,7 +139,7 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 
-# Charger - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
+# Charger - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/bin/hvdcp_opti
 
 # DPM - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
