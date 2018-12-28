@@ -15,29 +15,45 @@
 <BoostConfigs>
     <PerfBoost>
 
+    <!--app lauch boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- DISABLE_POWER_COLLAPSE resource opcode, value-->
+        <!-- CLUSTR_0_CPUS_ON resource opcode, value-->
+        <!-- GPU_MIN_PWRLVL resource opcode, value-->
+        <!-- SWAP_RATIO resource opcode, value-->
+
+        <!-- Type="1", main launch boost of 2sec -->
+        <Config
+            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="msm8937"
+            Resources="0x40C00000, 0x1, 0x40800000, 0x5DC, 0x40400000, 0x1, 0x41000000, 0x4, 0x42804000, 0x1, 0x42C0C000, 0x64" />
+
     <!-- config_enablePerfBoostForAnimation-->
+        <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- GPU_MIN_PWRLVL resource opcode, value-->
 
         <!-- Type="1", Animation boost of 0.6sec -->
         <Config
             Id="0x00001083" Type="1" Enable="true" Timeout="600" Target="msm8937"
-            Resources="0x40800000, 0x44C, 0x42804000, 0x1" />
+            Resources="0x40C00000, 0x1, 0x40800000, 0x44C, 0x42804000, 0x1" />
 
     <!--Vertical Scroll boost-->
-        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="msm8937"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40C00000, 0x1, 0x40800000, 0x514" />
 
     <!--Horizontal Scroll boost-->
-        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
 
         <!-- Type="2", Horizontal Scroll boost -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="msm8937"
-            Resources="0x40800100, 0x578" />
+            Resources="0x40C00000, 0x1, 0x40800000, 0x514" />
     </PerfBoost>
 </BoostConfigs>
