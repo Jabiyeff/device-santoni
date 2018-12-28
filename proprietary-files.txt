@@ -395,10 +395,10 @@ etc/qdcm_calib_data_ili9881c_HD720p_video_EbbgDJN.xml:vendor/etc/qdcm_calib_data
 
 # Fingerprint
 bin/gx_fpd:vendor/bin/gx_fpd
-lib/hw/fingerprint.searchf.so:vendor/lib/hw/fingerprint.searchf.so
+lib/hw/fingerprint.searchf.so:vendor/lib/hw/fingerprint.searchf.so|2abc0a9174a63b91f32223574bf2f4ece58b6f41
 lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
-lib64/hw/fingerprint.searchf.so:vendor/lib64/hw/fingerprint.searchf.so
-lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.so
+lib64/hw/fingerprint.searchf.so:vendor/lib64/hw/fingerprint.searchf.so|1eadef2c967ba29cbb29f8b95f7c721849605b2a
+lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.so|28a7f4a29eb51c07956a9010bc037bb2a862e9d2
 lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so
 lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
@@ -424,3 +424,8 @@ etc/firmware/a530v2_seq.fw2:vendor/firmware/a530v2_seq.fw2
 etc/firmware/a530v3_gpmu.fw2:vendor/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2:vendor/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
+
+# FocalTech-5336 Touchscreen
+etc/ft5336_oufei_720p.ini:vendor/etc/ft5336_oufei_720p.ini
+etc/ft5336_biel_1080p.ini:vendor/etc/ft5336_biel_1080p.ini
+
