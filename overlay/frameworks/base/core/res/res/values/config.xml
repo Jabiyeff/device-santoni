@@ -444,4 +444,7 @@
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- Internal default to navigation bar value -->
+    <bool name="config_defaultToNavigationBar">false</bool>
 </resources>
