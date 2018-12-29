@@ -285,29 +285,29 @@ vendor/lib64/libmm-hdcpmgr.so|f3bc845319ca6a4530537dbc6707a9210c9aac5c
 vendor/lib64/librs_adreno.so|4b8f5f5f73dde6325b48d2d4a7e1c486485dc672
 vendor/lib64/librs_adreno_sha1.so|62f9a3da4a0339025493db807101e8d58d651818
 
-# Graphics (HDR) - from marmite - OPM5.171019.017 - UOS273C
+# Graphics (HDR) - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/lib/libhdr_tm.so
 vendor/lib64/libhdr_tm.so
 
-# Graphics (SDM) - from marmite - OPM5.171019.017 - UOS273C
-lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so|5c7e946cfa654f533d481970da9b3d2e0c181161
-lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so|c6681b458123832bb6f4015fd3e24032d5b2eff8
-vendor/lib/libscalar.so|af7161c0a4a941eb133f82fffde21d5ed79e1b2d
-vendor/lib/libsdm-color.so|9144f6d1e254fc6353fb91386eb1d0ee1964d8a2
-vendor/lib/libsdm-diag.so|e2e3a0fba39190c58bafa0568e8cd51b391b71b6
--vendor/lib/libsdm-disp-vndapis.so|55e2d71cb097a2af3310b112e086e919bd81656f
-vendor/lib/libsdmextension.so|04fba39e30c182e4edbf01d78c897c0fd0dc52d9
-vendor/lib/libtinyxml2_1.so|3882fddae942997be6ad6af789cf209fa45e61b3
-vendor/lib64/libscalar.so|778da7ece21c97b79e8486754f60e1cf7ebe11db
-vendor/lib64/libsdm-color.so|bca0a2a58c2c33e1dbed82de7446ebfcbc8250ff
-vendor/lib64/libsdm-diag.so|87a4f764e894f16246c9a0d6e3f5885df76b750b
--vendor/lib64/libsdm-disp-vndapis.so|fde2de5a3f031577edc39b49036435ef2607b134
-vendor/lib64/libsdmextension.so|b26b05c09aac03153fdb6ece475cc5866f390e1d
-vendor/lib64/libtinyxml2_1.so|b225b16e689e7e4c26fc6144637f6b0c416063f8
+# Graphics (SDM) - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
+lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
+vendor/lib/libscalar.so
+vendor/lib/libsdm-color.so
+vendor/lib/libsdm-diag.so
+-vendor/lib/libsdm-disp-vndapis.so
+vendor/lib/libsdmextension.so
+vendor/lib/libtinyxml2_1.so
+vendor/lib64/libscalar.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-diag.so
+-vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml2_1.so
 
-# Graphics (Vulkan) - from jasmine - PKQ1.180904.001 V10.0.1.0.PDIMIFJ
-vendor/lib/hw/vulkan.msm8937.so|1426694ac179ddd26d0dadf9cc54305cad0386a4
-vendor/lib64/hw/vulkan.msm8937.so|82b72990a737799894c291f8a3515d7d668a5423
+# Graphics (Vulkan) - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8937.so
+vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8937.so
 
 # Keystore - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/hw/keystore.msm8937.so
