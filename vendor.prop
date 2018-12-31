@@ -228,9 +228,6 @@ net.tcp.2g_init_rwnd=10
 # Wifi
 wifi.interface=wlan0
 
-# UI
-sys.use_fifo_ui=1
-
 # Usb
 persist.vendor.usb.config.extra=none
 
