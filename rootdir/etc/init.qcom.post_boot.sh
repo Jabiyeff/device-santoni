@@ -236,6 +236,12 @@ function configure_read_ahead_kb_values() {
         echo 128 > /sys/block/dm-0/queue/read_ahead_kb
         echo 128 > /sys/block/dm-1/queue/read_ahead_kb
         echo 128 > /sys/block/dm-2/queue/read_ahead_kb
+        if [ -f /sys/block/mmcblk1/bdi/read_ahead_kb ]; then
+                echo 128 > /sys/block/mmcblk1/bdi/read_ahead_kb
+        fi
+        if [ -f /sys/block/mmcblk1/queue/read_ahead_kb ]; then
+                echo 128 > /sys/block/mmcblk1/queue/read_ahead_kb
+        fi
     else
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
         echo 512 > /sys/block/mmcblk0/queue/read_ahead_kb
@@ -244,6 +250,12 @@ function configure_read_ahead_kb_values() {
         echo 512 > /sys/block/dm-0/queue/read_ahead_kb
         echo 512 > /sys/block/dm-1/queue/read_ahead_kb
         echo 512 > /sys/block/dm-2/queue/read_ahead_kb
+        if [ -f /sys/block/mmcblk1/bdi/read_ahead_kb ]; then
+                echo 512 > /sys/block/mmcblk1/bdi/read_ahead_kb
+        fi
+        if [ -f /sys/block/mmcblk1/queue/read_ahead_kb ]; then
+                echo 512 > /sys/block/mmcblk1/queue/read_ahead_kb
+        fi
     fi
 }
 
