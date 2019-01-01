@@ -21,7 +21,11 @@ GAPPS_EXCLUDED_PACKAGES += \
     PlusOne \
     Hangouts \
     Maps \
-    YouTube
+    YouTube \
+    MarkupGoogle \
+    Turbo \
+    ActionsServices
+    
 
 GAPPS_PRODUCT_PACKAGES += \
     Chrome \
