@@ -432,35 +432,32 @@ vendor/bin/pm-service|d115b6d3e3113e36cf78f9c5e1128bcb6686d528
 vendor/lib/libperipheral_client.so|f8f7ebda2c0f443b811db68e6675e265a0185edf
 vendor/lib64/libperipheral_client.so|5acda41dcc3e85a90220a7cd6eb1ed37f9f67ae1
 
-# Postprocessing - from marmite - OPM5.171019.017 - UOS273C
-etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|6f1bdaddf366acdd1d6682d9d4a8c01137ccee84
--lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
-lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
-lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
--lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
-lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
-lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
--vendor/app/colorservice/colorservice.apk|5ecd49e790b8b233f2f70492a4c07eaced1dff75
-vendor/bin/hw/vendor.display.color@1.0-service|bb775ca42eaa7f112115a849ec9743638e6660e2
-vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|84a70f6dd21bfbc97971161e385f905a50693ddf
-vendor/bin/mm-pp-dpps|9501dcc4c938e7171741be35400d6fa5004b61af
-vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
-vendor/lib/libqseed3.so|3068e96424f57aa913fd07b32de7694c988e0147
-vendor/lib/libdisp-aba.so|d82b44e9519cd4f55b04f8f475dbd736e39714d9
-vendor/lib/vendor.display.color@1.1.so|5cbf7dbcf436c7b52d2201e7b670d54a2c742994
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|ca1933a8339a22ca006da87142d7933f1a2a2bd0
-vendor/lib/vendor.display.postproc@1.0.so|84e2bec33b405cacc4b9087152f3216ebd8e20ad
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
-vendor/lib/vendor.display.color@1.0.so|c74b9402c4e242e72a41185b49dac51806cd77ee
-vendor/lib64/libdisp-aba.so|c25a25b33bfb6c7d16f3603c3c6ec8bbfb9db6a0
-vendor/lib64/vendor.display.color@1.1.so|2c31ab8c795a6684a01c2a330f5e2942d34ed622
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|12674982b974c4121467564b60bd966c6d884662
-vendor/lib64/vendor.display.postproc@1.0.so|de9a0d12dcb4471a02b395878ec80fe9fc19b07c
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|d101774878c0374ad805d964c3d00c71b44456d9
-vendor/lib64/vendor.display.color@1.0.so|0316423c6bf2f4af29c005f59ccd4a6924d1e008
-vendor/lib64/libqseed3.so|8c45ff3b62f8ed36f6b46bfa030e9e8b8e7e3187
+# Postprocessing - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+etc/permissions/com.qti.snapdragon.sdk.display.xml
+framework/com.qti.snapdragon.sdk.display.jar
+-lib/vendor.display.color@1.0.so
+lib/vendor.display.postproc@1.0.so
+lib/vendor.qti.hardware.qdutils_disp@1.0.so
+-lib64/vendor.display.color@1.0.so
+lib64/vendor.display.postproc@1.0.so
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/bin/mm-pp-dpps
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
+vendor/lib/libdisp-aba.so
+vendor/lib/vendor.display.color@1.0.so
+vendor/lib/vendor.display.color@1.1.so
+vendor/lib/vendor.display.color@1.2.so
+vendor/lib/vendor.display.postproc@1.0.so
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/lib64/libdisp-aba.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.postproc@1.0.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # QMI - from tissot - OPR1.170623.026.V9.5.4.0.ODHMIFA
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
