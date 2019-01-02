@@ -191,12 +191,12 @@ vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|00b7f4c081f3cf1bbc
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so|2c1128a79b8164cb4ff705431497fa68d31e0fa3
 
 # FM - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
--lib/vendor.qti.hardware.fm@1.0.so|e2e9a0c579c5a81d95cc2d5f51ec7e570889e70b
--lib64/vendor.qti.hardware.fm@1.0.so|26d6c69bfd3b63b3d0e120723e7c22091c8e6495
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|063670bdd16ce4fba13a731c321638efc3bc2e3a
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so|fadaa908713096361e5884b9e4af423620f6ae5a
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|668690f2ca374156d6dee245577611f0e8d80ed4
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so|77d3495110ed1cdaad5ac8b96a2720fad11e5d18
+-lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+-lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/hw/gatekeeper.msm8937.so|727158ab391d96d078bc0d67dbd315c512a4dc2e
