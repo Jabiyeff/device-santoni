@@ -37,12 +37,6 @@ vendor.voice.playback.conc.disabled=true \
 vendor.voice.record.conc.disabled=false \
 vendor.voice.voip.conc.disabled=true
 
-# B service
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.sys.fw.bservice_enable=true \
-ro.vendor.qti.sys.fw.bservice_limit=5 \
-ro.vendor.qti.sys.fw.bservice_age=5000
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.bt.enable.splita2dp=false \
@@ -211,7 +205,6 @@ service.qti.ims.enabled=1 \
 telephony.lteOnCdmaDevice=1 \
 ro.telephony.default_network=22,20
 
-
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.timed.enable=true
@@ -223,14 +216,6 @@ net.tcp.2g_init_rwnd=10
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.usb.config.extra=none
-
-# Trim properties
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.sys.fw.use_trim_settings=true \
-ro.vendor.qti.sys.fw.empty_app_percent=50 \
-ro.vendor.qti.sys.fw.trim_empty_percent=100 \
-ro.vendor.qti.sys.fw.trim_cache_percent=100 \
-ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
