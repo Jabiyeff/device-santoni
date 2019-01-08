@@ -24,7 +24,8 @@ GAPPS_EXCLUDED_PACKAGES += \
     YouTube \
     MarkupGoogle \
     Turbo \
-    ActionsServices
+    ActionsServices \
+    Velvet
     
 
 GAPPS_PRODUCT_PACKAGES += \
