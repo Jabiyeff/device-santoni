@@ -209,7 +209,7 @@ TARGET_USE_SDCLANG := true
 
 # RIL
 PROTOBUF_SUPPORTED := true
-#TARGET_RIL_VARIANT := caf
+TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery/fstab.qcom
