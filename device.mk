@@ -307,6 +307,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OTA Updates
+PRODUCT_PACKAGES += \
+    Updates
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom
