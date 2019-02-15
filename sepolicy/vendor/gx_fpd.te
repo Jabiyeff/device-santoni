@@ -7,8 +7,8 @@ binder_use(gx_fpd)
 
 typeattribute gx_fpd data_between_core_and_vendor_violators;
 
-allow gx_fpd { persist_drm_file gx_fpd_data_file }:dir create_dir_perms;
-allow gx_fpd { persist_drm_file gx_fpd_data_file }:file create_file_perms;
+allow gx_fpd { persist_drm_file gx_fpd_data_file mnt_vendor_file }:dir create_dir_perms;
+allow gx_fpd { persist_drm_file gx_fpd_data_file mnt_vendor_file }:file create_file_perms;
 
 #Allow access to goodix device
 allow gx_fpd gx_fpd_device:chr_file rw_file_perms;
