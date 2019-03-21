@@ -235,9 +235,9 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Gatekeeper - from marmite - OPM5.171019.017 - UOS273C
-vendor/lib/hw/gatekeeper.msm8937.so|727158ab391d96d078bc0d67dbd315c512a4dc2e
-vendor/lib64/hw/gatekeeper.msm8937.so|b2507be6b3e182f6da1c5af3eaf9be8330cb3f2b
+# Gatekeeper - from TA-1024
+vendor/lib/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8937.so
 
 # GPS - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 etc/permissions/com.qti.location.sdk.xml
@@ -368,9 +368,17 @@ vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 
-# Keystore - from marmite - OPM5.171019.017 - UOS273C
-vendor/lib/hw/keystore.msm8937.so|3b01c9cda28c85accd726a8f9582fdd6bbb69cd6
-vendor/lib64/hw/keystore.msm8937.so|f555204adc1589746f5aa64e607cd64f7ba5ca4f
+# Keystore - from TA-1024
+vendor/lib/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8937.so
+
+# Keymaster - from TA-1024
+vendor/lib/libkeymasterutils.so
+vendor/lib/libkeymasterprovision.so
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterdeviceutils.so
 
 # Listen - from marmite - OPM5.171019.017 - UOS273C
 vendor/lib/libadpcmdec.so|ddd8d6936a718349aa2692edd39340c5f02d020f
