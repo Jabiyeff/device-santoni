@@ -684,13 +684,6 @@ service vendor.netmgrd /vendor/bin/netmgrd
     group radio readproc system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ipacm-diag /vendor/bin/ipacm-diag
-    class main
-    user radio
-    socket ipacm_log_file dgram 660 radio radio
-    group radio diag
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio

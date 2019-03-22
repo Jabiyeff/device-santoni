@@ -579,7 +579,6 @@ framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
-vendor/bin/ipacm-diag
 vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qti
