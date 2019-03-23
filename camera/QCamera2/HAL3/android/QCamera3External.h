@@ -38,8 +38,8 @@
 
 namespace qcamera {
 
-inline android::status_t setCameraLaunchStatus(uint32_t on __attribute__ ((unused))) {
-    return android::OK;
+inline android::status_t setCameraLaunchStatus(uint32_t on) {
+    return ::setCameraLaunchStatus(on);
 }
 
 }; // namespace qcamera

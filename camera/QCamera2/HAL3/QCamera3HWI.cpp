@@ -10914,12 +10914,10 @@ int32_t QCamera3HardwareInterface::extractSceneMode(
         if (NAME_NOT_FOUND != val) {
             uint8_t sceneMode = (uint8_t)val;
             LOGD("sceneMode: %d", sceneMode);
-#if 0
             if (ADD_SET_PARAM_ENTRY_TO_BATCH(hal_metadata,
                     CAM_INTF_PARM_BESTSHOT_MODE, sceneMode)) {
                 rc = BAD_VALUE;
             }
-#endif
         }
 
         uint8_t bestshot = sceneMode;
@@ -10938,12 +10936,10 @@ int32_t QCamera3HardwareInterface::extractSceneMode(
             (ANDROID_CONTROL_MODE_AUTO == metaMode)) {
         uint8_t sceneMode = CAM_SCENE_MODE_OFF;
         LOGD("sceneMode: %d", sceneMode);
-#if 0
         if (ADD_SET_PARAM_ENTRY_TO_BATCH(hal_metadata,
                 CAM_INTF_PARM_BESTSHOT_MODE, sceneMode)) {
             rc = BAD_VALUE;
         }
-#endif
     }
 
     if (mForceHdrSnapshot) {
