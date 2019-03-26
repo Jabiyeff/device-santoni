@@ -1,0 +1,16 @@
+# Healthd
+genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply      u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/msm-bcl-20/power_supply        u:object_r:sysfs_batteryinfo:s0
+
+# Rmt
+genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
+
+# RTC
+genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                  u:object_r:sysfs_rtc:s0
+
+# Touchscreen
+genfscon proc /touchpanel	u:object_r:proc_touchpanel:s0
+
+
+#PowerHal
+genfscon sysfs /bus/msm_subsys                                       u:object_r:sysfs_msm_subsys:s0

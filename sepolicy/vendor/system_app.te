@@ -1,0 +1,12 @@
+# AdvancedControls
+allow system_app sysfs_kcal:dir search;
+allow system_app sysfs_kcal:file rw_file_perms;
+allow system_app sysfs_torch:dir search;
+allow system_app sysfs_torch:file rw_file_perms;
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file rw_file_perms;
+allow system_app sysfs_battery_supply:file open;
+allow system_app sysfs_battery_supply:file getattr;
+allow system_app sysfs_battery_supply:file write; 
+allow system_app sysfs_battery_supply:dir search;
+allow system_app sysfs_battery_supply:lnk_file read;
