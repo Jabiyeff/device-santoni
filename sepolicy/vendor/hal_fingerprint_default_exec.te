@@ -1,0 +1,41 @@
+type hal_fingerprint_default_exec, domain, binder_in_vendor_violators;
+hal_server_domain(hal_fingerprint_default_exec, hal_fingerprint)
+
+type hal_fingerprint_default_exec_exec, exec_type, vendor_file_type, file_type;
+binder_use(hal_fingerprint_default_exec)
+init_daemon_domain(hal_fingerprint_default_exec)
+
+typeattribute hal_fingerprint_default_exec data_between_core_and_vendor_violators;
+allow hal_fingerprint_default_exec gx_fpd:binder { transfer call };
+allow hal_fingerprint_default_exec gx_fpd_service:service_manager find;
+allow hal_fingerprint_default_exec fingerprint_service:service_manager find;
+allow hal_fingerprint_default_exec fpc_sysfs:file { r_file_perms write };
+allow hal_fingerprint_default_exec fpc_sysfs:dir r_dir_perms;
+allow hal_fingerprint_default_exec tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default_exec uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_default_exec fpc_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default_exec fpc_data_file:sock_file create_file_perms;
+allow hal_fingerprint_default_exec servicemanager:binder { transfer call };
+
+allow hal_fingerprint_default_exec fingerprintd_data_file:dir create_dir_perms;
+allow hal_fingerprint_default_exec fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default_exec media_rw_data_file:dir { open read search };
+allow hal_fingerprint_default_exec mnt_user_file:dir search;
+allow hal_fingerprint_default_exec mnt_user_file:lnk_file read;
+allow hal_fingerprint_default_exec sdcardfs:dir search;
+allow hal_fingerprint_default_exec storage_file:dir search;
+allow hal_fingerprint_default_exec storage_file:lnk_file read;
+
+set_prop(hal_fingerprint_default_exec, system_prop)
+r_dir_file(hal_fingerprint_default_exec, firmware_file)
+
+# Need to add auth tokens to KeyStore
+use_keystore(hal_fingerprint_default_exec)
+allow hal_fingerprint_default_exec keystore:keystore_key { add_auth };
+# need to find KeyStore and add self
+
+allow hal_fingerprint_default_exec keystore_service:service_manager find;
+
+# For permissions checking
+binder_call(hal_fingerprint_default_exec, system_server);
+allow hal_fingerprint_default_exec permission_service:service_manager find;
