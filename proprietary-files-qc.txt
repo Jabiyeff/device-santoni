@@ -440,9 +440,9 @@ vendor/lib64/libOmxSwVdec.so|c7813e635138787c16ccf97ffd1dda3ae82a8a08
 vendor/lib64/libOmxSwVencMpeg4.so|efa609c91d386f17e01749092abafd479f208427
 vendor/lib64/libswvdec.so|928e421d7f4a8c8d1b1e8a37e8dd37f46d2c86c4
 
-# Modem - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/lib/libwms.so|f34362d8c077a84bf203166ea73ade3de8cfc876
-vendor/lib64/libwms.so|23a0fd55cdf06ace1c7af3f77d0cf1a85ba2e204
+# Modem - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+vendor/lib/libwms.so
+vendor/lib64/libwms.so
 
 # Perf - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 lib/libqti-at.so
@@ -494,11 +494,11 @@ lib64/libqti-util_system.so
 lib64/libqti_performance.so
 
 
-# Peripheral manager - from tissot - OPM1.171019.026 V9.6.4.0.ODHMIFE
-vendor/bin/pm-proxy|3a6e03b81206ac445f70bd04309131e2e6757a53
-vendor/bin/pm-service|d115b6d3e3113e36cf78f9c5e1128bcb6686d528
-vendor/lib/libperipheral_client.so|f8f7ebda2c0f443b811db68e6675e265a0185edf
-vendor/lib64/libperipheral_client.so|5acda41dcc3e85a90220a7cd6eb1ed37f9f67ae1
+# Peripheral manager - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib/libperipheral_client.so
+vendor/lib64/libperipheral_client.so
 
 # Postprocessing - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 etc/permissions/com.qti.snapdragon.sdk.display.xml
