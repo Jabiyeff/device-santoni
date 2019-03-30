@@ -762,19 +762,21 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 
-# Sensors - from marmite - OPM5.171019.017 - UOS273C
-vendor/bin/sensors.qcom|ac4219584168f4d19dbce0375b9955969275e31c
--vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|cbc37993a423de1de97114bf7de105d2aa792101
-vendor/lib/hw/activity_recognition.msm8937.so|471c0c7d52f1ada4b5cca3565fb2e4137487cd17
-vendor/lib/libsensor1.so|8b4a1fba125011709b764e3bb3f959e78056a013
-vendor/lib/libsensor_reg.so|b38a48d9d0c0cb2f98b274b93e45730826814b0c
-vendor/lib/sensors.ssc.so|4c593afd059b132eb25f3c89a6f192c178b0f914
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|50b2f47e31c65af5261812026855eed7e62f5c57
-vendor/lib64/hw/activity_recognition.msm8937.so|3b5ace9dc2565eb46a14293464718a773cead56a
-vendor/lib64/libsensor1.so|3bb8fc9d64e9314fffde62021019f769c9c67e01
-vendor/lib64/libsensor_reg.so|ed67fe926d547e385a1e24fa9173a9fd53cd57bb
-vendor/lib64/sensors.ssc.so|4a3735ff6b4196774233210713eb1c62f9dfa095
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|743635a4dcb3c67eb32d874b261b12f6b1a19204
+# Sensors - from tissot - PKQ1.180917.001 V10.0.5.0.PDHMIXM
+vendor/bin/sensors.qti
+-vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
+vendor/lib/hw/activity_recognition.msm8937.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor_user_cal.so
+vendor/lib/sensors.ssc.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/hw/activity_recognition.msm8937.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor_user_cal.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Thermal - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 vendor/bin/thermal-engine
