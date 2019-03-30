@@ -1,1 +1,2 @@
 allow webview_zygote zygote:unix_dgram_socket write;
+allow webview_zygote proc_cmdline:file r_file_perms;

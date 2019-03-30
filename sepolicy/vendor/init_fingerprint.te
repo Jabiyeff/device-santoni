@@ -15,3 +15,5 @@ allow init_fingerprint persist_file:dir search;
 allow init_fingerprint persist_drm_file:dir { read search open write remove_name };
 allow init_fingerprint persist_drm_file:file { getattr unlink };
 allow init_fingerprint system_data_file:file r_file_perms;
+allow init_fingerprint mnt_vendor_file:dir search;
+allow init_fingerprint persist_drm_file:dir create_file_perms; 
