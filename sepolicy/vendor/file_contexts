@@ -26,6 +26,7 @@
 # Input files
 /(vendor|system/vendor)/usr/idc(/.*)?		u:object_r:idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?	u:object_r:keylayout_file:s0
+/sys/board_properties/virtualkeys.ft5x06_720p   u:object_r:keylayout_file_sysfs:s0
 
 # Lights / IR Blaster
 /sys/devices/soc/[a-z0-9]+\.sdhci/leds(/.*)?                                u:object_r:sysfs_leds:s0

@@ -1,6 +1,7 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
 
 allow vendor_init rootfs:lnk_file setattr;
+allow vendor_init fpc_data_file:dir create_file_perms;
 
 allow vendor_init {
   bluetooth_data_file
