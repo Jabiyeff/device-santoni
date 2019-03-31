@@ -74,6 +74,46 @@ on early-boot
 
     exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
+    # for backward compatibility
+    chown system system /persist/sensors
+    chown system system /persist/sensors/registry
+    chown system system /persist/sensors/registry/registry
+    chown system system /persist/sensors/registry/registry/sensors_registry
+    chown system system /persist/sensors/sensors_settings
+    chown system system /persist/sensors/registry/config
+    chmod 0664 /persist/sensors/sensors_settings
+
+    chown system system /mnt/vendor/persist/sensors
+    chown system system /mnt/vendor/persist/sensors/sns.reg
+    chown system system /mnt/vendor/persist/sensors/sensors_list.txt
+    chown system system /mnt/vendor/persist/sensors/registry
+    chown system system /mnt/vendor/persist/sensors/registry/registry
+    chown system system /mnt/vendor/persist/sensors/registry/registry/sensors_registry
+    chown system system /mnt/vendor/persist/sensors/sensors_settings
+    chown system system /mnt/vendor/persist/sensors/registry/sns_reg_config
+    chown system system /mnt/vendor/persist/sensors/registry/config
+    chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
+
+    # for backward compatibility
+    chown system system /persist/sensors
+    chown system system /persist/sensors/registry
+    chown system system /persist/sensors/registry/registry
+    chown system system /persist/sensors/registry/registry/sensors_registry
+    chown system system /persist/sensors/sensors_settings
+    chown system system /persist/sensors/registry/config
+    chmod 0664 /persist/sensors/sensors_settings
+
+    chown system system /mnt/vendor/persist/sensors
+    chown system system /mnt/vendor/persist/sensors/sns.reg
+    chown system system /mnt/vendor/persist/sensors/sensors_list.txt
+    chown system system /mnt/vendor/persist/sensors/registry
+    chown system system /mnt/vendor/persist/sensors/registry/registry
+    chown system system /mnt/vendor/persist/sensors/registry/registry/sensors_registry
+    chown system system /mnt/vendor/persist/sensors/sensors_settings
+    chown system system /mnt/vendor/persist/sensors/registry/sns_reg_config
+    chown system system /mnt/vendor/persist/sensors/registry/config
+    chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
+
     # Graphics
     chown system graphics /sys/class/graphics/fb0/idle_time
     chmod 0664 /sys/class/graphics/fb0/idle_time
@@ -120,6 +160,9 @@ on boot
     mkdir /dev/socket/netmgr 0750 radio radio
 
     setprop wifi.interface wlan0
+
+    #enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
 
 #   Define TCP buffer sizes for various networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
@@ -170,6 +213,16 @@ on boot
     chown root system /sys/class/leds/infrared/brightness  
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+    # Allow access to sensors device attributes
+    chown system system /sys/class/sensors/MPU6050-accel/enable
+    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    chown system system /sys/class/sensors/MPU6050-gyro/enable
+    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    chown system system /sys/class/sensors/apds9930-light/enable
+    chown system system /sys/class/sensors/apds9930-light/poll_delay
+    chown system system /sys/class/sensors/apds9930-proximity/enable
+    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
     # Create hvdcp_opti directory
     mkdir /persist/hvdcp_opti 0770 root system
@@ -537,11 +590,16 @@ service vendor.dataqti /vendor/bin/qti
     group radio diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.sensors /vendor/bin/sensors.qti
+service vendor.sensors /vendor/bin/sscrpcd
     class core
     user system
     group system
-    writepid /dev/cpuset/system-background/tasks
+    disabled
+
+service vendor.sensors.qti /vendor/bin/sensors.qti
+    class core
+    user system
+    group system
 
 on property:ro.vendor.use_data_netmgrd=false
     # netmgr not supported on specific target
@@ -627,6 +685,11 @@ service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user system
     group root system radio
+    oneshot
+
+service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
     oneshot
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh

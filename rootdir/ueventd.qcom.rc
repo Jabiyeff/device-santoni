@@ -202,6 +202,7 @@
 /dev/tsc_ci0              0660   media       media
 
 # sensors
+/dev/sensors              0660   system     system
 /sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
 /sys/devices/f9925000.i2c/i2c-0/0-*                 enable         0660    input    system
 /sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay     0660    input    system
@@ -231,6 +232,10 @@
 /sys/devices/soc/78b7000.i2c/i2c-3/3-004b/input/input*    secure_touch_enable  0660   system  drmrpc
 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch         0440   system  drmrpc
 /sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch_enable  0660   system  drmrpc
+/sys/devices/platform/soc/a98000.i2c/i2c-2/2-0020/input/input*  secure_touch          0440 system drmrpc
+/sys/devices/platform/soc/a98000.i2c/i2c-2/2-0020/input/input*  secure_touch_enable   0660 system drmrpc
+/sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch          0440 system drmrpc
+/sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch_enable   0660 system drmrpc
 
 # laser sensor access
 /sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   input
