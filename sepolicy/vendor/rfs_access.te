@@ -1,0 +1,1 @@
+allow rfs_access persist_file:dir r_dir_perms;
