@@ -1,0 +1,2 @@
+allow system_app proc_pagetypeinfo:file read;
+allow system_app sysfs_zram:dir search;
