@@ -83,6 +83,7 @@ dalvik.vm.heapmaxfree=8m
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.hw=0 \
+debug.sf.latch_unsignaled=1 \
 debug.egl.hw=0 \
 persist.hwc.mdpcomp.enable=true \
 debug.mdpcomp.logs=0 \
@@ -104,6 +105,10 @@ vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
 debug.hwui.use_buffer_age=false \
 vendor.video.disable.ubwc=1
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.use_fifo_ui=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
