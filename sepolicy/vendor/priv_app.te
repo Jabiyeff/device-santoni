@@ -5,5 +5,6 @@ allow priv_app proc_interrupts:file { read open };
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app { proc_stat }:file r_file_perms;
 allow priv_app firmware_file:filesystem getattr;
+allow priv_app proc_modules:file read;
 
 get_prop(priv_app, camera_prop)
