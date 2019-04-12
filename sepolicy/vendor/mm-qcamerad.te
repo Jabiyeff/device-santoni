@@ -2,3 +2,4 @@ allow mm-qcamerad camera_socket:dir rw_dir_perms;
 allow mm-qcamerad camera_socket:sock_file { create unlink };
 allow mm-qcamerad diag_device:chr_file rw_file_perms; 
 allow mm-qcamerad persist_file:dir r_dir_perms;
+allow mm-qcamerad unlabeled:dir r_dir_perms;

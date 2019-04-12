@@ -5,3 +5,4 @@ allow ueventd wifi_vendor_data_file:dir search;
 allow ueventd wifi_vendor_data_file:file { getattr open read };
 allow ueventd persist_file:dir r_dir_perms;
 allow ueventd persist_file:file r_file_perms;
+allow ueventd unlabeled:dir r_dir_perms;

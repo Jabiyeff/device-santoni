@@ -37,6 +37,11 @@ on fs
     swapon_all /vendor/etc/fstab.qcom
 
     setprop sys.usb.ffs.aio_compat 1
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/bms 0700 root system
+    restorecon_recursive /mnt/vendor/persist
  
 on init
    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1

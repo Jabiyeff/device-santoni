@@ -1,2 +1,3 @@
+dontaudit wcnss_service serialno_prop:file read;
 get_prop(wcnss_service, wifi_prop)
 set_prop(wcnss_service, wifi_prop)

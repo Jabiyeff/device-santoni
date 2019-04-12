@@ -11,6 +11,7 @@ allow tee system_data_file:dir create_dir_perms;
 
 allow tee fingerprintd_data_file:dir create_dir_perms;
 allow tee fingerprintd_data_file:file create_file_perms;
-allow tee unlabeled:dir r_dir_perms;
+allow tee unlabeled:dir rw_dir_perms;
+allow tee unlabeled:file rw_file_perms;
 allow tee tmpfs:dir r_dir_perms;
 allow tee persist_file:dir r_dir_perms;
