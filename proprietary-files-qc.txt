@@ -440,7 +440,7 @@ vendor/lib64/libOmxSwVdec.so|c7813e635138787c16ccf97ffd1dda3ae82a8a08
 vendor/lib64/libOmxSwVencMpeg4.so|efa609c91d386f17e01749092abafd479f208427
 vendor/lib64/libswvdec.so|928e421d7f4a8c8d1b1e8a37e8dd37f46d2c86c4
 
-# Modem - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+# Modem - from tissot - PKQ1.180917.001 V10.0.5.0.PDHMIXM
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
@@ -493,8 +493,7 @@ lib64/libqti-perfd-client_system.so
 lib64/libqti-util_system.so
 lib64/libqti_performance.so
 
-
-# Peripheral manager - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
+# Peripheral manager - from tissot - PKQ1.180917.001 V10.0.5.0.PDHMIXM
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
