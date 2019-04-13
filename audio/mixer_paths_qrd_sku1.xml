@@ -1064,6 +1064,7 @@
         <ctl name="ADC3 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="ADC1_INP1 Switch" value="1" />
     </path>
 
     <path name="speaker">
