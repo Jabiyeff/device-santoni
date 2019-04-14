@@ -27,7 +27,7 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
 #Stargazing
-HAVOC_BUILD_TYPE := Stargazing
+export export HAVOC_BUILD_TYPE=Official
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.havoc.maintainer="STARGAZER"
