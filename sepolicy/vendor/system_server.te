@@ -14,3 +14,7 @@ allow system_server proc_touchpanel:lnk_file read;
 # vibrator
 allow system_server sysfs_vibrator:file read;
 allow system_server thermal_service:service_manager find;
+
+#KCAL
+allow system_server sysfs_kcal:file rw_file_perms;
+allow system_server sysfs_kcal:dir r_dir_perms; 
