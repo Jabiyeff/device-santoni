@@ -5,3 +5,6 @@ sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
 sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
 wlan.driver.config         u:object_r:wifi_prop:s0
 wlan.driver.ath            u:object_r:wifi_prop:s0
+
+# Spectrum
+persist.spectrum.profile    u:object_r:spectrum_prop:s0

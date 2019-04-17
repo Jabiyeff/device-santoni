@@ -240,3 +240,6 @@ persist.sys.usb.config.extra=none
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+#Spectrum
+spectrum.support=1
