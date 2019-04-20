@@ -8,3 +8,6 @@ allow priv_app firmware_file:filesystem getattr;
 allow priv_app proc_modules:file read;
 
 get_prop(priv_app, camera_prop)
+get_prop(priv_app, boottime_prop)
+get_prop(priv_app, bg_daemon_prop)
+get_prop(priv_app, bg_boot_complete_prop)

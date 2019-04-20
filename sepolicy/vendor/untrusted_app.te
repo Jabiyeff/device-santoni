@@ -1,0 +1,4 @@
+get_prop(untrusted_app, camera_prop)
+get_prop(untrusted_app, boottime_prop)
+get_prop(untrusted_app, bg_daemon_prop)
+get_prop(untrusted_app, bg_boot_complete_prop)
