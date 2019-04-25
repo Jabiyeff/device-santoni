@@ -360,13 +360,11 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterdeviceutils.so
 
-# Listen - from marmite - OPM5.171019.017 - UOS273C
-vendor/lib/libadpcmdec.so|ddd8d6936a718349aa2692edd39340c5f02d020f
-vendor/lib/libsmwrapper.so|ac0e3c3415594e9e7c1ac7fba303ee8e5d6dc4b3
-vendor/lib/vendor.qti.voiceprint@1.0.so|16e0084800cf19698862df4c7827a115bee8f530
-vendor/lib/hw/sound_trigger.primary.msm8937.so|5b24a1391389e14c46e6ce6ff9e8a9d17fcadf86
-vendor/lib64/vendor.qti.voiceprint@1.0.so|5975981a5c40065cf4593f30bb36ca66fd1bf7fc
-vendor/lib64/hw/sound_trigger.primary.msm8937.so|a7ab4173393fa335fee2fc359b553df8aac271e4
+# Listen - from TA-1024
+vendor/lib/libadpcmdec.so
+vendor/lib/libsmwrapper.so
+vendor/lib/hw/sound_trigger.primary.msm8937.so
+vendor/lib64/hw/sound_trigger.primary.msm8937.so
 
 # Media - from tissot - PKQ1.180917.001 V10.0.2.0.PDHMIFK
 lib/libstagefright_soft_flacdec.so
