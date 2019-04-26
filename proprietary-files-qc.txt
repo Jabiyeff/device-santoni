@@ -505,6 +505,15 @@ vendor/lib64/vendor.display.color@1.2.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
+# Power-off alarm - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+framework/vendor.qti.hardware.alarm-V1.0-java.jar
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
 # QMI - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 etc/permissions/qti_permissions.xml
 lib/libdiag_system.so
