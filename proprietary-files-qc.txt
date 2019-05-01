@@ -367,11 +367,13 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterdeviceutils.so
 
-# Listen - from TA-1024
+# Listen - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+vendor/lib64/hw/sound_trigger.primary.msm8937.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
+vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
-vendor/lib/hw/sound_trigger.primary.msm8937.so
-vendor/lib64/hw/sound_trigger.primary.msm8937.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
 
 # Media - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 lib/libstagefright_soft_flacdec.so
