@@ -4,6 +4,9 @@ allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
 # leds
 allow init sysfs_leds:lnk_file read;
 
+# DT2W
+allow init sysfs_dt2w:file { rw_file_perms setattr };
+
 allow init property_socket:sock_file write;
 allow init { domain -lmkd -crash_dump }:process noatsecure;
 allow init system_data_file:sock_file write;
