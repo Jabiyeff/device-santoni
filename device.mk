@@ -168,9 +168,6 @@ PRODUCT_PACKAGES += \
 # Charger
 include $(LOCAL_PATH)/rootdir/charger/charger.mk
 
-# Xiaomi Shit
-PRODUCT_PACKAGES += \
-    XiaomiShit
 
 # Display
 PRODUCT_PACKAGES += \
@@ -318,13 +315,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Xiaomi Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
 
 # Power
 PRODUCT_PACKAGES += \
@@ -353,9 +343,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    init.spectrum.rc \
-    init.spectrum.sh
+    ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.baseband.sh \
