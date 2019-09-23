@@ -5,11 +5,11 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     class late_start
     socket fpce stream 0666 system system
     user system
-    group system sdcard_rw input
+    group system sdcard_rw input uhid
     system system
     disabled
-	writepid /dev/cpuset/system-background/tasks
-
+    writepid /dev/cpuset/system-background/tasks
+	
 service vendor.gx_fpd /vendor/bin/gx_fpd
      class core
      user system
