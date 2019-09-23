@@ -1,8 +1,0 @@
-[ 
- {
-    "remote":       "github",
-    "repository":   "LineageOS/android_packages_apps_Snap",
-    "target_path":  "packages/apps/Snap",
-    "revision":     "lineage-16.0"
-  }
-]

@@ -17,20 +17,15 @@
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
 # Inherit some common HavocOS stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
-PRODUCT_NAME := havoc_santoni
+PRODUCT_NAME := arrow_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-#Stargazing
-export export HAVOC_BUILD_TYPE=Official
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.havoc.maintainer="STARGAZER"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
