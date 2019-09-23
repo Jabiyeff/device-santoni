@@ -559,7 +559,7 @@ service btsnoop /system/bin/btsnoop
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
+    group bluetooth net_bt_admin misc diag net_bt
     disabled
     oneshot
 
@@ -571,7 +571,7 @@ service bridgemgrd /system/bin/bridgemgrd
 
 service port-bridge /system/bin/port-bridge
     class main
-    user radio system
+    user radio
     group radio system inet
     oneshot
 
@@ -850,7 +850,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
 service wfdservice /system/bin/wfdservice
     class main
     user system
-    group audio camera inet net_bt_stack drmrpc media_rw media input net_admin
+    group audio camera inet drmrpc media_rw media input net_admin
     #removed these because of limit of 12 groups
     #graphics net_bt net_bt_admin bluetooth
     disabled
