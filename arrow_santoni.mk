@@ -26,6 +26,8 @@ PRODUCT_NAME := arrow_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
+# Opting out of Chromium
+TARGET_EXCLUDE_CHROMIUM := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
