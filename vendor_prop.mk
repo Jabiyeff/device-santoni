@@ -214,6 +214,10 @@ persist.radio.calls.on.ims=1 \
 persist.radio.aosp_usr_pref_sel=true \
 ro.telephony.default_network=22,20
 
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+ro.surface_flinger.protected_contents=true
+
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.timed.enable=true
