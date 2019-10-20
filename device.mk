@@ -398,6 +398,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
+	
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/santoni
 
 # TextClassifier
 PRODUCT_PACKAGES += \
