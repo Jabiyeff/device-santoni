@@ -1,5 +1,5 @@
 #
-# Goodix fingerprint sensor driver
+# Goodix Fingerprint Touch sensor driver
 #
 # Copyright (c) 2013,2014 Fingerprint Cards AB <tech@fingerprints.com>
 #
@@ -8,4 +8,8 @@
 # as published by the Free Software Foundation.
 #
 
-#key  212    CAMERA
+device.internal = 1
+
+keyboard.layout = gf3208
+keyboard.builtIn = 1
+keyboard.orientationAware = 1
