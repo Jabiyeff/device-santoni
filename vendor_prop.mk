@@ -42,7 +42,7 @@ persist.vendor.bt.enable.splita2dp=false \
 bluetooth.hfp.client=1 \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7 \
-ro.qualcomm.bt.hci_transport=smd \
+ro.vendor.qualcomm.bt.hci_transport=smd \
 persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Camera
