@@ -280,7 +280,7 @@ vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 
-# Graphics - from TA-1024
+# Graphics - from LA.UM.8.6.r1-01900-89xx.0
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -330,7 +330,7 @@ vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libscalar.so
 
-# Graphics (SDM) - from LA.UM.7.5.r1-03700-8x96.0
+# Graphics (SDM) - from LA.UM.8.6.r1-01900-89xx.0
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so
 lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so
 vendor/lib/libsdm-color.so
@@ -375,7 +375,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
-# Media - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Media - from LA.UM.8.6.r1-01900-89xx.0
 lib/libstagefright_soft_flacdec.so
 -vendor/lib/libgpustats.so
 vendor/lib/libI420colorconvert.so
@@ -390,6 +390,7 @@ vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
 vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
@@ -399,10 +400,10 @@ vendor/lib/libvqzip.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libAlacSwDec.so
-vendor/lib/libMpeg4SwEncoder.so|971eb18b4209287f7c078c082508ebc46c11de0e
-vendor/lib/libOmxSwVdec.so|3266ebc8499e38b21211942a2ec843c2eafe17ee
-vendor/lib/libOmxSwVencMpeg4.so|91487e1059c8d412751b9a9e2edc74f2eb2863b1
-vendor/lib/libswvdec.so|a240b48b4c374d9418197d0f3dc3fccad6eee909
+vendor/lib/libMpeg4SwEncoder.so
+vendor/lib/libOmxSwVdec.so
+vendor/lib/libOmxSwVencMpeg4.so
+vendor/lib/libswvdec.so
 -vendor/lib64/libgpustats.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libmm-color-convertor.so
@@ -422,10 +423,10 @@ vendor/lib64/libvpplibrary.so
 vendor/lib64/libFlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libAlacSwDec.so
-vendor/lib64/libMpeg4SwEncoder.so|cbe22cd92aac9ac155a908b2ad1fa9fef2250fa4
-vendor/lib64/libOmxSwVdec.so|c7813e635138787c16ccf97ffd1dda3ae82a8a08
-vendor/lib64/libOmxSwVencMpeg4.so|efa609c91d386f17e01749092abafd479f208427
-vendor/lib64/libswvdec.so|928e421d7f4a8c8d1b1e8a37e8dd37f46d2c86c4
+vendor/lib64/libMpeg4SwEncoder.so
+vendor/lib64/libOmxSwVdec.so
+vendor/lib64/libOmxSwVencMpeg4.so
+vendor/lib64/libswvdec.so
 
 # Modem - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 vendor/lib/libwms.so
@@ -487,7 +488,7 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Postprocessing - from LA.UM.8.6.r1-01900-89xx.0
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 framework/com.qti.snapdragon.sdk.display.jar
 -lib/vendor.display.color@1.0.so
@@ -514,7 +515,7 @@ vendor/lib64/vendor.display.color@1.2.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Power-off alarm - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Power-off alarm - from LA.UM.8.6.r1-01900-89xx.0
 framework/vendor.qti.hardware.alarm-V1.0-java.jar
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -809,7 +810,7 @@ vendor/lib64/libldacBT_abr.so|26aa6bf2bac014ba80f09f835354093fbc209037
 vendor/lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
 vendor/lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
 
-# Wi-Fi Display
+# Wi-Fi Display - from LA.UM.8.6.r1-01900-89xx.0
 bin/wfdservice
 etc/init/wfdservice.rc
 etc/wfdconfig.xml
@@ -822,7 +823,9 @@ lib64/libmmparser_lite.so
 lib64/libmmosal.so
 lib64/libwfdclient.so
 lib64/libwfdnative.so
-lib/extractors/libmmparser.so
+lib/libwfdclient.so
+lib/libwfdnative.so
+lib/extractors/libmmparserextractor.so
 lib/libFileMux.so
 lib/libmmparser_lite.so
 lib/libmmosal.so
