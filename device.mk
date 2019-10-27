@@ -271,9 +271,6 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system \
     android.hidl.manager@1.0-java
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_libpermissions.xml
-
 # HW crypto
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
