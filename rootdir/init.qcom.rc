@@ -531,13 +531,6 @@ service hciattach /vendor/bin/hci_qcomm_init -e
     disabled
     oneshot
 
-on property:bluetooth.hciattach=true
-    start hciattach
-    setprop bluetooth.status on
-
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
-
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
     user bluetooth
