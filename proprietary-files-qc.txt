@@ -69,24 +69,25 @@ vendor/lib64/soundfx/libshoebox.so|cfc916d9a1ee617c248f784359df41a95d3b820a
 lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
-# Bluetooth - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+# Bluetooth - from LA.UM.7.6.2.r1-03800-89xx.0 
+lib/com.qualcomm.qti.bluetooth_audio@1.0.so
+lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
+vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
+vendor/lib/libbtnv.so
+vendor/lib/libbt-hidlclient.so
+vendor/lib/libbthost_if.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libbt-hidlclient.so
+vendor/lib64/libbthost_if.so
 
-# Bluetooth a2dp (calling) - from
-vendor/lib64/libbluetooth_jni.so|c57158675b9f2f65aaf550392376ba775d71ebc1
-vendor/lib64/libbluetooth-binder.so|505a8e0cff6c06dd74d23f5c8229f3478179c2b3
-vendor/lib64/libbluetooth.so|6a8682504a9ed72233217e27224d068e411eb388
-vendor/lib64/android.hardware.bluetooth.a2dp@1.0.so|0f6e42af107a978638843965da1f79d69d47602b
-vendor/lib64/android.hardware.bluetooth@1.0.so|d0e74aa2a4870aea0c9f8cb473d1059693709939
-vendor/lib/libbluetooth.so|e20847c9d5d52274b257008589d546ca26d48638
-vendor/lib/android.hardware.bluetooth.a2dp@1.0.so|afcd2a0f90476cd48eb91d01fd1947e7083a1b47
-vendor/lib/android.hardware.bluetooth@1.0.so|c0b35936e0d74bb4f4a43b90c989dbf1ddaacc81
+# Bluetooth - HIDL service
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 
 # CNE - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 etc/permissions/cneapiclient.xml
