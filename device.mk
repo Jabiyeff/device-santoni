@@ -390,6 +390,8 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
     ims-ext-common
 
 PRODUCT_BOOT_JARS += \
