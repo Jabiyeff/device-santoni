@@ -659,9 +659,14 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
 
+# Radio - IMS - from LA.UM.8.6.r1-01900-89xx.0
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so
+-product/priv-app/ims/ims.apk
+
 # Radio - IMS - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 -app/imssettings/imssettings.apk:vendor/app/imssettings/imssettings.apk
--priv-app/ims/ims.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
@@ -696,8 +701,6 @@ lib64/lib-imsvideocodec.so
 lib64/lib-imsvt.so
 lib64/lib-imsvtextutils.so
 lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
 lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
 lib64/librcc.so
