@@ -217,6 +217,7 @@ service.qti.ims.enabled=1 \
 persist.radio.calls.on.ims=1 \
 persist.radio.aosp_usr_pref_sel=true \
 ro.telephony.default_network=22,20
+persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
