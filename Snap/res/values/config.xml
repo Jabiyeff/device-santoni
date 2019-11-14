@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Camera app resources that may need to be customized
+     for different hardware or product builds. -->
+<resources>
+    <!-- Maximum recording length in milliseconds. 0 means unlimited. -->
+    <integer name="max_video_recording_length">0</integer>
+
+    <!-- This value may be tweaked to save memory on low RAM devices. The value
+         is the percentage of camera preview height/width to scale to. -->
+    <integer name="panorama_frame_size_reduction">100</integer>
+
+    <!-- This value may be changed to true to enable the warped pano preview overlayed on top
+         of the fullscreen pano preview. -->
+    <bool name="enable_warped_pano_preview">false</bool>
+
+    <!-- Enable support for camera api v2 -->
+    <bool name="support_camera_api_v2">false</bool>
+
+    <!-- Opens back camera using openLegacy() and forces api v1 -->
+    <bool name="back_camera_open_legacy">true</bool>
+
+    <!-- Opens front camera using openLegacy() and forces api v1 -->
+    <bool name="front_camera_open_legacy">true</bool>
+
+    <!-- Restart preview for back camera onPictureTaken -->
+    <bool name="back_camera_restart_preview_onPictureTaken">false</bool>
+
+    <!-- Restart preview for front camera onPictureTaken -->
+    <bool name="front_camera_restart_preview_onPictureTaken">false</bool>
+
+    <!-- Restart preview for additional camera onPictureTaken -->
+    <bool name="additional_camera_restart_preview_onPictureTaken">false</bool>
+
+    <!-- Set's manufacturer specific parameters on startup.
+         Example: lge-camera=1;cam-mode=0 -->
+    <string name="manufacturer_key_values"></string>
+
+    <!-- Use following iso parameter.
+         Example: lg-iso
+                  lg-iso-values -->
+    <string name="key_iso">iso</string>
+    <string name="key_iso_values">iso-values</string>
+
+    <!-- ISO values use numbers.
+         Example: 50 instead of ISO50 -->
+    <bool name="iso_values_use_numbers">false</bool>
+
+    <!-- Enable support for LGE HDR -->
+    <bool name="lge_hdr_mode">false</bool>
+
+    <!-- Set this to true to use device manufacturer and model for exif -->
+    <bool name="override_maker_and_model_tag">false</bool>
+
+    <!-- A list of scenemodes where Longshot should be enabled.
+         An empty list will use the default restrictions. If defined, longshot
+         will be enabled ONLY for these scenemodes and disabled for others. -->
+    <string-array name="longshot_scenemodes"></string-array>
+
+    <!-- Minimum picture size (in pixel) to include in selection list -->
+    <integer name="minimum_picture_size">900000</integer>
+
+    <!-- Enable support for image stabilization -->
+    <bool name="support_dis">true</bool>
+
+    <!-- Enable support for bokeh mode -->
+    <bool name="support_bokeh_mode">false</bool>
+</resources>

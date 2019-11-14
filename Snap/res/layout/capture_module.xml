@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016, The Linux Foundation. All rights reserved.
+     Not a Contribution.
+
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This layout is shared by phone and tablet in both landscape and portrait
+ orientation. The purpose of having this layout is to eventually not manually
+ recreate views when the orientation changes, by migrating the views that do not
+ need to be recreated in onConfigurationChanged from old photo_module to this
+ layout. -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+    <include layout="@layout/selfie_flash_view" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mdp_preivew_frame"
+        android:layout_gravity="center_vertical|center_horizontal">
+        <com.android.camera.ui.AutoFitSurfaceView
+            android:id="@+id/mdp_preview_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+        <com.android.camera.ui.AutoFitSurfaceView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+	        android:id="@+id/mdp_preview_content_mono"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/camera_glpreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal" />
+
+    <View
+        android:id="@+id/preview_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.camera.ui.Camera2FaceView
+            android:id="@+id/face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <com.android.camera.Camera2GraphView
+            android:id="@+id/graph_view_r"
+            android:visibility="gone"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginTop="520dip"
+            android:layout_marginLeft="10dip" />
+        <com.android.camera.Camera2GraphView
+            android:id="@+id/graph_view_gb"
+            android:visibility="gone"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginTop="520dip"
+            android:layout_marginLeft="120dip" />
+        <com.android.camera.Camera2GraphView
+            android:id="@+id/graph_view_b"
+            android:visibility="gone"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginTop="520dip"
+            android:layout_marginLeft="230dip" />
+        <TextView
+            android:id="@+id/bg_stats_graph_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dip"
+            android:layout_marginLeft="16dip"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:text="@string/stats_visualizer_bg_label"/>
+        <com.android.camera.Camera2BGBitMap
+            android:id="@+id/bg_stats_graph"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dip"
+            android:layout_marginLeft="16dip" />
+        <TextView
+            android:id="@+id/be_stats_graph_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dip"
+            android:layout_marginLeft="260dip"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:text="@string/stats_visualizer_be_label"/>
+        <com.android.camera.Camera2BEBitMap
+            android:id="@+id/be_stats_graph"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dip"
+            android:layout_marginLeft="260dip" />
+        <LinearLayout
+            android:id="@+id/stats_awb_info"
+            android:layout_marginTop="68dip"
+            android:layout_marginLeft="150dip"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/stats_awb_r_text"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/stats_awb_g_text"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/stats_awb_b_text"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/stats_awb_cc_text"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <com.android.camera.DrawAutoHDR2
+            android:id="@+id/autohdr_view"
+            android:layout_width="200dip"
+            android:layout_height="200dip"
+            android:layout_marginTop="50dip"
+            android:layout_marginLeft="15dip" />
+        <com.android.camera.ui.focus.FocusRingView
+            android:id="@+id/focus_ring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <com.android.camera.ui.RenderOverlay
+        android:id="@+id/render_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.android.camera.ui.RotateLayout
+            android:id="@+id/recording_time_rect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="80dp">
+            <include
+                android:id="@+id/labels"
+                layout="@layout/viewfinder_labels_video"/>
+        </com.android.camera.ui.RotateLayout>
+    </FrameLayout>
+
+    <include
+        layout="@layout/scene_mode_label"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:gravity="left">
+        <com.android.camera.ui.RotateLayout
+            android:id="@+id/deepzoom_set_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/deepzoom_set"
+                style="@style/OnViewfinderSceneLabel"
+                android:clickable="true"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:background="#90000000"
+                android:padding="6dp"
+                android:textSize="16dp" />
+        </com.android.camera.ui.RotateLayout>
+    </LinearLayout>
+
+    <include
+        style="@style/CameraControls"
+        layout="@layout/one_ui_layout"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/preview_of_intent"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone">
+        <com.android.camera.ui.RotateImageView
+            android:id="@+id/preview_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/preview_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gallery_play_big"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <com.android.camera.ui.RotatableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/CameraControls"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="2dip">
+            <com.android.camera.ui.RotateImageView android:id="@+id/done_button"
+                style="@style/ReviewControlIcon"
+                android:contentDescription="@string/accessibility_review_ok"
+                android:scaleType="center"
+                android:layout_gravity="right|bottom"
+                android:background="@drawable/bg_pressed"
+                android:src="@drawable/ic_menu_done_holo_light" />
+
+            <com.android.camera.ui.RotateImageView android:id="@+id/preview_btn_retake"
+                style="@style/ReviewControlIcon"
+                android:contentDescription="@string/accessibility_review_retake"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="center"
+                android:focusable="true"
+                android:background="@drawable/bg_pressed"
+                android:src="@drawable/ic_btn_shutter_retake" />
+
+            <com.android.camera.ui.RotateImageView android:id="@+id/preview_btn_cancel"
+                style="@style/ReviewControlIcon"
+                android:contentDescription="@string/accessibility_review_cancel"
+                android:scaleType="center"
+                android:layout_gravity="left|bottom"
+                android:background="@drawable/bg_pressed"
+                android:src="@drawable/ic_menu_cancel_holo_light" />
+        </com.android.camera.ui.RotatableLayout>
+    </FrameLayout>
+</merge>
