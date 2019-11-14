@@ -216,7 +216,7 @@ ro.telephony.call_ring.multiple=false \
 service.qti.ims.enabled=1 \
 persist.radio.calls.on.ims=1 \
 persist.radio.aosp_usr_pref_sel=true \
-ro.telephony.default_network=22,20
+ro.telephony.default_network=22,20 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
@@ -240,6 +240,3 @@ net.tcp.2g_init_rwnd=10
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
-
-#Spectrum
-spectrum.support=1
