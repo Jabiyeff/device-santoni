@@ -50,6 +50,7 @@
         android:paddingTop="@dimen/status_bar_padding_top"
         android:orientation="horizontal"
         >
+
         <FrameLayout
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -78,10 +79,39 @@
                     android:layout_height="match_parent"
                     android:textAppearance="@style/TextAppearance.StatusBar.Clock"
                     android:singleLine="true"
+                    android:visibility="gone"
                     android:paddingStart="@dimen/status_bar_left_clock_starting_padding"
                     android:paddingEnd="@dimen/status_bar_left_clock_end_padding"
                     android:gravity="center_vertical|start"
                 />
+
+                <com.android.keyguard.AlphaOptimizedLinearLayout
+                    android:id="@+id/left_icon_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <com.android.systemui.havoc.carrierlabel.CarrierLabel
+                        android:id="@+id/statusbar_carrier_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp"
+                        android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+                        android:visibility="gone"
+                        android:singleLine="true"/>
+
+                    <com.android.systemui.havoc.logo.LogoImageView
+                        android:id="@+id/havoc_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp"
+                        android:scaleType="center"
+                        android:visibility="gone" />
+                </com.android.keyguard.AlphaOptimizedLinearLayout>
 
                 <com.android.systemui.statusbar.AlphaOptimizedFrameLayout
                     android:id="@+id/notification_icon_area"
@@ -117,8 +147,39 @@
             >
 
             <include layout="@layout/system_icons" />
+
         </com.android.keyguard.AlphaOptimizedLinearLayout>
+
+        <com.android.systemui.statusbar.policy.ClockRight
+            android:id="@+id/right_clock"
+            android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:paddingStart="@dimen/status_bar_right_clock_starting_padding"
+            android:paddingEnd="@dimen/status_bar_clock_end_padding"
+            android:gravity="center_vertical|start"
+            />
     </LinearLayout>
+
+    <com.android.keyguard.AlphaOptimizedLinearLayout
+        android:id="@+id/center_clock_layout"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.android.systemui.statusbar.policy.ClockCenter
+            android:id="@+id/center_clock"
+            android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:singleLine="true"
+            />
+    </com.android.keyguard.AlphaOptimizedLinearLayout>
 
     <ViewStub
         android:id="@+id/emergency_cryptkeeper_text"
@@ -128,4 +189,3 @@
     />
 
 </com.android.systemui.statusbar.phone.PhoneStatusBarView>
-
