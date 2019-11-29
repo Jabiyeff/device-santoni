@@ -659,6 +659,9 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
 
+#Radio - from LA.UM.8.6.r1-01900-89xx.0
+vendor/bin/adpl
+
 # Radio - IMS - from LA.UM.8.6.r1-01900-89xx.0
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/lib64/libimscamera_jni.so
