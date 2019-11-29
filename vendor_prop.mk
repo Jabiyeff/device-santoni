@@ -142,7 +142,8 @@ media.stagefright.audio.sink=280 \
 vendor.mm.enable.qcom_parser=17825791 \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
-video.disable.ubwc=1
+vendor.video.disable.ubwc=1 \
+media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Rendering
 PRODUCT_PROPERTY_OVERRIDES += \
