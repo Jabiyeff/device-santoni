@@ -486,8 +486,7 @@ lib64/libqti-perfd-client_system.so
 lib64/libqti-util_system.so
 lib64/libqti_performance.so
 
-
-# Peripheral manager - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Peripheral manager - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
@@ -792,7 +791,7 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Time services - from LA.UM.8.6.r1-01900-89xx.0
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
