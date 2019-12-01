@@ -484,7 +484,7 @@
             6 - Previous music
             7 - Open camera
             8 - Open dialer -->
-    <integer name="config_doubleTapDefault">1</integer>
+    <integer name="config_doubleTapDefault">0</integer>
 
     <!-- Whether to intercept inputs on screen off. -->
     <bool name="config_enableKeyHandler">true</bool>
