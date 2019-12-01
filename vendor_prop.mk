@@ -135,7 +135,7 @@ ro.gps.agps_provider=1
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 media.msm8956hw=0 \
-mm.enable.smoothstreaming=true \
+mm.sec.enable.smoothstreaming=true \
 mmp.enable.3g2=true \
 media.aac_51_output_enabled=true \
 media.stagefright.audio.sink=280 \
