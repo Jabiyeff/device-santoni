@@ -528,7 +528,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# QMI - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# QMI - from LA.UM.7.6.2.r1-03800-89xx.0
 etc/permissions/qti_permissions.xml
 lib/libdiag_system.so
 lib/libqmi_cci_system.so
@@ -566,7 +566,7 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
-# Radio - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# Radio - from LA.UM.7.6.2.r1-03800-89xx.0
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/lpa.xml
 etc/permissions/telephonyservice.xml
@@ -576,7 +576,6 @@ etc/permissions/qcrilhook.xml
 -framework/qcrilhook.jar
 -framework/uimlpalibrary.jar
 -framework/uimremotesimlocklibrary.jar
-framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
@@ -660,6 +659,7 @@ vendor/radio/qcril_database/qcril.db
 
 #Radio - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/adpl
+product/framework/qti-telephony-common.jar
 
 # Radio - IMS - from LA.UM.8.6.r1-01900-89xx.0
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
@@ -667,8 +667,8 @@ product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 -product/priv-app/ims/ims.apk
 
-# Radio - IMS - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
--app/imssettings/imssettings.apk:vendor/app/imssettings/imssettings.apk
+# Radio - IMS - from LA.UM.7.6.2.r1-03800-89xx.0
+-app/imssettings/imssettings.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
@@ -714,6 +714,7 @@ vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
+vendor/bin/ipacm-diag
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.1.so
