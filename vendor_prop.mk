@@ -6,6 +6,7 @@ audio.offload.disable=true \
 audio.offload.min.duration.secs=30 \
 audio.offload.video=true \
 ro.vendor.audio.sdk.fluencetype=fluence \
+persist.audio.dirac.speaker=true \
 persist.vendor.audio.fluence.voicecall=true \
 persist.vendor.audio.fluence.voicerec=false \
 persist.vendor.audio.fluence.speaker=true \
@@ -48,6 +49,10 @@ persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxada
 persist.bluetooth.bluetooth_audio_hal.disabled=true \
 persist.bluetooth.a2dp_offload.disabled=true
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.vendor.shutdown.waittime=500
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
@@ -75,6 +80,8 @@ persist.debug.coresight.config=stm-events
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.dex2oat-filter=speed \
+dalvik.vm.image-dex2oat-filter=speed \
 dalvik.vm.heapstartsize=16m \
 dalvik.vm.heapgrowthlimit=192m \
 dalvik.vm.heapsize=384m \
@@ -187,15 +194,16 @@ persist.vendor.data.mode=concurrent
 
 # Nitz
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.rild.nitz_plmn="" \
-persist.rild.nitz_long_ons_0="" \
-persist.rild.nitz_long_ons_1="" \
-persist.rild.nitz_long_ons_2="" \
-persist.rild.nitz_long_ons_3="" \
-persist.rild.nitz_short_ons_0="" \
-persist.rild.nitz_short_ons_1="" \
-persist.rild.nitz_short_ons_2="" \
-persist.rild.nitz_short_ons_3=""
+persist.vendor.radio.nitz_plmn="" \
+persist.vendor.radio.nitz_lons_0="" \
+persist.vendor.radio.nitz_lons_0="" \
+persist.vendor.radio.nitz_lons_1="" \
+persist.vendor.radio.nitz_lons_2="" \
+persist.vendor.radio.nitz_lons_3="" \
+persist.vendor.radio.nitz_sons_0="" \
+persist.vendor.radio.nitz_sons_1="" \
+persist.vendor.radio.nitz_sons_2="" \
+persist.vendor.radio.nitz_sons_3=""
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -218,6 +226,7 @@ ril.subscription.types=NV,RUIM \
 rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
+persist.vendor.radio.jbims=1 \
 service.qti.ims.enabled=1 \
 persist.radio.calls.on.ims=1 \
 persist.radio.aosp_usr_pref_sel=true \
@@ -240,6 +249,7 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
+persist.delta_time.enable=true \
 persist.timed.enable=true
 
 # Tcp
@@ -251,12 +261,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
 # Memory management tweaks
-ro.config.fha_enable=true
-ro.sys.fw.bg_apps_limit=32
-ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
-ro.config.dha_empty_init=32
-ro.config.dha_lmk_scale=0.545
-ro.config.dha_th_rate=2.3
-ro.config.sdha_apps_bg_max=64
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.fha_enable=true \
+ro.sys.fw.bg_apps_limit=32 \
+ro.config.dha_cached_max=16 \
+ro.config.dha_empty_max=42 \
+ro.config.dha_empty_init=32 \
+ro.config.dha_lmk_scale=0.545 \
+ro.config.dha_th_rate=2.3 \
+ro.config.sdha_apps_bg_max=64 \
 ro.config.sdha_apps_bg_min=8
