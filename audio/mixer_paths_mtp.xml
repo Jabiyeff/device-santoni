@@ -51,7 +51,7 @@
     <ctl name="TTY Mode" value="OFF" />
     <ctl name="HPHL Volume" value="9" />
     <ctl name="HPHR Volume" value="9" />
-    <ctl name="RX1 Digital Volume" value="84" />
+    <ctl name="RX1 Digital Volume" value="87" />
     <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="88" />
     <ctl name="IIR1 INP1 Volume" value="84" />
@@ -1157,6 +1157,14 @@
         <ctl name="HPHL" value="Switch" />
         <ctl name="HPHR" value="Switch" />
         <ctl name="headset amp" value="ENABLE"/>
+    </path>
+	
+    <path name="hph-highquality-mode">
+        <ctl name="RX HPH Mode" value="HD2" />
+    </path>
+
+    <path name="hph-lowpower-mode">
+        <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
     </path>
 
     <path name="headset-mic">
