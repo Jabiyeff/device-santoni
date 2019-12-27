@@ -134,6 +134,10 @@ ro.fingerprint.cleanup.unused=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
 
+# FWK
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.gps.qc_nlp_in_use=1 \
