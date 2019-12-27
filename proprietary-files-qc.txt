@@ -293,7 +293,6 @@ vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/vulkan.msm8937.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libhdr_tm.so
@@ -317,7 +316,6 @@ vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.msm8937.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
@@ -348,6 +346,10 @@ vendor/lib64/libsdm-diag.so
 -vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
+
+# Graphics (Vulkan) - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib/hw/vulkan.msm8937.so|37d502dcc1c6f1d855e245faa0fe1fd7cb888139
+vendor/lib64/hw/vulkan.msm8937.so|f33b81f52921a9498cd6bc2b8b3a8a463ab084fa
 
 # Graphics firmware - from TA-1024
 vendor/firmware/a530_gpmu.fw2
