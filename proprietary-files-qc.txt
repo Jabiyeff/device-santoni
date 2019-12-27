@@ -1,4 +1,4 @@
-# ADSP - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
+# ADSP - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
