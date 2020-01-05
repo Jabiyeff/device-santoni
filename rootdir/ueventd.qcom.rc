@@ -126,6 +126,7 @@
 /dev/pft                  0660   system     drmrpc
 /dev/spcom                0660   system     system
 /dev/sp_kernel            0660   system     system
+/dev/sp_nvm               0660   system     system
 /dev/sp_ssr               0660   system     system
 /dev/sp_keymaster         0660   system     system
 /dev/cryptoapp            0660   system     system
