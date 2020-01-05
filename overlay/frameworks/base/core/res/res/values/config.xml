@@ -502,4 +502,7 @@
     <!-- Button backlight -->
     <integer name="config_buttonBrightnessSettingDefault">0</integer>
 
+    <!-- Specifies whether to decouple the auto-suspend state of the device from the display on/off state. -->
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+
 </resources>
