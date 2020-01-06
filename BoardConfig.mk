@@ -113,12 +113,6 @@ WITH_LINEAGE_CHARGER := false
 # CNE / DPM
 BOARD_USES_QCNE := true
 
-# Dexpreopt
-ifeq ($(HOST_OS),linux)
-  WITH_DEXPREOPT ?= true
-  WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
-endif
-
 # Display
 BOARD_USES_ADRENO := true
 TARGET_USES_ION := true
