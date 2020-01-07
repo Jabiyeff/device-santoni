@@ -334,13 +334,7 @@
          Refer to power.h for details.
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
-
-    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
-         May be less than the minimum allowed brightness setting
-         that can be set by the user. -->
-    
-
-
+  
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
@@ -380,9 +374,6 @@
 
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3300</integer>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
@@ -475,24 +466,6 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
     <string name="config_SmartChargingSupspendValue" translatable="false">0</string>
     <string name="config_SmartChargingResumeValue" translatable="false">1</string>
-
-    <!-- Keycodes of gestures. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">143</integer>
-
-    <!-- Default settings for gestures
-            0 - Disabled
-            1 - Wake device
-            2 - Toggle flashlight
-            3 - Toggle airplane mode
-            4 - Play/Pause music
-            5 - Next music
-            6 - Previous music
-            7 - Open camera
-            8 - Open dialer -->
-    <integer name="config_doubleTapDefault">0</integer>
-
-    <!-- Whether to intercept inputs on screen off. -->
-    <bool name="config_enableKeyHandler">true</bool>
 	
     <!-- The list of components which should be automatically disabled for a specific device. -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
