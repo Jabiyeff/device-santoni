@@ -643,10 +643,10 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/radio/qcril_database/qcril.db
-
-#Radio - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/adpl
-product/framework/qti-telephony-common.jar
+
+# Radio (telephony) - from DRG - QKQ1.190828.002
+product/framework/qti-telephony-common.jar|877de1466cbea094738d2cfb50d7cbcfc4ac2ed1
 
 # Radio - IMS - from LA.UM.8.6.r1-01900-89xx.0
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
