@@ -46,7 +46,6 @@ ro.bluetooth.hfp.ver=1.7 \
 ro.vendor.qualcomm.bt.hci_transport=smd \
 persist.vendor.bluetooth.modem_nv_support=true \
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
-persist.bluetooth.bluetooth_audio_hal.disabled=true \
 persist.bluetooth.a2dp_offload.disabled=true
 
 # Boot
