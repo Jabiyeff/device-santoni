@@ -231,11 +231,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
-   qcom.fmradio
+    qcom.fmradio
 
 # fwk-detect
 PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -353,7 +355,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
-
 
 # Power
 PRODUCT_PACKAGES += \
