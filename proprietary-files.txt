@@ -1552,11 +1552,11 @@ bin/gx_fpd:vendor/bin/gx_fpd
 lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.msm8937.so|68839c6a06b986223fa37341f4b52117a72afe68
 lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
 lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so|8ebf8f6bc370cec26cfcf1daebdbbb31fd66ae09
-lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so
+lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.so|c3034eba5df5fb9f52438effcdddfb4af113c8b7
 lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
-lib64/libfp_client.so:vendor/lib64/libfp_client.so
-lib64/libfpservice.so:vendor/lib64/libfpservice.so
+lib64/libfp_client.so:vendor/lib64/libfp_client.so|fec40052b7cb14acb1e8edc6378583a075eb180a
+lib64/libfpservice.so:vendor/lib64/libfpservice.so|a95cf81ac9cb72de1d04c3cff72d19b8da0e5027
 
 # Graphics firmware
 etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
