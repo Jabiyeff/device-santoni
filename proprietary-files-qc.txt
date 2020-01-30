@@ -438,24 +438,29 @@ vendor/lib64/libswvdec.so
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Perf - from LA.UM.8.6.r1-01900-89xx.0
-vendor/bin/energy-awareness|d9124bd669e2e3a1e2d40e96518ba18f15f21af6
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|69186f92b781f1e296c99bb274c419591e1347cf
+# Perf - from LA.UM.8.6.r1-02600-89xx.0
+product/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
+product/lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
+product/lib64/vendor.qti.hardware.perf@1.0.so|8858021553ea41933cdaaa4a68e9d4d15609db46
+product/lib64/vendor.qti.hardware.perf@2.0.so|9353709cc2e2af8c4edd3967b5362ede79a72805
+vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
+vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|c6f8a59cd76fdf049182ca8de34494b5a6c13648
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
-vendor/lib64/libperfconfig.so|bd0ec5a97a4bfada47f97ee81287483847fd41e1
-vendor/lib64/libperfgluelayer.so|56f9a84b8f6f11aec1ff4917f14dd80a6fe9ac92
-vendor/lib64/libqti-perfd.so|e9c153b810feb151491dd4ba702918fdd373d282
-vendor/lib64/libqti-perfd-client.so|94ab278009a42e75c1d62f6dfc41d85b0cc1f412
-vendor/lib64/libqti-util.so|e37c5fd07710a25edc9883507a14f83306d83d28
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|54f1b2223cbd44e5f50440c29af0c782943be3c3
-vendor/lib64/vendor.qti.hardware.perf@2.0.so|df0788c7777b1906cd4a83bb6a722cc425377f17
-vendor/lib/libperfconfig.so|e4e05181077427bbe80570d46c8cb6f7fa9d6779
-vendor/lib/libperfgluelayer.so|65370303ba1097c5d29f93910f9e2e1514fcd4b2
-vendor/lib/libqti-perfd.so|78ab50abc7ae3704e7645dd3363c5fb057832c6b
-vendor/lib/libqti-perfd-client.so|a6ddd909d581fbb5d8caa2f1f489ec5c2c5789c1
-vendor/lib/libqti-util.so|293284848723e0065f1097d363cd76772a795b8c
-vendor/lib/vendor.qti.hardware.perf@1.0.so|13eb868906a7f9fa328d272488201141c64a79bd
-vendor/lib/vendor.qti.hardware.perf@2.0.so|592ca48b30ac1b8c42b21710bd6a41ebaa99e15f
+vendor/lib64/libperfconfig.so|ccedfa4263476affae09325320171a6e7f129d86
+vendor/lib64/libperfgluelayer.so|ebe13c60a08bb42bde54cf9197f4474915688bfe
+vendor/lib64/libqti-perfd.so|7a5724fcb4a5a7a74d58e2641c051934b038905d
+vendor/lib64/libqti-perfd-client.so|cfdfe3d443085feae4cf4af398d711722b904388
+vendor/lib64/libqti-util.so|4911109f327c4bf9d1d34acc14082f78e69b4ccb
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|8858021553ea41933cdaaa4a68e9d4d15609db46
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|9353709cc2e2af8c4edd3967b5362ede79a72805
+vendor/lib/libperfconfig.so|dbfa02fbef1b71f32e4e9791a26cbb33a2acc679
+vendor/lib/libperfgluelayer.so|3b75969e9bc101e727c00f26258a35b050547d0c
+vendor/lib/libqti-perfd.so|bc6f03e63c9172c256c4b87ffd045667168adb1c
+vendor/lib/libqti-perfd-client.so|eb81a99bab35f29b7977bde878ea2a29e2abe18c
+vendor/lib/libqti-util.so|da7cfbe08e99dfa77fb29f06878b5d676af40d09
+vendor/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
+vendor/lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
 
 # Perf QPerformance - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 bin/perfservice
