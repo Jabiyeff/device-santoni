@@ -741,11 +741,11 @@ vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Thermal - from LA.UM.8.6.r1-01900-89xx.0
-vendor/bin/thermal-engine|2d14a781f9738708a1b8cee4ddf833218ed97e23
--vendor/lib64/libthermalclient.so|61a8dfc6132836e7ed27b044ddc8a078b5c7299e
-vendor/lib64/libthermalioctl.so|3f0b6e48f673ce9f40140ba23ed227f9d1e2420b
--vendor/lib/libthermalclient.so|28fde51ddd79ebd811efe27fc93cb054e60339e4
+# Thermal - from LA.UM.8.6.r1-02600-89xx.0
+vendor/bin/thermal-engine|37ef9d9d7180d1508096668047e7fd98b8a25b39
+-vendor/lib/libthermalclient.so|5366dedac700727f05ed1729bf00c855d0777de4
+-vendor/lib64/libthermalclient.so|fead3fb780b175ef478c7ab120639dea5b37a802
+vendor/lib64/libthermalioctl.so|1d6587245c7e7148638f14254e2f61f6b5552857
 
 # Time services - from LA.UM.8.6.r1-01900-89xx.0
 -vendor/app/TimeService/TimeService.apk
