@@ -498,7 +498,6 @@ vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
@@ -513,13 +512,16 @@ vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
-vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
+
+# QMI - from LA.UM.8.6.r1-02600-89xx.0
+vendor/lib/libqmi_cci.so|df2e1f83ef1243efd3b15f98351f1407d32d5956
+vendor/lib64/libqmi_cci.so|9e066cc4ceb721413db7e9a322836de981e92c74
 
 # Radio - from LA.UM.7.6.2.r1-03800-89xx.0
 -app/QtiTelephonyService/QtiTelephonyService.apk
