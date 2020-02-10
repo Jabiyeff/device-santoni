@@ -147,6 +147,7 @@ ro.gps.agps_provider=1
 PRODUCT_PROPERTY_OVERRIDES += \
 debug.stagefright.omx_default_rank.sw-audio=1 \
 debug.stagefright.omx_default_rank=0 \
+debug.media.codec2=2 \
 media.msm8956hw=0 \
 mm.sec.enable.smoothstreaming=true \
 mmp.enable.3g2=true \
