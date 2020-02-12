@@ -102,6 +102,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -117,7 +126,7 @@
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
-            <instance>gnss_vendor</instance>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
         </interface>
     </hal>
     <hal format="hidl">
@@ -389,15 +398,6 @@
         <interface>
             <name>IDisplayPostproc</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILocHidlGnss</name>
-            <instance>gnss_vendor</instance>
         </interface>
     </hal>
     <hal format="hidl">
