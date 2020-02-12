@@ -39,14 +39,9 @@ vendor.voice.voip.conc.disabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.bt.enable.splita2dp=false \
-bluetooth.hfp.client=1 \
-vendor.qcom.bluetooth.soc=smd \
-ro.bluetooth.hfp.ver=1.7 \
-ro.vendor.qualcomm.bt.hci_transport=smd \
 persist.vendor.bluetooth.modem_nv_support=true \
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
-persist.bluetooth.a2dp_offload.disabled=true
+persist.vendor.bt.enable.splita2dp=false \
+vendor.qcom.bluetooth.soc=smd
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
