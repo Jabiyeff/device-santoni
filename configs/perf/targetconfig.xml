@@ -46,13 +46,74 @@
              Target="msm8937"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="294,313"
+             SocIds="294,295,313"
              SynCore="1"
-             MinCoreOnline="0"
-             GovInstanceType="1" />
+             CoreCtlCpu="0"
+             MinCoreOnline="0" />
 
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
-         <ClustersInfo Id="1" NumCores="4" Type="big" />
+         <ClustersInfo Id="0" NumCores="4" Type="big" />
+         <ClustersInfo Id="1" NumCores="4" Type="little" />
 
     </Config1>
+
+    <Config2>
+         <TargetInfo
+             Target="msm8917"
+             NumClusters="1"
+             TotalNumCores="4"
+             SocIds="303,307,308,309,320"
+             SynCore="1"
+             MinCoreOnline="1"
+             GovInstanceType="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="big" />
+
+    </Config2>
+
+    <Config3>
+         <TargetInfo
+             Target="sdm439"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="353,363"
+             SynCore="1"
+             CoreCtlCpu="0"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="big" />
+         <ClustersInfo Id="1" NumCores="4" Type="little" />
+
+    </Config3>
+
+    <Config4>
+         <TargetInfo
+             Target="sdm429"
+             NumClusters="1"
+             TotalNumCores="4"
+             SocIds="354,364"
+             SynCore="1"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             GovInstanceType="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="big" />
+
+    </Config4>
+
+    <Config5>
+         <TargetInfo
+             Target="qm215"
+             NumClusters="1"
+             TotalNumCores="4"
+             SocIds="386"
+             SynCore="1"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             GovInstanceType="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="big" />
+
+    </Config5>
+
 </TargetConfig>
