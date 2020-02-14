@@ -130,7 +130,8 @@ ro.fm.transmitter=false
 
 # FWK
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.va_aosp.support=1
+ro.vendor.qti.va_aosp.support=1 \
+ro.vendor.qti.va_odm.support=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
