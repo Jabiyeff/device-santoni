@@ -42,24 +42,22 @@ vendor/lib/libadiertac.so|59bd9c9c2df081580088df25274cb0a196221b80
 vendor/lib/libadm.so|b373d5cb6e4c6e081f1d206f6d9538339f330fda
 vendor/lib/libaudcal.so|dda994bbd37d3c178120791a911fb219a2ccb5ca
 vendor/lib/libaudioalsa.so|1c0615d720024b5bd7ac28bec13d37ab7102b57f
-vendor/lib/libmdsprpc.so
 vendor/lib/libdrc.so|55fc13d205ce3199de2cf1f9c1dab479909c15be
 vendor/lib/libqtigef.so|5630df4e52109c0602d441d5d63bd342d202faf4
-vendor/lib/libsurround_3mic_proc.so|d8c1d2cb7d598eee79ccfe5b7ec83a185c8fef6c
-vendor/lib/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so|0d2afd6f2c5b9aa2397f3e1cb3287bf906cf8fb6
-vendor/lib/soundfx/libqcreverb.so|733e30f646b87e4f5ee90baea0ce5e7982d607c9
-vendor/lib64/soundfx/libqcvirt.so|bb046694512d412d6a04bd95ccb2b573454d9717
 vendor/lib/soundfx/libshoebox.so|538dc7ed2d3066ca956a1722e147808f96c0224b
+vendor/lib/libsurround_3mic_proc.so|d8c1d2cb7d598eee79ccfe5b7ec83a185c8fef6c
+vendor/lib/soundfx/libasphere.so|72c4e50e1e0058721e213387975f3dde5372d610
+vendor/lib/soundfx/libqcbassboost.so|bc8ae80ff1ade557ff494631494c2f8261028acb
+vendor/lib/soundfx/libqcreverb.so|733e30f646b87e4f5ee90baea0ce5e7982d607c9
+vendor/lib/soundfx/libqcvirt.so|41bf71787ffae3f511d9cb3e32b9e721a0a2e385
 vendor/lib64/libacdb-fts.so|9ad8551afa5a372b19ce295b61d5d9f8f7f69700
 vendor/lib64/libacdbloader.so|adddad70de016fe19fd060c65628d89d06e6e3fe
 vendor/lib64/libacdbrtac.so|220366b0464fe4a8cb04e17feb8bd5da41cbe297
 vendor/lib64/libadiertac.so|87302b3eaa3bb2465c3823d5f9089f3030d9a7a5
 vendor/lib64/libaudcal.so|6964ecc9607ae9c05ee7b37cbff66c0b37bde216
 vendor/lib64/libaudioalsa.so|af924f5a37d3066a97175f1343ea5c9484689ee3
-vendor/lib64/libmdsprpc.so
 vendor/lib64/libqtigef.so|e7f0dfa3cd7252310c9a01f2bc0e4074e6e78871
-vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libasphere.so|314e269df0372fbe84ca71f262f8c0a3602d17ce
 vendor/lib64/soundfx/libqcbassboost.so|0d2afd6f2c5b9aa2397f3e1cb3287bf906cf8fb6
 vendor/lib64/soundfx/libqcreverb.so|8bdd74d69593cd838e4b92d9b2884e0c4140226f
 vendor/lib64/soundfx/libqcvirt.so|bb046694512d412d6a04bd95ccb2b573454d9717
@@ -164,6 +162,11 @@ vendor/lib64/vendor.qti.latency@2.0.so|20a3037a1aea98f5f490b14c8f5620d2d3a0cf57
 
 # Charger - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 vendor/bin/hvdcp_opti
+
+# Dirac
+vendor/etc/diracmobile.config
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/soundfx/libdirac.so
 
 # DPM - from LA.UM.8.6.r1-02900-89xx.0
 product/bin/dpmd|a70053cbaadbfdce93a85da4a9e55b096a75a83a
@@ -306,6 +309,11 @@ vendor/lib/vendor.qti.gnss@2.0.so|465fbfe96dbb2213ae4fcc58da55ebb5c0739efa
 vendor/lib/vendor.qti.gnss@2.1.so|cd077a8b857cbe21959b15d9c011f1cc136d7045
 vendor/lib/vendor.qti.gnss@3.0.so|273a0e2d63cd1fec990725bdf3db6b98e13d835b
 
+# Graphics - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib64/egl/libq3dtools_esx.so
+
 # Graphics - from LA.UM.8.6.r1-02900-89xx.0
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so|5b006423286008ba9b54b8c29e9ce2ab4b6fa14d
 lib64/libsdm-disp-apis.so:vendor/lib64/libsdm-disp-apis.so|25391818f65a4dfe3fdf0603109eacc4eedc4c13
@@ -315,7 +323,6 @@ vendor/lib/egl/libGLESv1_CM_adreno.so|17bbde3fd2a67234581be29370f45d12f91f1869
 vendor/lib/egl/libGLESv2_adreno.so|6878841e4f7d2383a41fe355eb746311f3890b70
 vendor/lib/egl/libQTapGLES.so|957d9c98f3c29e7bf1da02fedac0789ada49dc70
 vendor/lib/egl/libq3dtools_adreno.so|1d760b6203cdb6cc1ef036ce092f4d7e6e7f3324
-vendor/lib/hw/vulkan.msm8953.so|c24dee59782e94c119e1e6ae00ac05c2d67c3f93
 vendor/lib/libC2D2.so|c04a5ac1e576f63ebe91aba14bf917ee9e382be0
 vendor/lib/libCB.so|ecb562c1ecb787cbbc8b3f1fd0dc00e9039ebe26
 vendor/lib/libOpenCL.so|dba84cb947a30c269a7e9b324771ef3b89bf4236
@@ -336,7 +343,6 @@ vendor/lib64/egl/libGLESv1_CM_adreno.so|9f8f826f14a769965eb77f2a8d7e273fb45eb89c
 vendor/lib64/egl/libGLESv2_adreno.so|aa87e754bd4ea141fd9594b41c7d61cbf83e3452
 vendor/lib64/egl/libQTapGLES.so|104e9cec67678174b92a698849aa2bcf52ba46ce
 vendor/lib64/egl/libq3dtools_adreno.so|e9e50eb922ce32918eb6e6989286e945e0c8acb3
-vendor/lib64/hw/vulkan.msm8953.so|8c01e237bdc542ca682cb97ce28f264135033fab
 vendor/lib64/libC2D2.so|ff2d4947c7924376ff66517461246d238e221e05
 vendor/lib64/libCB.so|8a7c2a7e2834b2f18ba51a861d8b370497f73a05
 vendor/lib64/libOpenCL.so|323c9ba2b67f6e7ec6b14caff8b1082ba2c783a5
@@ -383,10 +389,9 @@ vendor/lib64/libsdm-diag.so|87373a043267b9b3bb923931a910119a9deb425f
 vendor/lib64/libsdmextension.so|b151897919e5750c36a8b5a9dc430e9c570bde72
 vendor/lib64/libtinyxml2_1.so|56d4d5d0ea010f951de219c7b9fd2c9695a5b9d2
 
-
 # Graphics (Vulkan) - from LA.UM.8.6.r1-02900-89xx.0
-vendor/lib/hw/vulkan.msm8937.so
-vendor/lib64/hw/vulkan.msm8937.so
+vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8937.so|1f6bcac540152287b4aab4ec030876cf7e48d890
+vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8937.so|58429a5dc9ee7fc910025d704c32e1fc7cd7bde1
 
 # Graphics firmware - from TA-1024
 vendor/firmware/a530_gpmu.fw2
@@ -412,12 +417,25 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterdeviceutils.so
 
 # Listen - from LA.UM.8.6.r1-02600-89xx.0
-vendor/lib/hw/sound_trigger.primary.msm8953.so|b47051e826382b19894501471eb629173df6a967
+vendor/lib/hw/sound_trigger.primary.msm8937.so|b47051e826382b19894501471eb629173df6a967
 vendor/lib/libadpcmdec.so|be5fdf08a08b635816381e61b6bbf2874c62f613
 vendor/lib/libsmwrapper.so|1ab31b5378265784145defa47d50435029cf5f57
 vendor/lib/vendor.qti.voiceprint@1.0.so|ad4df37a1240290f2c1d678d751a0401509b343f
-vendor/lib64/hw/sound_trigger.primary.msm8953.so|62a3b3814deefbb1a83759fea4b6b705af6b36af
+vendor/lib64/hw/sound_trigger.primary.msm8937.so|62a3b3814deefbb1a83759fea4b6b705af6b36af
 vendor/lib64/vendor.qti.voiceprint@1.0.so|5c3794e4541cc916c03f5a2ba26c6c2f43149d16
+
+# Media - from LA.UM.8.6.r1-01900-89xx.0
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libFlacSwDec.so
+vendor/lib/libMpeg4SwEncoder.so
+vendor/lib/libOmxSwVdec.so
+vendor/lib/libOmxSwVencMpeg4.so
+vendor/lib/libOmxVpp.so
+vendor/lib/libswvdec.so
+vendor/lib/libvpplibrary.so
+vendor/lib64/libswvdec.so
+vendor/lib64/libvpplibrary.so
 
 # Media - from LA.UM.8.6.r1-02900-89xx.0
 lib/extractors/libmmparserextractor.so|0d7dc41270c150a24901adeb41dbc2f8be74f973
@@ -448,7 +466,6 @@ vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
 
 # Modem - from tissot - PKQ1.180917.001 V10.0.7.0.PDHMIXM
 vendor/lib/libwms.so
-vendor/lib64/libwms.so
 
 # Perf - from LA.UM.8.6.r1-02600-89xx.0
 product/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
@@ -637,7 +654,7 @@ vendor/radio/qcril_database/qcril.db
 vendor/bin/adpl
 
 # Radio (telephony) - from DRG - QKQ1.190828.002
-product/framework/qti-telephony-common.jar|877de1466cbea094738d2cfb50d7cbcfc4ac2ed1
+product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
 
 # Radio - from LA.UM.8.6.r1-02900-89xx.0
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|71d083671c3ea4cd5e287a63fb254bb0ab60ed20
@@ -676,7 +693,6 @@ lib/lib-imsvtextutils.so
 lib/lib-imsvtutils.so
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
-lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
 lib/librcc.so
 lib/librtp_jni.so
@@ -692,7 +708,6 @@ lib64/lib-imsvideocodec.so
 lib64/lib-imsvt.so
 lib64/lib-imsvtextutils.so
 lib64/lib-imsvtutils.so
-lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
 lib64/librcc.so
 lib64/librtp_jni.so
