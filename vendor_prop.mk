@@ -35,7 +35,9 @@ vendor.voice.conc.fallbackpath=deep-buffer \
 vendor.voice.path.for.pcm.voip=true \
 vendor.voice.playback.conc.disabled=true \
 vendor.voice.record.conc.disabled=false \
-vendor.voice.voip.conc.disabled=true
+vendor.voice.voip.conc.disabled=true \
+ro.config.vc_call_vol_steps=8 \
+ro.config.media_vol_steps=20
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -63,7 +65,6 @@ vendor.vidc.enc.narrow.searchrange=1 \
 persist.vendor.qti.telephony.vt_cam_interface=1 \
 media.camera.ts.monotonic=1 \
 persist.camera.HAL3.enabled=1
-
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -102,7 +103,7 @@ debug.sf.recomputecrop=0 \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
 ro.qualcomm.svi=0 \
-ro.sf.lcd_density=300 \
+ro.sf.lcd_density=280 \
 persist.debug.wfd.enable=1 \
 persist.hwc.enable_vds=1 \
 vendor.display.disable_skip_validate=1 \
@@ -111,11 +112,8 @@ vendor.display.perf_hint_window=50 \
 vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
 debug.hwui.use_buffer_age=false \
-vendor.video.disable.ubwc=1
-
-# UI
-PRODUCT_PROPERTY_OVERRIDES += \
-sys.use_fifo_ui=1
+vendor.video.disable.ubwc=1 \
+debug.sdm.support_writeback=0
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -124,7 +122,6 @@ drm.service.enabled=true
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.qfp=false \
-ro.fingerprint.cleanup.unused=false
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -170,13 +167,18 @@ vendor.video.disable.ubwc=1 \
 media.settings.xml=/vendor/etc/media_profiles_V1_0.xml \
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
-# Rendering
-PRODUCT_PROPERTY_OVERRIDES += \
-debug.sdm.support_writeback=0
-
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.config.fha_enable=true \
+ro.sys.fw.bg_apps_limit=32 \
+ro.config.dha_cached_max=16 \
+ro.config.dha_empty_max=42 \
+ro.config.dha_empty_init=32 \
+ro.config.dha_lmk_scale=0.545 \
+ro.config.dha_th_rate=2.3 \
+ro.config.sdha_apps_bg_max=64 \
+ro.config.sdha_apps_bg_min=8
 
 # Perf Ux IOPrefetcher
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -188,17 +190,28 @@ persist.vendor.qti.games.gt.prof=1 \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.extension_library=libqti-perfd-client.so \
-ro.vendor.qti.am.reschedule_service=true \
-ro.vendor.qti.core_ctl_min_cpu=2 \
-ro.vendor.qti.core_ctl_max_cpu=4
-
-# art
-PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.boot-dex2oat-threads=8 \
 ro.sys.fw.dex2oat_thread_count=6 \
 dalvik.vm.bg-dex2oat-threads=2 \
-dalvik.vm.dex2oat-threads=6
+dalvik.vm.dex2oat-threads=6 \
+ro.vendor.qti.am.reschedule_service=true \
+ro.vendor.qti.core_ctl_min_cpu=1 \
+ro.vendor.qti.core_ctl_max_cpu=4 \
+ro.vendor.at_library=libqti-at.so \
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.gt_library=libqti-gt.so \
+vendor.perf.gestureflingboost.enable=true
+
+# Perf configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.vendor.qti.sys.fw.bservice_limit=5 \
+ro.vendor.qti.sys.fw.bservice_age=5000 \
+ro.vendor.qti.sys.fw.use_trim_settings=true \
+ro.vendor.qti.sys.fw.empty_app_percent=50 \
+ro.vendor.qti.sys.fw.trim_empty_percent=100 \
+ro.vendor.qti.sys.fw.trim_cache_percent=100 \
+ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -225,7 +238,10 @@ DEVICE_PROVISIONED=1 \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
-persist.radio.aosp_usr_pref_sel=true \
+persist.radio.NO_STAPA=1 \
+persist.radio.VT_ENABLE=1 \
+persist.radio.VT_HYBRID_ENABLE=1 \
+persist.vendor.radio.aosp_usr_pref_sel=true \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.radio.DROPSETENABLE=1 \
 persist.radio.force_on_dc=true \
@@ -234,6 +250,7 @@ persist.radio.multisim.config=dsds \
 persist.radio.schd.cache=3500 \
 persist.vendor.ims.dropset_feature=0 \
 persist.vendor.radio.custom_ecc=1 \
+persist.vendor.radio.prefer_spn=1 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 ril.subscription.types=NV,RUIM \
@@ -245,6 +262,7 @@ service.qti.ims.enabled=1 \
 persist.radio.calls.on.ims=1 \
 persist.radio.aosp_usr_pref_sel=true \
 ro.telephony.default_network=22,20 \
+vendor.service.qti.ims.enabled=1 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
@@ -274,14 +292,6 @@ net.tcp.2g_init_rwnd=10
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
-# Memory management tweaks
+# UI
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.config.fha_enable=true \
-ro.sys.fw.bg_apps_limit=32 \
-ro.config.dha_cached_max=16 \
-ro.config.dha_empty_max=42 \
-ro.config.dha_empty_init=32 \
-ro.config.dha_lmk_scale=0.545 \
-ro.config.dha_th_rate=2.3 \
-ro.config.sdha_apps_bg_max=64 \
-ro.config.sdha_apps_bg_min=8
+sys.use_fifo_ui=1
