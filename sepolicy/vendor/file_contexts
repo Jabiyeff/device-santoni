@@ -27,8 +27,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.santoni             u:object_r:hal_usb_default_exec:s0
 
 # Input files
-/(vendor|system/vendor)/usr/idc(/.*)?		u:object_r:idc_file:s0
-/(vendor|system/vendor)/usr/keylayout(/.*)?	u:object_r:keylayout_file:s0
 /sys/board_properties/virtualkeys.ft5x06_720p   u:object_r:keylayout_file_sysfs:s0
 
 # Legacy root dirs

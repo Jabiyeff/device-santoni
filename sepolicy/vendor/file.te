@@ -8,8 +8,6 @@ type fpc_sysfs, fs_type, sysfs_type;
 type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 
 # Input
-type idc_file, file_type, vendor_file_type;
-type keylayout_file, file_type, vendor_file_type;
 type keylayout_file_sysfs, fs_type, sysfs_type;
 
 # Rild
