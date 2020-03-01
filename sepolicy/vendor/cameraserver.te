@@ -1,1 +1,2 @@
 allow cameraserver mediacodec:binder call;
+allow cameraserver gpu_device:chr_file { ioctl open read write };

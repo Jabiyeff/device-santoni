@@ -4,6 +4,9 @@
 # Camera
 /data/vendor/qcam(/.*)?                         u:object_r:camera_socket:s0
 
+# Cryptfshw
+/(product|system/product)/lib(64)?/vendor\.qti\.hardware\.cryptfshw@1\.0\.so u:object_r:same_process_hal_file:s0
+
 # FPC Fingerprint
 /data/fpc(/.*)?                                          u:object_r:fpc_data_file:s0
 /dev/socket/fpce                                         u:object_r:fpc_socket:s0
@@ -51,6 +54,7 @@
 # Shell Script
 /(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
+/(vendor|system/vendor)/bin/init2\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
 
 # KCAL
 /sys/devices/platform/kcal_ctrl.0(/.*)?                                       u:object_r:sysfs_kcal:s0
@@ -58,6 +62,9 @@
 
 # DT2W
 /sys/android_touch/doubletap2wake                                     u:object_r:sysfs_dt2w:s0
+
+# USB force fastcharge
+/sys/kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
 
 # Vibration
 /sys/class/timed_output/vibrator/vmax_mv            u:object_r:sysfs_vibrator:s0

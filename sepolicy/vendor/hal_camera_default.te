@@ -1,5 +1,5 @@
 allow hal_camera_default camera_data_file:sock_file write;
 allow hal_camera_default camera_socket:sock_file write;
 allow hal_camera_default camera_socket:dir search;
-
+r_dir_file(hal_camera_default, sysfs_kgsl)
 hal_client_domain(hal_camera_default, hal_power)

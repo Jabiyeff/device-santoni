@@ -1,9 +1,10 @@
 allow system_app { proc_pagetypeinfo sysfs_zram }:file r_file_perms;
 allow system_app sysfs_zram:dir r_dir_perms;
-
-allow system_app sysfs_kcal:file rw_file_perms;
-allow system_app sysfs_kcal:dir search;
-allow system_app sysfs_vibrator:file rw_file_perms;
-allow system_app sysfs_vibrator:dir search;
 allow system_app spectrum_prop:property_service set;
 get_prop(system_app, spectrum_prop);
+allow system_app spectrum_prop:file read;
+allow system_app sysfs_kcal:dir search;
+allow system_app sysfs_kcal:file rw_file_perms;
+allow system_app sysfs_kcal:file { getattr open write };
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file { getattr open read write };

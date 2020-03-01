@@ -1,5 +1,3 @@
 allow hal_graphics_composer_default persist_file:dir r_dir_perms;
-allow hal_graphics_composer_default init:binder { call };
-allow hal_graphics_composer_default sysfs:file { write };
 allow hal_graphics_composer_default sysfs:file { open };
 allow hal_graphics_composer_default hal_graphics_composer_default:netlink_kobject_uevent_socket { read };

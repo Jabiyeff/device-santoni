@@ -1,1 +1,2 @@
 allow hal_memtrack_default sysfs:file { read open getattr };
+r_dir_file(hal_memtrack_default, sysfs_kgsl)

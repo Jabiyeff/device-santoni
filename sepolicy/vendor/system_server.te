@@ -1,16 +1,13 @@
-allow system_server init:binder { call };
-allow system_server device:chr_file { ioctl };
-allow system_server device:chr_file { read write };
+# touchpanel
+allow system_server proc_touchpanel:dir search;
+allow system_server proc_touchpanel:file rw_file_perms;
+allow system_server proc_touchpanel:lnk_file read;
+allow system_server keylayout_file_sysfs:file { open read getattr };
 
 # input files
 r_dir_file(system_server, idc_file)
 r_dir_file(system_server, keylayout_file)
 r_dir_file(system_server, keylayout_file_sysfs)
-
-# touchpanel
-allow system_server proc_touchpanel:dir search;
-allow system_server proc_touchpanel:file rw_file_perms;
-allow system_server proc_touchpanel:lnk_file read;
 
 # DT2W
 allow system_server sysfs_dt2w:dir search;
