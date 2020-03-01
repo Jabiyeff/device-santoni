@@ -118,9 +118,11 @@ service vendor.qseecomd /vendor/bin/qseecomd
    writepid /dev/cpuset/system-background/tasks
 
 service perfd /vendor/bin/perfd
-   class main
+   class late_start
    user root
-   disabled
+   group root
+   socket perfd seqpacket 0666 root system
+   writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /vendor/bin/thermal-engine
    class main
