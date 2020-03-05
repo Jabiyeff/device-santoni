@@ -21,4 +21,3 @@ allow init_fingerprint unlabeled:file unlink;
 # Allow to delete/create/unlink file
 allow init_fingerprint { persist_file persist_drm_file mnt_vendor_file gx_fpd_data_file }:dir create_dir_perms;
 allow init_fingerprint { persist_file persist_drm_file mnt_vendor_file gx_fpd_data_file }:file create_file_perms;
-

@@ -1,5 +1,6 @@
 get_prop(untrusted_app_27, bg_boot_complete_prop)
 get_prop(untrusted_app_27, bg_daemon_prop)
-
+get_prop(untrusted_app_27, persist_camera_prop)
+dontaudit untrusted_app_27 proc_vmstat:file { getattr open };
 allow untrusted_app_27 device:chr_file { ioctl };
 allow untrusted_app_27 device:chr_file { ioctl };
