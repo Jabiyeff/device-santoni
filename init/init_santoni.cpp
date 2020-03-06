@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
-   Copyright (c) 2017, The LineageOS Project
+   Copyright (C) 2019 The LineageOS Project.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -14,7 +14,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -28,34 +27,49 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
-#include <android-base/file.h>
 #include <android-base/properties.h>
-#include <android-base/strings.h>
-
-#include "property_service.h"
 #include "vendor_init.h"
+#include "property_service.h"
+#include "android/log.h"
 
-using android::base::GetProperty;
+char const *heapstartsize;
+char const *heapgrowthlimit;
+char const *heapsize;
+char const *heapminfree;
+char const *heapmaxfree;
+
 using android::init::property_set;
 
-typedef struct {
-    char const *heapstartsize;
-    char const *heapgrowthlimit;
-    char const *heapsize;
-    char const *heapminfree;
-    char const *heapmaxfree;
-} dalvikprop_t;
+void check_device()
+{
+    struct sysinfo sys;
 
-static void property_override(char const prop[], char const value[]) {
+    sysinfo(&sys);
+
+    if (sys.totalram > 2048ull * 1024 * 1024) {
+        // from - phone-xxhdpi-3072-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "288m";
+        heapsize = "768m";
+        heapminfree = "2m";
+        heapmaxfree = "8m";
+    } else {
+        // from - phone-xxhdpi-2048-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "192m";
+        heapsize = "512m";
+        heapminfree = "512k";
+        heapmaxfree = "8m";
+   }
+}
+
+void property_override(char const prop[], char const value[])
+{
     prop_info *pi;
 
     pi = (prop_info*) __system_property_find(prop);
@@ -65,68 +79,22 @@ static void property_override(char const prop[], char const value[]) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-static void check_device(dalvikprop_t* dprop) {
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-
-    if (dprop == nullptr)
-        return;
-
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxhdpi-4096-dalvik-heap.mk
-        dprop->heapstartsize = "16m";
-        dprop->heapgrowthlimit = "256m";
-        dprop->heapsize = "512m";
-        dprop->heapminfree = "4m";
-        dprop->heapmaxfree = "8m";
-    } else if (sys.totalram > 2048ull * 1024 * 1024) {
-        // from - phone-xxhdpi-3072-dalvik-heap.mk
-        dprop->heapstartsize = "8m";
-        dprop->heapgrowthlimit = "288m";
-        dprop->heapsize = "768m";
-        dprop->heapminfree = "512k";
-        dprop->heapmaxfree = "8m";
-    } else {
-        // from - phone-xxhdpi-2048-dalvik-heap.mk
-        dprop->heapstartsize = "16m";
-        dprop->heapgrowthlimit = "192m";
-        dprop->heapsize = "512m";
-        dprop->heapminfree = "2m";
-        dprop->heapmaxfree = "8m";
-   }
+void property_override_dual(char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
 }
 
-static void init_target_properties() {
-    std::ifstream fin;
-    std::string buf;
+void vendor_load_properties()
+{
+    check_device();
 
-    std::string product = GetProperty("ro.product.name", "");
-    if (product.find("santoni") == std::string::npos)
-        return;
-
-    fin.open("/proc/cmdline");
-    while (std::getline(fin, buf, ' '))
-        if (buf.find("board_id") != std::string::npos)
-            break;
-    fin.close();
-
-    if (buf.find("S88536CA2") != std::string::npos) {
-        property_override("ro.product.model", "Redmi 4");
-        property_override("ro.product.vendor.model", "Redmi 4");
-    }
-}
-
-void vendor_load_properties() {
-    dalvikprop_t dprop;
-    check_device(&dprop);
-
-    property_set("dalvik.vm.heapstartsize", dprop.heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", dprop.heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", dprop.heapsize);
+    property_set("dalvik.vm.heapstartsize", heapstartsize);
+    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_set("dalvik.vm.heapsize", heapsize);
     property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", dprop.heapminfree);
-    property_set("dalvik.vm.heapmaxfree", dprop.heapmaxfree);
+    property_set("dalvik.vm.heapminfree", heapminfree);
+    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
 
-    init_target_properties();
 }
