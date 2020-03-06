@@ -227,6 +227,10 @@ on boot
 	# DT2W
     chmod 0666 /sys/android_touch/doubletap2wake
     chown system system /sys/android_touch/doubletap2wake
+	
+	# FPS Node
+    chown system graphics /sys/class/graphics/fb0/measured_fps
+    chmod 0666 /sys/class/graphics/fb0/measured_fps
 
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
