@@ -214,19 +214,6 @@ ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
-# Nitz
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.radio.nitz_plmn="" \
-persist.vendor.radio.nitz_lons_0="" \
-persist.vendor.radio.nitz_lons_0="" \
-persist.vendor.radio.nitz_lons_1="" \
-persist.vendor.radio.nitz_lons_2="" \
-persist.vendor.radio.nitz_lons_3="" \
-persist.vendor.radio.nitz_sons_0="" \
-persist.vendor.radio.nitz_sons_1="" \
-persist.vendor.radio.nitz_sons_2="" \
-persist.vendor.radio.nitz_sons_3=""
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PROVISIONED=1 \
@@ -249,9 +236,10 @@ persist.vendor.radio.prefer_spn=1 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 ril.subscription.types=NV,RUIM \
-rild.libargs=-d/dev/smd0 \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
+ro.telephony.use_old_mnc_mcc_format=true \
 persist.vendor.radio.jbims=1 \
 service.qti.ims.enabled=1 \
 persist.radio.calls.on.ims=1 \
