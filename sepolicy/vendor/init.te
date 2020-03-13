@@ -46,5 +46,7 @@ allow init system_app:fd use;
 allow init system_server:binder call;
 allow init video_device:chr_file { open read write };
 allow qti_init_shell self:socket create;
+allow init fingerprintd_data_file:file rename;
+allow init fpc_sysfs:file { open read write };
 
 #allow init shell_exec:file execute_no_trans;
