@@ -258,6 +258,9 @@ on boot
     # Create hvdcp_opti directory
     mkdir /persist/hvdcp_opti 0770 root system
 
+on post-fs
+    start vendor.qseecomd
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
