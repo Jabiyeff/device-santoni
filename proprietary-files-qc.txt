@@ -470,7 +470,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|cbf2dd1cd5cbf0dbb90f1563a77bc7fee608fb2e
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|680d4ad1999c8db44ee7d6240dda4ec1873e4c4d
 
-# QMI - from LA.UM.7.6.2.r1-03800-89xx.0
+# QMI - from tissot PKQ1.180917.001-V10.0.18.0.PDHMIXM
 etc/permissions/qti_permissions.xml
 lib/libdiag_system.so
 lib/libqmi_cci_system.so
@@ -513,16 +513,13 @@ vendor/lib64/libpdmapper.so|b837641e006ff90a49764d7ac78553de537acd74
 vendor/lib64/libqmi_cci.so|9e066cc4ceb721413db7e9a322836de981e92c74
 vendor/lib64/libqsocket.so|6264041e0e897f78dc9b6a4be6424cbd927669d0
 
-# Radio - from LA.UM.7.6.2.r1-03800-89xx.0
+# Radio - from tissot PKQ1.180917.001-V10.0.18.0.PDHMIXM
 -app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/lpa.xml
 etc/permissions/telephonyservice.xml
 etc/permissions/qcrilhook.xml
 -framework/embmslibrary.jar
 -framework/QtiTelephonyServicelibrary.jar
 -framework/qcrilhook.jar
--framework/uimlpalibrary.jar
--framework/uimremotesimlocklibrary.jar
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
@@ -621,7 +618,7 @@ product/lib64/libimsmedia_jni.so|448795a73bbf72fc0c9876f86a13769139ea8022
 -product/priv-app/ims/ims.apk|4d8c1b7db75fb6a8ea2620511d67261384eec8a2
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|936011dbcfd05ea9350f7410bb6f4d69ddd3fb61s
 
-# Radio - IMS - from LA.UM.7.6.2.r1-03800-89xx.0
+# Radio - IMS - from tissot PKQ1.180917.001-V10.0.18.0.PDHMIXM
 -app/imssettings/imssettings.apk
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
@@ -643,7 +640,6 @@ lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
 lib/libmmrtpencoder.so
 lib/librcc.so
-lib/librtp_jni.so
 lib/vendor.qti.imsrtpservice@1.0.so
 lib/vendor.qti.ims.callinfo@1.0.so
 lib/vendor.qti.ims.rcsconfig@1.0.so
