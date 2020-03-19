@@ -10,6 +10,9 @@ type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 # Input
 type keylayout_file_sysfs, fs_type, sysfs_type;
 
+# FPS Info
+type sysfs_fps, sysfs_type, fs_type;
+
 # Rild
 type rild_file, file_type, vendor_file_type;
 

@@ -8,3 +8,4 @@ allow system_app sysfs_kcal:file rw_file_perms;
 allow system_app sysfs_kcal:file { getattr open write };
 allow system_app sysfs_vibrator:dir search;
 allow system_app sysfs_vibrator:file { getattr open read write };
+allow system_app persist_camera_prop:file { open read };

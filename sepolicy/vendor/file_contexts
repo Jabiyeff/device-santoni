@@ -34,6 +34,9 @@
 # Input files
 /sys/board_properties/virtualkeys.ft5x06_720p   u:object_r:keylayout_file_sysfs:s0
 
+# FPS Info
+/sys/devices/virtual/graphics/fb0/measured_fps                              u:object_r:sysfs_fps:s0
+
 # Legacy root dirs
 /firmware(/.*)?            u:object_r:firmware_file:s0
 /bt_firmware(/.*)?              u:object_r:bt_firmware_file:s0
@@ -57,7 +60,6 @@
 # Shell Script
 /(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
-/(vendor|system/vendor)/bin/init2\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
 
 # KCAL
 /sys/devices/platform/kcal_ctrl.0(/.*)?                                       u:object_r:sysfs_kcal:s0
