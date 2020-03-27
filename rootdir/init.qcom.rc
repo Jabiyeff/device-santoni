@@ -62,6 +62,10 @@ on init
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/display 0770 system graphics
     restorecon_recursive /mnt/vendor/persist
+	
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
