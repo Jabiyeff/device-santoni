@@ -189,6 +189,7 @@ vendor/lib64/libdpmqmihal.so|25d74c0e867f023b71a7c599ab6d213c7de2725d
 # DRM - from LA.UM.8.6.r1-03400-89xx.0
 vendor/bin/qseecomd|e43054ef83d7d27a0b1958c693ae07fdac6d73e0
 vendor/lib/libQSEEComAPI.so|6f5651b25790daf382b8b7f9061087d4476a2663
+vendor/lib/libspl.so|ed7f96c3b6162243d8e206b055b670e9d020ea3f
 vendor/lib64/libGPreqcancel.so|a5f7f9679fdd081c9b9ea8f5c4a3714761ca997c
 vendor/lib64/libGPreqcancel_svc.so|82ee3c978563896569468fdc006455b3f28f35e9
 vendor/lib64/libQSEEComAPI.so|11660979ca250ff3ba7957afdb6004545168bd1c
@@ -200,6 +201,7 @@ vendor/lib64/libqisl.so|491ac949ab488299c7a1ae4fe8257ec0a6f994b1
 vendor/lib64/librpmb.so|252757acda40774aebbcb29397eab514595f70db
 vendor/lib64/libsecureui.so|f280d590f7dc00c9ca89c43e676dfd084f23206f
 vendor/lib64/libsecureui_svcsock.so|060bbd76ead3b3aeb323af0c7352f9445088d3fe
+vendor/lib64/libspl.so|8c848b95674bb6c9f40415568dafe086a3d952f7
 vendor/lib64/libssd.so|33d717f793c2579e3bd17b5ce6534cb68c12887d
 
 # DRM - Widevine - LA.UM.8.6.r1-03400-89xx.0
