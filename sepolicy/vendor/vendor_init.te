@@ -1,5 +1,7 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
 
+set_prop(vendor_init, fm_prop)
+
 allow vendor_init rootfs:lnk_file setattr;
 allow vendor_init fpc_data_file:dir create_file_perms;
 

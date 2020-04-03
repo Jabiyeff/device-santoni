@@ -9,3 +9,5 @@ allow system_app sysfs_kcal:file { getattr open write };
 allow system_app sysfs_vibrator:dir search;
 allow system_app sysfs_vibrator:file { getattr open read write };
 allow system_app persist_camera_prop:file { open read };
+allow system_app fm_prop:property_service set;
+get_prop(system_app, fm_prop)
