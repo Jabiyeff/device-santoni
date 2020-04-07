@@ -31,7 +31,7 @@
     <application
         android:label="@string/advanced_settings"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/CustomOptionsTheme">
         <receiver
             android:name="com.xiaomi.addon.BootReceiver"
             android:defaultToDeviceProtectedStorage="true"
@@ -71,8 +71,8 @@
         <activity
             android:name="com.xiaomi.addon.kcal.KCalSettingsActivity"
             android:exported="false"
-            android:label="@string/advanced_settings_kcal">
-
+            android:label="@string/advanced_settings_kcal"
+            android:theme="@style/CustomOptionsTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
