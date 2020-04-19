@@ -149,7 +149,7 @@ service audiod /vendor/bin/audiod
    group system
 
 service wcnss-service /vendor/bin/wcnss_service
-    class late_start
+    class main
     user system
     group system wifi radio
     oneshot
