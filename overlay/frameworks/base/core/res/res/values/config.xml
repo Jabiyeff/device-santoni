@@ -481,4 +481,7 @@
          vendor fingerprint HAL implementations. -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 
+    <!-- Whether camera shutter sound is forced or not  (country specific). -->
+    <bool name="config_camera_sound_forced">false</bool>
+
 </resources>
