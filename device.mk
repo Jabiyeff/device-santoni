@@ -392,8 +392,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init.spectrum.rc \
-    init.spectrum.sh
 
 PRODUCT_PACKAGES += \
     init.baseband.sh \
