@@ -261,7 +261,7 @@ persist.sys.fflag.override.settings_network_and_internet_v2=true
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ro.surface_flinger.protected_contents=true \
-ro.surface_flinger.max_frame_buffer_acquired_buffers=2 \
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
 ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
