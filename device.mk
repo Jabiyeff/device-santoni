@@ -512,6 +512,9 @@ endif
 PRODUCT_BOOT_JARS += \
    WfdCommon
 
+PRODUCT_PACKAGES += \
+    libnl
+
 #XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts \
