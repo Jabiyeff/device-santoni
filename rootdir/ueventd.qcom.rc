@@ -26,9 +26,10 @@
 #
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0666   system     oem_2901
+/dev/diag                 0660   system     oem_2901
 
 /dev/genlock              0666   system     system
+/dev/wlan                 0660   wifi       wifi
 /dev/kgsl                 0666   system     system
 /dev/kgsl-3d0             0666   system     system
 /dev/kgsl-2d0             0666   root       root
@@ -49,6 +50,8 @@
 /dev/dpl_ctrl             0660   usb        usb
 /dev/ipa_odl_ctl          0660   radio      radio
 /dev/ipa_adpl             0660   system     oem_2905
+/dev/synx_device          0660   root       camera
+/dev/hab                  0666   system     system
 
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
@@ -110,41 +113,63 @@
 /dev/hsicctl14            0640   radio      radio
 /dev/hsicctl15            0640   radio      radio
 /dev/hsicctl16            0640   radio      radio
-/dev/mhi_pipe_14          0640   radio      radio
-/dev/mhi_pipe_16          0640   radio      radio
-/dev/mhi_pipe_32          0640   radio      radio
+/dev/mhi_*_pipe_14        0640   radio      radio
+/dev/mhi_*_pipe_16        0640   radio      radio
+/dev/mhi_*_pipe_32        0640   radio      radio
 /dev/at_usb0              0640   radio      radio
 /dev/at_mdm0              0640   radio      radio
 /dev/video*               0660   system     camera
+/dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
-/dev/smcinvoke            0660   system     system
+/dev/smcinvoke            0660   system     drmrpc
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc
 /dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
 /dev/spcom                0660   system     system
+/dev/spss_utils           0660   system     system
 /dev/sp_kernel            0660   system     system
 /dev/sp_nvm               0660   system     system
 /dev/sp_ssr               0660   system     system
 /dev/sp_keymaster         0660   system     system
+/dev/sec_nvm_*            0660   system     system
 /dev/cryptoapp            0660   system     system
+/dev/spdaemon_ssr         0660   system     system
+/dev/spu_hal_ssr          0660   system     system
+/dev/iuicc                0660   system     system
+/dev/iuicc0               0660   system     system
+/dev/iuicc1               0660   system     system
 /dev/gemini0              0660   system     camera
 /dev/jpeg0                0660   system     camera
 /dev/jpeg1                0660   system     camera
 /dev/jpeg2                0660   system     camera
 /dev/jpeg3                0660   system     camera
 /dev/adsprpc-smd          0664   system     system
+/dev/adsprpc-smd-secure   0644   system     system
 /dev/system_health_monitor 0644  radio      system
 /dev/mdss_rotator         0664   system     system
+
+#QDSS
+/dev/byte-cntr            0660   system    oem_2902
+/dev/mhi_qdss             0660   system    oem_2902
+/sys/class/qdss_bridge/mhi_qdss  mode      0660     system   oem_2902
+
+#qg
+/dev/qg                   0660  system     system
+/dev/qg_battery           0660  system     system
+
+#qvr
+/dev/qvr_external_sensor_ioctl      0660  system  system
+/sys/kernel/qvr_external_sensor/fd  0660  system  system
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/wlan0/queues/rx-* rps_cpus           0660   system     system
 /sys/devices/soc/a000000.qcom,wcnss-wlan/net/p2p0/queues/rx-* rps_cpus            0660   system     system
 /dev/spidev0.0            0660   system     audio
-/dev/aud_pasthru_adsp     0660   system     audio
 /dev/i2c-7                0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
@@ -154,6 +179,7 @@
 /dev/msm_vidc_dec_sec     0660   system     audio
 /dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
+/dev/hw_random            0600   root       root
 /dev/sdsprpc-smd          0660   system     system
 
 #permissions for audio
@@ -196,6 +222,8 @@
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
 /dev/avtimer              0660   system     audio
+/dev/spidev2.0            0660   system     audio
+/dev/aud_pasthru_adsp     0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
@@ -242,6 +270,9 @@
 /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch          0440 system drmrpc
 /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input*  secure_touch_enable   0660 system drmrpc
 
+# GNSS Device premissions
+/dev/gnss_sirf             0660   gps     gps
+
 # laser sensor access
 /sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   input
 /sys/devices/virtual/input/input*                   set_delay_ms     0660  system   input
@@ -256,6 +287,15 @@
 /dev/wcnss_ctrl           0660   system     system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/queues/rx-* rps_cpus 0660 system system
 /sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/p2p0/queues/rx-* rps_cpus 0660 system system
+
+# wigig
+/sys/bus/pci/drivers/wil6210* 0000:01:00.0/wil6210/fst_link_loss 0660 wifi wifi
+/sys/bus/pci/drivers/wil6210* 0000:01:00.0/wil6210/thermal_throttling 0660 system system
+/sys/bus/pci/drivers/wil6210* 0000:01:00.0/wil6210/snr_thresh 0660 wifi wifi
+/sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/queues/rx-0/rps_cpus 0660 system system
+/sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/gro_flush_timeout 0660 system system
+/sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
+/dev/wigig_sensing        0660   system     system
 
 # UIO devices
 /dev/uio0                 0660   system     system
@@ -272,7 +312,9 @@
 /dev/ramdump*             0640   system     system
 
 # Fingerprint device
-/dev/qbt1000              0660   system     system
+/dev/qbt*                 0660   system     system
+/sys/class/fts/touch_aoi aoi_set 0660 root system
+/sys/class/fts/touch_aoi power_set 0660 root system
 
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
@@ -283,6 +325,11 @@
 /dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
 /dev/block/platform/soc/1da4000.ufshc/by-name/frp       0600   system     system
+/dev/block/platform/soc/c0c4000.sdhci/by-name/frp       0600   system     system
+/dev/block/platform/soc/1d84000.ufshc/by-name/frp       0600   system     system
+/dev/block/platform/soc/7c4000.sdhci/by-name/frp        0600   system     system
+/dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
+/dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
 
 /sys/devices/soc/soc:fpc1020		hw_reset			0220   system     system
 /sys/devices/soc/soc:fpc1020		irq	        		0660   system     system
@@ -293,5 +340,66 @@
 # Kmsg device
 /dev/kmsg                                               0620   root       system
 
+
+# LED class devices
+/sys/class/leds/red      delay_on     0640    system    system
+/sys/class/leds/red      delay_off    0640    system    system
+/sys/class/leds/red      breath       0640    system    system
+/sys/class/leds/green    delay_on     0640    system    system
+/sys/class/leds/green    delay_off    0640    system    system
+/sys/class/leds/green    breath       0640    system    system
+/sys/class/leds/blue     delay_on     0640    system    system
+/sys/class/leds/blue     delay_off    0640    system    system
+/sys/class/leds/blue     breath       0640    system    system
+
+# NPU device
+/dev/msm_npu             0644   system     system
+
+# USB role switch
+/sys/class/dual_role_usb/*	data_role	0660	system	system
+/sys/class/dual_role_usb/*	power_role	0660	system	system
+/sys/class/dual_role_usb/*	mode		0660	system	system
+
+#Memory Offline
+/sys/devices/system/memory/memory* state    0660 system system
+
+/sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics
+
 # lirc
 /dev/lirc0                0660   system     system
+
+# sys-fs display
+/sys/class/graphics/fb*     hpd                      0664    system  graphics
+/sys/class/graphics/fb*     res_info                 0664    system  graphics
+/sys/class/graphics/fb*     vendor_name              0664    system  graphics
+/sys/class/graphics/fb*     product_description      0664    system  graphics
+/sys/class/graphics/fb*     video_mode               0664    system  graphics
+/sys/class/graphics/fb*     format_3d                0664    system  graphics
+/sys/class/graphics/fb*     s3d_mode                 0664    system  graphics
+/sys/class/graphics/fb*     dynamic_fps              0664    system  graphics
+/sys/class/graphics/fb*     msm_fb_dfps_mode         0664    system  graphics
+/sys/class/graphics/fb*     hdr_stream               0664    system  graphics
+/sys/class/graphics/fb*     cec/enable               0664    system  graphics
+/sys/class/graphics/fb*     cec/logical_addr         0664    system  graphics
+/sys/class/graphics/fb*     cec/rd_msg               0664    system  graphics
+/sys/class/graphics/fb*     pa                       0664    system  graphics
+/sys/class/graphics/fb*     cec/wr_msg               0600    system  graphics
+/sys/class/graphics/fb*     hdcp/tp                  0664    system  graphics
+/sys/class/graphics/fb*     hdcp2p2/min_level_change 0660    system  graphics
+/sys/class/graphics/fb*     hdmi_audio_cb            0600    audioserver audio
+
+/sys/class/graphics/fb*     lineptr_value            0664    system  graphics
+/sys/class/graphics/fb*     msm_fb_persist_mode      0664    system  graphics
+
+/sys/class/graphics/fb0     idle_time                0664    system  graphics
+/sys/class/graphics/fb0     dynamic_fps              0664    system  graphics
+/sys/class/graphics/fb0     dyn_pu                   0664    system  graphics
+/sys/class/graphics/fb0     modes                    0664    system  graphics
+/sys/class/graphics/fb0     mode                     0664    system  graphics
+/sys/class/graphics/fb0     msm_cmd_autorefresh_en   0664    system  graphics
+/sys/class/kgsl/kgsl-3d0    pwrscale                 0664    root  system
+/sys/class/kgsl/kgsl-3d0    devfreq/governor         0664    root  system
+/sys/class/kgsl/kgsl-3d0    force_rail_on            0664    root  system
+/sys/class/kgsl/kgsl-3d0    force_bus_on             0664    root  system
+/sys/class/kgsl/kgsl-3d0    force_clk_on             0664    root  system
+/sys/class/kgsl/kgsl-3d0    bus_split                0664    root  system
