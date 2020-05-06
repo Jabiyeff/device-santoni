@@ -1,1 +1,2 @@
+allow hvdcp sysfs:dir read;
 r_dir_file(hvdcp, sysfs_batteryinfo)

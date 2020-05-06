@@ -1,4 +1,4 @@
-allow ueventd fpc_sysfs:file rw_file_perms;
+allow ueventd sysfs_fps_attr:file rw_file_perms;
 
 typeattribute ueventd data_between_core_and_vendor_violators;
 allow ueventd wifi_vendor_data_file:dir search;
