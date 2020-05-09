@@ -484,5 +484,8 @@
 
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
     <bool name="config_camera_sound_forced">false</bool>
+	
+	<!-- Whether the device show_vendor_mismatch_message -->
+    <bool name="config_show_vendor_mismatch_message">false</bool>
 
 </resources>
