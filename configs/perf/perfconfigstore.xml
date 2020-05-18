@@ -32,11 +32,15 @@ property Name is called. -->
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
 
                 <!--Vendor Properties -->
-                <Prop Name="vendor.iop.enable_iop" Value="0" />
                 <Prop Name="vendor.iop.enable_uxe" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="0" />
                 <Prop Name="vendor.enable.prefetch" Value="0" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
+				
+                <!--Mention all the target/kernel specific properties at the end of xml file
+                    All the default valuea are kept above-->
+                <Prop Name="vendor.debug.enable.lm" Value="true" Kernel="4.9" />
+
     </PerfConfigs>
 </PerfConfigsStore>
