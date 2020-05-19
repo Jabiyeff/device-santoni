@@ -1,1 +1,2 @@
 allow poweroffalarm_app persist_file:dir search;
+allow poweroffalarm_app cgroup:file write;

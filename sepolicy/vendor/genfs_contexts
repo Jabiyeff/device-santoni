@@ -12,8 +12,11 @@ genfscon sysfs /devices/soc/msm-bcl-19/power_supply                          u:o
 genfscon sysfs /devices/soc/qpnp-fg-18/power_supply                          u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-17/power_supply                  u:object_r:sysfs_batteryinfo:s0
 
-genfscon sysfs /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8937@0:qcom,pm8937_rtc/rtc/rtc0/hctosys                  u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00                        u:object_r:sysfs_battery_supply:s0
+genfscon sysfs   /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8937@0:qcom,pm8937_rtc/rtc/rtc0/hctosys                  u:object_r:sysfs_battery_supply:s0
+genfscon sysfs   /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00                        u:object_r:sysfs_battery_supply:s0
+genfscon sysfs   /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00                                                                                     u:object_r:sysfs_battery_supply:s0
+genfscon sysfs   /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-01                                                                                     u:object_r:sysfs_battery_supply:s0
+genfscon sysfs   /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02                                                                                     u:object_r:sysfs_battery_supply:s0
 genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/name                                                                                         u:object_r:sysfs_battery_supply:s0
 genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/power_supply                                                                                 u:object_r:sysfs_battery_supply:s0
 genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/power_supply/parallel                                                                        u:object_r:sysfs_battery_supply:s0
