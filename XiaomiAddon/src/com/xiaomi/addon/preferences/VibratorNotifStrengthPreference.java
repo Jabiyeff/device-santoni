@@ -53,7 +53,7 @@ public class VibratorNotifStrengthPreference extends Preference implements
     public VibratorNotifStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mMinValue = 116;
-        mMaxValue = 2088;
+        mMaxValue = 3596;
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         setLayoutResource(R.layout.preference_seek_bar);
@@ -75,7 +75,7 @@ public class VibratorNotifStrengthPreference extends Preference implements
     }
 
 	public static String getValue(Context context) {
-		return Utils.getFileValue(FILE_LEVEL, "2088");
+		return Utils.getFileValue(FILE_LEVEL, "2726");
 	}
 
 	private void setValue(String newValue, boolean withFeedback) {
@@ -90,7 +90,7 @@ public class VibratorNotifStrengthPreference extends Preference implements
             return;
         }
 
-        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_NOTIF_VIBSTRENGTH, "2088");
+        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_NOTIF_VIBSTRENGTH, "2726");
         Utils.writeValue(FILE_LEVEL, storedValue);
     }
 
