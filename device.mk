@@ -527,6 +527,10 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
+#XiaomiAddon
+PRODUCT_PACKAGES += \
+    XiaomiAddon
+	
 #XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
