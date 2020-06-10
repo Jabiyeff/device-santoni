@@ -26,6 +26,8 @@ on property:sys.boot_completed=1
    chmod 0664 /sys/module/adreno_idler/parameters/adreno_idler_active
    chown system system /sys/block/mmcblk0/queue/scheduler
    chmod 0664 /sys/block/mmcblk0/queue/scheduler
+   chown system system /sys/block/mmcblk1/queue/scheduler
+   chmod 0664 /sys/block/mmcblk1/queue/scheduler
 
    # Set default profile on first boot
     exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
