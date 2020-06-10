@@ -269,6 +269,7 @@ on post-fs
 
     # Vibrator permissions
     chown system system /sys/class/leds/vibrator/vmax_override
+    chmod 0660 /sys/class/leds/vibrator/vmax_override
     write /sys/class/leds/vibrator/vmax_override 1
     chown system system /sys/class/leds/vibrator/vmax_mv_user
     chown system system /sys/class/leds/vibrator/vmax_mv_call
