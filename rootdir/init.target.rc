@@ -72,7 +72,7 @@ on property:vold.decrypt=trigger_restart_framework
 service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
-    group system
+    group system net_raw
     ioprio rt 4
     writepid /dev/cpuset/system-background/tasks
 
