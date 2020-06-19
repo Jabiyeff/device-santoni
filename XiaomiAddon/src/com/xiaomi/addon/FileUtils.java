@@ -127,7 +127,7 @@ class FileUtils {
     static boolean getFileValueAsBoolean(String filename, boolean defValue) {
         String fileValue = readLine(filename);
         if (fileValue != null) {
-            return !fileValue.equals("N");
+            return !fileValue.equals("0");
         }
         return defValue;
     }
