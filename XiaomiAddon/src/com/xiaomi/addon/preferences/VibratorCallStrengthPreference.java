@@ -47,7 +47,7 @@ public class VibratorCallStrengthPreference extends Preference implements
     private int mMaxValue;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "/sys/class/leds/vibrator/vmax_mv_call";
+    private static final String FILE_LEVEL = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call";
     private static final long testVibrationPattern[] = {0,250};
 
     public VibratorCallStrengthPreference(Context context, AttributeSet attrs) {

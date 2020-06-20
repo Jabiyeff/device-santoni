@@ -72,10 +72,7 @@
 /sys/kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
 
 # Vibration
-/sys/class/leds/vibrator/vmax_override               u:object_r:sysfs_vibrator:s0
-/sys/class/leds/vibrator/vmax_mv_user                u:object_r:sysfs_vibrator:s0
-/sys/class/leds/vibrator/vmax_mv_call                u:object_r:sysfs_vibrator:s0
-/sys/class/leds/vibrator/vmax_mv_strong              u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator(/.*)?           u:object_r:sysfs_vibrator:s0
 /sys/class/timed_output/vibrator/vmax_mv             u:object_r:sysfs_vibrator:s0
 /sys/class/timed_output/vibrator/vtg_level           u:object_r:sysfs_vibrator:s0
 
