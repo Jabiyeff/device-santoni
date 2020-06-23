@@ -3,6 +3,7 @@ allow system_app sysfs_zram:dir r_dir_perms;
 allow system_app spectrum_prop:property_service set;
 get_prop(system_app, spectrum_prop);
 allow system_app spectrum_prop:file read;
+allow system_app sysfs_fcharge:file { open read getattr write };
 allow system_app sysfs_kcal:dir search;
 allow system_app sysfs_kcal:file rw_file_perms;
 allow system_app sysfs_kcal:file { getattr open write };
