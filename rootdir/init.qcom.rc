@@ -904,3 +904,6 @@ service goodix_script /vendor/bin/init.goodix.sh
 	
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+
+on property:dev.bootcomplete=1
+    restart ril-daemon
