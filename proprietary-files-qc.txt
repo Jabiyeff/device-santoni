@@ -463,10 +463,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|00b41ba2e3737041c536d7a3fe87739edb
 
 # QMI - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
-lib/libdiag_system.so|96e00fb268257343bac8fa52f02aab5aa12a650e
-lib/libqmi_cci_system.so|a1adcd8bed76076be0a3678bdd55ec6f6eef8a7a
-lib64/libdiag_system.so|811c30efa526e8e3828b112487b1d203cca5ed6e
-lib64/libqmi_cci_system.so|18633283b6f8c7a103d3726e562027449f5ad5a9
+lib64/libdiag_system.so:product/lib64/libdiag_system.so|811c30efa526e8e3828b112487b1d203cca5ed6e
 vendor/bin/irsc_util|3966b101150b54078b3e004212122a24f3fa0d82
 vendor/lib/libdiag.so|5b7fe4d15ab64af813827020166474c3b77591ef
 vendor/lib/libdsi_netctrl.so|78206e2c94d0a9ceb69712aeec99ed90f8fc63b3
@@ -505,12 +502,11 @@ vendor/lib64/libqmi_cci.so|9e066cc4ceb721413db7e9a322836de981e92c74
 vendor/lib64/libqsocket.so|6264041e0e897f78dc9b6a4be6424cbd927669d0
 
 # Radio - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
--app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
-etc/permissions/telephonyservice.xml|3a6bc2a522270f968ff5a332b8781c0289e6d1ef
-etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
--framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
--framework/QtiTelephonyServicelibrary.jar|1df2f89ffb3aedc36e1c2ca7cafbf73a6a06b3fb
--framework/qcrilhook.jar|784df5e6aa9df0127700b9a6f1083440ebfac057
+-app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
+etc/permissions/telephonyservice.xml:product/etc/permissions/telephonyservice.xml|3a6bc2a522270f968ff5a332b8781c0289e6d1ef
+etc/permissions/qcrilhook.xml:product/etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
+framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|1df2f89ffb3aedc36e1c2ca7cafbf73a6a06b3fb
+framework/qcrilhook.jar:product/framework/qcrilhook.jar|784df5e6aa9df0127700b9a6f1083440ebfac057
 vendor/bin/hw/qcrild|442a706df50e319f00aa92a69e7c06e4e75ff5b5
 vendor/bin/ATFWD-daemon|d8e8b853f33411504054eb965b1fb836544daee4
 vendor/bin/netmgrd|e9c82b0644cb08b160a2ce484fdb58830306237d
@@ -570,16 +566,15 @@ vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa
 vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # Radio - IMS - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
-lib64/com.qualcomm.qti.imscmservice@1.0.so|e622ddede56d6a9dcb9d3dbcff7c33ab3f4c1131
-lib64/com.qualcomm.qti.imscmservice@2.0.so|47732fea882f132beb4f3f515e4fed5ce7162120
-lib64/com.qualcomm.qti.imscmservice@2.1.so|5808cb432903b7b45e0c2563286851ef89e06a98
-lib64/com.qualcomm.qti.uceservice@2.0.so|25301b03ab0f1fb8b723d4ebd98c4734e552b54b
-lib64/libmmrtpencoder.so|da67c10a9fb3579c2a5b8ab705fc0335ec62bef0
-lib64/librcc.so|4d732d9211e3139ed17fae059edfcd71f0e13d7e
-lib64/librtp_jni.so|2c273878efd73a610cc0fc2f0a362cf0e79f8651
-lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
-lib64/vendor.qti.ims.callinfo@1.0.so|5567616f4792889965b1bc254b245d5323ab6516
-lib64/vendor.qti.ims.rcsconfig@1.0.so|bee66b95aa31d6c536e27b67aed2094b0b63635f
+lib64/com.qualcomm.qti.imscmservice@1.0.so:product/lib64/com.qualcomm.qti.imscmservice@1.0.so|e622ddede56d6a9dcb9d3dbcff7c33ab3f4c1131
+lib64/com.qualcomm.qti.imscmservice@2.0.so:product/lib64/com.qualcomm.qti.imscmservice@2.0.so|47732fea882f132beb4f3f515e4fed5ce7162120
+lib64/com.qualcomm.qti.imscmservice@2.1.so:product/lib64/com.qualcomm.qti.imscmservice@2.1.so|5808cb432903b7b45e0c2563286851ef89e06a98
+lib64/com.qualcomm.qti.uceservice@2.0.so:product/lib64/com.qualcomm.qti.uceservice@2.0.so|25301b03ab0f1fb8b723d4ebd98c4734e552b54b
+lib64/libmmrtpencoder.so:product/lib64/libmmrtpencoder.so|da67c10a9fb3579c2a5b8ab705fc0335ec62bef0
+lib64/librcc.so:product/lib64/librcc.so|4d732d9211e3139ed17fae059edfcd71f0e13d7e
+lib64/librtp_jni.so:product/lib64/librtp_jni.so|2c273878efd73a610cc0fc2f0a362cf0e79f8651
+lib64/vendor.qti.imsrtpservice@1.0.so:product/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
+lib64/vendor.qti.ims.callinfo@1.0.so:product/lib64/vendor.qti.ims.callinfo@1.0.so|5567616f4792889965b1bc254b245d5323ab6516
 vendor/bin/ims_rtp_daemon|174be7387753db4b72fa4de305edaa80fe79b6a9
 vendor/bin/imsdatadaemon|56e1ab6f6f6679261bcd36dd218097632da866b6
 vendor/bin/imsqmidaemon|0e5cf08e7cbd4e34fb69e6644a8c7d5e6715c306
