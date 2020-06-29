@@ -34,9 +34,9 @@
 
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Spectrum</string>
-    <string name="spectrum_title">Spectrum Profiles</string>
-    <string name="spectrum_summary">Choose your Spectrum Profiles</string>
-    <string name="spectrum_dialogTitle">Choose your Spectrum Profiles</string>
+    <string name="spectrum_title">Spectrum Profile</string>
+    <string name="spectrum_summary">Choose your Spectrum Profile</string>
+    <string name="spectrum_dialogTitle">Choose your Spectrum Profile</string>
 
     <!-- Values for Spectrum Presets -->
     <string name="spectrum_performance">Performance</string>

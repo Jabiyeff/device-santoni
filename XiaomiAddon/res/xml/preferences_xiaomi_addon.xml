@@ -89,10 +89,6 @@
     android:key="selinux"
     android:title="@string/selinux_category">
 
-    <Preference
-        android:summary="@string/selinux_explanation_summary"
-        android:selectable="false"/>
-
     <SwitchPreference
         android:key="selinux_mode"
         android:title="@string/selinux_mode_title"
@@ -106,6 +102,12 @@
         android:summary="@string/selinux_persistence_summary"
         android:defaultValue="true"
         android:icon="@drawable/ic_power" />
+		
+    <Preference
+        android:summary="@string/selinux_explanation_summary"
+        android:selectable="false"
+        android:title=""
+        android:icon="@drawable/ic_info" />
 
     </PreferenceCategory>
 
