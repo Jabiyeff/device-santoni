@@ -120,6 +120,9 @@ vendor.video.disable.ubwc=1
 debug.sdm.support_writeback=0
 debug.hwui.renderer=skiavk
 
+# Dolby
+vendor.audio.dolby.ds2.enabled=true
+
 # DRM
 drm.service.enabled=true
 
