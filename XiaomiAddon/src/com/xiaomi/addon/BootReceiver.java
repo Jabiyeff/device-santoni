@@ -101,6 +101,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
     }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+		
+        VibratorStrengthPreference.restore(context);
+        VibratorCallStrengthPreference.restore(context);
+        VibratorNotifStrengthPreference.restore(context);
 
         if (Settings.Secure.getInt(context.getContentResolver(), PREF_ENABLED, 0) == 1) {
             FileUtils.setValue(KCAL_ENABLE, Settings.Secure.getInt(context.getContentResolver(),
@@ -126,9 +130,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
-        VibratorStrengthPreference.restore(context);
-        VibratorCallStrengthPreference.restore(context);
-        VibratorNotifStrengthPreference.restore(context);
         }
 
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
