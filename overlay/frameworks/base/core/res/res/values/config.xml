@@ -494,4 +494,7 @@
 	<!-- Whether the device show_vendor_mismatch_message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
 
+    <!-- Flag indicating whether the surface flinger has limited alpha compositing functionality in hardware. If set, the window manager will disable alpha trasformation in animations where not strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
 </resources>
