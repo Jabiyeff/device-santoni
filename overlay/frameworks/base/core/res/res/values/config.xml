@@ -154,6 +154,9 @@
 
     <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
     <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
+	
+    <!-- Configuration to enable non-default PDP during IWLAN -->
+    <bool name="config_feature_iwlan_enabled">true</bool>
 
     <!-- IWLAN -->
     <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
