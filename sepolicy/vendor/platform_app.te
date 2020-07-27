@@ -1,2 +1,4 @@
 allow platform_app sysfs:file { getattr };
 allow platform_app sysfs_fps:file { getattr open read };
+allow platform_app system_app_data_file:dir getattr;
+allow platform_app app_data_file:file rx_file_perms;
