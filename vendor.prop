@@ -3,7 +3,7 @@ af.fast_track_multiplier=1
 audio.offload.disable=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
 persist.audio.dirac.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
@@ -29,7 +29,7 @@ vendor.audio.tunnel.encode=false
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=192
-vendor.voice.conc.fallbackpath=deep-buffer
+vendor.voice.conc.fallbackpath=fast
 vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
@@ -129,7 +129,7 @@ vendor.vidc.disable.split.mode=1
 vendor.vidc.enc.disable.pq=true
 vendor.video.disable.ubwc=1
 av.debug.disable.pers.cache=1
-media.settings.xml=/vendor/etc/media_profiles_V1_0.xml
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Perf Ux IOPrefetcher
