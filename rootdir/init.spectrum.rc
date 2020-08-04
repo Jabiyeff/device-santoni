@@ -1,6 +1,6 @@
 # SPECTRUM KERNEL MANAGER
 # Ramdisk file for profile based kernel management
-# Implimentation inspired by Franco's fku profiles
+# Implementation inspired by Franco's fku profiles
 
 # Initialization
 on property:sys.boot_completed=1
@@ -20,10 +20,18 @@ on property:sys.boot_completed=1
    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz
    chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz
+   chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel
+   chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel
+   chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
+   chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
+   chown system system /sys/module/adreno_idler/parameters/adreno_idler_active
+   chmod 0664 /sys/module/adreno_idler/parameters/adreno_idler_active
    chown system system /sys/block/mmcblk0/queue/scheduler
    chmod 0664 /sys/block/mmcblk0/queue/scheduler
    chown system system /sys/block/mmcblk1/queue/scheduler
    chmod 0664 /sys/block/mmcblk1/queue/scheduler
+   chown system system/sys/module/workqueue/parameters/power_efficient
+   chmod 0664 /sys/module/workqueue/parameters/power_efficient
 
    # Set default profile on first boot
     exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
@@ -51,6 +59,9 @@ on property:persist.spectrum.profile=0
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/module/adreno_idler/parameters/adreno_idler_active Y
 
 		#IO Scheduler
 		write /sys/block/mmcblk0/queue/scheduler bfq
@@ -86,6 +97,9 @@ on property:persist.spectrum.profile=1
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 3
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/module/adreno_idler/parameters/adreno_idler_active N
 
 		#IO Scheduler
 		write /sys/block/mmcblk0/queue/scheduler cfq
@@ -121,6 +135,9 @@ on property:persist.spectrum.profile=2
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor simple_ondemand
+		write /sys/module/adreno_idler/parameters/adreno_idler_active Y
 
 		#IO Scheduler
 		write /sys/block/mmcblk0/queue/scheduler noop
@@ -156,6 +173,9 @@ on property:persist.spectrum.profile=3
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 475
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 2
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/module/adreno_idler/parameters/adreno_idler_active N
 
 		#IO Scheduler
 		write /sys/block/mmcblk0/queue/scheduler deadline
