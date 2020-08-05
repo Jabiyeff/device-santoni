@@ -29,6 +29,7 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.spectrum.rc
+import /vendor/etc/init/hw/init.extras.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -105,26 +106,6 @@ on early-boot
     chown system system /mnt/vendor/persist/sensors/registry/config
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
 
-    # for backward compatibility
-    chown system system /persist/sensors
-    chown system system /persist/sensors/registry
-    chown system system /persist/sensors/registry/registry
-    chown system system /persist/sensors/registry/registry/sensors_registry
-    chown system system /persist/sensors/sensors_settings
-    chown system system /persist/sensors/registry/config
-    chmod 0664 /persist/sensors/sensors_settings
-
-    chown system system /mnt/vendor/persist/sensors
-    chown system system /mnt/vendor/persist/sensors/sns.reg
-    chown system system /mnt/vendor/persist/sensors/sensors_list.txt
-    chown system system /mnt/vendor/persist/sensors/registry
-    chown system system /mnt/vendor/persist/sensors/registry/registry
-    chown system system /mnt/vendor/persist/sensors/registry/registry/sensors_registry
-    chown system system /mnt/vendor/persist/sensors/sensors_settings
-    chown system system /mnt/vendor/persist/sensors/registry/sns_reg_config
-    chown system system /mnt/vendor/persist/sensors/registry/config
-    chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
-
     # Graphics
     chown system graphics /sys/class/graphics/fb0/idle_time
     chmod 0664 /sys/class/graphics/fb0/idle_time
@@ -143,15 +124,14 @@ on boot
     chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chown system system /sys/module/msm_core/parameters/polling_interval
     chown system system /sys/module/msm_core/parameters/disabled
     chown system system /sys/kernel/debug/msm_core/enable
     chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
+    chown system system /sys/kernel/boot_adsp/ssr
     chmod 0660 /sys/module/bluetooth_power/parameters/power
-	
-    chown system system /sys/class/power_supply/battery/charging_enabled
-    chmod 0666 /sys/class/power_supply/battery/charging_enabled
 
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
@@ -160,7 +140,7 @@ on boot
     chmod 2770 /dev/socket/qmux_radio
 
     mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/misc 0770 system system
     mkdir /mnt/vendor/persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/time 0770 system system
@@ -170,23 +150,6 @@ on boot
 
     #enable camera read sensors data
     setprop persist.camera.gyro.disable 0
-
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.wifi    524288,2097152,4194304,262144,524288,1048576
-
-#   Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.default 4096,87380,524288,4096,16384,110208
-    setprop net.tcp.buffersize.lte     2097152,4194304,8388608,262144,524288,1048576
-    setprop net.tcp.buffersize.umts    4094,87380,110208,4096,16384,110208
-    setprop net.tcp.buffersize.hspa    4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsupa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hsdpa   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.hspap   4094,87380,1220608,4096,16384,1220608
-    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
-    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
-    setprop net.tcp.buffersize.evdo    4094,87380,524288,4096,16384,262144
 
     setprop net.tcp.2g_init_rwnd 10
 
@@ -210,44 +173,6 @@ on boot
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
 	
-	# KCAL permissions
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
-
-    # Vibrator permissions
-    chown root system /sys/class/timed_output/vibrator/vtg_level
-    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
-    chown system system /sys/class/timed_output/vibrator/vmax_mv
-    chmod 0660 /sys/class/timed_output/vibrator/vmax_mv
-	
-	# DT2W
-    chmod 0666 /sys/android_touch/doubletap2wake
-    chown system system /sys/android_touch/doubletap2wake
-	
-	# FPS Node
-    chown system graphics /sys/class/graphics/fb0/measured_fps
-    chmod 0666 /sys/class/graphics/fb0/measured_fps
-
-    # IR blaster
-    chown root system /sys/class/leds/infrared/transmit
-    chown root system /sys/class/leds/infrared/brightness  
-	
-    # USB Fastcharge
-    chown system system /sys/kernel/fast_charge/force_fast_charge
-    chmod 0660 /sys/kernel/fast_charge/force_fast_charge
-
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # Allow access to sensors device attributes
@@ -265,14 +190,6 @@ on boot
 
 on post-fs
     start vendor.qseecomd
-
-    # Vibrator permissions
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    chmod 0660 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    write /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override 1
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -884,7 +801,7 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
     capabilities BLOCK_SUSPEND SYS_NICE
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
@@ -900,7 +817,7 @@ service goodix_script /vendor/bin/init.goodix.sh
     class late_start
     user system
     oneshot
-	
+
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
 
