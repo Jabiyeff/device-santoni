@@ -29,10 +29,6 @@ PRODUCT_MANUFACTURER := Xiaomi
 # Official
 export export HAVOC_BUILD_TYPE=Official
 
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.havoc.maintainer=STARGAZER
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720

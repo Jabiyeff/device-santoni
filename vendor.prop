@@ -80,6 +80,7 @@ debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.egl.hw=0
+debug.sf.disable_backpressure=1
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
@@ -189,17 +190,10 @@ persist.vendor.lte.pco_supported=true
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.aosp_usr_pref_sel=true
 persist.vendor.radio.apm_sim_not_pwdn=1
-persist.radio.force_on_dc=true
-persist.radio.ignore_dom_time=5
-persist.vendor.radio.oem_ind_to_both=0
 persist.radio.multisim.config=dsds
-persist.radio.schd.cache=3500
-persist.vendor.ims.dropset_feature=0
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.force_get_pref=1
-persist.vendor.radio.lte_vrte_ltd=1
 persist.vendor.radio.enable_temp_dds=true
-persist.vendor.radio.no_wait_for_card=1
 persist.vendor.radio.prefer_spn=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.relay_oprt_change=1
@@ -213,15 +207,8 @@ persist.vendor.radio.jbims=1
 persist.vendor.vt.supported=1
 service.qti.ims.enabled=1
 persist.radio.calls.on.ims=1
-ro.telephony.default_network=22,20
+ro.telephony.default_network=22,22
 vendor.service.qti.ims.enabled=1
-
-# SurfaceFlinger
-debug.sf.disable_backpressure=1
-debug.sf.early_phase_offset_ns=1500000
-debug.sf.early_app_phase_offset_ns=1500000
-debug.sf.early_gl_phase_offset_ns=3000000
-debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # Time Services
 persist.vendor.delta_time.enable=true

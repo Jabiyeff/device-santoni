@@ -260,7 +260,7 @@
                 <route type="mix" sink="FM"
                        sources="primary output"/>
                 <route type="mix" sink="BT SCO"
-					   sources="primary output,raw,low_latency,direct_pcm,compressed_offload,voip_rx"/>
+                       sources="primary output,raw,low_latency,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Headset"
                        sources="primary output,raw,low_latency,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Car Kit"

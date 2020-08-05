@@ -83,7 +83,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audiod \
     audio.a2dp.default \
     audio.primary.msm8937 \
     audio.r_submix.default \
@@ -92,8 +91,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcompostprocbundle \
-    tinymix
+    libqcompostprocbundle
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
@@ -121,7 +119,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/aanc_tuning_mixer.txt \
 	$(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 	$(LOCAL_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
-	$(LOCAL_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
 	$(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
 	$(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
 	$(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -156,10 +153,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
-	
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libldacBT_dec
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -277,7 +270,8 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager
+    ims-ext-common \
+    ims_ext_common.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -424,8 +418,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    ims-ext-common \
-    ims_ext_common.xml
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -470,9 +462,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
-# Properties
--include $(LOCAL_PATH)/vendor_prop.mk
-
 # VNDK-SP:
 PRODUCT_PACKAGES += \
     vndk-sp
@@ -500,18 +489,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# Wallpapers
-ifeq ($(WITH_GAPPS),true)
-PRODUCT_PACKAGES += \
-    PixelLiveWallpaperPrebuilt
-endif
-
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
    WfdCommon
 
 PRODUCT_PACKAGES += \
-    libaacwrapper \
     libnl
 
 #XiaomiAddon

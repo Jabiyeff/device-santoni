@@ -184,7 +184,7 @@
         <interface>
             <name>IComposer</name>
             <instance>default</instance>
-			<fqname>@2.1::IComposer/default</fqname>
+            <fqname>@2.1::IComposer/default</fqname>
         </interface>
     </hal>
     <hal format="hidl">
