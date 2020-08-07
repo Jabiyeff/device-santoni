@@ -24,6 +24,8 @@ on property:sys.boot_completed=1
    chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel
    chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
    chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
+   chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost
+   chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost
    chown system system /sys/module/adreno_idler/parameters/adreno_idler_active
    chmod 0664 /sys/module/adreno_idler/parameters/adreno_idler_active
    chown system system /sys/block/mmcblk0/queue/scheduler
@@ -61,6 +63,7 @@ on property:persist.spectrum.profile=0
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 1
 		write /sys/module/adreno_idler/parameters/adreno_idler_active Y
 
 		#IO Scheduler
@@ -99,6 +102,7 @@ on property:persist.spectrum.profile=1
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 3
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 2
 		write /sys/module/adreno_idler/parameters/adreno_idler_active N
 
 		#IO Scheduler
@@ -137,6 +141,7 @@ on property:persist.spectrum.profile=2
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor simple_ondemand
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 0
 		write /sys/module/adreno_idler/parameters/adreno_idler_active Y
 
 		#IO Scheduler
@@ -175,6 +180,7 @@ on property:persist.spectrum.profile=3
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 475
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 2
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
+		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 3
 		write /sys/module/adreno_idler/parameters/adreno_idler_active N
 
 		#IO Scheduler
