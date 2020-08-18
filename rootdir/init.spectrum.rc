@@ -5,21 +5,6 @@
 # Initialization
 on property:sys.boot_completed=1
 
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-   
-   chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-   chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-   chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-   chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz
-   chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz
    chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel
    chmod 0664 /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel
    chown system system /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
@@ -51,16 +36,11 @@ on property:persist.spectrum.profile=0
 
 		# Configure governor settings for big cluster
 		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
 
 		# Configure governor settings for little cluster
 		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
 
 		#GPU
-		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 1
@@ -89,17 +69,12 @@ on property:persist.spectrum.profile=0
 on property:persist.spectrum.profile=1
 
 		# Configure governor settings for big cluster
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1094400
+		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
 
 		# Configure governor settings for little cluster
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 960000
+		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
 
 		#GPU
-		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 3
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 2
@@ -129,16 +104,11 @@ on property:persist.spectrum.profile=2
 
 		# Configure governor settings for big cluster
 		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
 
 		# Configure governor settings for little cluster
 		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor powersave
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
 
 		#GPU
-		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 450
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor simple_ondemand
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 0
@@ -168,16 +138,11 @@ on property:persist.spectrum.profile=3
 
 		# Configure governor settings for big cluster
 		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1401000
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1094400
 
 		# Configure governor settings for little cluster
 		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1094400
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 960000
 
 		#GPU
-		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_clock_mhz 475
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 2
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost 3
