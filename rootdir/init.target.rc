@@ -60,11 +60,15 @@ on init
    chown cameraserver cameraserver /dev/cpuset/camera-daemon
    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
    chmod 0660 /dev/cpuset/camera-daemon/tasks
-   
-on post-fs-data
+ 
+ on post-fs
+    start vendor.qseecomd
+    wait_for_prop vendor.sys.listeners.registered true
+    write /dev/ipa 1
 
-#Create folder for mm-qcamera-daemon
-mkdir /data/vendor/qcam/ 0770 camera camera
+on post-fs-data
+   #Create folder for mm-qcamera-daemon
+   mkdir /data/vendor/qcam/ 0770 camera camera
 
 #start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
@@ -76,6 +80,8 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
 # Start camera provider later for encrypted devices
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
+    restart vendor.audio-hal-2-0
+    restart vendor.fps_hal
 
 #Start up peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
@@ -92,17 +98,12 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service qfp-daemon /system/bin/qfp-daemon
-   class late_start
-   user system
-   group system drmrpc
-
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-	stop vendor.ims_rtp_daemon
+    stop vendor.ims_rtp_daemon
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -136,13 +137,6 @@ on property:vendor.sys.listeners.registered=*
     setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
     setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
 
-service perfd /vendor/bin/perfd
-   class late_start
-   user root
-   group root
-   socket perfd seqpacket 0666 root system
-   writepid /dev/cpuset/system-background/tasks
-
 service thermal-engine /vendor/bin/thermal-engine
    class main
    user root
@@ -163,12 +157,6 @@ service wcnss-service /vendor/bin/wcnss_service
     user system
     group system wifi radio
     oneshot
-
-service hbtp /vendor/bin/hbtp_daemon
-    class main
-    user system
-    group system
-    disabled
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
