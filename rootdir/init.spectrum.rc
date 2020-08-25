@@ -51,7 +51,7 @@ on property:persist.spectrum.profile=0
 		write /sys/block/mmcblk1/queue/scheduler bfq
 
 		#LMK		
-		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lm 0
+		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
 		write /sys/module/lowmemorykiller/parameters/minfree 18432,23040,27648,32256,55296,80640
 		write /sys/module/lowmemorykiller/parameters/cost 32
 		write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
@@ -69,10 +69,10 @@ on property:persist.spectrum.profile=0
 on property:persist.spectrum.profile=1
 
 		# Configure governor settings for big cluster
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
 
 		# Configure governor settings for little cluster
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
+		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 3
@@ -85,7 +85,7 @@ on property:persist.spectrum.profile=1
 		write /sys/block/mmcblk1/queue/scheduler cfq
 
 		#LMK
-		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lm 1
+		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
 		write /sys/module/lowmemorykiller/parameters/minfree 18432,23040,27648,51256,89600,115200
 		write /sys/module/lowmemorykiller/parameters/cost 32
 		write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 128000
@@ -103,10 +103,10 @@ on property:persist.spectrum.profile=1
 on property:persist.spectrum.profile=2
 
 		# Configure governor settings for big cluster
-		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+		write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor conservative
 
 		# Configure governor settings for little cluster
-		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor powersave
+		write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor conservative
 
 		#GPU
 		write /sys/devices/platform/soc/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel 5
@@ -119,7 +119,7 @@ on property:persist.spectrum.profile=2
 		write /sys/block/mmcblk1/queue/scheduler noop
 
 		#LMK		
-		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lm 0
+		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
 		write /sys/module/lowmemorykiller/parameters/minfree 18432,23040,27648,32256,55296,80640
 		write /sys/module/lowmemorykiller/parameters/cost 32
 		write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 128000
@@ -153,7 +153,7 @@ on property:persist.spectrum.profile=3
 		write /sys/block/mmcblk1/queue/scheduler deadline
 
 		#LMK
-		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lm 1
+		write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
 		write /sys/module/lowmemorykiller/parameters/minfree 18432,23040,27648,51256,150296,200640
 		write /sys/module/lowmemorykiller/parameters/cost 16
 		write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 202640
