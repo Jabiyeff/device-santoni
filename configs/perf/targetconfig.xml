@@ -106,7 +106,7 @@
              Target="qm215"
              NumClusters="1"
              TotalNumCores="4"
-             SocIds="386"
+             SocIds="386,436"
              SynCore="1"
              MinCoreOnline="0"
              CpufreqGov="1"
