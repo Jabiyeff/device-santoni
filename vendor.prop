@@ -35,6 +35,7 @@ vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
+ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=8
 ro.config.media_vol_steps=20
 
