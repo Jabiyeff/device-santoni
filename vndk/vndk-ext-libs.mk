@@ -1,3 +1,32 @@
 EXTRA_VENDOR_LIBRARIES := \
+    android.frameworks.bufferhub@1.0 \
     android.hidl.base@1.0 \
-    libpowermanager
+    libandroidicu \
+    libaudioclient \
+    libaudiomanager \
+    libaudiopolicy \
+    libbinder \
+    libbinderthreadstate \
+    libbufferhub \
+    libbufferhubqueue \
+    libcamera_client \
+    libft2 \
+    libgui \
+    libharfbuzz_ng \
+    libheif \
+    libicuuc \
+    libicui18n \
+    libinput \
+    libmedia \
+    libmediametrics \
+    libmediautils \
+    libmemunreachable \
+    libminikin \
+    libnblog \
+    libpackagelistparser \
+    libpdx_default_transport \
+    libpowermanager \
+    libselinux \
+    libstdc++ \
+    libsonivox \
+    libvibrator
