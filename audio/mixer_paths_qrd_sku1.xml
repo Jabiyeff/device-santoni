@@ -1188,6 +1188,29 @@
     <path name="voice-headset-mic">
         <path name="headset-mic" />
     </path>
+	
+    <path name="unprocessed-handset-mic">
+        <path name="handset-mic" />
+    </path>
+    <path name="unprocessed-mic">
+        <path name="unprocessed-handset-mic" />
+    </path>
+
+    <path name="unprocessed-stereo-mic">
+        <path name="voice-rec-dmic-ef" />
+    </path>
+
+    <path name="unprocessed-three-mic">
+        <path name="three-mic" />
+    </path>
+
+    <path name="unprocessed-quad-mic">
+        <path name="quad-mic" />
+    </path>
+
+    <path name="unprocessed-headset-mic">
+        <path name="headset-mic" />
+    </path>
 
     <path name="speaker-and-headphones">
         <path name="headphones" />
