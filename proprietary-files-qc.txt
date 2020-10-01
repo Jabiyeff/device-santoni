@@ -204,14 +204,6 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|b626d9bbf7043c66c8ef903c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|75335443a33a06a03eecfa714dfe9f1c0c4df2b1
 vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
 
-# FM - from LA.UM.8.6.2.r1-08100-89xx.0
--product/lib/vendor.qti.hardware.fm@1.0.so|8e13cca2be4c4f9812d656e4cb15bd524fdfdf12
--product/lib64/vendor.qti.hardware.fm@1.0.so|eb2bc6dd4043b84a0d75a4f2304baba4db7e8648
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|d388f414435447800cf2162a381376260b2fe321
-vendor/lib/vendor.qti.hardware.fm@1.0.so|8811e71630bc81e9e504283b4aeab8d905efacae
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|942c4a88be55eb62fab614a08b64676972de2d89
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|9c1b952043c7722fd27bfd971ecebb2584671862
-
 # Gatekeeper - from LA.UM.8.6.2.r1-08100-89xx.0
 vendor/lib/hw/gatekeeper.msm8937.so|f33d89c54a0423023d8e5ac884bcbaf1b9f5c11c
 vendor/lib64/hw/gatekeeper.msm8937.so|710afb0bd16813f3dfa4e42c31a9307e3753f364
