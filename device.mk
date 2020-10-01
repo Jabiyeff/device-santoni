@@ -493,10 +493,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libnl
 
-#XiaomiAddon
-PRODUCT_PACKAGES += \
-    XiaomiAddon
-
 # Reduce system image size by limiting java debug info.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
