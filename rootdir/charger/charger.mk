@@ -1,5 +1,5 @@
 PRODUCT_COPY_FILES += \
-    device/xiaomi/santoni/rootdir/charger/chargeonlymode:$(TARGET_OUT_DIR)/root/sbin/charger \
+    device/xiaomi/santoni/rootdir/charger/chargeonlymode:$(TARGET_COPY_OUT_VENDOR)/bin/charger \
     device/xiaomi/santoni/rootdir/charger/battery_image_0.png:$(TARGET_OUT_DIR)/root/res/images/charger/battery_image_0.png \
     device/xiaomi/santoni/rootdir/charger/battery_image_1.png:$(TARGET_OUT_DIR)/root/res/images/charger/battery_image_1.png \
     device/xiaomi/santoni/rootdir/charger/battery_image_2.png:$(TARGET_OUT_DIR)/root/res/images/charger/battery_image_2.png \
