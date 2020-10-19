@@ -68,23 +68,23 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|eab2344316c7c641f8644
 vendor/lib64/libbtnv.so|57947639152164a367f3a66213a2cbed12744777
 vendor/lib64/libbt-hidlclient.so|0a0d0ac4e2f4e2e80f4ec488b53c18c96ff08dc6
 
-# Bluetooth (Audio) - LA.UM.8.6.2.r1-08100-89xx.0
-vendor/lib64/hw/audio.bluetooth_qti.default.so|a17474dec03b704cc9741c85f2f6aef62c5ad71e
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|a1a86ead8177ac54dfdab729b9adf06af1d4a747
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|4e188cd7cc009ced6af7901f357005623dd0875a
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|df20addad1f9c1c8b342aeee1ff9a5fbc5cf8bb8
-vendor/lib64/libbluetooth_audio_session_qti.so|efc32a2a4eaf0cf33b1741b62565b4c6e6495063
-vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|8c6895ee0f64c33b829ce28d20de1021bf3e9cca
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|237a97fc3d3332b1466583178b548dd1525479ef
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|5677a85470b88400467410b9a264f56119b30046
-vendor/lib/hw/audio.bluetooth_qti.default.so|f99c2de8d7e5746ad777a758512b2a364462d59c
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|9880c5dcd6aca43d3caa7c16a1627a078a36d028
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|688065b7b8902d29a820aab3f5cc5dc584325423
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|e7efde96f1751fd7308568634380002fa325f4eb
-vendor/lib/libbluetooth_audio_session_qti.so|a61efd4c1c6a736b3f5c2fd571447fe6bd0423a4
-vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|2aff95e3eb070334bee674f3706c3790b9c2e2ca
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|e2ff653e1a5e9d6379fa1fee6824642c4a615ce4
-vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|0ff482f72a05eb9e2a4617fe03ae9e737843c885
+# Bluetooth (Audio) - from LA.UM.8.6.2.r1-08100-89xx.0
+vendor/lib64/hw/audio.bluetooth_qti.default.so|102539a0013edf06790215b21bed68c704437a96
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|93f09e7ee848e2d6fee7f0810ad8a3e57346b72c
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|ebdfcc7064fc144acf6cba300486c6394af3d73b
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|5e06b7b33d084975d6326875268cb237ad6d8559
+vendor/lib64/libbluetooth_audio_session_qti.so|c2b100d5fbce3d219515f8c359c6990a08e9fa94
+vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so|288a9824ae282cad32f02fbf0ee723a50702e923
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9b7ae20ce9d6d2a67fdac94268cec441278cca3d
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|e08969ef1897ec5958894323f7d6e730a1d7ce25
+vendor/lib/hw/audio.bluetooth_qti.default.so|0bd3f25837d1aa37fb8e15316308afd710af6503
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|bec45d727a5e8977ddb7ddc4ee6856bdfdf5824e
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|84f86d20af330ee0bd44e6609c3df1149d04a1a6
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|63a54ed76fdfee5d7c1be4d756ec8ce4080072d4
+vendor/lib/libbluetooth_audio_session_qti.so|e4c2908f8257b403610a93df094c8717dc87ffd0
+vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so|b6e5d67869138d102595dd03562314d33c2e825e
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|e9cffc642dc8f15492ca316c276e02c7e146b90d
+vendor/lib/vendor.qti.hardware.btconfigstore@1.0.so|fe0c94096ad70472271c0093ce6be226f74e40f4
 
 # Bluetooth (aptX) - from Crosshatch - QQ1A.191205.008
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
@@ -199,10 +199,10 @@ vendor/lib64/libsecureui_svcsock.so|1ebe2b61e1c4329aadc532ca5291dcae61c8d9b5
 vendor/lib64/libspl.so|8c848b95674bb6c9f40415568dafe086a3d952f7
 vendor/lib64/libssd.so|3a2d9b5c64be5e09eb6fa0e92861ec98aee21bd5
 
-# DRM - Widevine - LA.UM.8.6.2.r1-08100-89xx.0
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine|b626d9bbf7043c66c8ef903c9d0e5183fc47388d
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|75335443a33a06a03eecfa714dfe9f1c0c4df2b1
-vendor/lib64/libwvhidl.so|4af61fdcf1186700ea7ee23c607fb9ce5fd0f0e8
+# DRM - Widevine - from LA.UM.8.6.2.r1-08100-89xx.0
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|f4258fe902140e7a35c59f79d274dde89a80d1e8
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|ad2769dc38c425495c80e0a2cc4f3a4012108917
+vendor/lib64/libwvhidl.so|1b0dce24a4f77883785999b9cf6cb5686232c3b3
 
 # Gatekeeper - from LA.UM.8.6.2.r1-08100-89xx.0
 vendor/lib/hw/gatekeeper.msm8937.so|f33d89c54a0423023d8e5ac884bcbaf1b9f5c11c
@@ -297,8 +297,12 @@ vendor/lib64/librs_adreno.so|3d0a23777e7bdd979a0c84d9da731ae15d58af68
 vendor/lib64/librs_adreno_sha1.so|2de0db397070c1ef1b5f9c54266cdd6188472655
 
 # Graphics (Postprocessing) - from LA.UM.8.6.2.r1-08100-89xx.0
-etc/permissions/com.qti.snapdragon.sdk.display.xml|79a36c560f8cdbfeca03911fefc282bda25b2322
+etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 framework/com.qti.snapdragon.sdk.display.jar|495d45dd84a61e873a3d1176ab7741826e60d7f1
+lib/vendor.display.color@1.0.so|d5f3693e462c1832ea5407ce2eded800641f6d80
+lib/vendor.display.postproc@1.0.so|13e1e398997cbb7da4bb24392e4b13578c4644fc
+lib64/vendor.display.color@1.0.so|6093f6b3f654ea557ea297e695bc92a8fbae0c13
+lib64/vendor.display.postproc@1.0.so|44a60e215fc075f09973f033bacc89af2afe4164
 vendor/bin/hw/vendor.display.color@1.0-service|e8c561e3a169c3007b117515f2946f23a195a5e5
 vendor/bin/mm-pp-dpps|3f84359a790a437d88a760f45e62f41fdaeb1a51
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -397,6 +401,7 @@ vendor/lib64/libvpplibrary.so|ca9c4ef1a3036205a593a641ec96b90a73fef39e
 # Perf - from LA.UM.8.6.2.r1-08100-89xx.0
 product/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
 product/lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
+product/lib/vendor.qti.hardware.perf@2.1.so|d8241e46de9fe70d381bbacbe9f8d1e9615b336b
 product/lib64/vendor.qti.hardware.perf@1.0.so|261661c79a115c46ad272010c17940a8e5435f3b
 product/lib64/vendor.qti.hardware.perf@2.0.so|f6afe272ddd739c7b3f83a7a1d6cb14b7d868783
 product/lib64/vendor.qti.hardware.perf@2.1.so|2a827e3cc784b8c80dd313b825a998f3076ab66f
@@ -488,6 +493,7 @@ vendor/lib64/libqsocket.so|6264041e0e897f78dc9b6a4be6424cbd927669d0
 -app/QtiTelephonyService/QtiTelephonyService.apk:product/app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
 framework/QtiTelephonyServicelibrary.jar:product/framework/QtiTelephonyServicelibrary.jar|1df2f89ffb3aedc36e1c2ca7cafbf73a6a06b3fb
 framework/qcrilhook.jar:product/framework/qcrilhook.jar|784df5e6aa9df0127700b9a6f1083440ebfac057
+framework/embmslibrary.jar:product/framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
 vendor/bin/hw/qcrild|442a706df50e319f00aa92a69e7c06e4e75ff5b5
 vendor/bin/ATFWD-daemon|d8e8b853f33411504054eb965b1fb836544daee4
 vendor/bin/netmgrd|e9c82b0644cb08b160a2ce484fdb58830306237d
@@ -618,6 +624,13 @@ vendor/lib64/sensors.ssc.so|1c45bd3c2223dcd05373d5a75b88e8ea79dc3156
 
 # Thermal - from from olive-user 10 QKQ1.191014.001 V11.0.1.0.QCNCNXM release-keys
 vendor/bin/thermal-engine|633b9cff05ba176a18101bdfc03ecacc98e1e0f0
+vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
+vendor/etc/thermal-engine-camera.conf|365fb62ac0892e5b2aa1e293d926824520cf5f77
+vendor/etc/thermal-engine-map.conf|952fa325f760f821b7a3fe64ca0222fbcea68326
+vendor/etc/thermal-engine-sgame.conf|f2dbf8c2c6ce954a2517f5743b97a5a9c78f9e4e
+vendor/etc/thermal-engine-high.conf|468135cfcb272f24649774dcf4d689644f5064e1
+vendor/etc/thermal-engine-nolimits.conf|d265737374c7c87f89c36ca64755955d7cd658e4
+vendor/etc/thermal-engine-normal.conf|bc42b3a6293454220ceca58135f792345d1d95fe
 -vendor/lib/libthermalclient.so|8837ba9f8f43d4cfbec00d8055fef4c9a7434931
 -vendor/lib64/libthermalclient.so|148421212c4b2d3bcb37cb08f9542d3286f008c1
 vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
