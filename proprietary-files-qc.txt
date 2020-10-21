@@ -300,18 +300,14 @@ vendor/lib64/librs_adreno_sha1.so|2de0db397070c1ef1b5f9c54266cdd6188472655
 etc/permissions/com.qti.snapdragon.sdk.display.xml|79a36c560f8cdbfeca03911fefc282bda25b2322
 framework/com.qti.snapdragon.sdk.display.jar|495d45dd84a61e873a3d1176ab7741826e60d7f1
 vendor/bin/hw/vendor.display.color@1.0-service|e8c561e3a169c3007b117515f2946f23a195a5e5
-vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|214d876835224bbb723c9d4dd4911ac2aee6ca34
 vendor/bin/mm-pp-dpps|3f84359a790a437d88a760f45e62f41fdaeb1a51
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
 vendor/lib/libdisp-aba.so|cbf3b62dc575a88d0421f77408416640c16caaa2
 vendor/lib/vendor.display.color@1.0.so|29d27a33202f1cd54df563efcc659fdfa3c45077
 vendor/lib/vendor.display.postproc@1.0.so|c27914ebea476e01c737a1363ca16f166f5d6e79
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|ac7320f6d0cc4f7982ee0bd6a9c0f68de28c3e2a
 vendor/lib64/libdisp-aba.so|d847d2619799819641667e116ea091709542c410
 vendor/lib64/vendor.display.color@1.0.so|c7eb0d87e45934ad7ff34d0c977116ed46091865
 vendor/lib64/vendor.display.postproc@1.0.so|c9c96ff50b6ff8989fac9fdf35d282a996ea477a
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|c740f7d48227ee499ef8edb60c4e177052a108d3
 
 # Graphics (SDM) - from LA.UM.8.6.2.r1-08100-89xx.0
 vendor/lib/libscalar.so|72315ef8655e5d92ad866fa2563995108b3ca144
