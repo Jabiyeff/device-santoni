@@ -343,9 +343,6 @@ on property:vendor.radio.atfwd.start=false
 on property:vendor.media.target.version=*
 	setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
-on property:persist.env.fastdorm.enabled=true
-    setprop persist.radio.data_no_toggle 1
-
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
@@ -415,13 +412,6 @@ on property:persist.ims.regmanager.mode=1
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-on property:ro.data.large_tcp_window_size=true
-    # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
-
-on property:sys.sysctl.tcp_adv_win_scale=*
-    write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
 
 service battery_monitor /system/bin/battery_monitor
     user system
