@@ -206,20 +206,21 @@ void IPACM_Wlan::event_callback(ipa_cm_event_id event, void *param)
 
 			IPACMDBG_H("Received IPA_LAN_DELETE_SELF event.\n");
 			IPACMDBG_H("ipa_WLAN (%s):ipa_index (%d) instance close \n", IPACM_Iface::ipacmcfg->iface_table[ipa_if_num].iface_name, ipa_if_num);
-#ifdef FEATURE_ETH_BRIDGE_LE
-			if(rx_prop != NULL)
+			if (IPACM_Iface::ipacmcfg->isEthBridgingSupported())
 			{
-				free(rx_prop);
+				if(rx_prop != NULL)
+				{
+					free(rx_prop);
+				}
+				if(tx_prop != NULL)
+				{
+					free(tx_prop);
+				}
+				if(iface_query != NULL)
+				{
+					free(iface_query);
+				}
 			}
-			if(tx_prop != NULL)
-			{
-				free(tx_prop);
-			}
-			if(iface_query != NULL)
-			{
-				free(iface_query);
-			}
-#endif
 			delete this;
 		}
 		break;
@@ -1633,9 +1634,8 @@ int IPACM_Wlan::handle_wlan_client_route_rule(uint8_t *mac_addr, ipa_ip_type ipt
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[1] = 0xFFFFFFFF;
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[2] = 0xFFFFFFFF;
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[3] = 0xFFFFFFFF;
-#ifdef FEATURE_IPA_V3
-					rt_rule_entry->rule.hashable = true;
-#endif
+					if (IPACM_Iface::ipacmcfg->isIPAv3Supported())
+						rt_rule_entry->rule.hashable = true;
 					if (false == m_routing.AddRoutingRule(rt_rule))
 					{
 						IPACMERR("Routing rule addition failed!\n");
@@ -1685,9 +1685,8 @@ int IPACM_Wlan::handle_wlan_client_route_rule(uint8_t *mac_addr, ipa_ip_type ipt
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[1] = 0xFFFFFFFF;
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[2] = 0xFFFFFFFF;
 					rt_rule_entry->rule.attrib.u.v6.dst_addr_mask[3] = 0xFFFFFFFF;
-#ifdef FEATURE_IPA_V3
-					rt_rule_entry->rule.hashable = true;
-#endif
+					if (IPACM_Iface::ipacmcfg->isIPAv3Supported())
+						rt_rule_entry->rule.hashable = true;
 #ifdef IPA_IOCTL_SET_FNR_COUNTER_INFO
 					/* use index hw-counter */
 					if(IPACM_Iface::ipacmcfg->hw_fnr_stats_support)
@@ -2137,9 +2136,8 @@ fail:
 			IPACMDBG_H("depend Got pipe %d rm index : %d \n", rx_prop->rx[0].src_pipe, IPACM_Iface::ipacmcfg->ipa_client_rm_map_tbl[rx_prop->rx[0].src_pipe]);
 			IPACM_Iface::ipacmcfg->DelRmDepend(IPACM_Iface::ipacmcfg->ipa_client_rm_map_tbl[rx_prop->rx[0].src_pipe]);
 		}
-#ifndef FEATURE_ETH_BRIDGE_LE
-		free(rx_prop);
-#endif
+		if (!(IPACM_Iface::ipacmcfg->isEthBridgingSupported()))
+			free(rx_prop);
 	}
 
 	for (i = 0; i < num_wifi_client; i++)
@@ -2153,17 +2151,18 @@ fail:
 	{
 		free(wlan_client);
 	}
-#ifndef FEATURE_ETH_BRIDGE_LE
-	if (tx_prop != NULL)
+	if (!(IPACM_Iface::ipacmcfg->isEthBridgingSupported()))
 	{
-		free(tx_prop);
-	}
+		if (tx_prop != NULL)
+		{
+			free(tx_prop);
+		}
 
-	if (iface_query != NULL)
-	{
-		free(iface_query);
+		if (iface_query != NULL)
+		{
+			free(iface_query);
+		}
 	}
-#endif
 
 	is_active = false;
 	post_del_self_evt();
@@ -2504,9 +2503,8 @@ int IPACM_Wlan::add_connection(int client_index, int v6_num)
 	flt_rule_entry.rule.to_uc = 0;
 	flt_rule_entry.rule.eq_attrib_type = 1;
 	flt_rule_entry.rule.action = IPA_PASS_TO_ROUTING;
-#ifdef FEATURE_IPA_V3
-	flt_rule_entry.rule.hashable = true;
-#endif
+	if (IPACM_Iface::ipacmcfg->isIPAv3Supported())
+		flt_rule_entry.rule.hashable = true;
 	flt_rule_entry.rule.attrib.attrib_mask |= IPA_FLT_DST_ADDR;
 	flt_rule_entry.rule.attrib.u.v6.dst_addr[0] = get_client_memptr(wlan_client, client_index)->v6_addr[v6_num][0];
 	flt_rule_entry.rule.attrib.u.v6.dst_addr[1] = get_client_memptr(wlan_client, client_index)->v6_addr[v6_num][1];

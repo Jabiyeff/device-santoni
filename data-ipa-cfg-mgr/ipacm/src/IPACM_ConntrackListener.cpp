@@ -1219,25 +1219,26 @@ bool isLocalHostAddr(uint32_t src_ip_addr, uint32_t dst_ip_addr) {
 	return false;
 }
 
-void IPACM_ConntrackListener::readConntrack() {
+void IPACM_ConntrackListener::readConntrack(int fd) {
 
-	IPACM_ConntrackClient *pClient;
-	int len_fil = 0, recv_bytes = -1, index = 0, len =0;
+	int recv_bytes = -1, index = 0, len =0;
 	char buffer[CT_ENTRIES_BUFFER_SIZE];
-	char *buf = &buffer[0];
 	struct nf_conntrack *ct;
 	struct nlmsghdr *nl_header;
-	static struct sockaddr_nl nlAddr = {
-		.nl_family = AF_NETLINK
+   	struct iovec iov = {
+		.iov_base	= buffer,
+		.iov_len	= CT_ENTRIES_BUFFER_SIZE,
 	};
-	unsigned int addr_len = sizeof(nlAddr);
-
-	pClient = IPACM_ConntrackClient::GetInstance();
-	if(pClient == NULL)
-	{
-		IPACMERR("unable to get conntrack client instance\n");
-		return;
-	}
+	struct sockaddr_nl addr;
+	struct msghdr msg = {
+		.msg_name	= &addr,
+		.msg_namelen	= sizeof(struct sockaddr_nl),
+		.msg_iov	= &iov,
+		.msg_iovlen	= 1,
+		.msg_control	= NULL,
+		.msg_controllen	= 0,
+		.msg_flags	= 0,
+	};
 
 	len = MAX_CONNTRACK_ENTRIES * sizeof(struct nf_conntrack **);
 
@@ -1249,17 +1250,18 @@ void IPACM_ConntrackListener::readConntrack() {
 	}
 	memset(ct_entries, 0, len);
 
-	if( pClient->fd_tcp < 0)
+	if( fd < 0)
 	{
-		IPACMDBG_H("Invalid fd %d \n",pClient->fd_tcp);
+		IPACMDBG_H("Invalid fd %d \n",fd);
 		free(ct_entries);
 		return;
 	}
-
 	IPACMDBG_H("receiving conntrack entries started.\n");
-	while(len_fil < sizeof(buffer) && index <  MAX_CONNTRACK_ENTRIES)
+	len = CT_ENTRIES_BUFFER_SIZE;
+	while (len > 0)
 	{
-	 	recv_bytes = recvfrom( pClient->fd_tcp, buf, sizeof(buffer)-len_fil, 0, (struct sockaddr *)&nlAddr, (socklen_t *)&addr_len);
+		memset(buffer, 0, CT_ENTRIES_BUFFER_SIZE);
+		recv_bytes = recvmsg(fd, &msg, 0);
 		if(recv_bytes < 0)
 		{
 			IPACMDBG_H("error in receiving conntrack entries %d%s",errno, strerror(errno));
@@ -1267,42 +1269,45 @@ void IPACM_ConntrackListener::readConntrack() {
 		}
 		else
 		{
-			nl_header = (struct nlmsghdr *)buf;
-
-			if (NLMSG_OK(nl_header, recv_bytes) == 0 || nl_header->nlmsg_type == NLMSG_ERROR)
+			len -= recv_bytes;
+			nl_header = (struct nlmsghdr *)buffer;
+			IPACMDBG_H("Number of bytes:%d to parse\n", recv_bytes);
+			while(NLMSG_OK(nl_header, recv_bytes) && (index < MAX_CONNTRACK_ENTRIES))
 			{
-				IPACMDBG_H("recv_bytes is %d\n",recv_bytes);
-				break;
-			}
-			ct = nfct_new();
-			if (ct != NULL)
-			{
-				int parseResult =  nfct_parse_conntrack((nf_conntrack_msg_type) NFCT_T_ALL,nl_header, ct);
-				if(parseResult != NFCT_T_ERROR)
+				if (nl_header->nlmsg_type == NLMSG_ERROR)
 				{
-					ct_entries[index++] = ct;
+					IPACMDBG_H("Error, recv_bytes is %d\n",recv_bytes);
+					break;
+				}
+				ct = nfct_new();
+				if (ct != NULL)
+				{
+					int parseResult =  nfct_parse_conntrack((nf_conntrack_msg_type) NFCT_T_ALL,nl_header, ct);
+					if(parseResult != NFCT_T_ERROR)
+					{
+						ct_entries[index++] = ct;
+					}
+					else
+					{
+						IPACMDBG_H("error in parsing  %d%s \n", errno, strerror(errno));
+					}
 				}
 				else
 				{
-					IPACMDBG_H("error in parsing  %d%s \n", errno, strerror(errno));
+					IPACMDBG_H("ct allocation failed");
 				}
+				if (nl_header->nlmsg_type == NLMSG_DONE)
+				{
+					IPACMDBG_H("Message is done.\n");
+					break;
+				}
+				nl_header = NLMSG_NEXT(nl_header, recv_bytes);
 			}
-			else
-			{
-				IPACMDBG_H("ct allocation failed");
-				continue;
-			}
-
-			if((nl_header->nlmsg_type & NLM_F_MULTI) == 0)
-			{
-				break;
-			}
-			len_fil += recv_bytes;
-			buf = buf + recv_bytes;
 		}
 	}
+
 	isReadCTDone = true;
-	IPACMDBG_H("receiving conntrack entries ended.\n");
+	IPACMDBG_H("receiving conntrack entries ended. No of entries: %d\n", index);
 	if(isWanUp() && !isProcessCTDone)
 	{
 		IPACMDBG_H("wan is up, process ct entries \n");
@@ -1324,7 +1329,7 @@ void IPACM_ConntrackListener::processConntrack() {
 		while(ct_entries[index] != NULL)
 		{
 			ip_type = nfct_get_attr_u8(ct_entries[index], ATTR_REPL_L3PROTO);
-			if(!(AF_INET6 == ip_type) && isLocalHostAddr(nfct_get_attr_u32(ct_entries[index], ATTR_ORIG_IPV4_SRC),
+			if((AF_INET == ip_type) && isLocalHostAddr(nfct_get_attr_u32(ct_entries[index], ATTR_ORIG_IPV4_SRC),
 					nfct_get_attr_u32(ct_entries[index], ATTR_ORIG_IPV4_DST)))
 			{
 				IPACMDBG_H(" loopback entry \n");
@@ -1372,6 +1377,6 @@ IGNORE:
 	}
 	isProcessCTDone = true;
 	free(ct_entries);
-	IPACMDBG_H("process conntrack ended \n");
+	IPACMDBG_H("process conntrack ended. Number of entries:%d \n", index);
 	return;
 }

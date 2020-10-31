@@ -97,11 +97,7 @@ extern "C"
 #define IPA_DEVICE_NAME "/dev/ipa"
 #define MAX_NUM_PROP 2
 
-#ifndef FEATURE_IPA_V3
-#define IPA_MAX_FLT_RULE 50
-#else
 #define IPA_MAX_FLT_RULE 100
-#endif
 
 #define TCP_FIN_SHIFT 16
 #define TCP_SYN_SHIFT 17

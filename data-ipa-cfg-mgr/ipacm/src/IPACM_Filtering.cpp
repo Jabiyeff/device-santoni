@@ -46,6 +46,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "IPACM_Filtering.h"
 #include <IPACM_Log.h>
 #include "IPACM_Defs.h"
+#include "IPACM_Iface.h"
 
 
 const char *IPACM_Filtering::DEVICE_NAME = "/dev/ipa";
@@ -235,156 +236,162 @@ fail_tbl:
 bool IPACM_Filtering::AddFilteringRuleAfter_hw_index(struct ipa_ioc_add_flt_rule_after *ruleTable, int hw_counter_index)
 {
 	bool ret = true;
-#ifdef FEATURE_IPA_V3
 	int retval=0, cnt = 0, len = 0;
 	struct ipa_ioc_add_flt_rule_after_v2 *ruleTable_v2;
 	struct ipa_flt_rule_add_v2 flt_rule_entry;
 
-	IPACMDBG("Printing filter add attributes\n");
-	IPACMDBG("ep: %d\n", ruleTable->ep);
-	IPACMDBG("ip type: %d\n", ruleTable->ip);
-	IPACMDBG("Number of rules: %d\n", ruleTable->num_rules);
-	IPACMDBG("add_after_hdl: %d\n", ruleTable->add_after_hdl);
-	IPACMDBG("commit value: %d\n", ruleTable->commit);
-
-	/* change to v2 format*/
-	len = sizeof(struct ipa_ioc_add_flt_rule_after_v2);
-	ruleTable_v2 = (struct ipa_ioc_add_flt_rule_after_v2*)malloc(len);
-	if (ruleTable_v2 == NULL)
+	if (IPACM_Iface::ipacmcfg->isIPAv3Supported())
 	{
-		IPACMERR("Error Locate ipa_ioc_add_flt_rule_after_v2 memory...\n");
-		return false;
-	}
-	memset(ruleTable_v2, 0, len);
-	ruleTable_v2->rules = (uint64_t)calloc(ruleTable->num_rules, sizeof(struct ipa_flt_rule_add_v2));
-	if (!ruleTable_v2->rules) {
-		IPACMERR("Failed to allocate memory for filtering rules\n");
-		ret = false;
-		goto fail_tbl;
-	}
+		IPACMDBG("Printing filter add attributes\n");
+		IPACMDBG("ep: %d\n", ruleTable->ep);
+		IPACMDBG("ip type: %d\n", ruleTable->ip);
+		IPACMDBG("Number of rules: %d\n", ruleTable->num_rules);
+		IPACMDBG("add_after_hdl: %d\n", ruleTable->add_after_hdl);
+		IPACMDBG("commit value: %d\n", ruleTable->commit);
 
-	ruleTable_v2->commit = ruleTable->commit;
-	ruleTable_v2->ep = ruleTable->ep;
-	ruleTable_v2->ip = ruleTable->ip;
-	ruleTable_v2->num_rules = ruleTable->num_rules;
-	ruleTable_v2->add_after_hdl = ruleTable->add_after_hdl;
-	ruleTable_v2->flt_rule_size = sizeof(struct ipa_flt_rule_add_v2);
-
-	for (cnt=0; cnt < ruleTable->num_rules; cnt++)
-	{
-		memset(&flt_rule_entry, 0, sizeof(struct ipa_flt_rule_add_v2));
-		flt_rule_entry.at_rear = ruleTable->rules[cnt].at_rear;
-		flt_rule_entry.rule.retain_hdr = ruleTable->rules[cnt].rule.retain_hdr;
-		flt_rule_entry.rule.to_uc = ruleTable->rules[cnt].rule.to_uc;
-		flt_rule_entry.rule.action = ruleTable->rules[cnt].rule.action;
-		flt_rule_entry.rule.rt_tbl_hdl = ruleTable->rules[cnt].rule.rt_tbl_hdl;
-		flt_rule_entry.rule.rt_tbl_idx = ruleTable->rules[cnt].rule.rt_tbl_idx;
-		flt_rule_entry.rule.eq_attrib_type = ruleTable->rules[cnt].rule.eq_attrib_type;
-		flt_rule_entry.rule.max_prio = ruleTable->rules[cnt].rule.max_prio;
-		flt_rule_entry.rule.hashable = ruleTable->rules[cnt].rule.hashable;
-		flt_rule_entry.rule.rule_id = ruleTable->rules[cnt].rule.rule_id;
-		flt_rule_entry.rule.set_metadata = ruleTable->rules[cnt].rule.set_metadata;
-		flt_rule_entry.rule.pdn_idx = ruleTable->rules[cnt].rule.pdn_idx;
-		memcpy(&flt_rule_entry.rule.eq_attrib,
-					 &ruleTable->rules[cnt].rule.eq_attrib,
-					 sizeof(flt_rule_entry.rule.eq_attrib));
-		memcpy(&flt_rule_entry.rule.attrib,
-					 &ruleTable->rules[cnt].rule.attrib,
-					 sizeof(flt_rule_entry.rule.attrib));
-		IPACMDBG("Filter rule:%d attrib mask: 0x%x\n", cnt,
-				ruleTable->rules[cnt].rule.attrib.attrib_mask);
-		/* 0 means disable hw-counter-sats */
-		if (hw_counter_index != 0)
+		/* change to v2 format*/
+		len = sizeof(struct ipa_ioc_add_flt_rule_after_v2);
+		ruleTable_v2 = (struct ipa_ioc_add_flt_rule_after_v2*)malloc(len);
+		if (ruleTable_v2 == NULL)
 		{
-			flt_rule_entry.rule.enable_stats = 1;
-			flt_rule_entry.rule.cnt_idx = hw_counter_index;
+			IPACMERR("Error Locate ipa_ioc_add_flt_rule_after_v2 memory...\n");
+			return false;
+		}
+		memset(ruleTable_v2, 0, len);
+		ruleTable_v2->rules = (uint64_t)calloc(ruleTable->num_rules, sizeof(struct ipa_flt_rule_add_v2));
+		if (!ruleTable_v2->rules) {
+			IPACMERR("Failed to allocate memory for filtering rules\n");
+			ret = false;
+			goto fail_tbl;
 		}
 
-		/* copy to v2 table*/
-		memcpy((void *)(ruleTable_v2->rules + (cnt * sizeof(struct ipa_flt_rule_add_v2))),
-			&flt_rule_entry, sizeof(flt_rule_entry));
-	}
+		ruleTable_v2->commit = ruleTable->commit;
+		ruleTable_v2->ep = ruleTable->ep;
+		ruleTable_v2->ip = ruleTable->ip;
+		ruleTable_v2->num_rules = ruleTable->num_rules;
+		ruleTable_v2->add_after_hdl = ruleTable->add_after_hdl;
+		ruleTable_v2->flt_rule_size = sizeof(struct ipa_flt_rule_add_v2);
 
-	retval = ioctl(fd, IPA_IOC_ADD_FLT_RULE_AFTER_V2, ruleTable_v2);
-	if (retval != 0)
-	{
-		IPACMERR("Failed adding Filtering rule %pK\n", ruleTable_v2);
-		PERROR("unable to add filter rule:");
-
-		for (int cnt = 0; cnt < ruleTable_v2->num_rules; cnt++)
+		for (cnt=0; cnt < ruleTable->num_rules; cnt++)
 		{
-			if (((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status != 0)
+			memset(&flt_rule_entry, 0, sizeof(struct ipa_flt_rule_add_v2));
+			flt_rule_entry.at_rear = ruleTable->rules[cnt].at_rear;
+			flt_rule_entry.rule.retain_hdr = ruleTable->rules[cnt].rule.retain_hdr;
+			flt_rule_entry.rule.to_uc = ruleTable->rules[cnt].rule.to_uc;
+			flt_rule_entry.rule.action = ruleTable->rules[cnt].rule.action;
+			flt_rule_entry.rule.rt_tbl_hdl = ruleTable->rules[cnt].rule.rt_tbl_hdl;
+			flt_rule_entry.rule.rt_tbl_idx = ruleTable->rules[cnt].rule.rt_tbl_idx;
+			flt_rule_entry.rule.eq_attrib_type = ruleTable->rules[cnt].rule.eq_attrib_type;
+			flt_rule_entry.rule.max_prio = ruleTable->rules[cnt].rule.max_prio;
+			flt_rule_entry.rule.hashable = ruleTable->rules[cnt].rule.hashable;
+			flt_rule_entry.rule.rule_id = ruleTable->rules[cnt].rule.rule_id;
+			flt_rule_entry.rule.set_metadata = ruleTable->rules[cnt].rule.set_metadata;
+			flt_rule_entry.rule.pdn_idx = ruleTable->rules[cnt].rule.pdn_idx;
+			memcpy(&flt_rule_entry.rule.eq_attrib,
+						 &ruleTable->rules[cnt].rule.eq_attrib,
+						 sizeof(flt_rule_entry.rule.eq_attrib));
+			memcpy(&flt_rule_entry.rule.attrib,
+						 &ruleTable->rules[cnt].rule.attrib,
+						 sizeof(flt_rule_entry.rule.attrib));
+			IPACMDBG("Filter rule:%d attrib mask: 0x%x\n", cnt,
+					ruleTable->rules[cnt].rule.attrib.attrib_mask);
+			/* 0 means disable hw-counter-sats */
+			if (hw_counter_index != 0)
+			{
+				flt_rule_entry.rule.enable_stats = 1;
+				flt_rule_entry.rule.cnt_idx = hw_counter_index;
+			}
+
+			/* copy to v2 table*/
+			memcpy((void *)(ruleTable_v2->rules + (cnt * sizeof(struct ipa_flt_rule_add_v2))),
+				&flt_rule_entry, sizeof(flt_rule_entry));
+		}
+
+		retval = ioctl(fd, IPA_IOC_ADD_FLT_RULE_AFTER_V2, ruleTable_v2);
+		if (retval != 0)
+		{
+			IPACMERR("Failed adding Filtering rule %pK\n", ruleTable_v2);
+			PERROR("unable to add filter rule:");
+
+			for (int cnt = 0; cnt < ruleTable_v2->num_rules; cnt++)
+			{
+				if (((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status != 0)
+				{
+					IPACMERR("Adding Filter rule:%d failed with status:%d\n",
+									 cnt, ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status);
+				}
+			}
+			ret = false;
+			goto fail_rule;
+		}
+
+		/* copy results from v2 to v1 format */
+		for (int cnt = 0; cnt < ruleTable->num_rules; cnt++)
+		{
+			/* copy status to v1 format */
+			ruleTable->rules[cnt].status = ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status;
+			ruleTable->rules[cnt].flt_rule_hdl = ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].flt_rule_hdl;
+
+			if(((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status != 0)
 			{
 				IPACMERR("Adding Filter rule:%d failed with status:%d\n",
-								 cnt, ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status);
+								 cnt, ((struct ipa_flt_rule_add_v2 *) ruleTable_v2->rules)[cnt].status);
 			}
 		}
-		ret = false;
-		goto fail_rule;
-	}
 
-	/* copy results from v2 to v1 format */
-	for (int cnt = 0; cnt < ruleTable->num_rules; cnt++)
+		IPACMDBG("Added Filtering rule %pK\n", ruleTable_v2);
+
+	fail_rule:
+		if((void *)ruleTable_v2->rules != NULL)
+			free((void *)ruleTable_v2->rules);
+	fail_tbl:
+		if (ruleTable_v2 != NULL)
+			free(ruleTable_v2);
+	}
+	else
 	{
-		/* copy status to v1 format */
-		ruleTable->rules[cnt].status = ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status;
-		ruleTable->rules[cnt].flt_rule_hdl = ((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].flt_rule_hdl;
-
-		if(((struct ipa_flt_rule_add_v2 *)ruleTable_v2->rules)[cnt].status != 0)
-		{
-			IPACMERR("Adding Filter rule:%d failed with status:%d\n",
-							 cnt, ((struct ipa_flt_rule_add_v2 *) ruleTable_v2->rules)[cnt].status);
-		}
+		if (ruleTable)
+			IPACMERR("Not support adding Filtering rule %pK\n", ruleTable);
 	}
-
-	IPACMDBG("Added Filtering rule %pK\n", ruleTable_v2);
-
-fail_rule:
-	if((void *)ruleTable_v2->rules != NULL)
-		free((void *)ruleTable_v2->rules);
-fail_tbl:
-	if (ruleTable_v2 != NULL)
-		free(ruleTable_v2);
-#else
-	if (ruleTable)
-	IPACMERR("Not support adding Filtering rule %pK\n", ruleTable);
-#endif
 	return ret;
 }
 #endif //IPA_IOCTL_SET_FNR_COUNTER_INFO
 
 bool IPACM_Filtering::AddFilteringRuleAfter(struct ipa_ioc_add_flt_rule_after const *ruleTable)
 {
-#ifdef FEATURE_IPA_V3
 	int retval = 0;
 
-	IPACMDBG("Printing filter add attributes\n");
-	IPACMDBG("ip type: %d\n", ruleTable->ip);
-	IPACMDBG("Number of rules: %d\n", ruleTable->num_rules);
-	IPACMDBG("End point: %d\n", ruleTable->ep);
-	IPACMDBG("commit value: %d\n", ruleTable->commit);
-
-	retval = ioctl(fd, IPA_IOC_ADD_FLT_RULE_AFTER, ruleTable);
-
-	for (int cnt = 0; cnt<ruleTable->num_rules; cnt++)
+	if (IPACM_Iface::ipacmcfg->isIPAv3Supported())
 	{
-		if(ruleTable->rules[cnt].status != 0)
+		IPACMDBG("Printing filter add attributes\n");
+		IPACMDBG("ip type: %d\n", ruleTable->ip);
+		IPACMDBG("Number of rules: %d\n", ruleTable->num_rules);
+		IPACMDBG("End point: %d\n", ruleTable->ep);
+		IPACMDBG("commit value: %d\n", ruleTable->commit);
+
+		retval = ioctl(fd, IPA_IOC_ADD_FLT_RULE_AFTER, ruleTable);
+
+		for (int cnt = 0; cnt<ruleTable->num_rules; cnt++)
 		{
-			IPACMERR("Adding Filter rule:%d failed with status:%d\n",
-							 cnt, ruleTable->rules[cnt].status);
+			if(ruleTable->rules[cnt].status != 0)
+			{
+				IPACMERR("Adding Filter rule:%d failed with status:%d\n",
+								 cnt, ruleTable->rules[cnt].status);
+			}
 		}
-	}
 
-	if (retval != 0)
-	{
-		IPACMERR("Failed adding Filtering rule %pK\n", ruleTable);
-		return false;
+		if (retval != 0)
+		{
+			IPACMERR("Failed adding Filtering rule %pK\n", ruleTable);
+			return false;
+		}
+		IPACMDBG("Added Filtering rule %pK\n", ruleTable);
 	}
-	IPACMDBG("Added Filtering rule %pK\n", ruleTable);
-#else
-	if (ruleTable)
-	IPACMERR("Not support adding Filtering rule %pK\n", ruleTable);
-#endif
+	else
+	{
+		if (ruleTable)
+			IPACMERR("Not support adding Filtering rule %pK\n", ruleTable);
+	}
 	return true;
 }
 
@@ -502,9 +509,7 @@ bool IPACM_Filtering::AddWanDLFilteringRule(struct ipa_ioc_add_flt_rule const *r
 {
 	int ret = 0, cnt, num_rules = 0, pos = 0;
 	ipa_install_fltr_rule_req_msg_v01 qmi_rule_msg;
-#ifdef FEATURE_IPA_V3
 	ipa_install_fltr_rule_req_ex_msg_v01 qmi_rule_ex_msg;
-#endif
 
 	memset(&qmi_rule_msg, 0, sizeof(qmi_rule_msg));
 	int fd_wwan_ioctl = open(WWAN_QMI_IOCTL_DEVICE_NAME, O_RDWR);
@@ -526,175 +531,178 @@ bool IPACM_Filtering::AddWanDLFilteringRule(struct ipa_ioc_add_flt_rule const *r
 	}
 
 	/* if it is not IPA v3, use old QMI format */
-#ifndef FEATURE_IPA_V3
-	if(num_rules > QMI_IPA_MAX_FILTERS_V01)
+	if (!IPACM_Iface::ipacmcfg->isIPAv3Supported())
 	{
-		IPACMERR("The number of filtering rules exceed limit.\n");
-		close(fd_wwan_ioctl);
-		return false;
-	}
-	else
-	{
-		if (num_rules > 0)
+		if(num_rules > QMI_IPA_MAX_FILTERS_V01)
 		{
-			qmi_rule_msg.filter_spec_list_valid = true;
-		}
-		else
-		{
-			qmi_rule_msg.filter_spec_list_valid = false;
-		}
-
-		qmi_rule_msg.filter_spec_list_len = num_rules;
-		qmi_rule_msg.source_pipe_index_valid = 0;
-
-		IPACMDBG_H("Get %d WAN DL filtering rules in total.\n", num_rules);
-
-		if(rule_table_v4 != NULL)
-		{
-			for(cnt = rule_table_v4->num_rules - 1; cnt >= 0; cnt--)
-			{
-				if (pos < QMI_IPA_MAX_FILTERS_V01)
-				{
-					qmi_rule_msg.filter_spec_list[pos].filter_spec_identifier = pos;
-					qmi_rule_msg.filter_spec_list[pos].ip_type = QMI_IPA_IP_TYPE_V4_V01;
-					qmi_rule_msg.filter_spec_list[pos].filter_action = GetQmiFilterAction(rule_table_v4->rules[cnt].rule.action);
-					qmi_rule_msg.filter_spec_list[pos].is_routing_table_index_valid = 1;
-					qmi_rule_msg.filter_spec_list[pos].route_table_index = rule_table_v4->rules[cnt].rule.rt_tbl_idx;
-					qmi_rule_msg.filter_spec_list[pos].is_mux_id_valid = 1;
-					qmi_rule_msg.filter_spec_list[pos].mux_id = mux_id;
-					memcpy(&qmi_rule_msg.filter_spec_list[pos].filter_rule,
-						&rule_table_v4->rules[cnt].rule.eq_attrib,
-						sizeof(struct ipa_filter_rule_type_v01));
-					pos++;
-				}
-				else
-				{
-					IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_V01, pos);
-				}
-			}
-		}
-
-		if(rule_table_v6 != NULL)
-		{
-			for(cnt = rule_table_v6->num_rules - 1; cnt >= 0; cnt--)
-			{
-				if (pos < QMI_IPA_MAX_FILTERS_V01)
-				{
-					qmi_rule_msg.filter_spec_list[pos].filter_spec_identifier = pos;
-					qmi_rule_msg.filter_spec_list[pos].ip_type = QMI_IPA_IP_TYPE_V6_V01;
-					qmi_rule_msg.filter_spec_list[pos].filter_action = GetQmiFilterAction(rule_table_v6->rules[cnt].rule.action);
-					qmi_rule_msg.filter_spec_list[pos].is_routing_table_index_valid = 1;
-					qmi_rule_msg.filter_spec_list[pos].route_table_index = rule_table_v6->rules[cnt].rule.rt_tbl_idx;
-					qmi_rule_msg.filter_spec_list[pos].is_mux_id_valid = 1;
-					qmi_rule_msg.filter_spec_list[pos].mux_id = mux_id;
-					memcpy(&qmi_rule_msg.filter_spec_list[pos].filter_rule,
-						&rule_table_v6->rules[cnt].rule.eq_attrib,
-						sizeof(struct ipa_filter_rule_type_v01));
-					pos++;
-				}
-				else
-				{
-					IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_V01, pos);
-				}
-			}
-		}
-
-		ret = ioctl(fd_wwan_ioctl, WAN_IOC_ADD_FLT_RULE, &qmi_rule_msg);
-		if (ret != 0)
-		{
-			IPACMERR("Failed adding Filtering rule %p with ret %d\n ", &qmi_rule_msg, ret);
+			IPACMERR("The number of filtering rules exceed limit.\n");
 			close(fd_wwan_ioctl);
 			return false;
 		}
-	}
+		else
+		{
+			if (num_rules > 0)
+			{
+				qmi_rule_msg.filter_spec_list_valid = true;
+			}
+			else
+			{
+				qmi_rule_msg.filter_spec_list_valid = false;
+			}
+
+			qmi_rule_msg.filter_spec_list_len = num_rules;
+			qmi_rule_msg.source_pipe_index_valid = 0;
+
+			IPACMDBG_H("Get %d WAN DL filtering rules in total.\n", num_rules);
+
+			if(rule_table_v4 != NULL)
+			{
+				for(cnt = rule_table_v4->num_rules - 1; cnt >= 0; cnt--)
+				{
+					if (pos < QMI_IPA_MAX_FILTERS_V01)
+					{
+						qmi_rule_msg.filter_spec_list[pos].filter_spec_identifier = pos;
+						qmi_rule_msg.filter_spec_list[pos].ip_type = QMI_IPA_IP_TYPE_V4_V01;
+						qmi_rule_msg.filter_spec_list[pos].filter_action = GetQmiFilterAction(rule_table_v4->rules[cnt].rule.action);
+						qmi_rule_msg.filter_spec_list[pos].is_routing_table_index_valid = 1;
+						qmi_rule_msg.filter_spec_list[pos].route_table_index = rule_table_v4->rules[cnt].rule.rt_tbl_idx;
+						qmi_rule_msg.filter_spec_list[pos].is_mux_id_valid = 1;
+						qmi_rule_msg.filter_spec_list[pos].mux_id = mux_id;
+						memcpy(&qmi_rule_msg.filter_spec_list[pos].filter_rule,
+							&rule_table_v4->rules[cnt].rule.eq_attrib,
+							sizeof(struct ipa_filter_rule_type_v01));
+						pos++;
+					}
+					else
+					{
+						IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_V01, pos);
+					}
+				}
+			}
+
+			if(rule_table_v6 != NULL)
+			{
+				for(cnt = rule_table_v6->num_rules - 1; cnt >= 0; cnt--)
+				{
+					if (pos < QMI_IPA_MAX_FILTERS_V01)
+					{
+						qmi_rule_msg.filter_spec_list[pos].filter_spec_identifier = pos;
+						qmi_rule_msg.filter_spec_list[pos].ip_type = QMI_IPA_IP_TYPE_V6_V01;
+						qmi_rule_msg.filter_spec_list[pos].filter_action = GetQmiFilterAction(rule_table_v6->rules[cnt].rule.action);
+						qmi_rule_msg.filter_spec_list[pos].is_routing_table_index_valid = 1;
+						qmi_rule_msg.filter_spec_list[pos].route_table_index = rule_table_v6->rules[cnt].rule.rt_tbl_idx;
+						qmi_rule_msg.filter_spec_list[pos].is_mux_id_valid = 1;
+						qmi_rule_msg.filter_spec_list[pos].mux_id = mux_id;
+						memcpy(&qmi_rule_msg.filter_spec_list[pos].filter_rule,
+							&rule_table_v6->rules[cnt].rule.eq_attrib,
+							sizeof(struct ipa_filter_rule_type_v01));
+						pos++;
+					}
+					else
+					{
+						IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_V01, pos);
+					}
+				}
+			}
+
+			ret = ioctl(fd_wwan_ioctl, WAN_IOC_ADD_FLT_RULE, &qmi_rule_msg);
+			if (ret != 0)
+			{
+				IPACMERR("Failed adding Filtering rule %p with ret %d\n ", &qmi_rule_msg, ret);
+				close(fd_wwan_ioctl);
+				return false;
+			}
+		}
 	/* if it is IPA v3, use new QMI format */
-#else
-	if(num_rules > QMI_IPA_MAX_FILTERS_EX_V01)
-	{
-		IPACMERR("The number of filtering rules exceed limit.\n");
-		close(fd_wwan_ioctl);
-		return false;
 	}
 	else
 	{
-		memset(&qmi_rule_ex_msg, 0, sizeof(qmi_rule_ex_msg));
-
-		if (num_rules > 0)
+		if(num_rules > QMI_IPA_MAX_FILTERS_EX_V01)
 		{
-			qmi_rule_ex_msg.filter_spec_ex_list_valid = true;
-		}
-		else
-		{
-			qmi_rule_ex_msg.filter_spec_ex_list_valid = false;
-		}
-		qmi_rule_ex_msg.filter_spec_ex_list_len = num_rules;
-		qmi_rule_ex_msg.source_pipe_index_valid = 0;
-
-		IPACMDBG_H("Get %d WAN DL filtering rules in total.\n", num_rules);
-
-		if(rule_table_v4 != NULL)
-		{
-			for(cnt = rule_table_v4->num_rules - 1; cnt >= 0; cnt--)
-			{
-				if (pos < QMI_IPA_MAX_FILTERS_EX_V01)
-				{
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].ip_type = QMI_IPA_IP_TYPE_V4_V01;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_action = GetQmiFilterAction(rule_table_v4->rules[cnt].rule.action);
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_routing_table_index_valid = 1;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].route_table_index = rule_table_v4->rules[cnt].rule.rt_tbl_idx;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_mux_id_valid = 1;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].mux_id = mux_id;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].rule_id = rule_table_v4->rules[cnt].rule.rule_id;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_rule_hashable = rule_table_v4->rules[cnt].rule.hashable;
-					memcpy(&qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_rule,
-						&rule_table_v4->rules[cnt].rule.eq_attrib,
-						sizeof(struct ipa_filter_rule_type_v01));
-
-					pos++;
-				}
-				else
-				{
-					IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_EX_V01, pos);
-				}
-			}
-		}
-
-		if(rule_table_v6 != NULL)
-		{
-			for(cnt = rule_table_v6->num_rules - 1; cnt >= 0; cnt--)
-			{
-				if (pos < QMI_IPA_MAX_FILTERS_EX_V01)
-				{
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].ip_type = QMI_IPA_IP_TYPE_V6_V01;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_action = GetQmiFilterAction(rule_table_v6->rules[cnt].rule.action);
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_routing_table_index_valid = 1;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].route_table_index = rule_table_v6->rules[cnt].rule.rt_tbl_idx;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_mux_id_valid = 1;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].mux_id = mux_id;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].rule_id = rule_table_v6->rules[cnt].rule.rule_id;
-					qmi_rule_ex_msg.filter_spec_ex_list[pos].is_rule_hashable = rule_table_v6->rules[cnt].rule.hashable;
-					memcpy(&qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_rule,
-						&rule_table_v6->rules[cnt].rule.eq_attrib,
-						sizeof(struct ipa_filter_rule_type_v01));
-
-					pos++;
-				}
-				else
-				{
-					IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_EX_V01, pos);
-				}
-			}
-		}
-
-		ret = ioctl(fd_wwan_ioctl, WAN_IOC_ADD_FLT_RULE_EX, &qmi_rule_ex_msg);
-		if (ret != 0)
-		{
-			IPACMERR("Failed adding Filtering rule %pK with ret %d\n ", &qmi_rule_ex_msg, ret);
+			IPACMERR("The number of filtering rules exceed limit.\n");
 			close(fd_wwan_ioctl);
 			return false;
 		}
+		else
+		{
+			memset(&qmi_rule_ex_msg, 0, sizeof(qmi_rule_ex_msg));
+
+			if (num_rules > 0)
+			{
+				qmi_rule_ex_msg.filter_spec_ex_list_valid = true;
+			}
+			else
+			{
+				qmi_rule_ex_msg.filter_spec_ex_list_valid = false;
+			}
+			qmi_rule_ex_msg.filter_spec_ex_list_len = num_rules;
+			qmi_rule_ex_msg.source_pipe_index_valid = 0;
+
+			IPACMDBG_H("Get %d WAN DL filtering rules in total.\n", num_rules);
+
+			if(rule_table_v4 != NULL)
+			{
+				for(cnt = rule_table_v4->num_rules - 1; cnt >= 0; cnt--)
+				{
+					if (pos < QMI_IPA_MAX_FILTERS_EX_V01)
+					{
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].ip_type = QMI_IPA_IP_TYPE_V4_V01;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_action = GetQmiFilterAction(rule_table_v4->rules[cnt].rule.action);
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_routing_table_index_valid = 1;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].route_table_index = rule_table_v4->rules[cnt].rule.rt_tbl_idx;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_mux_id_valid = 1;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].mux_id = mux_id;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].rule_id = rule_table_v4->rules[cnt].rule.rule_id;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_rule_hashable = rule_table_v4->rules[cnt].rule.hashable;
+						memcpy(&qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_rule,
+							&rule_table_v4->rules[cnt].rule.eq_attrib,
+							sizeof(struct ipa_filter_rule_type_v01));
+
+						pos++;
+					}
+					else
+					{
+						IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_EX_V01, pos);
+					}
+				}
+			}
+
+			if(rule_table_v6 != NULL)
+			{
+				for(cnt = rule_table_v6->num_rules - 1; cnt >= 0; cnt--)
+				{
+					if (pos < QMI_IPA_MAX_FILTERS_EX_V01)
+					{
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].ip_type = QMI_IPA_IP_TYPE_V6_V01;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_action = GetQmiFilterAction(rule_table_v6->rules[cnt].rule.action);
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_routing_table_index_valid = 1;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].route_table_index = rule_table_v6->rules[cnt].rule.rt_tbl_idx;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_mux_id_valid = 1;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].mux_id = mux_id;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].rule_id = rule_table_v6->rules[cnt].rule.rule_id;
+						qmi_rule_ex_msg.filter_spec_ex_list[pos].is_rule_hashable = rule_table_v6->rules[cnt].rule.hashable;
+						memcpy(&qmi_rule_ex_msg.filter_spec_ex_list[pos].filter_rule,
+							&rule_table_v6->rules[cnt].rule.eq_attrib,
+							sizeof(struct ipa_filter_rule_type_v01));
+
+						pos++;
+					}
+					else
+					{
+						IPACMERR(" QMI only support max %d rules, current (%d)\n ",QMI_IPA_MAX_FILTERS_EX_V01, pos);
+					}
+				}
+			}
+
+			ret = ioctl(fd_wwan_ioctl, WAN_IOC_ADD_FLT_RULE_EX, &qmi_rule_ex_msg);
+			if (ret != 0)
+			{
+				IPACMERR("Failed adding Filtering rule %pK with ret %d\n ", &qmi_rule_ex_msg, ret);
+				close(fd_wwan_ioctl);
+				return false;
+			}
+		}
 	}
-#endif
 
 	close(fd_wwan_ioctl);
 	return true;

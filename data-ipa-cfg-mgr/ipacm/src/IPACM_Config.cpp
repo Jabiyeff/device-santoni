@@ -905,3 +905,26 @@ enum ipa_hw_type IPACM_Config::GetIPAVer(bool get)
 	IPACMDBG_H("IPA version is %d.\n", ver);
 	return ver;
 }
+
+bool IPACM_Config::isEthBridgingSupported()
+{
+	enum ipa_hw_type hw_type;
+
+	hw_type = GetIPAVer();
+
+#ifdef IPA_HW_v4_7
+	return ((hw_type >= IPA_HW_v4_5) &&
+		(hw_type != IPA_HW_v4_7));
+#else
+	return (hw_type >= IPA_HW_v4_5);
+#endif
+}
+
+bool IPACM_Config::isIPAv3Supported()
+{
+	enum ipa_hw_type hw_type;
+
+	hw_type = GetIPAVer();
+
+	return (hw_type >= IPA_HW_v3_0);
+}

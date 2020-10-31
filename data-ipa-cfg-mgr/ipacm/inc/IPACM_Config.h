@@ -261,6 +261,10 @@ public:
 
 	enum ipa_hw_type GetIPAVer(bool get = false);
 
+	bool isEthBridgingSupported();
+
+	bool isIPAv3Supported();
+
 	int Init(void);
 
 	inline bool isPrivateSubnet(uint32_t ip_addr)

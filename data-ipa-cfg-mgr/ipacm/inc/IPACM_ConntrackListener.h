@@ -119,7 +119,7 @@ public:
 	void HandleSTAClientAddEvt(uint32_t);
 	void HandleSTAClientDelEvt(uint32_t);
 	int  CreateConnTrackThreads(void);
-	void readConntrack(void);
+	void readConntrack(int fd);
 	void processConntrack(void);
 };
 

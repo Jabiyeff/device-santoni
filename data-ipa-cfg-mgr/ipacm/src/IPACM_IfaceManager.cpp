@@ -406,9 +406,8 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 				IPACM_EvtDispatcher::registr(IPA_HANDLE_WAN_DOWN_V6, wl);
 #endif
 				IPACM_EvtDispatcher::registr(IPA_PRIVATE_SUBNET_CHANGE_EVENT, wl); 	// register for IPA_PRIVATE_SUBNET_CHANGE_EVENT event
-#ifdef FEATURE_ETH_BRIDGE_LE
-				IPACM_EvtDispatcher::registr(IPA_CFG_CHANGE_EVENT, wl);
-#endif
+				if (IPACM_Iface::ipacmcfg->isEthBridgingSupported())
+					IPACM_EvtDispatcher::registr(IPA_CFG_CHANGE_EVENT, wl);
 				IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, wl);
 				IPACM_EvtDispatcher::registr(IPA_WLAN_LINK_DOWN_EVENT, wl);
 #ifndef FEATURE_IPA_ANDROID
@@ -451,6 +450,12 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 					else
 					{
 						w = new IPACM_Wan(ipa_interface_index, is_sta_mode, NULL);
+						if (w->rx_prop == NULL && w->tx_prop == NULL)
+						{
+							/* close the netdev instance if IPA not support*/
+							w->delete_iface();
+							return IPACM_FAILURE;
+						}
 					}
 					IPACM_EvtDispatcher::registr(IPA_ADDR_ADD_EVENT, w);
 #ifdef FEATURE_IPA_ANDROID

@@ -30,9 +30,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef IPA_NAT_DRVI_H
 #define IPA_NAT_DRVI_H
 
-#include <unistd.h>
 #include <stdio.h>
 #include <sys/ioctl.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <linux/msm_ipa.h>
@@ -40,6 +40,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sys/inotify.h>
 #include <errno.h>
 #include <pthread.h>
+#include <unistd.h>
 
 #include "ipa_nat_logi.h"
 
