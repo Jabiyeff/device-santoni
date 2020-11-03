@@ -117,11 +117,6 @@ on property:persist.usb.chgdisabled=1
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
-service qrngd /system/bin/qrngd -f
-   class main
-   user root
-   group root
-
 service qrngp /system/bin/qrngp -f
    class main
    user root
