@@ -1,6 +1,3 @@
-# Charger
-ro.charger.enable_suspend=true
-
 # BPF
 ro.kernel.ebpf.supported=true
 
