@@ -118,6 +118,7 @@ vendor.gralloc.enable_fb_ubwc=1
 debug.hwui.use_buffer_age=false
 vendor.video.disable.ubwc=1
 debug.sdm.support_writeback=0
+debug.hwui.renderer=skiavk
 
 # DRM
 drm.service.enabled=true
