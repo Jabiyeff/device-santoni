@@ -340,26 +340,6 @@ case "$target" in
         else
              hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
-	if [ "$low_ram" != "true" ]; then
-             case "$soc_id" in
-                  "294" | "295" | "303" | "307" | "308" | "309" | "313" | "320" | "353" | "354" | "363" | "364")
-                       case "$hw_platform" in
-                            "Surf")
-                                    setprop qemu.hw.mainkeys 0
-                                    ;;
-                            "MTP")
-                                    setprop qemu.hw.mainkeys 0
-                                    ;;
-                            "RCM")
-                                    setprop qemu.hw.mainkeys 0
-                                    ;;
-                            "QRD")
-                                    setprop qemu.hw.mainkeys 0
-                                    ;;
-                       esac
-                       ;;
-             esac
-        fi
         ;;
     "msm8953")
 	start_msm_irqbalance_8939
