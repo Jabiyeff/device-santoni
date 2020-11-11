@@ -373,13 +373,11 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init.spectrum.rc \
     init.extras.rc
 
 PRODUCT_PACKAGES += \
     init.baseband.sh \
     init.goodix.sh \
-    init.spectrum.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh
 
