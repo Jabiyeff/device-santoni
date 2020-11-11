@@ -5,7 +5,7 @@ cc_binary {
     local_include_dirs: ["src"] + ["inc"],
 	header_libs: ["generated_kernel_headers"],
 
-    cflags: ["-v"] + ["-DFEATURE_IPA_ANDROID"] + ["-DFEATURE_IPACM_RESTART"] + [
+    cflags: ["-DFEATURE_IPA_ANDROID"] + ["-DFEATURE_IPACM_RESTART"] + [
         "-DFEATURE_IPACM_HAL",
 	"-DDEBUG",
         "-Wall",
