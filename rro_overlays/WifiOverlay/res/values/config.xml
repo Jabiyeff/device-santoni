@@ -44,7 +44,7 @@
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
 
     <!-- Indicates that AP mode MAC randomization is supported on this device -->
-    <bool name="config_wifi_ap_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_ap_mac_randomization_supported">false</bool>
 
     <!-- Integer thresholds, do not connect to APs with RSSI lower than these values  -->
     <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-77</integer>
