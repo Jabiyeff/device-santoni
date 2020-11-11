@@ -1,3 +1,7 @@
+# Adreno
+ro.hardware.vulkan=adreno
+ro.hardware.egl=adreno
+
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
