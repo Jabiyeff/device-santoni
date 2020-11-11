@@ -22,5 +22,8 @@ cc_library_static {
         "system/core/base/include",
         "system/core/init",
         "external/selinux/libselinux/include"
-    ]
+    ],
+    shared_libs: [
+        "libbase",
+    ],
 }

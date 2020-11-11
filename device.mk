@@ -154,6 +154,11 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
 
+# Binder
+PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
@@ -255,7 +260,9 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0-java
+    android.hidl.manager@1.0-java \
+    libhidltransport \
+    libhidltransport.vendor
 
 # HW crypto
 PRODUCT_PACKAGES += \
@@ -400,7 +407,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
     libxml2 \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -432,6 +440,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamshim
 
+# Signapk
+PRODUCT_HOST_PACKAGES += \
+    signapk
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/santoni
 
@@ -461,6 +473,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-ext \
     libstdc++.vendor
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so
 
 # Wifi
 PRODUCT_PACKAGES += \
