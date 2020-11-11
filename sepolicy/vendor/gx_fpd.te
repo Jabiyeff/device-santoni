@@ -57,9 +57,6 @@ allow gx_fpd mnt_user_file:dir search;
 r_dir_file(gx_fpd, firmware_file)
 
 # Allow read write sysfs
-allow gx_fpd sysfs:file rw_file_perms;
-
-#register service in service manager
-allow gx_fpd default_android_service:service_manager find;
+allow gx_fpd sysfs:file rw_file_perms;;
 
 add_service(gx_fpd, gx_fpd_service);

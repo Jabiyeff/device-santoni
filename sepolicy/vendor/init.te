@@ -1,5 +1,5 @@
 # adsprpcd
-allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+allow init adsprpcd_file:filesystem { mount relabelfrom relabelto getattr };
 
 # leds
 allow init sysfs_leds:lnk_file read;
@@ -8,7 +8,6 @@ allow init sysfs_leds:lnk_file read;
 allow init sysfs_dt2w:file { rw_file_perms setattr };
 
 allow init property_socket:sock_file write;
-allow init { domain -lmkd -llkd -crash_dump }:process noatsecure;
 allow init system_data_file:sock_file write;
 allow init system_server:fd use;
 allow init system_server:unix_stream_socket { read write };
@@ -45,7 +44,7 @@ allow init sysfs_kgsl:file { open read write };
 allow init sysfs_msm_perf:file { open write };
 allow init sysfs_wake_lock:file { open write };
 allow init system_app:fd use;
-allow init system_file:file mounton;
+allow init system_file:file { mounton };
 allow init system_server:binder call;
 allow init video_device:chr_file { open read write };
 allow qti_init_shell self:socket create;
@@ -55,5 +54,6 @@ allow init self:netlink_socket { bind create write };
 allow init system_server:binder transfer;
 allow init vendor_file:file execute;
 allow init firmware_file:filesystem getattr;
+allow init socket_device:sock_file { create setattr unlink };
 
 #allow init shell_exec:file execute_no_trans;

@@ -1,1 +1,2 @@
 allow bootanim system_data_file:dir read;
+allow bootanim userspace_reboot_exported_prop:file { open read getattr };
