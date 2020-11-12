@@ -360,10 +360,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Pixel Overlay
-PRODUCT_PACKAGES += \
-    PixelSettingsOverlay
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
