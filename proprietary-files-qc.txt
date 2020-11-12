@@ -215,9 +215,9 @@ vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
 vendor/lib64/libssd.so|1e2243f7eb5d36544a5ae51166d748b7b30e63c6
 
 # DRM - Widevine - from LA.UM.8.6.2.r1-08100-89xx.0
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine|f4258fe902140e7a35c59f79d274dde89a80d1e8
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|9b94131dbe81d17e4a106e16da55e72d3759c510
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|ad2769dc38c425495c80e0a2cc4f3a4012108917
-vendor/lib64/libwvhidl.so|1b0dce24a4f77883785999b9cf6cb5686232c3b3
+vendor/lib64/libwvhidl.so|83aa7350435b46b05a6a8bc91b91cd8a0ba633a5
 
 # Gatekeeper - from LA.UM.8.6.2.r1-08100-89xx.0
 vendor/lib/hw/gatekeeper.msm8937.so|f33d89c54a0423023d8e5ac884bcbaf1b9f5c11c
@@ -280,8 +280,8 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so|3c75d133af5193436167380aa89abcf05d07
 vendor/lib64/vendor.qti.gnss@4.0.so|cc2504016d0ce0afbc58ac95207a4b913f2ccfe9
 
 # Graphics - from LA.UM.9.6.2.r1-02500-89xx.0
-lib/libsdm-disp-apis.so|39d52eb5e311950a6b8eca35ac53758e7297e9cf
-lib64/libsdm-disp-apis.so|752de98fed59c7d161a113b62d46e20a2c939789
+lib/libsdm-disp-apis.so|572e077309808ce06dc2c86a3b4328e84efa634d
+lib64/libsdm-disp-apis.so|518a96d4e40f458c1884524337ad704df43aefcf
 vendor/lib/egl/eglSubDriverAndroid.so|ef519ee12656b4d9fcf3de343d161dd2761bf1f3
 vendor/lib/egl/libEGL_adreno.so|7b1ae9e2c4f44c4449db61b31e1860a8a584bbaf
 vendor/lib/egl/libGLESv1_CM_adreno.so|6c63055e6ac76dc5c7cd7842e697a66a71571f4b
@@ -325,8 +325,8 @@ system_ext/lib/vendor.display.color@1.0.so|1e86215aff5b4f5117a2884fe734017ab7af8
 system_ext/lib/vendor.display.postproc@1.0.so|bac604918ce243b3d4ff9916f0869f57493438fb
 system_ext/lib64/vendor.display.color@1.0.so|d2d105a4b2d3f08a4d1e9d4978a8140a474da90f
 system_ext/lib64/vendor.display.postproc@1.0.so|eba848b2b39aecbc763673c01ef2854709819120
-vendor/bin/hw/vendor.display.color@1.0-service|fe8aebf4caa5d3d5ae8f6a8ceef0f5718e89f8ec
-vendor/bin/mm-pp-dpps|798084a9ea98a808e768c430bbe199c2ad257ca1
+vendor/bin/hw/vendor.display.color@1.0-service|66d2461c3bf112ef67df37ebd7b2da8a5854d4e1
+vendor/bin/mm-pp-dpps|28221065a777a8c8faf14f4a15c4b0e28acce823
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib/libdisp-aba.so|898f31370aca398fc7f3926bdfc8ef225d2e2ca1
 vendor/lib/vendor.display.color@1.0.so|66a724a1a3cbca71edeec5c88957749ac0bf364a
@@ -382,9 +382,9 @@ vendor/lib64/libkeymasterdeviceutils.so|01b50edb4d6c804c31922b361b05705f264e0ff0
 vendor/lib/hw/sound_trigger.primary.msm8937.so|92453271f6834a02a32416b6ff690be2c4e76984
 vendor/lib/libadpcmdec.so|0b00273d1321f4fde109b1f8be514ab0ac6bedf1
 vendor/lib/libsmwrapper.so|5b3e34fd89883a2c308f377988da031c519a7b38
-vendor/lib/vendor.qti.voiceprint@1.0.so|2f9141a46d99737c6812ea921e4497ff954d726c
+vendor/lib/vendor.qti.voiceprint@1.0.so|5a93ef033f3ae5a22b6bdd22ecc3d50e9eeec416
 vendor/lib64/hw/sound_trigger.primary.msm8937.so|c09a2192b247c5b4e1042a762dc4b62726802fde
-vendor/lib64/vendor.qti.voiceprint@1.0.so|ab99a512c95b55c887b624b21fbc947bc6a6c999
+vendor/lib64/vendor.qti.voiceprint@1.0.so|873ae0b10525e299a4718e8f227b89467c403a95
 
 # Media - from LA.UM.9.6.2.r1-02500-89xx.0
 system_ext/lib/extractors/libmmparserextractor.so|1902f82487e88250aa53e4f7c82c785941488ca7
@@ -691,23 +691,23 @@ lib/libwfdcommonutils.so|35205d427d1d619a195ee8539e1d6bbf5ba8e7cd
 lib/libwfdconfigutils.so|297d166db9c148261c96cf1e3a5ff7f86576cac4
 lib/libwfdmminterface.so|668c1fa38a6d94ae36d74cdf8e3e538de41425fc
 lib/libwfdmmsink.so|85eb40963fff782d22ab6031a66ccdbebee3696d
-lib/libwfdmmsrc.so|fa79f113937a3c83f5dd3b8500347df4f3409341
-lib/libwfdnative.so|ba926c39a6b5c6a60c1d4f65e9629eb719bafee0
+lib/libwfdmmsrc.so|67607fe3b0e4be1f345f2268f90a982f5a6d2aa9
+lib/libwfdnative.so|ee87786948805c7c9d745a9be7e4825a830f2cd5
 lib/libwfdrtsp.so|ff172aaf2df1d5ea4da247bc1af16d68304c7389
 lib/libwfdservice.so|eff7d1419400a8fb764f9e689cf603610cd7f2c4
-lib/libwfdsm.so|321574cd208df53116ea4b7c2f0fbd53c6595f28
+lib/libwfdsm.so|6c9f50f09071b6075e17202bfe82d1c8c9187c78
 lib/libwfduibcinterface.so|d1de7c74841c7c0cb6b6c0c7c6290ea5b336cd71
 lib/libwfduibcsinkinterface.so|d3a309b7e5ad9ab4dc3179bcf5c46a7058f3d288
 lib/libwfduibcsink.so|e8157e35751ce8c4d882bf5f003ef1e7edbc1719
 lib/libwfduibcsrcinterface.so|fe8a2158155db35651f0e1ad834e000ca3e27247
 lib/libwfduibcsrc.so|a46688eba016d20c0315e0ebcb57f1d7a3476d21
 lib64/libwfdclient.so|8317f658713772fa98053417d74de56ac36848ee
-lib64/libwfdnative.so|b33cc22b66fc96479ba5119d50e984438d521d8e
+lib64/libwfdnative.so|e3c29208cf475adc87b8bf9048558a3130b60547
 -priv-app/WfdService/WfdService.apk|b99c24571581465e637c7f6a6efc7c36042e56ea
-vendor/bin/wifidisplayhalservice|9a5bbc21cbcaa50263d2cca5f220d8f435933ac6
+vendor/bin/wifidisplayhalservice|9d09834a0cc75f2f7ba31fd79571d39472ef168d
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|9e1000674de86c91933598297625a71e45828dc8
-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|04334ac3883c64b6201cef433ff9c3045585890a
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|65b99db56875288970b7ab8350ea52201ce68be9
 vendor/lib/libwfdcommonutils_proprietary.so|15414b82eff3e1c0a5e70caec10a481fc7634f81
 vendor/lib/libwfdhaldsmanager.so|da82fb77513d03875e917964a0dfcb8e0a153908
 vendor/lib/libwfdhdcpcp.so|0b8a69106f573a013479b231064c94b539c15e14
@@ -721,15 +721,15 @@ etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6
 etc/permissions/com.dolby.daxservice.xml|fea1e5540af97512168c63cf250d77522767d50c
 etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml|ab4600814879c626a410e607107829faceec9d2c
 product/etc/permissions/com.dolby.daxservice.xml|fea1e5540af97512168c63cf250d77522767d50c
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|cd0613b5713154a4aa604186a4922e074efd7472
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|ebf2efe04c5197adda885ddf1b118ea7b9a6939e
 vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|3f2ef278f56489ffaab9fe3578f86f9c1265de8a
 vendor/etc/dolby/dax-default.xml|9b1f284031ff38836a9ff12a0869c81ac0991f6c
 vendor/lib/libdapparamstorage.so|0f640ae673a390c7671ed60c8fb471e261d6a71f
 vendor/lib/libstagefrightdolby.so|44c8966d596cef60802e192e3986320adc544b38
-vendor/lib/vendor.dolby.hardware.dms@1.0.so|6e6d11272abbc02435551bad8564e70d7f7a33cb
-vendor/lib/soundfx/libswdap.so|2de162b80b491b710e93d2c74e742e0d9f535410
+vendor/lib/vendor.dolby.hardware.dms@1.0.so|2ca8b83850755de2446fe13db85ff24bdb6c2916
+vendor/lib/soundfx/libswdap.so|a1d794c86ce2dda0199cd774b35a337f402ae5c9
 vendor/lib64/libdapparamstorage.so|980b2f9c0facb0066236c4adf04c3a1b1567bbde
 vendor/lib64/libdlbdsservice.so|69f2a62245f93038cb03e6244ed0d4915e6c5084
-vendor/lib64/soundfx/libswdap.so|e83ca5da45c5de34eb658eca21b6b0a1c961aba3
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|8e147d44ed80c303add412787c47524b27fa001a
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so|2660a8f57f7131d08edfea4e1d4ad75a7de97b5b
+vendor/lib64/soundfx/libswdap.so|aea9b8a63c890f3cbd033cb8deb6caf9ab94afaf
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|94cb93dcba41446af5784b598974600919d0104d
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so|d30e9bc936a3aa864b8f65bb52095a0d2c628ad3
