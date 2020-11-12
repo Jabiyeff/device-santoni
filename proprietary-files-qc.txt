@@ -674,8 +674,8 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
 
-# Wi-Fi - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
-vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
+# Wi-Fi - from LA.UM.9.6.2.r1-02500-89xx.0
+vendor/bin/wcnss_service|05ed0f84b606ea958f45e1ca839317cb877b3c98
 
 # WiFi Display - from LA.UM.9.6.2.r1-02500-89xx.0
 bin/wfdservice|96a583c0efeaf90352b26c20c904ee156238b90f
