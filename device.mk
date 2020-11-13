@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
 	libvulkan \
     libqdMetaData.system \
+    libqdMetaData \
     liboverlay \
     libtinyxml
 
