@@ -1,3 +1,4 @@
 get_prop(wcnss_service, wifi_prop)
 set_prop(wcnss_service, wifi_prop)
+set_prop(wcnss_service, vendor_default_prop)
 dontaudit wcnss_service serialno_prop:file r_file_perms;

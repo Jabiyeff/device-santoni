@@ -1,0 +1,6 @@
+allow shell rootfs:file getattr;
+allow shell mnt_vendor_file:lnk_file getattr;
+allow shell init_exec:lnk_file getattr;
+allow shell linkerconfig_file:dir getattr;
+allow shell vendor_file:file getattr;
+allow shell adsprpcd_file:dir getattr;
