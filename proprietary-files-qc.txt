@@ -526,7 +526,7 @@ vendor/bin/qti|28c5da423ba2e0c7873c24e6eca4bb4db7f41fe8
 vendor/bin/rmt_storage|68113b986cef176c9d808fb7fb870ed61d4846bd
 vendor/bin/tftp_server|05a9c0e0e691e534e703bded4a99083d25a26ebb
 vendor/etc/data/dsi_config.xml|f4861831fcb21d43e2a9ca12519155ebb8ac1407
-vendor/etc/data/netmgr_config.xml|97066d76dbfd358895c9d2c02723230cae6cfb1e
+vendor/etc/data/netmgr_config.xml|9a66590aed48b5df9c33a75007420d9d99f533b5
 vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
 vendor/lib/liblqe.so|b1306e0186ab4bbc1e45ac3700d5aad8a8cbd2ad
 vendor/lib/libmdmdetect.so|11faf5c9ac48284dfe3a965d8a2309014d81a68d
