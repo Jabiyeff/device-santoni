@@ -3,4 +3,5 @@ get_prop(untrusted_app, boottime_prop)
 get_prop(untrusted_app, bg_daemon_prop)
 get_prop(untrusted_app, bg_boot_complete_prop)
 get_prop(untrusted_app, vendor_persist_camera_prop)
+allow untrusted_app exported_camera_prop:file { read open getattr };
 allow untrusted_app proc_vmstat:file { getattr };
