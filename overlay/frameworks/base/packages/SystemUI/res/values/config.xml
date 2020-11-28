@@ -40,4 +40,8 @@
 	
     <!-- Allow devices to enforce the H265 encoder for screen recordings -->
     <bool name="config_useNewScreenRecEncoder">false</bool>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">4</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">6</integer>
 </resources>
