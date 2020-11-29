@@ -70,6 +70,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+        case "${1}" in
+	lib/libwfdnative.so | lib64/libwfdnative.so )
+		patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
+        esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${AOSP_ROOT}" false "${CLEAN_VENDOR}"
 
