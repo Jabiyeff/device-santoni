@@ -574,7 +574,8 @@ void* IPACM_ConntrackClient::UDPRegisterWithConnTrack(void *)
 	/* Block to catch events from net filter connection track */
 ctcatch:
 	ret = nfct_catch(pClient->udp_hdl);
-	if((ret == -1) && (errno != ENOMSG))
+	/* Due to conntrack dump, sequence number might mismatch for initial events. */
+	if((ret == -1) && (errno != ENOMSG) && (errno != EILSEQ))
 	{
 		IPACMDBG("(%d)(%d)(%s)\n", ret, errno, strerror(errno));
 		return NULL;

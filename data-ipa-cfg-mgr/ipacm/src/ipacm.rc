@@ -34,5 +34,3 @@ service vendor.ipacm /system/vendor/bin/ipacm
     class late_start
     user radio
     group radio inet
-    writepid /dev/cpuset/system-background/tasks
-

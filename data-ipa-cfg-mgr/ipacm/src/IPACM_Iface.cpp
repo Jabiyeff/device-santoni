@@ -1009,7 +1009,7 @@ fail:
 	return res;
 }
 
-/*  get ipa interface name */
+/*  get ipa interface index from name */
 int IPACM_Iface::ipa_get_if_index
 (
   char * if_name,

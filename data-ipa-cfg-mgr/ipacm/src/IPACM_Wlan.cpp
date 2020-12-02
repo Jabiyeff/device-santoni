@@ -651,6 +651,35 @@ void IPACM_Wlan::event_callback(ipa_cm_event_id event, void *param)
 		}
 		break;
 	}
+#ifdef IPA_MTU_EVENT_MAX
+	case IPA_MTU_UPDATE:
+	{
+		IPACMDBG_H("Received IPA_MTU_UPDATE");
+		ipacm_event_mtu_info *evt_data = (ipacm_event_mtu_info *)param;
+		ipa_mtu_info *data = &(evt_data->mtu_info);
+
+		/* IPA_IP_MAX means both ipv4 and ipv6 */
+		if ((data->ip_type == IPA_IP_v4 || data->ip_type == IPA_IP_MAX) && IPACM_Wan::isWanUP(ipa_if_num))
+		{
+			handle_private_subnet_android(IPA_IP_v4);
+		}
+
+		/* IPA_IP_MAX means both ipv4 and ipv6 */
+		if ((data->ip_type == IPA_IP_v6 || data->ip_type == IPA_IP_MAX) && IPACM_Wan::isWanUP_V6(ipa_if_num))
+		{
+			//check if the prefix + MTU rules are installed
+			if (ipv6_prefix_flt_rule_hdl[0] && ipv6_prefix_flt_rule_hdl[1]) {
+				modify_ipv6_prefix_flt_rule(IPACM_Wan::backhaul_ipv6_prefix);
+			}
+			else
+			{
+				IPACMERR("failed to update prefix MTU rules, no prefix rules set");
+			}
+		}
+	}
+	break;
+#endif
+
 #else
 	case IPA_HANDLE_WAN_UP:
 		IPACMDBG_H("Received IPA_HANDLE_WAN_UP event\n");

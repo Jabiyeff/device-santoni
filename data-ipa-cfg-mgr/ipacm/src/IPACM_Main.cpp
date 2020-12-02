@@ -270,6 +270,10 @@ void* ipa_driver_msg_notifier(void *param)
 #endif
 	ipacm_cmd_q_data new_neigh_evt;
 	ipacm_event_data_all* new_neigh_data;
+#ifdef IPA_MTU_EVENT_MAX
+	ipacm_event_mtu_info *mtu_event = NULL;
+	ipa_mtu_info *mtu_info;
+#endif
 
 	param = NULL;
 	fd = open(IPA_DRIVER, O_RDWR);
@@ -871,6 +875,32 @@ void* ipa_driver_msg_notifier(void *param)
 			/* Notify all LTE instance to do RSC configuration */
 			evt_data.event = IPA_COALESCE_NOTICE;
 			evt_data.evt_data = NULL;
+			break;
+#endif
+
+#ifdef IPA_MTU_EVENT_MAX
+		case IPA_SET_MTU:
+			mtu_event = (ipacm_event_mtu_info *)malloc(sizeof(*mtu_event));
+			if(mtu_event == NULL)
+			{
+				IPACMERR("Failed to allocate memory.\n");
+				return NULL;
+			}
+			mtu_info = &(mtu_event->mtu_info);
+			memcpy(mtu_info, buffer + sizeof(struct ipa_msg_meta), sizeof(struct ipa_mtu_info));
+			IPACMDBG_H("Received IPA_SET_MTU if_name %s ip_type %d mtu_v4 %d mtu_v6 %d\n",
+				mtu_info->if_name, mtu_info->ip_type, mtu_info->mtu_v4, mtu_info->mtu_v6);
+			if (mtu_info->ip_type > IPA_IP_MAX)
+			{
+				IPACMERR("ip_type (%d) beyond the Max range (%d), abort\n",
+				mtu_info->ip_type, IPA_IP_MAX);
+				return NULL;
+			}
+
+			ipa_get_if_index(mtu_info->if_name, &(mtu_event->if_index));
+
+			evt_data.event = IPA_MTU_SET;
+			evt_data.evt_data = mtu_event;
 			break;
 #endif
 

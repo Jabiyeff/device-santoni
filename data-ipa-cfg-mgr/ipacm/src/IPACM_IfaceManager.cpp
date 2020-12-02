@@ -291,6 +291,9 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 				IPACM_EvtDispatcher::registr(IPA_TETHERING_STATS_UPDATE_EVENT, lan);
 #endif
 				IPACM_EvtDispatcher::registr(IPA_CRADLE_WAN_MODE_SWITCH, lan);
+#ifdef IPA_MTU_EVENT_MAX
+				IPACM_EvtDispatcher::registr(IPA_MTU_UPDATE, lan);
+#endif
 				IPACM_EvtDispatcher::registr(IPA_LINK_DOWN_EVENT, lan);
 				/* IPA_LAN_DELETE_SELF should be always last */
 				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, lan);
@@ -420,6 +423,9 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 				IPACM_EvtDispatcher::registr(IPA_WLAN_FWR_SSR_BEFORE_SHUTDOWN_NOTICE, wl);
 #endif
 				IPACM_EvtDispatcher::registr(IPA_WIGIG_CLIENT_ADD_EVENT, wl);
+#ifdef IPA_MTU_EVENT_MAX
+				IPACM_EvtDispatcher::registr(IPA_MTU_UPDATE, wl);
+#endif
 				/* IPA_LAN_DELETE_SELF should be always last */
 				IPACM_EvtDispatcher::registr(IPA_LAN_DELETE_SELF, wl);
 				IPACMDBG_H("ipa_WLAN (%s):ipa_index (%d) instance open/registr ok\n", wl->dev_name, wl->ipa_if_num);
@@ -464,6 +470,9 @@ int IPACM_IfaceManager::create_iface_instance(ipacm_ifacemgr_data *param)
 					if(is_sta_mode == Q6_WAN)
 					{
 						IPACM_EvtDispatcher::registr(IPA_NETWORK_STATS_UPDATE_EVENT, w);
+#ifdef IPA_MTU_EVENT_MAX
+						IPACM_EvtDispatcher::registr(IPA_MTU_SET, w);
+#endif
 					};
 #else/* defined(FEATURE_IPA_ANDROID) */
 					IPACM_EvtDispatcher::registr(IPA_ROUTE_ADD_EVENT, w);
