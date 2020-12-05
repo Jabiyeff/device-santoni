@@ -58,7 +58,7 @@ ro.build.shutdown_timeout=0
 # Camera
 camera.display.lmax=1280x720
 camera.display.umax=1920x1080
-vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
+vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
 persist.camera.gyro.disable=0
 persist.camera.imglib.cac3=2
 camera.lowpower.record.enable=1
