@@ -1557,8 +1557,8 @@ lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so:vendor/lib64/libfp_client.so
 lib64/libfpservice.so:vendor/lib64/libfpservice.so
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.custom
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.custom.rc
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.2-service.custom
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.2-service.custom.rc
 vendor/lib64/libgxbinder.so
 
 # Graphics firmware
