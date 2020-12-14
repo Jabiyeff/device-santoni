@@ -2,3 +2,7 @@ service vendor.touch-hal-1-0-xiaomi_8937 /vendor/bin/hw/vendor.lineage.touch@1.0
     class hal
     user system
     group system
+
+on init
+    chown system system /sys/bus/i2c/devices/3-0038/disable_keys
+    chmod 0666 /sys/bus/i2c/devices/3-0038/disable_keys

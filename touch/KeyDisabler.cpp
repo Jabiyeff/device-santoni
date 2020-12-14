@@ -26,7 +26,7 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-constexpr const char kControlPath[] = "/proc/touchpanel/capacitive_keys_enable";
+constexpr const char kControlPath[] = "/sys/bus/i2c/devices/3-0038/disable_keys";
 
 KeyDisabler::KeyDisabler() {
     mHasKeyDisabler = !access(kControlPath, F_OK);
