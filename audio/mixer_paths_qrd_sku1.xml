@@ -1161,7 +1161,7 @@
         <ctl name="headset amp" value="ENABLE"/>
     </path>
 
-    <path name="headset-mic-default">
+    <path name="headset-mic">
         <path name="adc2" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
@@ -1216,7 +1216,7 @@
     </path>
 
     <path name="voice-headset-mic">
-        <path name="headset-mic-default" />
+        <path name="headset-mic" />
     </path>
 	
     <path name="unprocessed-handset-mic">
