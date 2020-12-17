@@ -586,6 +586,12 @@
     <!-- Aspect ratio of screen -->
     <item name="config_screenAspectRatio" format="float" type="dimen">1.7</item>
 
+    <!-- Flag indicating whether the surface flinger has limited
+        alpha compositing functionality in hardware.  If set, the window
+        manager will disable alpha trasformation in animations where not
+        strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
