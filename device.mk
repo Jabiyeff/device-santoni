@@ -546,6 +546,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Prebuilts
 PRODUCT_PACKAGES += \
     RemovePackages
