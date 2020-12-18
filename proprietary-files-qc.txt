@@ -393,13 +393,12 @@ vendor/lib64/libkeymasterprovision.so|beff599c63646fbd1c6b495f56c66901eed1dc2e
 vendor/lib64/libkeymasterdeviceutils.so|e9500ef2f03e09cead88c3c20ccc1c29a6c8f7b1
 vendor/lib64/libqtikeymaster4.so|53a34f2d08d438f90ee4c4b5d9527b9f4a1f1039
 
-# Listen - from LA.UM.8.6.2.r1-08100-89xx.0
-vendor/lib/hw/sound_trigger.primary.msm8937.so|92453271f6834a02a32416b6ff690be2c4e76984
-vendor/lib/libadpcmdec.so|0b00273d1321f4fde109b1f8be514ab0ac6bedf1
-vendor/lib/libsmwrapper.so|5b3e34fd89883a2c308f377988da031c519a7b38
-vendor/lib/vendor.qti.voiceprint@1.0.so|5a93ef033f3ae5a22b6bdd22ecc3d50e9eeec416
-vendor/lib64/hw/sound_trigger.primary.msm8937.so|c09a2192b247c5b4e1042a762dc4b62726802fde
-vendor/lib64/vendor.qti.voiceprint@1.0.so|873ae0b10525e299a4718e8f227b89467c403a95
+# Listen - from LA.UM.9.6.2.r1-03300-89xx.0
+vendor/lib/hw/sound_trigger.primary.msm8937.so|55f8b7ebf9b30ef84341081dcdd5289dc70ceaa6
+vendor/lib/libadpcmdec.so|7a38d6b28b27cf663681ad077614a03164418f91
+vendor/lib/libsmwrapper.so|f0ee761c02c888e77d947bb87d162d9379bc1530
+vendor/lib/vendor.qti.voiceprint@1.0.so|12902f4d42e5b228cf4b80dc3e9631ace8fcf86e
+vendor/lib64/vendor.qti.voiceprint@1.0.so|2ecc0dc149b2231cb17334a3515eba1c36fc301a
 
 # Media - from LA.UM.9.6.2.r1-03300-89xx.0
 system_ext/lib/extractors/libmmparserextractor.so|67b406a1ad0825682dfae5745f43889381e6d473
