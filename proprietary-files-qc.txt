@@ -218,10 +218,10 @@ vendor/lib64/libsecureui.so|8831b502eeee5728b885aa7f71cd40ff9bee35de
 vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
 vendor/lib64/libssd.so|dc9fde19a4bbcce6b2ef99bf33d4f8121ced072f
 
-# DRM - Widevine - from LA.UM.8.6.2.r1-08100-89xx.0
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine|9b94131dbe81d17e4a106e16da55e72d3759c510
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|ad2769dc38c425495c80e0a2cc4f3a4012108917
-vendor/lib64/libwvhidl.so|83aa7350435b46b05a6a8bc91b91cd8a0ba633a5
+# DRM - Widevine - from Redmi/lmi/lmi:11/RKQ1.200826.002/20.10.19:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2230b35e2d067ba92496cae131b00fd1bbc812c2
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|6a777556a80797c6c836d73885e0bcef5bbbfe54
+vendor/lib64/libwvhidl.so|07a8861d3aa01ba535b7a1af808e012ba1dbe229
 
 # Gatekeeper - from LA.UM.8.6.2.r1-08600-89xx.0
 vendor/lib/hw/gatekeeper.msm8937.so|f33d89c54a0423023d8e5ac884bcbaf1b9f5c11c
