@@ -70,6 +70,11 @@ vendor.vidc.enc.narrow.searchrange=1
 persist.vendor.qti.telephony.vt_cam_interface=2
 media.camera.ts.monotonic=1
 persist.camera.HAL3.enabled=1
+persist.camera.mct.debug=0
+persist.camera.iface.logs=0
+persist.camera.imglib.logs=0
+persist.camera.isp.debug=0
+persist.camera.sensor.debug=0
 
 # Charger
 ro.charger.disable_init_blank=true
@@ -146,6 +151,7 @@ mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 media.stagefright.audio.sink=280
 vendor.mm.enable.qcom_parser=1048575
+vendor.vidc.debug.level=0
 vendor.vidc.disable.split.mode=1
 vendor.vidc.enc.disable.pq=true
 vendor.video.disable.ubwc=1
