@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
+    libdisplayconfig.qti.vendor \
 	libvulkan \
     libqdMetaData.system \
     libqdMetaData \
