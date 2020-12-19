@@ -378,7 +378,7 @@ service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     user root
     oneshot
 
-service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
@@ -391,7 +391,7 @@ service baseband-sh /vendor/bin/init.baseband.sh
     oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
+    start vendor.qcom-post-boot
 
 on property:persist.ims.regmanager.mode=1
     start ims_regmanager
@@ -434,7 +434,7 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqba
     disabled
 
 on charger
-    start qcom-post-boot
+    start vendor.qcom-post-boot
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
