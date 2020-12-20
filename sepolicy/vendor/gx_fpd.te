@@ -58,5 +58,6 @@ r_dir_file(gx_fpd, firmware_file)
 
 # Allow read write sysfs
 allow gx_fpd sysfs:file rw_file_perms;;
+allow hal_perf_default proc_meminfo:file { getattr open read };
 
 add_service(gx_fpd, gx_fpd_service);
