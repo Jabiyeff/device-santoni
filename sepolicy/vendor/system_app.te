@@ -17,3 +17,6 @@ allow system_app hal_power_default:binder call;
 allow system_app proc_vmallocinfo:file { open read getattr };
 allow system_app vold:binder call;
 allow system_app wificond:binder call;
+
+# fm_radio app needes  open read write on fm_radio_device
+allow system_app fm_radio_device:chr_file r_file_perms;
