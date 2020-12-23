@@ -14,6 +14,8 @@ allow system_app hal_power_default:binder call;
 allow system_app proc_vmallocinfo:file { open read getattr };
 allow system_app vold:binder call;
 allow system_app wificond:binder call;
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
 
 # fm_radio app needes  open read write on fm_radio_device
 allow system_app fm_radio_device:chr_file r_file_perms;
