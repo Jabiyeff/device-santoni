@@ -430,6 +430,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Recovery Override
+PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
