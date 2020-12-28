@@ -30,7 +30,6 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
 ro.surface_flinger.protected_contents=true
