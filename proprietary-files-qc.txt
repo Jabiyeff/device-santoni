@@ -387,6 +387,12 @@ vendor/lib/hw/vulkan.pastel.so|1d87540caf3b4a9981cfbab9a5ee4466ab497655
 vendor/lib64/hw/vulkan.adreno.so|1644b032813416f5e9a95db7ad5dc7af79381699
 vendor/lib64/hw/vulkan.pastel.so|0337ec78fbf10357fab3cbd757d656f1ab55a3c4
 
+# Graphics (WFD) - from LA.UM.9.6.2.r1-03300-89xx.0
+system_ext/lib/vendor.display.config@2.0.so|1322d64a842a7c4181d9468e29d654c4c4a5ed82
+system_ext/lib/libdisplayconfig.qti.so|90a11d43733ce8a0a92db82c7a994c7cabdef1b0
+system_ext/lib64/vendor.display.config@2.0.so|d58cf78757eba4a6fc1fb13bd31dce5a9cb34ca6
+system_ext/lib64/libdisplayconfig.qti.so|7c529023cb9e39f95e5bf010c8b4d3d03694308c
+
 # Graphics firmware - from LA.UM.9.6.2.r1-03300-89xx.0
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
 vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
@@ -752,6 +758,7 @@ lib/libwfdclient.so|f8bc675421610ed19dcd9e535e9c7a384a89d37d
 lib/libwfdcodecv4l2.so|fc0dc6c233ed5e98e47bb0168ba5722cb3a6100a
 lib/libwfdcommonutils.so|b9926c36f1389a71cc4dd76a0b2945557f3333ad
 lib/libwfdconfigutils.so|297d166db9c148261c96cf1e3a5ff7f86576cac4
+lib/libwfddisplayconfig.so|f06b58228ea5fc570ad0403be5db4a4f8e11f108
 lib/libwfdmminterface.so|668c1fa38a6d94ae36d74cdf8e3e538de41425fc
 lib/libwfdmmsink.so|40ba43de24c7d97df9244c63a6bfc00b2f11610c
 lib/libwfdmmsrc.so|cf8f8a63d2474a339d56471d745c572c14c0cb49
@@ -769,6 +776,7 @@ lib64/libwfdnative.so|fcea3ccd064171ddd9c2d7ce7bc38df324003937
 -priv-app/WfdService/WfdService.apk|b99c24571581465e637c7f6a6efc7c36042e56ea
 vendor/bin/wifidisplayhalservice|9a5bbc21cbcaa50263d2cca5f220d8f435933ac6
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
+vendor/lib/libstagefright_enc_common.so:lib/libstagefright_enc_common.so|7106cf86a8e120ad467f1847ea62716f86731e07
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|9e1000674de86c91933598297625a71e45828dc8
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|04334ac3883c64b6201cef433ff9c3045585890a
 vendor/lib/libwfdcommonutils_proprietary.so|1d0b71c302a88ee30b33660e005fccdbabae904a
