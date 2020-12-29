@@ -383,9 +383,7 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 
 # Graphics (Vulkan) - from LA.UM.9.6.2.r1-03300-89xx.0
 vendor/lib/hw/vulkan.adreno.so|ae1d65586b5a865f39cf8678216108a288e44239
-vendor/lib/hw/vulkan.pastel.so|1d87540caf3b4a9981cfbab9a5ee4466ab497655
 vendor/lib64/hw/vulkan.adreno.so|1644b032813416f5e9a95db7ad5dc7af79381699
-vendor/lib64/hw/vulkan.pastel.so|0337ec78fbf10357fab3cbd757d656f1ab55a3c4
 
 # Graphics (WFD) - from LA.UM.9.6.2.r1-03300-89xx.0
 system_ext/lib/vendor.display.config@2.0.so|1322d64a842a7c4181d9468e29d654c4c4a5ed82
