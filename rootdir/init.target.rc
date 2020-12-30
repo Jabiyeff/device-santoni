@@ -75,7 +75,7 @@ on post-fs-data
     mkdir /data/vendor/thermal/config 0771 root system
 
 #start camera server as daemon
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
