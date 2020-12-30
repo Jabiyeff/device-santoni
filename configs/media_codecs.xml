@@ -141,7 +141,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="48600" />
             <Limit name="bitrate" range="1-2000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
         </MediaCodec>
@@ -154,7 +154,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="48600" />
             <Limit name="bitrate" range="1-2000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
         </MediaCodec>
@@ -210,7 +210,7 @@ Only the three quirks included above are recognized at this point:
                 <Limit name="block-size" value="16x16" />
                 <Limit name="blocks-per-second" min="1" max="244800" />
                 <Limit name="bitrate" range="1-6000000" />
-                <Limit name="concurrent-instances" max="16" />
+                <Limit name="concurrent-instances" max="4" />
                 <Limit name="performance-point-1920x1088" value="30" />
             </Type>
             <Type name="video/mp4v-esdp">
@@ -219,7 +219,7 @@ Only the three quirks included above are recognized at this point:
                 <Limit name="block-size" value="16x16" />
                 <Limit name="blocks-per-second" min="1" max="244800" />
                 <Limit name="bitrate" range="1-6000000" />
-                <Limit name="concurrent-instances" max="16" />
+                <Limit name="concurrent-instances" max="4" />
                 <Limit name="performance-point-1920x1088" value="30" />
             </Type>
         </MediaCodec>
@@ -231,7 +231,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="48600" />
             <Limit name="bitrate" range="1-2000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="4" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
         </MediaCodec>
