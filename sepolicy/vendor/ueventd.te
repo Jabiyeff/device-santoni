@@ -9,6 +9,7 @@ allow ueventd sysfs_fps_attr:file rw_file_perms;
 allow ueventd sysfs_kcal:dir r_dir_perms;
 allow ueventd sysfs_kcal:file rw_file_perms;
 allow ueventd sysfs_kcal:lnk_file r_file_perms;
+allow ueventd self:capability kill;
 allow ueventd self:capability sys_nice;
 allow ueventd persist_file:lnk_file { read };
 allow ueventd debugfs:dir r_dir_perms;
