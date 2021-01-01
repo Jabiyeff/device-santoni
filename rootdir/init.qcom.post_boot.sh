@@ -2629,6 +2629,9 @@ case "$target" in
         case "$soc_id" in
             "318" | "327" | "385" )
 
+	        # Disable cdsprpcd daemon for sdm630
+	        setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+
             # Setting b.L scheduler parameters
             echo 85 > /proc/sys/kernel/sched_upmigrate
             echo 85 > /proc/sys/kernel/sched_downmigrate
@@ -3725,7 +3728,7 @@ case "$target" in
 
         # Scuba perf/power tunings
         case "$soc_id" in
-             "441" )
+             "441" | "473" | "474" )
 
             # Quad-core device. disable core_ctl
             echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable

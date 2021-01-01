@@ -149,9 +149,9 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
+    # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
-    write /proc/sys/kernel/printk "6 6 1 7"
+    write /proc/sys/kernel/printk "4 6 1 7"
 
     # Notification LED
     chown system system /sys/class/leds/red/blink
@@ -182,6 +182,12 @@ on post-fs-data
 
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
+
+    # Change lm related dirs
+    mkdir /data/vendor/lm 0700 root root
+
+    # Create directory used by powermodule
+    mkdir /data/vendor/pwr 0700 root root
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
@@ -306,6 +312,7 @@ service ss_ramdump /system/bin/subsystem_ramdump
     class main
     user system
     group system
+    ioprio rt 4
     disabled
 
 on property:persist.sys.ssr.enable_debug=*
@@ -346,6 +353,9 @@ on property:vendor.radio.atfwd.start=false
 
 on property:vendor.media.target.version=*
 	setprop vendor.sys.media.target.version ${vendor.media.target.version}
+
+on property:vendor.netflix.bsp_rev=*
+    setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core

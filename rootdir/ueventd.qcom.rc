@@ -224,6 +224,7 @@
 /dev/i2c-5                0660   media       media
 /dev/avtimer              0660   system     audio
 /dev/spidev2.0            0660   system     audio
+/dev/spidev22.0           0660   system     audio
 /dev/aud_pasthru_adsp     0660   system     audio
 /dev/msm_audio_ion        0660   system     audio
 
