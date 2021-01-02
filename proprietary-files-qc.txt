@@ -795,23 +795,3 @@ vendor/lib/libwfdhaldsmanager.so|da82fb77513d03875e917964a0dfcb8e0a153908
 vendor/lib/libwfdhdcpcp.so|0b8a69106f573a013479b231064c94b539c15e14
 vendor/lib/libwfdmmservice.so|ccdf23feee6f25493297cab321003a2b11177027
 vendor/lib/libwfdmodulehdcpsession.so|6e87f31c53f5c8cfcbbf27d5f5df1154ff6f6e96
-
-# MotoDolbyV3 - from Moto
--app/MotoDolbyV3/MotoDolbyV3.apk|5288201f7890811e0a0f28434833caeb159b7c61
--product/priv-app/daxService/daxService.apk|436ccb3e5d4bba4082538ca36933c65ccd24fe58
-etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6f83c507e357886b3
-etc/permissions/com.dolby.daxservice.xml|fea1e5540af97512168c63cf250d77522767d50c
-etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml|ab4600814879c626a410e607107829faceec9d2c
-product/etc/permissions/com.dolby.daxservice.xml|fea1e5540af97512168c63cf250d77522767d50c
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|ebf2efe04c5197adda885ddf1b118ea7b9a6939e
-vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|3f2ef278f56489ffaab9fe3578f86f9c1265de8a
-vendor/etc/dolby/dax-default.xml|9b1f284031ff38836a9ff12a0869c81ac0991f6c
-vendor/lib/libdapparamstorage.so|0f640ae673a390c7671ed60c8fb471e261d6a71f
-vendor/lib/libstagefrightdolby.so|44c8966d596cef60802e192e3986320adc544b38
-vendor/lib/vendor.dolby.hardware.dms@1.0.so|2ca8b83850755de2446fe13db85ff24bdb6c2916
-vendor/lib/soundfx/libswdap.so|a1d794c86ce2dda0199cd774b35a337f402ae5c9
-vendor/lib64/libdapparamstorage.so|980b2f9c0facb0066236c4adf04c3a1b1567bbde
-vendor/lib64/libdlbdsservice.so|69f2a62245f93038cb03e6244ed0d4915e6c5084
-vendor/lib64/soundfx/libswdap.so|aea9b8a63c890f3cbd033cb8deb6caf9ab94afaf
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|94cb93dcba41446af5784b598974600919d0104d
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so|d30e9bc936a3aa864b8f65bb52095a0d2c628ad3
