@@ -62,6 +62,9 @@ function blob_fixup() {
 	lib/libwfdnative.so | lib64/libwfdnative.so )
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+    vendor/lib/libmmcamera2_sensor_modules.so )
+        sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
+        ;;
         esac
 }
 
@@ -72,9 +75,5 @@ extract "${MY_DIR}"/proprietary-files.txt "${SRC}" \
 	"${KANG}" --section "${SECTION}"
 extract "${MY_DIR}"/proprietary-files-qc.txt "$SRC" \
 	"${KANG}" --section "${SECTION}"
-
-# Hax for cam configs
-CAMERA2_SENSOR_MODULES="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
-sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${CAMERA2_SENSOR_MODULES}"
 
 "${MY_DIR}"/setup-makefiles.sh
