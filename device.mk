@@ -552,6 +552,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# Dirac
+PRODUCT_PACKAGES += \
+    Dirac
+
 # Prebuilts
 PRODUCT_PACKAGES += \
     RemovePackages
