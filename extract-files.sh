@@ -60,7 +60,7 @@ fi
 function blob_fixup() {
         case "${1}" in
 	lib/libwfdnative.so | lib64/libwfdnative.so )
-		patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
         esac
 }
