@@ -2,6 +2,7 @@ ro.alarm_boot              u:object_r:vendor_alarm_boot_prop:s0
 persist.audio.dirac        u:object_r:dirac_prop:s0
 persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
+persist.vendor.camera.dbglog    u:object_r:vendor_camera_prop:s0
 sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
 sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
 wlan.driver.config         u:object_r:wifi_prop:s0

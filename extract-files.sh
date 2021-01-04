@@ -65,6 +65,9 @@ function blob_fixup() {
     vendor/lib/libmmcamera2_sensor_modules.so )
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
+    vendor/lib/libmmcamera_dbg.so )
+        sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "${2}"
+        ;;
         esac
 }
 
