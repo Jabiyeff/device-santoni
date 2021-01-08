@@ -1,5 +1,8 @@
 #system.prop for msm8937
 
+# Disable Surface Blur
+persist.sys.sf.disable_blurs=1
+
 #HWUI properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
