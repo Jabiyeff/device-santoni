@@ -233,7 +233,7 @@ PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl:64 \
-    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.3-service.clearkey
 
 # Ebtables
