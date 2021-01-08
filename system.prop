@@ -13,6 +13,9 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
+# Enable iorapd perfetto tracing for app starts
+iorapd.perfetto.enable=true
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
