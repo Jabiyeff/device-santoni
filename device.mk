@@ -480,10 +480,6 @@ PRODUCT_HOST_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/santoni
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
