@@ -88,6 +88,8 @@ persist.vendor.sys.cnd.iwlan=1
 persist.debug.coresight.config=stm-events
 
 # Dalvik
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
