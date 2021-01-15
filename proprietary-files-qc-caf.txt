@@ -661,10 +661,14 @@ vendor/bin/sensors.qti|d87eb74b701f9e047c8ed7deb5fcd43a5639572a
 vendor/lib/hw/activity_recognition.msm8937.so|98d3def727d5e5d23a8d0e18e3da90d903b9eaf2
 vendor/lib/libsensor1.so|4c720827e086453d20223c0ef76f0bf5a52b6623
 vendor/lib/libsensor_reg.so|848f74306042a91eab6dc68723d27062dc6e8522
+vendor/lib/libsensor_thresh.so|9c394a0e1a8c1d77b804c8419f7ee8bfade50b35
+vendor/lib/libsensor_user_cal.so|c2694930fd7991eb7d53174e00781546e2360a82
 vendor/lib/sensors.ssc.so|ab53946c1bf4d207bb1a48fa9da92ceb3fdf39c6
 vendor/lib64/hw/activity_recognition.msm8937.so|20948be407097354f1cb206dadc0c07a46ec5c5b
 vendor/lib64/libsensor1.so|ecd936e78d9ba35878cb0bfbff38289e8651ac8d
 vendor/lib64/libsensor_reg.so|4550e44b37ce57db92bb379e9c65ece68c802d1e
+vendor/lib64/libsensor_thresh.so|cc625ff56616753f600ddd0ccd69e8961d0b93a3
+vendor/lib64/libsensor_user_cal.so|9cd4a306c7d67a2248b1be89d4517ecd6c0fbbc2
 vendor/lib64/sensors.ssc.so|92f6c3da84c8790778b78b5dfa8593e12c940494
 
 # Time services - from LA.UM.9.6.2.r1-03600-89xx.0
