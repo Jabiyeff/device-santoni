@@ -597,8 +597,9 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- Feature flag to enable memory efficient task snapshots that are used in recents optimized
-         for low memory devices and replace the app transition starting window with the splash
-         screen. -->
-    <bool name="config_lowRamTaskSnapshotsAndRecents">true</bool>
+    <!-- Whether device supports sensor based doze customizations -->
+    <bool name="config_dozePulsePickup">true</bool>
+    <bool name="config_dozePulseTilt">true</bool>
+    <bool name="config_dozePulseProximity">true</bool>
+    <bool name="config_deviceHaveWakeUpProximity">true</bool>
 </resources>
