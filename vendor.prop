@@ -89,16 +89,7 @@ persist.vendor.sys.cnd.iwlan=1
 persist.debug.coresight.config=stm-events
 
 # Dalvik
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.image-dex2oat-threads=4
 dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heapsize=512m
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=8m
 
 # Display
 debug.sf.enable_hwc_vds=1

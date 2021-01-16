@@ -27,6 +27,7 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <fcntl.h>
 #include <stdlib.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -35,13 +36,11 @@
 #include <android-base/properties.h>
 #include "vendor_init.h"
 #include "property_service.h"
-#include "android/log.h"
+#include "log/log.h"
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
-char const *heapsize;
 char const *heapminfree;
-char const *heapmaxfree;
 
 void check_device()
 {
@@ -50,19 +49,13 @@ void check_device()
     sysinfo(&sys);
 
     if (sys.totalram > 2048ull * 1024 * 1024) {
-        // from - phone-xxhdpi-3072-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "288m";
-        heapsize = "768m";
-        heapminfree = "2m";
-        heapmaxfree = "8m";
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapminfree = "4m";
     } else {
-        // from - phone-xxhdpi-2048-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
-        heapsize = "512m";
         heapminfree = "512k";
-        heapmaxfree = "8m";
    }
 }
 
@@ -91,22 +84,15 @@ void set_zram_size(void)
     fclose(f);
 }
 
-void property_override(char const prop[], char const value[])
+void property_override(char const prop[], char const value[], bool add = true)
 {
-    prop_info *pi;
+    auto pi = (prop_info *) __system_property_find(prop);
 
-    pi = (prop_info*) __system_property_find(prop);
-    if (pi)
+    if (pi != nullptr) {
         __system_property_update(pi, value, strlen(value));
-    else
+    } else if (add) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
-}
-
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
-{
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
+    }
 }
 
 void vendor_load_properties()
@@ -116,9 +102,9 @@ void vendor_load_properties()
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heapsize", "512m");
     property_override("dalvik.vm.heaptargetutilization", "0.75");
     property_override("dalvik.vm.heapminfree", heapminfree);
-    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapmaxfree", "8m");
 
 }
