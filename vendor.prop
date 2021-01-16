@@ -55,7 +55,6 @@ vendor.qcom.bluetooth.soc=smd
 
 # Boot
 sys.vendor.shutdown.waittime=500
-ro.build.shutdown_timeout=0
 
 # Camera
 vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
@@ -220,13 +219,6 @@ persist.vendor.ims.disableDebugDataPathLogs=1
 persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableSigHandler=1
 persist.vendor.ims.disableQXDMLogs=1
-
-# SurfaceFlinger
-debug.sf.early_phase_offset_ns=11600000
-debug.sf.early_app_phase_offset_ns=11600000
-debug.sf.early_gl_phase_offset_ns=3000000
-debug.sf.early_gl_app_phase_offset_ns=15000000
-debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000
 
 # Time Servicess
 persist.vendor.delta_time.enable=true
