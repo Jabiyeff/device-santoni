@@ -548,10 +548,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
