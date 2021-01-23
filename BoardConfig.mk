@@ -55,9 +55,7 @@ TARGET_KERNEL_CONFIG := santoni_treble_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := sdllvm
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-none-linux-gnu-10.2/bin/aarch64-none-linux-gnu-
-TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-none-linux-gnueabihf-10.2/bin/arm-none-linux-gnueabihf-
+TARGET_KERNEL_CLANG_VERSION := 7095922
 
 # Audio
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
