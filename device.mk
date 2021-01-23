@@ -553,6 +553,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Do not spin up a separate process for the network stack, use an in-process APK.
+PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += com.android.tethering.inprocess
+
 # Reduce system image size by limiting java debug info.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
