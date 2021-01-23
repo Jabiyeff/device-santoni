@@ -182,6 +182,7 @@ on charger
     start thermal-engine
 
 on boot
+    chown system system /sys/kernel/hbtp/display_pwr
     write /dev/cpuset/audio-app/cpus "4-7"
     write /dev/cpuset/background/cpus "4-7"
     write /dev/cpuset/foreground/cpus "0-7"
