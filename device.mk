@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcompostprocbundle
+    libqcompostprocbundle \
+    libnbaio
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl:32 \
