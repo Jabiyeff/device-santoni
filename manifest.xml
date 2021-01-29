@@ -235,6 +235,16 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -480,6 +490,16 @@
             <name>IQtiOemHook</name>
             <instance>oemhook0</instance>
             <instance>oemhook1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQtiRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl">
