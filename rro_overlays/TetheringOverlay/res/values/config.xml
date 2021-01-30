@@ -19,12 +19,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Use the BPF offload for tethering when the kernel has support. True by default.
-         If the device doesn't want to support tether BPF offload, this should be false.
-         Note that this setting could be overridden by device config.
-    -->
-    <bool translatable="false" name="config_tether_enable_bpf_offload">false</bool>
-
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tethering over USB this should
          be empty.  An example would be "usb.*" -->
@@ -46,6 +40,13 @@
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
         <item>"bnep\\d"</item>
         <item>"bt-pan"</item>
+    </string-array>
+
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         Wifi P2P interfaces.  If the device doesn't want to support tethering over Wifi P2p this
+         should be empty.  An example would be "p2p-p2p.*" -->
+    <string-array translatable="false" name="config_tether_wifi_p2p_regexs">
+        <item>"p2p-p2p\\d-.*"</item>
     </string-array>
 
     <!-- Array of allowable ConnectivityManager network types for tethering -->
