@@ -214,12 +214,16 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
+    libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
-	libvulkan \
+    libvulkan \
     libqdMetaData.system \
     libqdMetaData \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.0.vendor \
+    vendor.display.config@2.0
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \

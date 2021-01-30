@@ -360,12 +360,6 @@ vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
 vendor/lib/hw/vulkan.adreno.so|f4f3b86f4703236451933183f1f5b4a9330ef9f1
 vendor/lib64/hw/vulkan.adreno.so|81422f8d82edeae2e66673b8ea14b317c47db94c
 
-# Graphics (WFD) - from LA.UM.9.6.2.r1-03600-89xx.0
-system_ext/lib/vendor.display.config@2.0.so|1322d64a842a7c4181d9468e29d654c4c4a5ed82
-system_ext/lib/libdisplayconfig.qti.so|ac6a0907cce52e298f3abacd368d90017e0bc9c9
-system_ext/lib64/vendor.display.config@2.0.so|d58cf78757eba4a6fc1fb13bd31dce5a9cb34ca6
-system_ext/lib64/libdisplayconfig.qti.so|8d464d75746931084a485a87f97b17caa84d6fc1
-
 # Graphics firmware - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
 vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
