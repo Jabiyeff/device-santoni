@@ -126,6 +126,7 @@ persist.qfp=false
 
 # FM
 ro.fm.transmitter=false
+vendor.hw.fm.init=0
 
 # GPS
 persist.gps.qc_nlp_in_use=1
