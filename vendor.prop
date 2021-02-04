@@ -73,6 +73,7 @@ persist.camera.iface.logs=0
 persist.camera.imglib.logs=0
 persist.camera.isp.debug=0
 persist.camera.sensor.debug=0
+ro.vendor.camera.provider24.disable_mem_init=1
 
 # Charger
 ro.charger.disable_init_blank=true
