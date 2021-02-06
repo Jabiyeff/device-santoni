@@ -16,3 +16,4 @@ allow system_app vold:binder call;
 allow system_app wificond:binder call;
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
+allow system_app hal_vibrator_default:binder call;
