@@ -1244,6 +1244,7 @@
 
     <path name="speaker-and-headphones">
         <path name="headphones" />
+        <ctl name="Lineout_1 amp" value="DUALMODE"/>
     </path>
 
     <path name="usb-headphones">
