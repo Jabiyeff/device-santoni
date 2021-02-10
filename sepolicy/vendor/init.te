@@ -56,6 +56,7 @@ allow init vendor_file:file execute;
 allow init firmware_file:filesystem getattr;
 allow init socket_device:sock_file { create setattr unlink };
 allow init self:capability sys_nice;
+allow init iorapd_data_file:file getattr;
 
 #allow init shell_exec:file execute_no_trans;
 
