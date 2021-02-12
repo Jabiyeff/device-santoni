@@ -482,7 +482,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libcamshim
+    libcamshim \
+    libwui
 
 # Signapk
 PRODUCT_HOST_PACKAGES += \

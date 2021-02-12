@@ -62,14 +62,17 @@ function blob_fixup() {
 	lib/libwfdnative.so | lib64/libwfdnative.so )
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
-    vendor/lib/libmmcamera2_sensor_modules.so )
+	vendor/lib/libmmcamera2_sensor_modules.so )
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
-    vendor/lib/libmmcamera_dbg.so )
+	vendor/lib/libmmcamera_dbg.so )
         sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "${2}"
         ;;
-    system_ext/framework/qti-telephony-common.jar )
+	system_ext/framework/qti-telephony-common.jar )
         sed -i "/com.qualcomm.qti.internal.telephony.QtiRIL/d" "${2}"
+        ;;
+	vendor/lib/libmmcamera2_stats_modules.so | vendor/lib/libmmcamera_ppeiscore.so | vendor/lib64/libmmsw_detail_enhancement.so | vendor/lib64/libmmsw_platform.so )
+        "${PATCHELF}" --replace-needed "libgui.so" "libwui.so" "${2}"
         ;;
         esac
 }

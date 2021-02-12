@@ -28,7 +28,7 @@ vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_stats_modules.so|484bad45d1ad580e717882536e7f82928bd00865
 vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
@@ -91,7 +91,7 @@ vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
-vendor/lib/libmmcamera_ppeiscore.so
+vendor/lib/libmmcamera_ppeiscore.so|b74f4323af1bfa52eb73fa0d4c3c5d59f70e966a
 vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so
 vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so
 vendor/lib/libmmcamera_quadracfa.so
@@ -162,10 +162,10 @@ vendor/lib64/libmmcamera_cac3_lib.so
 vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib64/libmmsw_detail_enhancement.so
+vendor/lib64/libmmsw_detail_enhancement.so|636413cd846b94f20d4bca4e9568bfb931fd23c9
 vendor/lib64/libmmsw_math.so
 vendor/lib64/libmmsw_opencl.so
-vendor/lib64/libmmsw_platform.so
+vendor/lib64/libmmsw_platform.so|f3f76c465f449697c99aed6c217767115b10c21c
 vendor/lib64/libmorpho_panorama_gp.so
 -vendor/lib/libts_detected_face_hal.so
 -vendor/lib/libts_face_beautify_hal.so
