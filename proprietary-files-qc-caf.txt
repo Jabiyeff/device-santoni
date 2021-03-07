@@ -26,22 +26,6 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 system_ext/lib/com.qualcomm.qti.ant@1.0.so|6b8eb143ce3e33e474c7bc28ff3cc58b86c6369c
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so|7fffcdca309796183708d9e345d3cd97461d901d
 
-# Audio ACDB - from LA.UM.9.6.2.r1-03600-89xx.0
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|316afdb1c54d96e278dbad1d66478e747c3833dd
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|6e56da26e29081243ca23b8142a26601ec83f9d6
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|7d32b6d14b2da0fad1e8e48dd87e1de162de6118
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|d5e5fd989e59ca97e98f61f7585644e9c9e3e668
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|9dfba3d57cd04a1cdf691dbce282a635e5b0f14a
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|0f8c3edfef7b3fac5e74dea94ab10815ad9caee3
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|d58a562b9e4c4c0c74d75b8693545f6b12214fd3
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|373f5784a9e584de1f6eb0852186f5a65f773a91
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|4643c70136c8af401fbfd8e34718d18246e39e7b
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|af444fde611a3d80f4755db45c0baf974585ae30
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|ec41fcd2d85894c7e4e1710a2ca2086008546a12
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|88d30123e0f930627764d5ffd99683865174b311
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|28bb8689c548683e70fb38652d090d3feb219df6
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|81f2959087d87388e455c18bc0896780fb89656f
-
 # Audio libraries - from LA.UM.9.6.2.r1-03600-89xx.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
