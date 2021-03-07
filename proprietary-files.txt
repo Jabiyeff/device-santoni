@@ -1554,3 +1554,8 @@ etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2
 etc/ft5336_oufei_720p.ini:vendor/etc/ft5336_oufei_720p.ini
 etc/ft5336_biel_1080p.ini:vendor/etc/ft5336_biel_1080p.ini
 
+# Media
+etc/firmware/DE.o.msm8937:vendor/firmware/DE.o.msm8937
+
+# USB
+etc/firmware/ice40.bin:vendor/firmware/ice40.bin
