@@ -410,6 +410,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/system-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
 
 # QMI
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 PRODUCT_PACKAGES += \
     libjson
 
