@@ -71,6 +71,9 @@ function blob_fixup() {
 	system_ext/framework/qti-telephony-common.jar )
         sed -i "/com.qualcomm.qti.internal.telephony.QtiRIL/d" "${2}"
         ;;
+	vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc )
+        sed -i -e "$a\\    capabilities NET_BIND_SERVICE" "${2}"
+        ;;
 	vendor/lib/libmmcamera2_stats_modules.so | vendor/lib/libmmcamera_ppeiscore.so | vendor/lib64/libmmsw_detail_enhancement.so | vendor/lib64/libmmsw_platform.so )
         "${PATCHELF}" --replace-needed "libgui.so" "libwui.so" "${2}"
         ;;
