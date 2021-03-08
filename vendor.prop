@@ -229,7 +229,8 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000
 
 # Time Servicess
-persist.vendor.delta_time.enable=true
+persist.backup.ntpServer=0.pool.ntp.org
+persist.timed.enable=true
 
 # Tcp
 net.tcp.2g_init_rwnd=10
