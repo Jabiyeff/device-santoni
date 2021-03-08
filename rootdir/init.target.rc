@@ -35,6 +35,8 @@ on early-init
 on fs
     mount_all /vendor/etc/fstab.qcom
     swapon_all /vendor/etc/fstab.qcom
+    # GnssConfiguration doesn't actually look at gps.conf, just the debug file
+    mount none /vendor/etc/gps.conf /system/etc/gps_debug.conf bind
 
     setprop sys.usb.ffs.aio_compat 1
     chown root system /mnt/vendor/persist
