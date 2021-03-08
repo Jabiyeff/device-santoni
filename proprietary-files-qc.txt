@@ -25,6 +25,10 @@ vendor/lib64/hw/gatekeeper.msm8937.so
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
+# Thermal - from LA.UM.8.6.2.r1-08600-89xx.0
+vendor/lib/hw/thermal.msm8937.so
+vendor/lib64/hw/thermal.msm8937.so
+
 # QMI - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
