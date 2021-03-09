@@ -44,8 +44,6 @@ on fs
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
-    chmod 0664 /sys/class/thermal/thermal_message/sconfig
-    chown system system /sys/class/thermal/thermal_message/sconfig
  
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
@@ -73,8 +71,6 @@ on post-fs
 on post-fs-data
    #Create folder for mm-qcamera-daemon
    mkdir /data/vendor/qcam/ 0770 camera camera
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
 
 #start camera server as daemon
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon

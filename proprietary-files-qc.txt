@@ -76,13 +76,6 @@ system_ext/lib64/libmmrtpencoder.so
 
 # Thermal - from from olive-user 10 QKQ1.191014.001 V11.0.1.0.QCNCNXM release-keys
 vendor/bin/thermal-engine
-vendor/etc/thermal-engine.conf
-vendor/etc/thermal-engine-camera.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-sgame.conf
-vendor/etc/thermal-engine-high.conf
-vendor/etc/thermal-engine-nolimits.conf
-vendor/etc/thermal-engine-normal.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
