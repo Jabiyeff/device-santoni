@@ -9,7 +9,6 @@ EXTRA_VENDOR_LIBRARIES := \
     libbufferhub \
     libbufferhubqueue \
     libcamera_client \
-    libcutils \
     libft2 \
     libgui \
     libharfbuzz_ng \
@@ -28,5 +27,4 @@ EXTRA_VENDOR_LIBRARIES := \
     libselinux \
     libstdc++ \
     libsonivox \
-    libunwind \
     libvibrator
