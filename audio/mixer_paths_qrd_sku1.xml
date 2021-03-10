@@ -1198,15 +1198,8 @@
         <path name="wsa-speaker" />
     </path>
 
-    <!-- bug 212709,zhangjianming2.wt,modify,20160920,fixed is to voice voulme smaller-->
-    <path name="handfree-mic">
-	<path name="adc3" />
-	<ctl name="DEC1 MUX" value="ADC2" />
-	<ctl name="ADC2 MUX" value="INP3" />
-    </path>
-
     <path name="voice-speaker-mic">
-      <path name="handfree-mic" />
+      <path name="speaker-mic" />
     </path>
 
     <path name="voice-headphones">
