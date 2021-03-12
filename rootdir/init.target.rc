@@ -201,3 +201,6 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
+
+on property:ro.crypto.state=unencrypted
+    setprop persist.sys.fflag.override.settings_fuse "false"
