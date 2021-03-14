@@ -430,8 +430,10 @@ vendor/lib64/libswvdec.so|f2ca69b50c339ce350eb4e6c151db19de3e5c9a9
 vendor/lib64/libvpplibrary.so|592e8d104185ab798e9730f510bdefb36323ad0a
 
 # Perf - from LA.UM.9.6.2.r1-03600-89xx.0
+system_ext/lib/libqti-at.so|3beb36a45c703e1a70da0983b0e00a037ec65e02
 system_ext/lib/libqti-perfd-client_system.so|79be2c728553c6c065a82441a9b4f7a32384f862
 system_ext/lib/libqti_performance.so|23ac6a73d51d9a9a5c4e952d0d5cb44441e9df8b
+system_ext/lib64/libqti-at.so|e9bb6ac38091498320c4d9118a06e4073c3f6a60
 system_ext/lib64/libqti-perfd-client_system.so|6d77f53f2940bde26b3629035d7793e211d93d87
 system_ext/lib64/libqti_performance.so|49ffda3e601d39d13755aef0839617fa6bbf5306
 vendor/etc/lm/AdaptLaunchFeature.xml|746b6082014bf2094d8d6a0233a65bee1e2465d4

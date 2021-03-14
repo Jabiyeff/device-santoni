@@ -33,12 +33,12 @@ property Name is called. -->
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
 
                 <!--Vendor Properties -->
-                <Prop Name="vendor.iop.enabled" Value="false" />
-                <Prop Name="vendor.iop.enable_uxe" Value="0" />
-                <Prop Name="vendor.perf.iop_v3.enable" Value="0" />
+                <Prop Name="vendor.iop.enabled" Value="true" />
+                <Prop Name="vendor.iop.enable_uxe" Value="1" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="1" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="0" />
-                <Prop Name="vendor.enable.prefetch" Value="0" />
-                <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
+                <Prop Name="vendor.enable.prefetch" Value="1" />
+                <Prop Name="vendor.iop.enable_prefetch_ofr" Value="1" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
                     All the default valuea are kept above-->
