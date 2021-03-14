@@ -99,6 +99,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
+    libvolumelistener \
     libnbaio
 
 PRODUCT_PACKAGES += \
