@@ -59,7 +59,3 @@ allow init self:capability sys_nice;
 allow init iorapd_data_file:file getattr;
 
 #allow init shell_exec:file execute_no_trans;
-
-allow init vendor_data_file:file lock;
-allow init hal_audio_default:binder call;
-allow init platform_app:binder call;

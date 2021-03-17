@@ -8,6 +8,3 @@ sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
 wlan.driver.config         u:object_r:wifi_prop:s0
 wlan.driver.ath            u:object_r:wifi_prop:s0
 wifi.active.interface      u:object_r:wifi_prop:s0
-
-# Dolby
-persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0

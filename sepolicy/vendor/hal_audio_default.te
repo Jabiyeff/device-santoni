@@ -3,7 +3,3 @@ allow hal_audio_default diag_device:chr_file { ioctl open read write getattr };
 get_prop(hal_audio_default, dirac_prop)
 set_prop(hal_audio_default, dirac_prop)
 get_prop(hal_audio_default, audio_prop)
-
-# Dolby
-allow hal_audio_default hal_dms_default:binder { transfer call };
-allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
