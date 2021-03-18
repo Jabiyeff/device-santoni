@@ -28,22 +28,6 @@
 #
 
 on boot
-    # KCAL permissions
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
-	
     # DT2W
     chmod 0666 /sys/android_touch/doubletap2wake
     chown system system /sys/android_touch/doubletap2wake
@@ -59,24 +43,3 @@ on boot
     # Smart Charging
     chown system system /sys/class/power_supply/battery/charging_enabled
     chmod 0666 /sys/class/power_supply/battery/charging_enabled
-	
-    # USB Fastcharge
-    chown system system /sys/kernel/fast_charge/force_fast_charge
-    chmod 0660 /sys/kernel/fast_charge/force_fast_charge
-	
-    # Vibrator permissions
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    chmod 0660 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    write /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override 1
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong
-	
-on post-fs
-    # Vibrator permissions
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    chmod 0660 /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override
-    write /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override 1
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call
-    chown system system /sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong

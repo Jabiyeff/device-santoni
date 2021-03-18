@@ -47,7 +47,6 @@ allow init system_app:fd use;
 allow init system_file:file { mounton };
 allow init system_server:binder call;
 allow init video_device:chr_file { open read write };
-allow qti_init_shell self:socket create;
 allow init fingerprintd_data_file:file rename;
 allow init sysfs_fps_attr:file { open read write };
 allow init self:netlink_socket { bind create write };
@@ -57,5 +56,3 @@ allow init firmware_file:filesystem getattr;
 allow init socket_device:sock_file { create setattr unlink };
 allow init self:capability sys_nice;
 allow init iorapd_data_file:file getattr;
-
-#allow init shell_exec:file execute_no_trans;

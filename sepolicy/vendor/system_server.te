@@ -17,13 +17,6 @@ r_dir_file(system_server, keylayout_file_sysfs)
 allow system_server sysfs_dt2w:dir search;
 allow system_server sysfs_dt2w:file rw_file_perms;
 
-# Vibrator
-allow system_server sysfs_vibrator:file read;
-
-# KCAL
-allow system_server sysfs_kcal:file rw_file_perms;
-allow system_server sysfs_kcal:dir r_dir_perms;
-
 # Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;
 
