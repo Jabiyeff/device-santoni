@@ -23,6 +23,8 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 # ANT+ - from LA.UM.9.6.2.r1-03600-89xx.0
 system_ext/lib/com.qualcomm.qti.ant@1.0.so|6b8eb143ce3e33e474c7bc28ff3cc58b86c6369c
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so|7fffcdca309796183708d9e345d3cd97461d901d
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|26dd8b53c31aa480f56b4cb02e064c0a129b7985
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|b5c57fdf48447c68b6308fdcb167d0d21b5c56ed
 
 # Audio libraries - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/libacdb-fts.so|ce5d9ee6188712bb55658fc00548aef96ec0ff17
