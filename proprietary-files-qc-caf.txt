@@ -21,8 +21,6 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f85
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
 # ANT+ - from LA.UM.9.6.2.r1-03600-89xx.0
--system_ext/lib/libantradio.so|be9ba09c6796ec0a4f1259746f6e7a6e0a0c8d05
--system_ext/lib64/libantradio.so|8ad81788551584f6c746de0c523b09672b7d4ab7
 system_ext/lib/com.qualcomm.qti.ant@1.0.so|6b8eb143ce3e33e474c7bc28ff3cc58b86c6369c
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so|7fffcdca309796183708d9e345d3cd97461d901d
 

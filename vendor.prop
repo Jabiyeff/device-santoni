@@ -44,50 +44,6 @@ ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=8
 ro.config.media_vol_steps=20
 
-# Audio Dynamic Feature
-vendor.audio.feature.a2dp_offload.enable=false
-vendor.audio.feature.afe_proxy.enable=true
-vendor.audio.feature.anc_headset.enable=true
-vendor.audio.feature.battery_listener.enable=false
-vendor.audio.feature.compr_cap.enable=false
-vendor.audio.feature.compress_in.enable=false
-vendor.audio.feature.compress_meta_data.enable=true
-vendor.audio.feature.compr_voip.enable=false
-vendor.audio.feature.concurrent_capture.enable=false
-vendor.audio.feature.custom_stereo.enable=true
-vendor.audio.feature.display_port.enable=false
-vendor.audio.feature.dsm_feedback.enable=false
-vendor.audio.feature.dynamic_ecns.enable=false
-vendor.audio.feature.ext_hw_plugin.enable=false
-vendor.audio.feature.external_dsp.enable=false
-vendor.audio.feature.external_speaker.enable=false
-vendor.audio.feature.external_speaker_tfa.enable=false
-vendor.audio.feature.fluence.enable=true
-vendor.audio.feature.fm.enable=true
-vendor.audio.feature.hdmi_edid.enable=true
-vendor.audio.feature.hdmi_passthrough.enable=false
-vendor.audio.feature.hfp.enable=true
-vendor.audio.feature.hifi_audio.enable=true
-vendor.audio.feature.hwdep_cal.enable=false
-vendor.audio.feature.incall_music.enable=true
-vendor.audio.feature.multi_voice_session.enable=true
-vendor.audio.feature.keep_alive.enable=false
-vendor.audio.feature.kpi_optimize.enable=false
-vendor.audio.feature.maxx_audio.enable=false
-vendor.audio.feature.ras.enable=false
-vendor.audio.feature.record_play_concurency.enable=false
-vendor.audio.feature.src_trkn.enable=true
-vendor.audio.feature.spkr_prot.enable=true
-vendor.audio.feature.ssrec.enable=true
-vendor.audio.feature.usb_offload.enable=false
-vendor.audio.feature.usb_offload_burst_mode.enable=false
-vendor.audio.feature.usb_offload_sidetone_volume.enable=false
-vendor.audio.feature.deepbuffer_as_primary.enable=false
-vendor.audio.feature.vbat.enable=true
-vendor.audio.feature.wsa.enable=true
-vendor.audio.feature.audiozoom.enable=false
-vendor.audio.feature.snd_mon.enable=true
-
 # Bluetooth
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
 persist.vendor.qcom.bluetooth.enable.splita2dp=false
@@ -115,7 +71,6 @@ persist.camera.iface.logs=0
 persist.camera.imglib.logs=0
 persist.camera.isp.debug=0
 persist.camera.sensor.debug=0
-ro.vendor.camera.provider24.disable_mem_init=1
 
 # Charger
 ro.charger.disable_init_blank=true
@@ -182,7 +137,6 @@ ro.gps.agps_provider=1
 debug.stagefright.omx_default_rank=0
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
-mm.sec.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 media.stagefright.audio.sink=280
@@ -194,10 +148,12 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Perf Ux IOPrefetcher
-vendor.enable_prefetch=1
+vendor.enable.prefetch=1
+vendor.iop.enabled=true
 vendor.iop.enable_uxe=1
 vendor.iop.enable_prefetch_ofr=1
 vendor.perf.iop_v3.enable=1
+vendor.perf.iop_v3.enable.debug=0
 persist.vendor.qti.games.gt.prof=1
 
 # Perf
@@ -207,6 +163,7 @@ dalvik.vm.bg-dex2oat-threads=2
 dalvik.vm.dex2oat-threads=6
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.at_library=libqti-at.so
 vendor.perf.gestureflingboost.enable=true
 
 # Perf configuration

@@ -82,7 +82,6 @@ service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
 # Start camera provider later for encrypted devices
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
-    restart vendor.audio-hal
     restart vendor.fps_hal
     restart vendor.gx_fpd
     start wcnss-service
@@ -107,13 +106,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-service qrngp /system/bin/qrngp -f
-   class main
-   user root
-   group root
-   oneshot
-   disabled
 
 on property:sys.boot_completed=1
    start qrngp
