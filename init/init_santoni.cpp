@@ -59,31 +59,6 @@ void check_device()
    }
 }
 
-void set_zram_size(void)
-{
-    FILE *f = fopen("/sys/block/zram0/disksize", "wb");
-    int MB = 1024 * 1024;
-    std::string zram_disksize;
-    struct sysinfo si;
-
-    // Check if zram exist
-    if (f == NULL) {
-        return;
-    }
-
-    // Initialize system info
-    sysinfo(&si);
-
-    // Set zram disksize (divide RAM size by 3)
-    zram_disksize = std::to_string(si.totalram / MB / 3);
-
-    // Write disksize to sysfs
-    fprintf(f, "%sM", zram_disksize.c_str());
-
-    // Close opened file
-    fclose(f);
-}
-
 void property_override(char const prop[], char const value[], bool add = true)
 {
     auto pi = (prop_info *) __system_property_find(prop);
@@ -108,7 +83,6 @@ void set_avoid_gfxaccel_config() {
 void vendor_load_properties()
 {
     check_device();
-    set_zram_size();
     set_avoid_gfxaccel_config();
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
