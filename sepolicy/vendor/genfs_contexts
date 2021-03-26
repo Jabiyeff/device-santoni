@@ -22,13 +22,6 @@ genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/power_supply    
 genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/power_supply/parallel                                                                        u:object_r:sysfs_battery_supply:s0
 genfscon sysfs   /devices/platform/soc/78b6000.i2c/i2c-2/2-001d/power_supply/parallel/device/name                                                            u:object_r:sysfs_battery_supply:s0
 
-# Powerstats
-genfscon sysfs /bus/iio/devices                                      u:object_r:sysfs_iio_devices:s0
-genfscon sysfs /kernel/wlan                                          u:object_r:sysfs_msm_wlan:s0
-genfscon sysfs /power/system_sleep/stats                             u:object_r:sysfs_power_stats:s0
-genfscon sysfs /power/rpmh_stats/master_stats                        u:object_r:sysfs_power_stats:s0
-genfscon sysfs /kernel/wlan/power_stats                              u:object_r:sysfs_power_stats:s0
-
 # ProcFS
 genfscon proc /sys/vm/swappiness                                      u:object_r:proc_swap:s0
 
