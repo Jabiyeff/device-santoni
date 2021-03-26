@@ -45,9 +45,6 @@
 /sys/devices(/platform)?/soc/soc:gpio-leds/leds(/.*)?                                   u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.santoni           u:object_r:hal_light_default_exec:s0
 
-# Powerstats
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock     u:object_r:hal_power_stats_default_exec:s0
-
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
 

@@ -35,11 +35,5 @@ type proc_touchpanel, fs_type, sysfs_type, proc_type;
 # DT2W
 type sysfs_dt2w, sysfs_type, fs_type;
 
-# Powerstats
-type sysfs_iio_devices, fs_type, sysfs_type;
+# Custom
 type sysfs_msm_subsys, sysfs_type, fs_type;
-type sysfs_power_stats, sysfs_type, fs_type;
-type sysfs_power_stats_ignore, sysfs_type, fs_type;
-type sysfs_scsi_devices_0000, sysfs_type, fs_type;
-type sysfs_msm_wlan, sysfs_type, fs_type;
-
