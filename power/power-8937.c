@@ -82,7 +82,8 @@ static int profile_bias_power[] = {
 };
 
 static int profile_bias_performance[] = {
-    MIN_FREQ_BIG_CORE_0, 0x540,
+    MIN_FREQ_BIG_CORE_0, 0x446,
+    MIN_FREQ_LITTLE_CORE_0, 0xFFF,
 };
 // clang-format on
 
