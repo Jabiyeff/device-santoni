@@ -17,14 +17,6 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libwvhidl.so
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 
-# Gatekeeper - from LA.UM.8.6.2.r1-08600-89xx.0
-vendor/lib/hw/gatekeeper.msm8937.so
-vendor/lib64/hw/gatekeeper.msm8937.so
-
-# Keystore - from LA.UM.8.6.2.r1-08600-89xx.0
-vendor/lib/hw/keystore.msm8937.so
-vendor/lib64/hw/keystore.msm8937.so
-
 # Thermal - from LA.UM.8.6.2.r1-08600-89xx.0
 vendor/lib/hw/thermal.msm8937.so
 vendor/lib64/hw/thermal.msm8937.so

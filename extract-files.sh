@@ -59,8 +59,18 @@ fi
 
 function blob_fixup() {
         case "${1}" in
-	lib/libwfdnative.so | lib64/libwfdnative.so )
+	system/lib/libwfdnative.so | system/lib64/libwfdnative.so )
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
+	system/lib/libwfdmmsink.so )
+        "${PATCHELF}" --add-needed "libwfdaudioclient.so" "${2}"
+        "${PATCHELF}" --add-needed "libwfdmediautils.so" "${2}"
+        ;;
+	system/lib/libwfdaudioclient.so )
+        "${PATCHELF}" --set-soname "libwfdaudioclient.so" "${2}"
+        ;;
+	system/lib/libwfdmediautils.so )
+        "${PATCHELF}" --set-soname "libwfdmediautils.so" "${2}"
         ;;
 	vendor/lib/libmmcamera2_sensor_modules.so )
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
