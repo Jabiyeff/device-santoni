@@ -197,15 +197,6 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableSigHandler=1
 persist.vendor.ims.disableQXDMLogs=1
 
-# RAM
-ro.lmk.debug=false
-ro.lmk.swap_free_low_percentage=20
-ro.lmk.swap_util_max=100
-ro.lmk.psi_partial_stall_ms=120
-ro.lmk.psi_complete_stall_ms=700
-ro.lmk.thrashing_limit=50
-ro.lmk.thrashing_limit_decay=30
-
 # SurfaceFlinger
 debug.sf.early_phase_offset_ns=11600000
 debug.sf.early_app_phase_offset_ns=11600000
