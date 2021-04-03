@@ -31,6 +31,7 @@ lib64/libqti_performance.so:system_ext/lib64/libqti_performance.so
 vendor/bin/msm_irqbalance
 vendor/bin/hw/vendor.qti.hardware.perf@2.1-service
 vendor/etc/init/vendor.qti.hardware.perf@2.1-service.rc
+vendor/etc/lm/AdaptLaunchFeature.xml
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/libgameoptfeature.so
