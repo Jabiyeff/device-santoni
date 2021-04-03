@@ -159,18 +159,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     user root
     group system wakelock
 
-on charger
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    setprop sys.usb.configfs 1
-    start qcom-post-boot
-    setprop persist.sys.usb.config mass_storage
-    start vendor.hvdcp_opti
-    start vendor.power_off_alarm
-    start thermal-engine
-
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
     write /dev/cpuset/audio-app/cpus "4-7"
