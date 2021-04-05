@@ -398,7 +398,6 @@ system_ext/lib/liblistensoundmodel2.qti.so|5ffa5cc4794c04dd4e1b719629b08edfbdd00
 system_ext/lib/liblistenjni.qti.so|3f5213ae96d55a1b77388ec822b420f69c8bfb1e
 system_ext/lib64/liblistensoundmodel2.qti.so|c09ba929478075ba906365f64c648b2635ab68cf
 system_ext/lib64/liblistenjni.qti.so|3b9e9b3c8ee994c7037ce343b5cc3827c8df7171
-vendor/lib/hw/sound_trigger.primary.msm8937.so|89094a2283c2617fc1104fa0075e2a7a77d474e8
 vendor/lib/liblistensoundmodel2.so|60aead85d7da7559e558d5b721563ff270361350
 vendor/lib/libadpcmdec.so|7a38d6b28b27cf663681ad077614a03164418f91
 vendor/lib/libmulawdec.so|d1c6a10365ab68c546388f1195ded70dd7c165d5

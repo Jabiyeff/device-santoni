@@ -87,9 +87,6 @@ function blob_fixup() {
 	vendor/lib/libmmcamera2_stats_modules.so | vendor/lib/libmmcamera_ppeiscore.so | vendor/lib64/libmmsw_detail_enhancement.so | vendor/lib64/libmmsw_platform.so )
         "${PATCHELF}" --replace-needed "libgui.so" "libwui.so" "${2}"
         ;;
-	vendor/lib/hw/sound_trigger.primary.msm8937.so )
-        sed -i "s|msm8937|msm8953|g" "${2}"
-        ;;
         esac
 }
 
