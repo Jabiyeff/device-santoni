@@ -334,7 +334,6 @@ vendor/lib64/hw/keystore.msm8937.so|03786c28112bb9e67958ee72ec1b3852bc9c6b9f
 # Listen - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib/liblistensoundmodel2.qti.so|80bcda8ef520bd37865e66fed1417ea57606ab46
 system_ext/lib64/liblistensoundmodel2.qti.so|d222c69327e19265aeeec043d74bda6a8b24eb7f
-vendor/lib/hw/sound_trigger.primary.msm8937.so|397e38ecdaf8526c4569ef55872ac01a21c56464
 vendor/lib/libadpcmdec.so|452d1123ab4e12c4444df33322f309e2ecc2e1e4
 vendor/lib/liblistensoundmodel2.so|1be16b762221f9805de77e5decb07cee0d4047df
 vendor/lib/libmulawdec.so|ca1045d8cef044ef722c323ea22ffa1e60ac8a92
