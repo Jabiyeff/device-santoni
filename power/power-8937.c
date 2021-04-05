@@ -53,9 +53,6 @@
 
 static int video_encode_hint_sent;
 
-static int display_fd;
-#define SYS_DISPLAY_PWR "/sys/kernel/hbtp/display_pwr"
-
 const int kMinInteractiveDuration = 500;  /* ms */
 const int kMaxInteractiveDuration = 5000; /* ms */
 const int kMaxLaunchDuration = 5000;      /* ms */
@@ -330,58 +327,6 @@ int power_hint_override(power_hint_t hint, void* data) {
     return ret_val;
 }
 
-int set_interactive_override(int on) {
-    char governor[80];
-    int rc = 0;
-
-    static const char* display_on = "1";
-    static const char* display_off = "0";
-    char err_buf[80];
-    static int init_interactive_hint = 0;
-
-    if (get_scaling_governor(governor, sizeof(governor)) == -1) {
-        ALOGE("Can't obtain scaling governor.");
-        return HINT_NONE;
-    }
-
-    if (!on) {
-        /* Display off */
-        if (is_interactive_governor(governor)) {
-            int resource_values[] = {INT_OP_CLUSTER0_TIMER_RATE, BIG_LITTLE_TR_MS_50,
-                                     INT_OP_CLUSTER1_TIMER_RATE, BIG_LITTLE_TR_MS_50,
-                                     INT_OP_NOTIFY_ON_MIGRATE,   0x00};
-            perform_hint_action(DISPLAY_STATE_HINT_ID, resource_values,
-                                ARRAY_SIZE(resource_values));
-        }
-    } else {
-        /* Display on */
-        if (is_interactive_governor(governor)) {
-            undo_hint_action(DISPLAY_STATE_HINT_ID);
-        }
-    }
-
-    if (init_interactive_hint == 0) {
-        // First time the display is turned off
-        display_fd = TEMP_FAILURE_RETRY(open(SYS_DISPLAY_PWR, O_RDWR));
-        if (display_fd < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error opening %s: %s\n", SYS_DISPLAY_PWR, err_buf);
-        } else
-            init_interactive_hint = 1;
-    } else if (!on) {
-        /* Display off */
-        rc = TEMP_FAILURE_RETRY(write(display_fd, display_off, strlen(display_off)));
-        if (rc < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error writing %s to  %s: %s\n", display_off, SYS_DISPLAY_PWR, err_buf);
-        }
-    } else {
-        /* Display on */
-        rc = TEMP_FAILURE_RETRY(write(display_fd, display_on, strlen(display_on)));
-        if (rc < 0) {
-            strerror_r(errno, err_buf, sizeof(err_buf));
-            ALOGE("Error writing %s to  %s: %s\n", display_on, SYS_DISPLAY_PWR, err_buf);
-        }
-    }
-    return HINT_HANDLED;
+int set_interactive_override(__attribute__((unused)) int on) {
+    return HINT_HANDLED; /* Don't excecute this code path, not in use */
 }
