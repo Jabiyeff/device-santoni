@@ -179,6 +179,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_santoni
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Malloc
 MALLOC_SVELTE_FOR_LIBC32 := true
 
