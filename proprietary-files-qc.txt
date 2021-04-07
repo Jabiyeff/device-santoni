@@ -1,6 +1,6 @@
-# Bluetooth (aptX) - from Crosshatch - QQ1A.191205.008
-product/lib64/libaptX_encoder.so:system_ext/lib64/libaptX_encoder.so
-product/lib64/libaptXHD_encoder.so:system_ext/lib64/libaptXHD_encoder.so
+# Bluetooth (aptX) - from Nokia/Deadpool_00WW/DPL_sprout:11/RKQ1.200928.002/00WW_3_140:user/release-keys
+system/lib64/libaptX_encoder.so
+system/lib64/libaptXHD_encoder.so
 
 # Dirac
 vendor/etc/diracmobile.config
@@ -11,7 +11,8 @@ vendor/lib/soundfx/libdirac.so
 vendor/lib64/libops.so
 vendor/lib64/libspl.so
 
-# DRM - Widevine - from Redmi/lmi/lmi:11/RKQ1.200826.002/20.10.19:user/release-keys
+# DRM - Widevine - from Nokia/Deadpool_00WW/DPL_sprout:11/RKQ1.200928.002/00WW_3_140:user/release-keys
+system/bin/move_widevine_data.sh
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libwvhidl.so
