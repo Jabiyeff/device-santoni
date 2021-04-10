@@ -295,7 +295,6 @@ vendor/lib/libgpudataproducer.so|ecfa9f48f09330d048351e84d186b99e5ea5f7b1
 vendor/lib/libgsl.so|45888b136c884332bf3f75a2fb1041db4041d8b0
 vendor/lib/libhdr_tm.so|3d899ac8b0e6370295ab56ad95076e3c00140f75
 vendor/lib/libllvm-glnext.so|3e69e44fec84f63a9a72694e1a62c371cd97c462
-vendor/lib/libllvm-qcom.so|8b473078cba98cf1827127cff168af2d17d803a1
 vendor/lib/libmm-hdcpmgr.so|ea47b3c85cfd894945cd7a4412cdc3972ea67c78
 vendor/lib/libpvr.so|683197241575bcd74c679d4c5678b4ba77e88dbd
 vendor/lib/librs_adreno.so|97756870564754d9cd6e6301a4f1a15f7a5a5711
@@ -315,7 +314,6 @@ vendor/lib64/libgpudataproducer.so|726ae81ef2e3623d96515676ba2c246db5120fbc
 vendor/lib64/libgsl.so|8ea2075d204467afb13f54364ef7903a8cf38253
 vendor/lib64/libhdr_tm.so|cfd5f03dd37b5b6fb46d288bed619b780ec7343e
 vendor/lib64/libllvm-glnext.so|68be9217c41199e463886ba39f59669e095a3427
-vendor/lib64/libllvm-qcom.so|4d290868df96dc315a663b3477b9be20a477f9d0
 vendor/lib64/libmm-hdcpmgr.so|14ba633fbef35ad3c684a440abb15d9e2c300537
 vendor/lib64/libpvr.so|9954bd8b598188e89fc6ceb210235eff60448a43
 vendor/lib64/librs_adreno.so|d8bee70cc12ab5c6a979427e24fb7843fddae08b
@@ -524,7 +522,6 @@ vendor/lib64/libqrtr.so|6f7abe88e19e44f6b933de1cac0c7a3437318f04
 vendor/lib64/libpdnotifier.so|9b6156370583f61fd85e6edf40e047442676bed8
 vendor/lib64/libqcrilFramework.so|da3c0216ddad60f48b1fc90b31a6d6d1114e95be
 vendor/lib64/libqsocket.so|391748e46f7dbbf267dbc5a5c89f0d2a8b4fca4e
-vendor/lib64/libril-qc-hal-qmi.so|c7cb7ac40713129ee5835e81ac4e1e95de1f45b8
 vendor/lib64/libril-qcril-hook-oem.so|dec0f4f4cd67c27fc0903e29c00964f9533b64ee
 vendor/lib64/librilqmiservices.so|47bc926d09be9696f4cfa0bf5e58d2d3b855eec2
 vendor/lib64/librmnetctl.so|829848dabd3cc43b12a90864506e31a1b09f9bad
