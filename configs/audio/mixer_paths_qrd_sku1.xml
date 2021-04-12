@@ -401,6 +401,7 @@
     <path name="compress-offload-playback speaker-protected">
         <path name="compress-offload-playback" />
     </path>
+
     <path name="compress-offload-playback bt-sco">
         <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4" value="1" />
     </path>
@@ -655,6 +656,7 @@
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
     </path>
+
     <path name="audio-record-compress">
         <ctl name="MultiMedia8 Mixer TERT_MI2S_TX" value="1" />
     </path>
@@ -952,6 +954,7 @@
     <path name="incall-rec-uplink-and-downlink-compress bt-sco-wb">
         <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
+
     <path name="incall-rec-uplink-and-downlink usb-headset-mic">
         <path name="incall-rec-uplink-and-downlink" />
     </path>
@@ -979,6 +982,7 @@
     <path name="incall_music_uplink usb-headphones">
         <path name="incall_music_uplink" />
     </path>
+
     <path name="incall_music_uplink2">
         <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
     </path>
@@ -998,6 +1002,7 @@
     <path name="incall_music_uplink2 usb-headphones">
         <path name="incall_music_uplink2" />
     </path>
+
     <path name="volte-call">
         <ctl name="PRI_MI2S_RX_Voice Mixer VoLTE" value="1" />
         <ctl name="VoLTE_Tx Mixer TERT_MI2S_TX_VoLTE" value="1" />
@@ -1089,6 +1094,7 @@
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="MICBIAS CAPLESS Switch" value="1" />
     </path>
+
     <path name="adc3">
         <ctl name="ADC3 Volume" value="6" />
         <ctl name="DEC1 MUX" value="ADC2" />
@@ -1138,7 +1144,7 @@
     <path name="handset">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RDAC2 MUX" value="RX1" />
-        <ctl name="RX1 Digital Volume" value="86" />
+        <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
@@ -1220,6 +1226,7 @@
     <path name="unprocessed-handset-mic">
         <path name="handset-mic" />
     </path>
+
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
     </path>
@@ -1266,6 +1273,7 @@
 
     <path name="bt-sco-mic-wb">
     </path>
+
     <path name="usb-headset-mic">
     </path>
 
