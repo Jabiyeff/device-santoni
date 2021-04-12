@@ -4,3 +4,6 @@ allow shell init_exec:lnk_file getattr;
 allow shell linkerconfig_file:dir getattr;
 allow shell vendor_file:file getattr;
 allow shell adsprpcd_file:dir getattr;
+allow shell idmap_exec:file getattr;
+
+get_prop(shell, device_config_runtime_native_boot_prop)
