@@ -109,6 +109,7 @@ on property:sys.shutdown.requested=*
 
 on property:sys.boot_completed=1
    start qrngp
+   restart vendor.camera-provider-2-4
 
 service vendor.qseecomd /vendor/bin/qseecomd
    class core
