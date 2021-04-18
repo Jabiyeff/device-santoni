@@ -43,7 +43,7 @@ vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 vendor.audio.volume.headset.gain.depcal=true
 ro.af.client_heap_size_kbyte=7168
-ro.config.vc_call_vol_steps=8
+ro.config.vc_call_vol_steps=6
 ro.config.media_vol_steps=20
 
 # Audio ACDB
