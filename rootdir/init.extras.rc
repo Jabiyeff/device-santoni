@@ -43,3 +43,13 @@ on boot
     # Smart Charging
     chown system system /sys/class/power_supply/battery/charging_enabled
     chmod 0666 /sys/class/power_supply/battery/charging_enabled
+
+on property:sys.boot_completed=1
+    # Audio gain permissions
+    chown system system /sys/kernel/sound_control/headphone_gain
+    chown system system /sys/kernel/sound_control/mic_gain
+    chown system system /sys/kernel/sound_control/speaker_gain
+    restorecon_recursive /sys/kernel/sound_control
+    chmod 0660 /sys/kernel/sound_control/headphone_gain
+    chmod 0660 /sys/kernel/sound_control/mic_gain
+    chmod 0660 /sys/kernel/sound_control/speaker_gain

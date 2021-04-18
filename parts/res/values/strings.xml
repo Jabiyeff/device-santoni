@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2018 The LineageOS Project
+<!-- Copyright (C) 2018 The Asus-SDM660 Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,7 +13,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="advanced_settings">Audio Amplification</string>
+    <string name="advanced_summary">Control audio gain</string>
+
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
+    <string name="speaker_gain">Speaker gain</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">Default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
     <string name="dirac_summary">Optimize audio quality</string>

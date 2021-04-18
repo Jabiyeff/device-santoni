@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.xiaomi.settings.dirac;
+package org.lineageos.settings.dirac;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -37,7 +37,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-import org.xiaomi.settings.R;
+import org.lineageos.settings.R;
 
 public class DiracSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {

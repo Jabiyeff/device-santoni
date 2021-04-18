@@ -43,3 +43,7 @@ type sysfs_power_stats_ignore, sysfs_type, fs_type;
 type sysfs_scsi_devices_0000, sysfs_type, fs_type;
 type sysfs_msm_wlan, sysfs_type, fs_type;
 
+# XiaomiParts
+type sysfs_hgain, sysfs_type, fs_type;
+type sysfs_mgain, sysfs_type, fs_type;
+type sysfs_sgain, sysfs_type, fs_type;

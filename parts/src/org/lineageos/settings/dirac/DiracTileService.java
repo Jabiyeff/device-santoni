@@ -1,4 +1,4 @@
-package org.xiaomi.settings.dirac;
+package org.lineageos.settings.dirac;
 
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;

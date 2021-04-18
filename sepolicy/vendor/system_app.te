@@ -9,3 +9,10 @@ allow system_app proc_vmallocinfo:file { open read getattr };
 allow system_app vold:binder call;
 allow system_app wificond:binder call;
 allow system_app hal_vibrator_default:binder call;
+
+# XiaomiParts
+allow system_app {
+    sysfs_hgain
+    sysfs_mgain
+    sysfs_sgain
+}:file rw_file_perms;

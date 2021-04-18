@@ -15,23 +15,32 @@
  * limitations under the License.
  */
 
-package org.xiaomi.settings;
+package org.lineageos.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.provider.Settings;
 
-import org.xiaomi.settings.dirac.DiracUtils;
+import org.lineageos.settings.soundcontrol.SoundControlSettings;
+import org.lineageos.settings.soundcontrol.SoundControlFileUtils;
+import org.lineageos.settings.dirac.DiracUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "Dirac";
+     private static final String TAG = "XiaomiParts";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+    int gain = Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
+        SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
+        SoundControlFileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
         new DiracUtils(context).onBootCompleted();;
     }
-
 }

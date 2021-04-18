@@ -513,9 +513,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libnl
 
-# Dirac
+# XiaomiParts
 PRODUCT_PACKAGES += \
-    Dirac
+    XiaomiParts
 
 # Do not spin up a separate process for the network stack, use an in-process APK.
 PRODUCT_PACKAGES += InProcessNetworkStack
