@@ -2,7 +2,6 @@ allow system_app { proc_pagetypeinfo sysfs_zram }:file r_file_perms;
 allow system_app sysfs_zram:dir r_dir_perms;
 allow system_app sysfs_zram:file r_file_perms;
 allow system_app vendor_persist_camera_prop:file { open read };
-get_prop(system_app, fm_prop)
 allow system_app iorapd:binder call;
 allow system_app hal_power_default:binder call;
 allow system_app proc_vmallocinfo:file { open read getattr };

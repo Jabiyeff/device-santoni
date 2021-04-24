@@ -29,13 +29,6 @@ genfscon sysfs /power/system_sleep/stats                             u:object_r:
 genfscon sysfs /power/rpmh_stats/master_stats                        u:object_r:sysfs_power_stats:s0
 genfscon sysfs /kernel/wlan/power_stats                              u:object_r:sysfs_power_stats:s0
 
-# Rmt
-genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
-
-# RTC
-genfscon sysfs /devices/soc/qpnp-rtc-8/rtc                  u:object_r:sysfs_rtc:s0
-genfscon sysfs /devices/soc/qpnp-rtc-7/rtc              u:object_r:sysfs_rtc:s0
-
 # ProcFS
 genfscon proc /sys/vm/swappiness                                      u:object_r:proc_swap:s0
 
@@ -46,7 +39,7 @@ genfscon sysfs /kernel/slab/zspage/store_user                         u:object_r
 # Touchscreen
 genfscon proc /touchpanel	u:object_r:proc_touchpanel:s0
 
-#PowerHal
+# PowerHal
 genfscon sysfs /bus/msm_subsys                                       u:object_r:sysfs_msm_subsys:s0
 
 # XiaomiParts (Sound-Control nodes)

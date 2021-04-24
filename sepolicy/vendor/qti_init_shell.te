@@ -7,7 +7,6 @@ allow qti_init_shell vendor_radio_data_file:dir search;
 allow qti_init_shell sysfs:file { write setattr };
 allow qti_init_shell sysfs_leds:file setattr;
 allow qti_init_shell proc_swap:file { open write };
-allow qti_init_shell fm_prop:property_service set;
 allow qti_init_shell self:socket create;
 allow qti_init_shell self:capability kill;
 

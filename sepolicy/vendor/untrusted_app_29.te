@@ -1,1 +1,1 @@
-allow untrusted_app_29 exported_camera_prop:file { read open getattr };
+get_prop(untrusted_app_29, exported_camera_prop)

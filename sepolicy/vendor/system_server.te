@@ -8,7 +8,7 @@ allow system_server proc_touchpanel:lnk_file read;
 allow system_server keylayout_file_sysfs:file { open read getattr };
 
 # Camera
-allow system_server exported_camera_prop:file { read open getattr };
+get_prop(system_server, exported_camera_prop)
 
 # Input files
 r_dir_file(system_server, keylayout_file_sysfs)
