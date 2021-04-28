@@ -338,10 +338,10 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/aud_dev/state
 
 on property:persist.vendor.radio.atfwd.start=false
-    stop atfwd
+    stop vendor.atfwd
 
 on property:vendor.radio.atfwd.start=false
-    stop atfwd
+    stop vendor.atfwd
 
 on property:vendor.media.target.version=*
 	setprop vendor.sys.media.target.version ${vendor.media.target.version}
