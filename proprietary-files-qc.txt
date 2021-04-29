@@ -78,11 +78,9 @@ vendor/lib64/libqmi.so
 vendor/lib64/libqmiservices.so
 
 # Radio - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
-vendor/bin/hw/qcrild
 vendor/bin/netmgrd
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/init/qcrild.rc
 vendor/lib/liblqe.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so

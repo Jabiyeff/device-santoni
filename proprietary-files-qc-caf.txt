@@ -503,15 +503,11 @@ vendor/lib64/libmdmdetect.so|7d9594eaa6da36b1cf7a7f9ca9447c568dcb2f38
 vendor/lib64/liboemaids_vendor.so|0cbc4ee12f829658a6d7a63453e257927a4ed14a
 vendor/lib64/libqcmaputils.so|73d322a673462396e490daa472e532ed425a3e2a
 vendor/lib64/libqrtr.so|6f7abe88e19e44f6b933de1cac0c7a3437318f04
-vendor/lib64/libpdnotifier.so|9b6156370583f61fd85e6edf40e047442676bed8
-vendor/lib64/libqcrilFramework.so|da3c0216ddad60f48b1fc90b31a6d6d1114e95be
 vendor/lib64/libqsocket.so|391748e46f7dbbf267dbc5a5c89f0d2a8b4fca4e
 vendor/lib64/libril-qcril-hook-oem.so|dec0f4f4cd67c27fc0903e29c00964f9533b64ee
 vendor/lib64/librilqmiservices.so|47bc926d09be9696f4cfa0bf5e58d2d3b855eec2
-vendor/lib64/librmnetctl.so|829848dabd3cc43b12a90864506e31a1b09f9bad
 vendor/lib64/libsettings.so|acef3c2c2f35b583ca6c5c278c451ba8c05e0793
 vendor/lib64/libsystem_health_mon.so|ebe87c25638ef68937c3820db0d49bc762a74619
-vendor/lib64/qcrild_librilutils.so|69354ed8d4f5b18dc890e292bcbfec01fa37edf7
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|c9d3326a23878f87e4a51865490d11d127ae743e
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|ced40d1ca99fca741908e2a377de1ca4f4bbfa02
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|26e1bb97770edbb8155a0f574f9bb2f892080a0e
