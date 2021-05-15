@@ -64,8 +64,5 @@
 # DT2W
 /sys/android_touch/doubletap2wake                                     u:object_r:sysfs_dt2w:s0
 
-# Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_8937 u:object_r:hal_lineage_touch_default_exec:s0
-
 # Thermal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.qti                    u:object_r:hal_thermal_default_exec:s0

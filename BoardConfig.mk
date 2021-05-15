@@ -171,6 +171,9 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
+ifeq ($(PRODUCT_NAME), lineage_santoni)
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifests/manifest-lineage.xml
+endif
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_santoni
@@ -199,7 +202,9 @@ BLOCK_BASED_OTA := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
+ifeq ($(PRODUCT_NAME), lineage_santoni)
 BOARD_POWER_CUSTOM_BOARD_LIB := libpower_8937
+endif
 TARGET_USES_INTERACTION_BOOST := true
 
 # Qualcomm
@@ -216,6 +221,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+ifeq ($(PRODUCT_NAME), lineage_santoni)
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-lineage/vendor
+endif
 
 # Treble
 BOARD_VNDK_VERSION := current
