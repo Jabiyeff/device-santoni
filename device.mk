@@ -429,10 +429,6 @@ PRODUCT_PACKAGES += \
     libcamshim \
     libwui
 
-# Signapk
-PRODUCT_HOST_PACKAGES += \
-    signapk
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/santoni
 
