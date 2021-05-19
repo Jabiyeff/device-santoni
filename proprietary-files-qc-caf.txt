@@ -632,6 +632,11 @@ vendor/lib64/libsensor_thresh.so|cc625ff56616753f600ddd0ccd69e8961d0b93a3
 vendor/lib64/libsensor_user_cal.so|9cd4a306c7d67a2248b1be89d4517ecd6c0fbbc2
 vendor/lib64/sensors.ssc.so|92f6c3da84c8790778b78b5dfa8593e12c940494
 
+# Thermal - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/bin/thermal-engine|9e48fd5d3bf6414db4d844b421b45f6b6a2f17d4
+-vendor/lib/libthermalclient.so|248fda00d69a626ee8e24159b704a6ae95eceb99
+-vendor/lib64/libthermalclient.so|d042cc537de4950837a5b928f6283fb238a9c59c
+
 # Time services - from LA.UM.9.6.2.r1-04100-89xx.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
 vendor/bin/time_daemon|737bbb156a23d114aafd4b4bb9adc38e8d965391
