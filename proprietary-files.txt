@@ -294,9 +294,7 @@ lib64/hw/gxfingerprint.default.so:vendor/lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so:vendor/lib64/libfp_client.so
 lib64/libfpservice.so:vendor/lib64/libfpservice.so
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.2-service.custom|0c8f1ec438f56919f133d2e87e0af82140cd8408
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.2-service.custom.rc
-vendor/lib64/libgxbinder.so
+-vendor/lib64/libgxbinder.so
 
 # FocalTech-5336 Touchscreen
 etc/ft5336_oufei_720p.ini:vendor/etc/ft5336_oufei_720p.ini
