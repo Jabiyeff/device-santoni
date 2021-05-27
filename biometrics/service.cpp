@@ -60,8 +60,8 @@ int main() {
             return 1;
         }
 
-        // the conventional HAL might start binder services
-        android::ProcessState::initWithDriver("/dev/binder");
+        // the conventional HAL might start vndbinder services
+        android::ProcessState::initWithDriver("/dev/vndbinder");
         // start a threadpool for vndbinder interactions
         android::ProcessState::self()->startThreadPool();
     }
