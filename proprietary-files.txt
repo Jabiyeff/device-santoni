@@ -289,8 +289,8 @@ vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so
 vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/hw/gxfingerprint.default.so
 vendor/lib64/libcom_fingerprints_service.so
-vendor/lib64/libfp_client.so
-vendor/lib64/libfpservice.so
+vendor/lib64/libfp_client.so|22bf87243359935ae8dcdcdf67262963ee9e40a9
+vendor/lib64/libfpservice.so|6034b749c0d382a544742199364b81cdfded9481
 -vendor/lib64/libgxbinder.so
 
 # FocalTech-5336 Touchscreen
