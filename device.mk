@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
     libdng_sdk.vendor \
+    libstdc++.vendor \
     libgui_vendor
 
 # Component overrides
@@ -445,11 +446,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk-ext \
-    libstdc++.vendor
 
 # Wifi
 PRODUCT_PACKAGES += \
