@@ -285,13 +285,15 @@ etc/qdcm_calib_data_ili9881c_HD720p_video_EbbgDJN.xml:vendor/etc/qdcm_calib_data
 
 # Fingerprint - from santoni MIUI Nougat
 vendor/bin/gx_fpd
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so
 vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/hw/gxfingerprint.default.so
 vendor/lib64/libcom_fingerprints_service.so
 vendor/lib64/libfp_client.so|22bf87243359935ae8dcdcdf67262963ee9e40a9
 vendor/lib64/libfpservice.so|6034b749c0d382a544742199364b81cdfded9481
 -vendor/lib64/libgxbinder.so
+
+# Fingerprint - from santoni MIUI Marshmallow
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.msm8937.so|28a7f4a29eb51c07956a9010bc037bb2a862e9d2
 
 # FocalTech-5336 Touchscreen
 etc/ft5336_oufei_720p.ini:vendor/etc/ft5336_oufei_720p.ini
