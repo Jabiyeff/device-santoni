@@ -122,10 +122,21 @@ ndk::ScopedAStatus Lights::setLightNotification(const HwLightState& state) {
 }
 
 ndk::ScopedAStatus Lights::setSpeakerLightLocked(const HwLightState& state) {
-    uint32_t red, green, blue;
-    uint32_t blink;
-    int onMS, offMS;
-    unsigned int colorRGB;
+    int blink, onMS, offMS, red, green, blue;
+    uint32_t alpha;
+
+    // Extract brightness from AARRGGBB
+    alpha = (state.color >> 24) & 0xff;
+    red = (state.color >> 16) & 0xff;
+    green = (state.color >> 8) & 0xff;
+    blue = state.color & 0xff;
+
+    // Scale RGB brightness if Alpha brightness is not 0xFF
+    if (alpha != 0xff) {
+        red = (red * alpha) / 0xff;
+        green = (green * alpha) / 0xff;
+        blue = (blue * alpha) / 0xff;
+    }
 
     switch (state.flashMode) {
         case FlashMode::TIMED:
@@ -139,12 +150,6 @@ ndk::ScopedAStatus Lights::setSpeakerLightLocked(const HwLightState& state) {
             break;
     }
 
-    colorRGB = state.color;
-
-    red = (colorRGB >> 16) & 0xFF;
-    green = (colorRGB >> 8) & 0xFF;
-    blue = colorRGB & 0xFF;
-
     if (onMS > 0 && offMS > 0) {
         /*
          * if ON time == OFF time
@@ -152,21 +157,34 @@ ndk::ScopedAStatus Lights::setSpeakerLightLocked(const HwLightState& state) {
          * else
          *   use blink mode 1
          */
-        if (onMS == offMS)
+        if (onMS == offMS) {
             blink = 2;
-        else
+        } else {
             blink = 1;
-    } else
-        blink = 0;
-
-    if (blink) {
-        if (red && WriteToFile(kRedBlinkFile, blink))
-            WriteToFile(kRedLEDFile, 0);
-        if (green && WriteToFile(kGreenBlinkFile, blink))
-            WriteToFile(kGreenLEDFile, 0);
-        if (blue && WriteToFile(kBlueBlinkFile, blink))
-            WriteToFile(kBlueLEDFile, 0);
+        }
     } else {
+        blink = 0;
+    }
+
+    /* Disable blinking. */
+    WriteToFile(kRedBlinkFile, 0);
+    WriteToFile(kGreenBlinkFile, 0);
+    WriteToFile(kBlueBlinkFile, 0);
+
+    /* Enable blinking */
+    if (blink){
+        if (red)
+            WriteToFile(kRedBlinkFile, blink);
+        if (green)
+            WriteToFile(kGreenBlinkFile, blink);
+        if (blue)
+            WriteToFile(kBlueBlinkFile, blink);
+    } else {
+        if (red == 0 && green == 0 && blue == 0) {
+            WriteToFile(kRedBlinkFile, 0);
+            WriteToFile(kGreenBlinkFile, 0);
+            WriteToFile(kBlueBlinkFile, 0);
+        }
         WriteToFile(kRedLEDFile, red);
         WriteToFile(kGreenLEDFile, green);
         WriteToFile(kBlueLEDFile, blue);
