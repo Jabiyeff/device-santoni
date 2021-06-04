@@ -15,3 +15,12 @@ cc_library_shared {
         "libutils",
     ],
 }
+
+// Goodix
+cc_library_shared {
+    name: "fakelogprint",
+    srcs: ["fakelogprint.cpp"],
+    shared_libs: ["liblog"],
+    compile_multilib: "64",
+    vendor: true
+}
