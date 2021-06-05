@@ -10,12 +10,8 @@ cc_binary {
         "service.cpp",
     ],
 
-    header_libs: [
-        "libbinder_headers"
-    ],
-
     shared_libs: [
-        "libgxbinder",
+        "libbinder",
         "libcutils",
         "liblog",
         "libhidlbase",
