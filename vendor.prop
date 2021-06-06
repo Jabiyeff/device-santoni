@@ -67,6 +67,7 @@ vendor.qcom.bluetooth.soc=smd
 sys.vendor.shutdown.waittime=500
 
 # Camera
+camera.disable_zsl_mode=1
 vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
 persist.camera.gyro.disable=0
 persist.camera.imglib.cac3=2
