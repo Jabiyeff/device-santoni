@@ -78,9 +78,6 @@ function blob_fixup() {
 	vendor/lib/libmmcamera_dbg.so )
         sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "${2}"
         ;;
-	system_ext/framework/qti-telephony-common.jar )
-        sed -i "/com.qualcomm.qti.internal.telephony.QtiRIL/d" "${2}"
-        ;;
 	vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc )
         sed -i -e "$a\\    capabilities NET_BIND_SERVICE" "${2}"
         ;;
