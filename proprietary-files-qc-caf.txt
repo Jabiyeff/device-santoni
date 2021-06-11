@@ -174,18 +174,21 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so|95b26a4a29f1443ec389be6ca80151a0aec9
 # DRM - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/qseecomd|80c97092e609e00057e4037da490c54b09205be0
 vendor/lib/libQSEEComAPI.so|90a357a7068c37d0dd1b6428981b27243f6f0c28
-vendor/lib64/libGPreqcancel.so|d3278679f75371f7d6813f69ee04cda66e46b445
-vendor/lib64/libGPreqcancel_svc.so|817fced1daa7913b363fdbebf2e0587e1f34b8eb
-vendor/lib64/libQSEEComAPI.so|5d10cbc93360fbb8fce662e2e7c787441f978b26
-vendor/lib64/libSecureUILib.so|f490abdef04ca0806ebcc9efde7acab628294178
-vendor/lib64/libStDrvInt.so|add517206707a8bd7f116b6b1554a16c51fe6668
 vendor/lib64/libdrmfs.so|071f9238bfa70ebd9d28748a21f6bb3297057d49
 vendor/lib64/libdrmtime.so|2d53dd4f3d0ee920263a89f6e6d4acad837ca672
+vendor/lib64/libGPreqcancel.so|d3278679f75371f7d6813f69ee04cda66e46b445
+vendor/lib64/libGPreqcancel_svc.so|817fced1daa7913b363fdbebf2e0587e1f34b8eb
+vendor/lib64/libcpion.so|388b27050e97bdfdee0d98428f223611b761f252
+vendor/lib64/libhdcpsrm.so|85c4b0f714b3946d94d32811d4c85ad2dd244d65
+vendor/lib64/liboemcrypto.so|2cd64ac318250f46e0c7671ff6fbee3c01c8f1fd
 vendor/lib64/libqisl.so|e9c402aed643ee094daaf495f1a3a1f29542d602
+vendor/lib64/libQSEEComAPI.so|5d10cbc93360fbb8fce662e2e7c787441f978b26
 vendor/lib64/librpmb.so|9a9e747080c33f14bc0457e7d65e3c09fa5bff87
+vendor/lib64/libSecureUILib.so|f490abdef04ca0806ebcc9efde7acab628294178
 vendor/lib64/libsecureui.so|226528da5a2a2caf64ad6cab536b370f974333b8
 vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
 vendor/lib64/libssd.so|9c7850a06f6caf5b3dc6ac1269a5b0be9f4fcde7
+vendor/lib64/libStDrvInt.so|add517206707a8bd7f116b6b1554a16c51fe6668
 
 # FM - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/fm_qsoc_patches|aaae1e4ee3b3feec9bc5863e1a4bb2eaaf22c0fd
