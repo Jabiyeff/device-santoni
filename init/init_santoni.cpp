@@ -85,9 +85,23 @@ void property_override(char const prop[], char const value[], bool add = true)
     }
 }
 
+void low_ram_device()
+{
+    struct sysinfo sys;
+    sysinfo(&sys);
+
+    if (sys.totalram <= 2048ull * 1024 * 1024) {
+        // Generated from build/make/target/product/go_defaults_common.mk
+        property_override("ro.config.low_ram", "true");
+        property_override("pm.dexopt.downgrade_after_inactive_days", "10");
+        property_override("pm.dexopt.shared", "quicken");
+    }
+}
+
 void vendor_load_properties()
 {
     check_device();
+    low_ram_device();
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
     property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
