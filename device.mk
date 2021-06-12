@@ -329,7 +329,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmm-omxcore \
     libc2dcolorconvert \
+    libOmxAacEnc \
+    libOmxAmrEnc \
     libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw \
