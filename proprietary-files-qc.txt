@@ -97,3 +97,10 @@ vendor/radio/qcril_database/qcril.db
 # Radio - IMS - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
+
+# Thermal - from from olive-user 10 QKQ1.191014.001 V12.0.3.0.QCNCNXM release-keys
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalfeature.so
+vendor/lib64/hw/thermal.msm8937.so
