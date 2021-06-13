@@ -340,10 +340,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_enc_common
 
-PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
-    android.hardware.media.omx@1.0-service
-
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@1.0.vendor \
