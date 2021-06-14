@@ -39,8 +39,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
         SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
-        SoundControlFileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
         new DiracUtils(context).onBootCompleted();;
     }
 }

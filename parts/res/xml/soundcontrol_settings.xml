@@ -34,14 +34,6 @@
             app:min="-10"
             android:icon="@drawable/ic_mic"
             android:title="@string/microphone_gain" />
-
-        <org.lineageos.settings.preferences.SecureSettingCustomSeekBarPreference 
-            android:defaultValue="0"
-            android:key="speaker_gain" 
-            android:max="20"
-            app:min="-10" 
-            android:icon="@drawable/ic_speaker"
-            android:title="@string/speaker_gain" />
     </PreferenceCategory>
 
 </PreferenceScreen>

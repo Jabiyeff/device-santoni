@@ -18,9 +18,8 @@
     <string name="advanced_summary">Control audio gain</string>
 
     <!-- Audio amplification -->
-    <string name="headphone_gain">Headphone gain</string>
+    <string name="headphone_gain">Headphone and Speaker gain</string>
     <string name="microphone_gain">Microphone gain</string>
-    <string name="speaker_gain">Speaker gain</string>
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
