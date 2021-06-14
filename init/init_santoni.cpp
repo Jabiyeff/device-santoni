@@ -88,7 +88,6 @@ void low_ram_device()
 
     if (sys.totalram <= 2048ull * 1024 * 1024) {
         // Generated from build/make/target/product/go_defaults_common.mk
-        property_override("ro.config.low_ram", "true");
         property_override("pm.dexopt.downgrade_after_inactive_days", "10");
         property_override("pm.dexopt.shared", "quicken");
     }
