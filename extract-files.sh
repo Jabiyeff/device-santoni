@@ -84,10 +84,6 @@ function blob_fixup() {
 	vendor/lib/libmmcamera2_stats_modules.so | vendor/lib/libmmcamera_ppeiscore.so | vendor/lib64/libmmsw_detail_enhancement.so | vendor/lib64/libmmsw_platform.so )
         "${PATCHELF}" --replace-needed "libgui.so" "libwui.so" "${2}"
         ;;
-	vendor/bin/wcnss_service )
-        "${PATCHELF}" --add-needed "libqmiservices_shim.so" "${2}"
-        sed -i "s|dms_get_service_object_internal_v01|dms_get_service_object_shimshim_v01|g" "${2}"
-        ;;
         esac
 }
 

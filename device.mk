@@ -449,7 +449,6 @@ PRODUCT_COPY_FILES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
-    libqmiservices_shim \
     libcld80211 \
     libwpa_client \
     hostapd \

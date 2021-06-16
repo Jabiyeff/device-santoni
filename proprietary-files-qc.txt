@@ -67,14 +67,14 @@ vendor/lib/libidl.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi.so
--vendor/lib/libqmiservices.so
+vendor/lib/libqmiservices.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
--vendor/lib64/libqmiservices.so
+vendor/lib64/libqmiservices.so
 
 # Radio - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 vendor/bin/netmgrd
@@ -103,3 +103,6 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
 vendor/lib64/hw/thermal.msm8937.so
+
+# Wi-Fi - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
+vendor/bin/wcnss_service

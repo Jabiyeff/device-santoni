@@ -631,9 +631,6 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
 
-# Wi-Fi - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/bin/wcnss_service|eeb08daae591d5f0977aa06d8e1a7b8c293fc844
-
 # WiFi Display - from LA.UM.9.6.2.r1-04100-89xx.0
 system/bin/wfdservice|96a583c0efeaf90352b26c20c904ee156238b90f
 system/etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
