@@ -31,6 +31,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 BOARD_USES_ADRENO := true
 TARGET_BOARD_PLATFORM := msm8937
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 
 TARGET_BOARD_SUFFIX := _64
 
@@ -45,16 +46,13 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
     BOARD_KERNEL_CMDLINE := androidboot.usbconfigfs=true
 endif
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_CONFIG := santoni_treble_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
-TARGET_KERNEL_VERSION := 4.9
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_SOURCE := kernel/xiaomi/santoni
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -133,10 +131,11 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 TARGET_SCREEN_DENSITY := 300
 BOARD_USES_ADRENO := true
 TARGET_USES_ION := true
+TARGET_USES_NEW_ION_API :=true
+TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
-TARGET_USES_QTI_MAPPER_2_0 := true
-TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
-TARGET_USES_GRALLOC4 := true
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+USE_OPENGL_RENDERER := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -167,9 +166,6 @@ TARGET_NO_RPC := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
-
-# HALs
-QCOM_SOONG_NAMESPACE := hardware/qcom-caf/msm8937
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/framework_manifest.xml
