@@ -1,1 +1,3 @@
 get_prop(untrusted_app_29, exported_camera_prop)
+
+dontaudit untrusted_app_29 hal_memtrack_hwservice:hwservice_manager { find };
