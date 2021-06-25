@@ -374,6 +374,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.msm.usb.configfs.rc \
     init.target.rc \
+    init.veth_ipa_config.sh \
     ueventd.qcom.rc \
     init.extras.rc
 
