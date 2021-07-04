@@ -69,18 +69,18 @@ static int profile_high_performance[] = {
 };
 
 static int profile_power_save[] = {
-    MAX_FREQ_BIG_CORE_0, 0x3bf,
+    MAX_FREQ_BIG_CORE_0, 0x3C0,
     MAX_FREQ_LITTLE_CORE_0, 0x300,
 };
 
 static int profile_bias_power[] = {
-    MAX_FREQ_BIG_CORE_0, 0x4B0,
-    MAX_FREQ_LITTLE_CORE_0, 0x300,
+    MAX_FREQ_BIG_CORE_0, 0x446,
+    MAX_FREQ_LITTLE_CORE_0, 0x386,
 };
 
 static int profile_bias_performance[] = {
     MIN_FREQ_BIG_CORE_0, 0x446,
-    MIN_FREQ_LITTLE_CORE_0, 0xFFF,
+    MIN_FREQ_LITTLE_CORE_0, 0x446,
 };
 // clang-format on
 
