@@ -6,33 +6,35 @@
         <value>4</value>
         <value>4</value>
     </array>
-    <array name="cpu.core_speeds.cluster1">
+    <array name="cpu.core_speeds.cluster0">
         <value>768000</value>
         <value>902400</value>
         <value>998400</value>
         <value>1094400</value>
+        <value>1209600</value>
     </array>
-    <array name="cpu.core_power.cluster1">
+    <array name="cpu.core_power.cluster0">
         <value>43</value>
         <value>54</value>
         <value>64</value>
         <value>79</value>
+        <value>92</value>
     </array>
-    <array name="cpu.core_speeds.cluster0">
+    <array name="cpu.core_speeds.cluster1">
         <value>960000</value>
         <value>1094400</value>
-        <value>1209600</value>
         <value>1248000</value>
         <value>1344000</value>
         <value>1401000</value>
+        <value>1497600</value>
     </array>
-    <array name="cpu.core_power.cluster0">
+    <array name="cpu.core_power.cluster1">
         <value>59</value>
         <value>75</value>
-        <value>91</value>
         <value>94</value>
         <value>108</value>
         <value>111</value>
+        <value>116</value>
     </array>
     <item name="cpu.idle">2.8</item>
     <item name="cpu.suspend">4</item>
