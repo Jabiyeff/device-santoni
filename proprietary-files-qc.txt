@@ -97,12 +97,13 @@ vendor/radio/qcril_database/qcril.db
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 
-# Thermal - from olive-user 10 QKQ1.191014.001 V12.0.3.0.QCNCNXM release-keys
+# Thermal - from daisy QKQ1.191002.002 V11.0.20.0.QDLMIXM
 vendor/bin/thermal-engine
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalfeature.so
-vendor/lib64/hw/thermal.msm8937.so
+vendor/lib64/libthermalioctl.so
+vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so
 
 # Wi-Fi - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 vendor/bin/wcnss_service
