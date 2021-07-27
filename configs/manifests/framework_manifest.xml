@@ -46,4 +46,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>sigmahal</instance>
         </interface>
     </hal>
+    <!--QDMA hal-->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQccsyshal</name>
+            <instance>qccsyshal</instance>
+        </interface>
+    </hal>
 </manifest>
