@@ -71,16 +71,19 @@ static int profile_high_performance[] = {
 static int profile_power_save[] = {
     MAX_FREQ_BIG_CORE_0, 0x3C0,
     MAX_FREQ_LITTLE_CORE_0, 0x300,
+    GPU_MAX_POWER_LEVEL, 0x5,
 };
 
 static int profile_bias_power[] = {
     MAX_FREQ_BIG_CORE_0, 0x446,
     MAX_FREQ_LITTLE_CORE_0, 0x386,
+    GPU_MAX_POWER_LEVEL, 0x3,
 };
 
 static int profile_bias_performance[] = {
     MIN_FREQ_BIG_CORE_0, 0x446,
     MIN_FREQ_LITTLE_CORE_0, 0x446,
+    GPU_MIN_POWER_LEVEL, 0x2,
 };
 // clang-format on
 
