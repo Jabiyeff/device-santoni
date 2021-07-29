@@ -1,3 +1,6 @@
+# Block IO
+type blkio, file_type;
+
 # Camera
 type camera_socket, file_type, data_file_type;
 
