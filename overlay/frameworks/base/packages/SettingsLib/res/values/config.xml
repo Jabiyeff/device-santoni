@@ -17,8 +17,8 @@
 <!-- These resources are around just to allow their values to be customized -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Threshold in micro watts below which a charger is rated as "slow"; 0.5A @ 5V -->
-    <integer name="config_chargingSlowlyThreshold">2500000</integer>
+    <!-- Threshold in micro watts below which a charger is rated as "slow"; 0.25A @ 5V -->
+    <integer name="config_chargingSlowlyThreshold">1250000</integer>
 
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 1.0A @ 5V  -->
     <integer name="config_chargingFastThreshold">5000000</integer>
