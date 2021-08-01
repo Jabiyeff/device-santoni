@@ -352,7 +352,7 @@
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
-    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+    <bool name="config_suspendWhenScreenOffDueToProximity">false</bool>
 
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
