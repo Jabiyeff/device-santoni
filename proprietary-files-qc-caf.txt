@@ -632,8 +632,6 @@ system/etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
 -system/framework/WfdCommon.jar|0faa0fdf415b1ecdc92dfe6a52946a3248b7b02b
 system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|aa89ab6f11d1d9f22862b8c4076d34172d6f0e8d
 system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|9e1000674de86c91933598297625a71e45828dc8
-system/lib/libaudioclient.so:system/lib/libwfdaudioclient.so|eb8ab407be9d517974d52b0ebba2c0cea0e47542
-system/lib/libmediautils.so:system/lib/libwfdmediautils.so|38ba29e9c08183fc4992162e18aa89451627c407
 system/lib/libwfdavenhancements.so|dd3b57ae90eaa606d069927f5d345b38cc8eba48
 system/lib/libwfdclient.so|afcf09fa9221cb9999c2b7bda4c94ffea6b261d8
 system/lib/libwfdcodecv4l2.so|ce3ea6c5cbfe7e8decd57419b77f21afc71e62f6
@@ -641,7 +639,7 @@ system/lib/libwfdcommonutils.so|34b5e00508ed1151a9b6238a48f346ae6fe7db7b
 system/lib/libwfdconfigutils.so|297d166db9c148261c96cf1e3a5ff7f86576cac4
 system/lib/libwfddisplayconfig.so|773e91d11fe9b8f52e5d17bd99cc6647d5ef36a0
 system/lib/libwfdmminterface.so|668c1fa38a6d94ae36d74cdf8e3e538de41425fc
-system/lib/libwfdmmsink.so|5f0a67565174e72d5122695e95f903216d49ab11
+system/lib/libwfdmmsink.so|01b295149a97653fdc38752831ed3e63dd732e8a
 system/lib/libwfdmmsrc.so|1f38057fb0a60486891234d9beb6ec9cea74cc35
 system/lib/libwfdnative.so|968c2c364e9fabe9cd544df589bba6fc94d40a63
 system/lib/libwfdrtsp.so|ff172aaf2df1d5ea4da247bc1af16d68304c7389
