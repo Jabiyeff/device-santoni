@@ -444,4 +444,5 @@ case "$buildvariant" in
         ;;
 esac
 
-rm -rf /data/misc/iorapd
+chmod g+w -R /data/misc/iorapd/*
+rm -rf /data/misc/iorapd/*
