@@ -443,6 +443,3 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
-
-chmod g+w -R /data/misc/iorapd/*
-rm -rf /data/misc/iorapd/*
