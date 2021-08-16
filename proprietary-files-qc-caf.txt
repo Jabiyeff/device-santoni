@@ -26,30 +26,30 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so|3a7b0647df0b556ca1389698b13122ca7d5
 vendor/lib/hw/com.dsi.ant@1.0-impl.so|5c65523431b88a9aaa8c70a58b9d4ac66be26698
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
-# Audio libraries - from LA.UM.9.6.3.r1-04200-89xx.0
-vendor/lib/libacdb-fts.so|98a296afb82f11691adc9de66cbfec140ff23067
-vendor/lib/libacdbloader.so|c4fe7b340bae1ef1a0d5438c37280754a330edb8
-vendor/lib/libacdbrtac.so|6b89b81415cf91b90e6673336739f9908ec440bc
-vendor/lib/libadiertac.so|a1b6a277cfbf29a3f02fa188dc69cc114c9bb71d
-vendor/lib/libadm.so|8415d5ce8ac6a1fd322aa82af4c3c516000f88b5
-vendor/lib/libaudcal.so|6a33e2261145a327ebc7ed9f2826ead922439a89
-vendor/lib/libaudioalsa.so|79b393f760621a3fe75be83cca18b9d2e2a0fe23
-vendor/lib/libdrc.so|7dbd6cef13d7e8ad18b1a49aa92a7d83da24c96a
-vendor/lib/libqtigef.so|53980f73520be54c9a97eb689bd6cfed73b51fac
-vendor/lib/libsurround_3mic_proc.so|98038406a407141f77fb7c81b512b8163261d958
-vendor/lib/soundfx/libqcbassboost.so|3b59063b25e67499bd1f3f47cd2fbe365b912580
-vendor/lib/soundfx/libqcreverb.so|6ef916af96f7bf26fa9d0d3349d028bb55f58845
-vendor/lib/soundfx/libqcvirt.so|65e39ff1138c9282a44221137dac99c6d9e307c6
-vendor/lib64/libacdb-fts.so|0d7463a6a1763a58a811506752f8bd228de7353c
-vendor/lib64/libacdbloader.so|478b0e5675120913f4d53309edb9675648d71e67
-vendor/lib64/libacdbrtac.so|9a33801da0e7bf1127f7640076dd2f28c286c9ca
-vendor/lib64/libadiertac.so|0b2decb5ac7439864104be287b9f997763988a3d
-vendor/lib64/libaudcal.so|ee86ff4745dfa6a5a30b3e7eb60aa15e8b2adba0
-vendor/lib64/libaudioalsa.so|361b3de1f094cc0943add1ef7040ffeadc5dbdcb
-vendor/lib64/libqtigef.so|7afd49bdf19887353d894bfcf1199e0ecfc21e23
-vendor/lib64/soundfx/libqcbassboost.so|f547ec2b644d23b2ca7708f1babaa66014efada0
-vendor/lib64/soundfx/libqcreverb.so|457c480626b8bd154ad453e01d942ef0498ea43a
-vendor/lib64/soundfx/libqcvirt.so|7b42a5f2c13921665c1bbf4a81c615970ad26d23
+# Audio libraries - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/libacdb-fts.so|ce5d9ee6188712bb55658fc00548aef96ec0ff17
+vendor/lib/libacdbloader.so|f1b1f6918e4839344ec3f5a5bb31b44183569747
+vendor/lib/libacdbrtac.so|58e01597eb162cc5783d9ca6da54e46cf67ad638
+vendor/lib/libadiertac.so|d7d70e99afaad0de116bf757b0621b9bb4dcd93d
+vendor/lib/libadm.so|a5e6c65b7133440b4550234db4454e4c81627f66
+vendor/lib/libaudcal.so|d26f30b1b692b51153d9606bf11aa417b9ab8e6c
+vendor/lib/libaudioalsa.so|58feb2c5cbc4ac6e23ef4896c87785bed8db3c80
+vendor/lib/libdrc.so|303d67b5bfea162ae994d3817de317258035c42a
+vendor/lib/libqtigef.so|fbb307c0da385bf09cbdef714e8fc1ecfc7ba6fd
+vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
+vendor/lib/soundfx/libqcbassboost.so|42b8b9bc68ac518170f5569a8f428a3cd827bb06
+vendor/lib/soundfx/libqcreverb.so|d4dfe0f501370eaa6d8a3784b5aaeffb2c8a6fde
+vendor/lib/soundfx/libqcvirt.so|0d615e698b41aa6a066b62e560c27eb16b0ed056
+vendor/lib64/libacdb-fts.so|8bf7d9173cdf503ffa240be382d8bfb06c6dfdb5
+vendor/lib64/libacdbloader.so|0e20d501f0351b1bf16163ef38f102376bdd11c0
+vendor/lib64/libacdbrtac.so|8975cdf11a072bd10c9c8aaf41612a072376ab3c
+vendor/lib64/libadiertac.so|e6cddad2fe64c4b6fb667c95b918d235dd6da01d
+vendor/lib64/libaudcal.so|2371c71996d9fcbef59347b364447c4ba257e34c
+vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
+vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
+vendor/lib64/soundfx/libqcbassboost.so|d88e34cafa68958666760c88657ec55547d734a2
+vendor/lib64/soundfx/libqcreverb.so|7a97a71b39e127f7bed1eb36d0c0a156a258053a
+vendor/lib64/soundfx/libqcvirt.so|ef6f49257c435bd2c1875ef12b0d3fb1939cce73
 
 # AV Enhancements - from LA.UM.9.6.3.r1-04200-89xx.0
 system_ext/lib/libavenhancements.so|9372b77cbd6667a2144c55da1adf3859ae37f849
