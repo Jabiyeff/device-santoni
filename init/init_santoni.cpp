@@ -59,7 +59,7 @@ void check_device()
         heapmaxfree = "16m";
     } else if (sys.totalram > 2048ull * 1024 * 1024) {
         // from - custom (adapted 2048-4096 values)
-        heapgrowthlimit = "256m";
+        heapgrowthlimit = "192m";
         heapsize = "512m";
         heaptargetutilization = "0.75";
         heapminfree = "2m";
