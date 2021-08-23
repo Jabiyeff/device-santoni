@@ -66,6 +66,9 @@ vendor.qcom.bluetooth.soc=smd
 # Boot
 sys.vendor.shutdown.waittime=500
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Camera
 camera.disable_zsl_mode=1
 vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android

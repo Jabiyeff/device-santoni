@@ -1,6 +1,3 @@
-# BPF
-ro.kernel.ebpf.supported=true
-
 # Default to BFQ I/O scheduler
 persist.sys.io.scheduler=bfq
 
