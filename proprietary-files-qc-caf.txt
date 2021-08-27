@@ -239,7 +239,7 @@ vendor/lib64/vendor.qti.gnss@3.0.so|6bf537748ba0d0b0a81c880699a5cc9c0fb6f36b
 vendor/lib64/vendor.qti.gnss@4.0-service.so|04233086636be1aeaaedf88d3126803b0c40c11d
 vendor/lib64/vendor.qti.gnss@4.0.so|6e1dfd080383908c1d1d9b2fcef0a152276cd0bf
 
-# Graphics - from LA.UM.9.6.2.r1-04200-89xx.0
+# Graphics - from LA.UM.9.6.3.r1-04200-89xx.0
 system/lib/libsdm-disp-apis.so|68c45b0a37115ffe0bc503873cbc3b6a9ae913d9
 system/lib64/libsdm-disp-apis.so|131b769dcda8e95cd999f912a9fa48636c792092
 vendor/lib/egl/eglSubDriverAndroid.so|2d9e3d695c66f7bb3c8dad0ab26ed784e4803f75
@@ -282,7 +282,7 @@ vendor/lib64/libpvr.so|b83b90fd51f0fb69d6376f04cd2571ece084089f
 vendor/lib64/librs_adreno.so|bf87696c917d75da5557c194098faaae5e303a0b
 vendor/lib64/libVkLayer_q3dtools.so|9d4d14824521b4be45064f9e61c715ab68b1eabd
 
-# Graphics (Postprocessing) - from LA.UM.9.6.2.r1-04200-89xx.0
+# Graphics (Postprocessing) - from LA.UM.9.6.3.r1-04200-89xx.0
 system/etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 system/framework/com.qti.snapdragon.sdk.display.jar|657b74d0517f6438d3e0914f92f3b8de6d2a10a1
 system_ext/lib/vendor.display.color@1.0.so|c8698d4d3e2ed9e4aefa9f8e099a27f3b1b03d1d
@@ -311,7 +311,7 @@ vendor/lib64/vendor.display.color@1.2.so|e365e72afc764c1c5d9ff3c190200e7b9212b73
 vendor/lib64/vendor.display.postproc@1.0.so|dcbc58c6afa58aac39558a6c752854441d5874d7
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|8775cdf7b23570079c53b323add2127179c41c22
 
-# Graphics (SDM) - from LA.UM.9.6.2.r1-04200-89xx.0
+# Graphics (SDM) - from LA.UM.9.6.3.r1-04200-89xx.0
 vendor/lib/libscalar.so|c78e4b32170501fd85daa8804aaa54afbcb40dd2
 vendor/lib/libsdm-color.so|2a65219886995705c4eef85fbc5bc3fc663ed0c5
 vendor/lib/libsdm-diag.so|4dfe9df197761861b9b8405b5b2e14cb9d813c90
@@ -325,11 +325,11 @@ vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
 vendor/lib64/libsdmextension.so|dfe51e86e14a364498b8611d0b07f134625414ba
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
-# Graphics (Vulkan) - from LA.UM.9.6.2.r1-04200-89xx.0
+# Graphics (Vulkan) - from LA.UM.9.6.3.r1-04200-89xx.0
 vendor/lib/hw/vulkan.adreno.so|0f3ff6512228bb415ac9f4104ff52b7a42fabdae
 vendor/lib64/hw/vulkan.adreno.so|0d6b5ce1b9c59ec82b2d2c873d3991087abb2e38
 
-# Graphics firmware - from LA.UM.9.6.2.r1-04200-89xx.0
+# Graphics firmware - from LA.UM.9.6.3.r1-04200-89xx.0
 vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
 vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
