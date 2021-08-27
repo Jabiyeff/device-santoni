@@ -136,8 +136,8 @@ vendor/lib64/vendor.qti.data.mwqem@1.0.so|0e75ac5b01a9d2c8594647d31f6867361e6699
 vendor/lib64/vendor.qti.latency@2.0.so|44e613964229ad11c5a69d1861b24f5897eff1d7
 vendor/lib64/vendor.qti.latency@2.1.so|3f5e3be5fcbc96b5f4c87dd76cfcc0e1dc858ad0
 
-# Charger - from LA.UM.9.6.3.r1-04400-89xx.0
-vendor/bin/hvdcp_opti|885892185db2bb9f33e45b6d1eac051db934871a
+# Charger - from LA.UM.9.6.3.r1-04200-89xx.0
+vendor/bin/hvdcp_opti|722b3ff247db5fe45c7faa9a8fa6e82d3179d279
 
 # DPM - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/bin/dpmd|8a582ec5f23d8f43922566a12840da8ced8e6ab7
