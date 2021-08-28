@@ -63,17 +63,11 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 # QMI - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
-vendor/lib/libidl.so
 vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
-vendor/lib64/libidl.so
 vendor/lib64/libqdi.so
-vendor/lib64/libqdp.so
-vendor/lib64/libqmi.so
 vendor/lib64/libqmiservices.so
 
 # Radio - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
