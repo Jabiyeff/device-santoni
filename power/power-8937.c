@@ -309,6 +309,7 @@ int power_hint_override(power_hint_t hint, void* data) {
 
     // Skip other hints in high/low power modes
     if (current_power_profile == PROFILE_POWER_SAVE ||
+        current_power_profile == PROFILE_BIAS_POWER ||
         current_power_profile == PROFILE_HIGH_PERFORMANCE) {
         return HINT_HANDLED;
     }
