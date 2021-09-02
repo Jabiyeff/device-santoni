@@ -151,6 +151,7 @@ ro.gps.agps_provider=1
 
 # Media
 debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank.sw-audio=1
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
