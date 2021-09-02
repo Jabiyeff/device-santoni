@@ -630,7 +630,6 @@ system/etc/wfdconfig.xml|d07f6b0441c0aa8913865100239490fa8687a020
 system/etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
 -system/framework/WfdCommon.jar|0faa0fdf415b1ecdc92dfe6a52946a3248b7b02b
 system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|53170660f8bf41dbf209a2300f3e97007c90ef9c
-system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|41f0d3a4e28205fd522034289552f52d79daed56
 system/lib/libwfdavenhancements.so|23a67a68a0a5c90366e4ebceecb247808694a398
 system/lib/libwfdclient.so|3156122849b0eedab11db3366125923c48835cdb
 system/lib/libwfdcodecv4l2.so|8dda949adcdabd0c342bdab6c51600626958d46d
