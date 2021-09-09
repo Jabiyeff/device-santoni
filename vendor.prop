@@ -72,7 +72,8 @@ ro.kernel.ebpf.supported=true
 # Camera
 camera.disable_zsl_mode=1
 vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
-persist.camera.gyro.disable=0
+persist.camera.gyro.android=0
+persist.camera.gyro.disable=1
 persist.camera.imglib.cac3=2
 persist.camera.isp.clock.optmz=0
 vendor.vidc.enc.narrow.searchrange=1
