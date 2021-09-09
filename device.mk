@@ -108,7 +108,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl:32 \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl:32 \
-    android.hardware.soundtrigger@2.2-impl:32 \
+    android.hardware.soundtrigger@2.1-impl:32 \
     android.hardware.broadcastradio@1.0-impl
 
 # Audio configuration
