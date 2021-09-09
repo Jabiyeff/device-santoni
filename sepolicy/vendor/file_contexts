@@ -31,6 +31,12 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.santoni     u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.1-service       u:object_r:hal_perf_default_exec:s0
 
+# I/O
+# This node is already labelled by QCOM but Lineage overrides it with sysfs_io_sched_tunable label
+# Since qti_init_shell needs to write to it, LOS's private label isn't accessible by our vendor
+# Relabel it to QCOM's sysfs_mmc_host label to get rid of denials
+/sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc[0-9]/mmc[0-9]:[a-f0-9]+/block/mmcblk[0-9]/queue/read_ahead_kb u:object_r:sysfs_mmc_host:s0
+
 # Input files
 /sys/board_properties/virtualkeys.ft5x06_720p   u:object_r:keylayout_file_sysfs:s0
 
