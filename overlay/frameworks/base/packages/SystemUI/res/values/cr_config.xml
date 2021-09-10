@@ -26,7 +26,7 @@
     <string name="config_fpsInfoSysNode" translatable="false">/sys/devices/virtual/graphics/fb0/measured_fps</string>
 
     <!-- The CPU temperature sensor path, defaults to empty -->
-    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone36/temp</string>
+    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone10/temp</string>
 
     <!-- The CPUs to display in CPUInfoService view -->
     <string name="config_displayCpus" translatable="false">0,4</string>
