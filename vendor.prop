@@ -99,9 +99,6 @@ persist.vendor.dpmhalservice.enable=1
 persist.vendor.dpm.loglevel=0
 persist.vendor.mwqem.enable=1
 
-# Coresight
-persist.debug.coresight.config=stm-events
-
 # Dalvik
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
