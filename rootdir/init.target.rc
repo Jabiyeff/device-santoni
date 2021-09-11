@@ -64,6 +64,8 @@ on init
    chmod 0660 /dev/cpuset/camera-daemon/tasks
 
 on post-fs
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
     write /dev/ipa 1
