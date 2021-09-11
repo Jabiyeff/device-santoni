@@ -320,7 +320,8 @@ on property:sys.boot_completed=1
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
-    chown media audio /sys/kernel/aud_dev/state
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
 
     # Setup final blkio
     # value for group_idle is us
