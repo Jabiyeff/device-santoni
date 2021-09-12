@@ -168,7 +168,10 @@ TARGET_NO_RPC := true
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # HALs
-QCOM_SOONG_NAMESPACE := hardware/qcom-caf/msm8937
+QCOM_SOONG_NAMESPACE := $(DEVICE_PATH)/qcom-caf
+DEVICE_SPECIFIC_AUDIO_PATH := $(DEVICE_PATH)/qcom-caf/audio
+DEVICE_SPECIFIC_DISPLAY_PATH := $(DEVICE_PATH)/qcom-caf/display
+DEVICE_SPECIFIC_MEDIA_PATH := $(DEVICE_PATH)/qcom-caf/media
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/framework_manifest.xml
