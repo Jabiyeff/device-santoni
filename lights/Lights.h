@@ -27,7 +27,6 @@ enum led_type {
     RED,
     GREEN,
     BLUE,
-    WHITE,
 };
 
 class Lights : public BnLights {
@@ -41,7 +40,7 @@ private:
     void setSpeakerLightLocked(const HwLightState& state);
     void handleSpeakerBatteryLocked();
 
-    bool setLedBreath(led_type led, uint32_t value);
+    bool setLedBlink(led_type led, uint32_t value);
     bool setLedBrightness(led_type led, uint32_t value);
 
     bool IsLit(uint32_t color);
@@ -49,8 +48,6 @@ private:
     bool WriteToFile(const std::string& path, uint32_t content);
 
     std::string mBacklightNode;
-    bool mWhiteLed;
-    bool mBreath;
     HwLightState mNotification;
     HwLightState mBattery;
 };

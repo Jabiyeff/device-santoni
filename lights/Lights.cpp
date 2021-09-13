@@ -33,7 +33,6 @@ static const std::string led_paths[] {
     [RED] = LED_PATH("red"),
     [GREEN] = LED_PATH("green"),
     [BLUE] = LED_PATH("blue"),
-    [WHITE] = LED_PATH("white"),
 };
 
 static const std::string kLCDFile = "/sys/class/leds/lcd-backlight/brightness";
@@ -50,8 +49,6 @@ const static std::vector<HwLight> kAvailableLights = {
 
 Lights::Lights() {
     mBacklightNode = !access(kLCDFile.c_str(), F_OK) ? kLCDFile : kLCDFile2;
-    mWhiteLed = !access((led_paths[WHITE] + "brightness").c_str(), W_OK);
-    mBreath = !access(((mWhiteLed ? led_paths[WHITE] : led_paths[RED]) + "breath").c_str(), W_OK);
 }
 
 // AIDL methods
@@ -107,28 +104,20 @@ void Lights::setSpeakerLightLocked(const HwLightState& state) {
     switch (state.flashMode) {
         case FlashMode::HARDWARE:
         case FlashMode::TIMED:
-            if (mWhiteLed) {
-                rc = setLedBreath(WHITE, blink);
-            } else {
                 if (!!red)
-                    rc = setLedBreath(RED, blink);
+                    rc = setLedBlink(RED, blink);
                 if (!!green)
-                    rc &= setLedBreath(GREEN, blink);
+                    rc &= setLedBlink(GREEN, blink);
                 if (!!blue)
-                    rc &= setLedBreath(BLUE, blink);
-            }
+                    rc &= setLedBlink(BLUE, blink);
             if (rc)
                 break;
             FALLTHROUGH_INTENDED;
         case FlashMode::NONE:
         default:
-            if (mWhiteLed) {
-                rc = setLedBrightness(WHITE, RgbaToBrightness(state.color));
-            } else {
                 rc = setLedBrightness(RED, red);
                 rc &= setLedBrightness(GREEN, green);
                 rc &= setLedBrightness(BLUE, blue);
-            }
             break;
     }
 
@@ -142,10 +131,7 @@ void Lights::handleSpeakerBatteryLocked() {
         return setSpeakerLightLocked(mNotification);
 }
 
-bool Lights::setLedBreath(led_type led, uint32_t value) {
-    if (mBreath)
-        return WriteToFile(led_paths[led] + "breath", value);
-    else
+bool Lights::setLedBlink(led_type led, uint32_t value) {
         return WriteToFile(led_paths[led] + "blink", value);
 }
 
