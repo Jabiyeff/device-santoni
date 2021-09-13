@@ -20,10 +20,6 @@
 #include <android-base/logging.h>
 #include <fcntl.h>
 
-#ifndef DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS
-#define DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS 0x80
-#endif
-
 using ::android::base::WriteStringToFile;
 
 namespace aidl {
@@ -31,28 +27,17 @@ namespace android {
 namespace hardware {
 namespace light {
 
-#define JOIN_PATH(a, b)                     a "/" b
+#define LED_PATH(led)                       "/sys/class/leds/" led "/"
 
-#define LED_FILE_BASE                       "/sys/class/leds"
+static const std::string led_paths[] {
+    [RED] = LED_PATH("red"),
+    [GREEN] = LED_PATH("green"),
+    [BLUE] = LED_PATH("blue"),
+    [WHITE] = LED_PATH("white"),
+};
 
-#define RED_LED_FILE_BASE                   JOIN_PATH(LED_FILE_BASE, "red")
-#define GREEN_LED_FILE_BASE                 JOIN_PATH(LED_FILE_BASE, "green")
-#define BLUE_LED_FILE_BASE                  JOIN_PATH(LED_FILE_BASE, "blue")
-
-#define LCD_BACKLIGHT_LED_FILE_BASE         JOIN_PATH(LED_FILE_BASE, "lcd-backlight")
-
-static const std::string kRedLEDFile = JOIN_PATH(RED_LED_FILE_BASE, "brightness");
-static const std::string kGreenLEDFile = JOIN_PATH(GREEN_LED_FILE_BASE, "brightness");
-static const std::string kBlueLEDFile = JOIN_PATH(BLUE_LED_FILE_BASE, "brightness");
-
-static const std::string kRedBlinkFile = JOIN_PATH(RED_LED_FILE_BASE, "blink");
-static const std::string kGreenBlinkFile = JOIN_PATH(GREEN_LED_FILE_BASE, "blink");
-static const std::string kBlueBlinkFile = JOIN_PATH(BLUE_LED_FILE_BASE, "blink");
-
-static const std::string kLCDFile = JOIN_PATH(LCD_BACKLIGHT_LED_FILE_BASE, "brightness");
+static const std::string kLCDFile = "/sys/class/leds/lcd-backlight/brightness";
 static const std::string kLCDFile2 = "/sys/class/backlight/panel0-backlight/brightness";
-
-static const std::string kPersistenceFile = "/sys/class/graphics/fb0/msm_fb_persist_mode";
 
 #define AutoHwLight(light) {.id = (int)light, .type = light, .ordinal = 0}
 
@@ -64,20 +49,24 @@ const static std::vector<HwLight> kAvailableLights = {
 };
 
 Lights::Lights() {
-    mBacklightNode = (!access(kLCDFile.c_str(), F_OK)) ? kLCDFile : kLCDFile2;
+    mBacklightNode = !access(kLCDFile.c_str(), F_OK) ? kLCDFile : kLCDFile2;
+    mWhiteLed = !access((led_paths[WHITE] + "brightness").c_str(), W_OK);
+    mBreath = !access(((mWhiteLed ? led_paths[WHITE] : led_paths[RED]) + "breath").c_str(), W_OK);
 }
 
 // AIDL methods
 ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
     switch (id) {
         case (int)LightType::BACKLIGHT:
-            setLightBacklight(state);
+            WriteToFile(mBacklightNode, RgbaToBrightness(state.color));
             break;
         case (int)LightType::BATTERY:
-            setLightBattery(state);
+            mBattery = state;
+            handleSpeakerBatteryLocked();
             break;
         case (int)LightType::NOTIFICATIONS:
-            setLightNotification(state);
+            mNotification = state;
+            handleSpeakerBatteryLocked();
             break;
         default:
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
@@ -95,108 +84,73 @@ ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
 }
 
 // device methods
-ndk::ScopedAStatus Lights::setLightBacklight(const HwLightState& state) {
-    bool wantsLowPersistence = state.brightnessMode == BrightnessMode::LOW_PERSISTENCE;
-    uint32_t brightness = (wantsLowPersistence) ? DEFAULT_LOW_PERSISTENCE_MODE_BRIGHTNESS : 
-                        RgbaToBrightness(state.color);
-
-    if (mLowPersistenceEnabled != wantsLowPersistence) {
-        WriteToFile(kPersistenceFile, wantsLowPersistence);
-        mLowPersistenceEnabled = wantsLowPersistence;
-    }
-
-    WriteToFile(mBacklightNode, brightness);
-    return ndk::ScopedAStatus::ok();
-}
-
-ndk::ScopedAStatus Lights::setLightBattery(const HwLightState& state) {
-    mBattery = state;
-    handleSpeakerBatteryLocked();
-    return ndk::ScopedAStatus::ok();
-}
-
-ndk::ScopedAStatus Lights::setLightNotification(const HwLightState& state) {
-    mNotification = state;
-    handleSpeakerBatteryLocked();
-    return ndk::ScopedAStatus::ok();
-}
-
-ndk::ScopedAStatus Lights::setSpeakerLightLocked(const HwLightState& state) {
-    int blink, onMS, offMS, red, green, blue;
-    uint32_t alpha;
+void Lights::setSpeakerLightLocked(const HwLightState& state) {
+    uint32_t alpha, red, green, blue;
+    uint32_t blink;
+    bool rc = true;
 
     // Extract brightness from AARRGGBB
-    alpha = (state.color >> 24) & 0xff;
-    red = (state.color >> 16) & 0xff;
-    green = (state.color >> 8) & 0xff;
-    blue = state.color & 0xff;
+    alpha = (state.color >> 24) & 0xFF;
+    red = (state.color >> 16) & 0xFF;
+    green = (state.color >> 8) & 0xFF;
+    blue = state.color & 0xFF;
 
     // Scale RGB brightness if Alpha brightness is not 0xFF
-    if (alpha != 0xff) {
-        red = (red * alpha) / 0xff;
-        green = (green * alpha) / 0xff;
-        blue = (blue * alpha) / 0xff;
+    if (alpha != 0xFF) {
+        red = (red * alpha) / 0xFF;
+        green = (green * alpha) / 0xFF;
+        blue = (blue * alpha) / 0xFF;
     }
+
+    blink = (state.flashOnMs != 0 && state.flashOffMs != 0);
 
     switch (state.flashMode) {
+        case FlashMode::HARDWARE:
         case FlashMode::TIMED:
-            onMS = state.flashOnMs;
-            offMS = state.flashOffMs;
-            break;
+            if (mWhiteLed) {
+                rc = setLedBreath(WHITE, blink);
+            } else {
+                if (!!red)
+                    rc = setLedBreath(RED, blink);
+                if (!!green)
+                    rc &= setLedBreath(GREEN, blink);
+                if (!!blue)
+                    rc &= setLedBreath(BLUE, blink);
+            }
+            if (rc)
+                break;
+            FALLTHROUGH_INTENDED;
         case FlashMode::NONE:
         default:
-            onMS = 0;
-            offMS = 0;
+            if (mWhiteLed) {
+                rc = setLedBrightness(WHITE, RgbaToBrightness(state.color));
+            } else {
+                rc = setLedBrightness(RED, red);
+                rc &= setLedBrightness(GREEN, green);
+                rc &= setLedBrightness(BLUE, blue);
+            }
             break;
     }
 
-    if (onMS > 0 && offMS > 0) {
-        /*
-         * if ON time == OFF time
-         *   use blink mode 2
-         * else
-         *   use blink mode 1
-         */
-        if (onMS == offMS) {
-            blink = 2;
-        } else {
-            blink = 1;
-        }
-    } else {
-        blink = 0;
-    }
-
-    /* Disable blinking. */
-    WriteToFile(kRedBlinkFile, 0);
-    WriteToFile(kGreenBlinkFile, 0);
-    WriteToFile(kBlueBlinkFile, 0);
-
-    /* Enable blinking */
-    if (blink){
-        if (red)
-            WriteToFile(kRedBlinkFile, blink);
-        if (green)
-            WriteToFile(kGreenBlinkFile, blink);
-        if (blue)
-            WriteToFile(kBlueBlinkFile, blink);
-    } else {
-        if (red == 0 && green == 0 && blue == 0) {
-            WriteToFile(kRedBlinkFile, 0);
-            WriteToFile(kGreenBlinkFile, 0);
-            WriteToFile(kBlueBlinkFile, 0);
-        }
-        WriteToFile(kRedLEDFile, red);
-        WriteToFile(kGreenLEDFile, green);
-        WriteToFile(kBlueLEDFile, blue);
-    }
-    return ndk::ScopedAStatus::ok();
+    return;
 }
 
-ndk::ScopedAStatus Lights::handleSpeakerBatteryLocked() {
+void Lights::handleSpeakerBatteryLocked() {
     if (IsLit(mBattery.color))
         return setSpeakerLightLocked(mBattery);
     else
         return setSpeakerLightLocked(mNotification);
+}
+
+bool Lights::setLedBreath(led_type led, uint32_t value) {
+    if (mBreath)
+        return WriteToFile(led_paths[led] + "breath", value);
+    else
+        return WriteToFile(led_paths[led] + "blink", value);
+}
+
+bool Lights::setLedBrightness(led_type led, uint32_t value) {
+    return WriteToFile(led_paths[led] + "brightness", value);
 }
 
 // Utils
