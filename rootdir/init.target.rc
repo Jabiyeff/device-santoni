@@ -111,7 +111,6 @@ on property:sys.shutdown.requested=*
 
 on property:sys.boot_completed=1
    start qrngp
-   restart vendor.camera-provider-2-4
    restart thermal-engine
 
 service vendor.qseecomd /vendor/bin/qseecomd
