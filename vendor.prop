@@ -134,6 +134,7 @@ vendor.display.disable_skip_validate=1
 vendor.display.rotator_downscale=1
 vendor.display.perf_hint_window=50
 vendor.display.enable_default_color_mode=0
+vendor.display.use_smooth_motion=1
 vendor.video.disable.ubwc=1
 debug.sdm.support_writeback=0
 
