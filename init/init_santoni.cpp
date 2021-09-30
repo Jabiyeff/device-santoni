@@ -92,7 +92,6 @@ void low_ram_device()
 
     if (sys.totalram <= 2048ull * 1024 * 1024) {
         // Generated from build/make/target/product/go_defaults_common.mk
-        property_override("ro.config.low_ram", "true");
         property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
