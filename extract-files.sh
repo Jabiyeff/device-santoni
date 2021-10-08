@@ -59,9 +59,6 @@ fi
 
 function blob_fixup() {
         case "${1}" in
-	system/lib/libwfdnative.so | system/lib64/libwfdnative.so )
-        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
 	vendor/lib/libmmcamera2_sensor_modules.so )
         sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "${2}"
         ;;
