@@ -7,7 +7,7 @@ service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.
     user system
     group system sdcard_rw input uhid
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.gx_fpd /vendor/bin/gx_fpd
     class core

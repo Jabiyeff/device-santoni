@@ -79,7 +79,7 @@ service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 # Start camera provider later for encrypted devices
 on property:vold.decrypt=trigger_restart_framework
@@ -94,14 +94,14 @@ service vendor.per_mgr /vendor/bin/pm-service
     user system
     group system net_raw
     ioprio rt 4
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
@@ -117,7 +117,7 @@ service vendor.qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow
 
 on property:vendor.sys.listeners.registered=*
     setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
@@ -131,7 +131,7 @@ service thermal-engine /vendor/bin/thermal-engine
    socket thermal-recv-client stream 0660 system oem_2907
    socket thermal-recv-passive-client stream 0660 system oem_2907
    socket thermal-send-rule stream 0660 system oem_2907
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow
 
 service wcnss-service /vendor/bin/wcnss_service
     class main
