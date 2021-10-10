@@ -473,7 +473,7 @@
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
+        <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
     <!-- Number of physical SIM slots on the device. This includes both eSIM and pSIM slots, and
