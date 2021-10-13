@@ -32,8 +32,9 @@ PRODUCT_NAME := arrow_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-# GAPPS
+# ArrowOS
 ARROW_GAPPS := true
+ARROW_BETA := true
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
