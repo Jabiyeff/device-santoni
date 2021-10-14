@@ -227,6 +227,10 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableSigHandler=1
 persist.vendor.ims.disableQXDMLogs=1
 
+# Soc
+ro.soc.manufacturer=QTI
+ro.soc.model=MSM8937
+
 # SurfaceFlinger
 debug.sf.early_phase_offset_ns=11600000
 debug.sf.early_app_phase_offset_ns=11600000
