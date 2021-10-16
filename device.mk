@@ -400,6 +400,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.baseband.sh \
     init.goodix.sh \
+    init.recovery.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh

@@ -103,6 +103,7 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
+    exec_background u:object_r:update_engine_exec:s0 root root -- /vendor/bin/init.recovery.sh
 
 on property:sys.boot_completed=1
    start qrngp
