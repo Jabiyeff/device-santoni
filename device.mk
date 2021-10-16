@@ -414,7 +414,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.1.vendor \
     android.hardware.radio.config@1.0.vendor \
-    android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.0.vendor \
     libcnefeatureconfig \
     librmnetctl \
     libprotobuf-cpp-full-vendorcompat \
