@@ -176,9 +176,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
-# Charger
-include $(LOCAL_PATH)/rootdir/charger/charger.mk
-
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
