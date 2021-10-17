@@ -15,3 +15,12 @@ COMMON_LUNCH_CHOICES += \
     aosp_santoni-userdebug \
     aosp_santoni-user \
     aosp_santoni-eng
+
+# Octavi-OS
+PRODUCT_MAKEFILES += \
+    $(LOCAL_DIR)/octavi_santoni.mk
+
+COMMON_LUNCH_CHOICES += \
+    octavi_santoni-userdebug \
+    octavi_santoni-user \
+    octavi_santoni-eng
