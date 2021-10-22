@@ -33,7 +33,7 @@ BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # ArrowOS
-ARROW_GAPPS := true
+#ARROW_GAPPS := true
 ARROW_BETA := true
 
 # Boot animation
