@@ -68,7 +68,6 @@
 # Shell Script
 /(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 /(vendor|system/vendor)/bin/init\.goodix\.sh		u:object_r:init_fingerprint_exec:s0
-/(vendor|system/vendor)/bin/init\.recovery\.sh		u:object_r:update_engine_exec:s0
 
 # DT2W
 /sys/android_touch/doubletap2wake                                     u:object_r:sysfs_dt2w:s0
