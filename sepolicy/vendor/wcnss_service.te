@@ -1,4 +1,5 @@
 get_prop(wcnss_service, wifi_prop)
+get_prop(wcnss_service, default_prop)
 set_prop(wcnss_service, wifi_prop)
 set_prop(wcnss_service, vendor_default_prop)
 dontaudit wcnss_service serialno_prop:file { read getattr open };
