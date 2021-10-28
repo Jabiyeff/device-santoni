@@ -101,13 +101,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.audio@6.0 \
-    android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio.common@6.0 \
-    android.hardware.audio.common@6.0-util \
+    android.hardware.audio@7.0 \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.common@7.0 \
+    android.hardware.audio.common@7.0-util \
     android.hardware.audio.effect@2.0-impl:32 \
-    android.hardware.audio.effect@6.0 \
-    android.hardware.audio.effect@6.0-impl:32 \
+    android.hardware.audio.effect@7.0 \
+    android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.soundtrigger@2.1-impl:32 \
     android.hardware.broadcastradio@1.0-impl
 
