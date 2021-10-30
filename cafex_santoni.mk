@@ -22,19 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from santoni device
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common CAF-Extended stuff.
+$(call inherit-product, vendor/cafex/common.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4X
-PRODUCT_NAME := aosp_santoni
+PRODUCT_NAME := cafex_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
