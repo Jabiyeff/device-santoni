@@ -116,7 +116,7 @@ vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
-vendor/lib/libmmcamera_ppeiscore.so|b74f4323af1bfa52eb73fa0d4c3c5d59f70e966a
+vendor/lib/libmmcamera_ppeiscore.so|24eb3ccf46f9a4df1a4a220557bd25dabda66dc4
 vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libmmcamera_s5k3l8_ofilm.so
 vendor/lib/libmmcamera_s5k3l8_ofilm_eeprom.so
@@ -147,7 +147,7 @@ vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so|484bad45d1ad580e717882536e7f82928bd00865
+vendor/lib/libmmcamera2_stats_modules.so|00d2169abae056797413ef28525bf2d015f6cba6
 
 -vendor/lib/libts_detected_face_hal.so
 -vendor/lib/libts_face_beautify_hal.so
