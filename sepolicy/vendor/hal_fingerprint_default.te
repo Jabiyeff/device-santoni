@@ -8,6 +8,9 @@ binder_call(hal_fingerprint_default, keystore)
 # Allow HwBinder communication
 hwbinder_use(hal_fingerprint_default)
 
+# Allow boot status
+get_prop(hal_fingerprint_default, boot_status_prop)
+
 # Add services
 allow hal_fingerprint_default gx_fpd_service:service_manager find;
 allow hal_fingerprint_default fingerprint_service:service_manager find;
