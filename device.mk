@@ -108,7 +108,11 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl:32 \
     android.hardware.audio.effect@7.0 \
     android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.broadcastradio@1.0-impl
+    android.hardware.broadcastradio@1.0-impl \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml
 
 # Audio configuration
 PRODUCT_COPY_FILES += \

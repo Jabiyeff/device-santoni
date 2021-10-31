@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/xiaomi/santoni/device.mk)
 
 # Inherit some common CAF-Extended stuff.
-$(call inherit-product, vendor/cafex/common.mk)
+$(call inherit-product, vendor/extended/common.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
