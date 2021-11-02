@@ -602,12 +602,10 @@ vendor/lib/hw/activity_recognition.msm8937.so|3b7a7a10cf39ee4654bfd68ce9eab6b854
 vendor/lib/libsensor1.so|751c72333944dbf38ab59c691bf17e921dd8bdd0
 vendor/lib/libsensor_reg.so|e01015508b5fc7ea28085af90c09c0b0478bce8e
 vendor/lib/sensor_calibrate.so|e5b770754b1b548c1f04a9629f9b153c2266cf8e
-vendor/lib/sensors.ssc.so|3822194018357010f312ee433031b6cfcd076393
 vendor/lib64/hw/activity_recognition.msm8937.so|5ab27068d75aec4fd65101c8e5afc8cacf074ce0
 vendor/lib64/libsensor1.so|aa0dd52c8ea6fc46f9237dd72406faf87a5f5bb9
 vendor/lib64/libsensor_reg.so|bfb27dfc51abb5e99a12fb482e6fe60502859e7a
 vendor/lib64/sensor_calibrate.so|ecb95cee65056ba4adc4b30ab28a8b9e3cff1b06
-vendor/lib64/sensors.ssc.so|2640169f57829513b4614e30a4b0888ec6f2fbe7
 
 # Time services - from LA.UM.9.6.3.r1-04400-89xx.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e

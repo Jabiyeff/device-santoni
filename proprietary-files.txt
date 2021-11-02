@@ -303,3 +303,7 @@ etc/firmware/DE.o.msm8937:vendor/firmware/DE.o.msm8937
 
 # USB
 etc/firmware/ice40.bin:vendor/firmware/ice40.bin
+
+# Sensors
+vendor/lib/sensors.ssc.so
+vendor/lib64/sensors.ssc.so
