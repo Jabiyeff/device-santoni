@@ -139,25 +139,6 @@ vendor/lib64/vendor.qti.latency@2.1.so|3f5e3be5fcbc96b5f4c87dd76cfcc0e1dc858ad0
 # Charger - from LA.UM.9.6.3.r1-04200-89xx.0
 vendor/bin/hvdcp_opti|722b3ff247db5fe45c7faa9a8fa6e82d3179d279
 
-# DPM - from LA.UM.9.6.3.r1-04400-89xx.0
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|74ec0d8e2ef3d7e3b0a730da9b97237921778ac4
-system_ext/bin/dpmd|8a582ec5f23d8f43922566a12840da8ced8e6ab7
-system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
-system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
-system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
-system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
-system_ext/framework/com.qti.dpmframework.jar|96a29e28b3abffb9223daadd67459e3f5a3271df
-system_ext/framework/dpmapi.jar|2e2fbe2257a697b96a644c774136da0554430d3f
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|b992e1f565f7b8b814eac0c88517543e6d0de603
-system_ext/lib64/libdpmctmgr.so|d0f29a2beb04ce0461ccc7e6479f061f5b8f195b
-system_ext/lib64/libdpmfdmgr.so|aee72b5021d546774ce8433cab91f5fb0efb2ded
-system_ext/lib64/libdpmframework.so|0042e9d15892b6d16cdae6c4d3da3b4c2dc448a2
-system_ext/lib64/libdpmtcm.so|e4e0c6a979f76727cd0ed1d67950d9b35bbbc17b
-vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
-vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
-vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
-
 # DSP - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib/vendor.qti.hardware.dsp@1.0.so|0b7011b90da673586c6848d9654d652a092a716b
 system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|5972f3e95f2c0c60679af08e9f92b6e662ecce18
