@@ -70,6 +70,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|3633c8f3008d9eb361e24feff0
 
 # CNE - from LA.UM.9.6.3.r1-04400-89xx.0
 -vendor/app/CneApp/CneApp.apk|6e355ca21e53c8a84794f06e1057e62ff2df1a58
+-vendor/app/IWlanService/IWlanService.apk|08472592f4a21ad806c487fc0c70c10bbe7c7ac2
 system_ext/lib64/com.quicinc.cne.api@1.0.so|76440d7953db0808e855eee393e116841b59c6d5
 system_ext/lib64/com.quicinc.cne.api@1.1.so|0b7d8bca2364f1445f3ba1208fc68f7eac7578fe
 system_ext/lib64/com.quicinc.cne.constants@1.0.so|e700fbf189a96fe1821a89d59d04c7d14ab14cf7
@@ -129,6 +130,7 @@ vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|7d80cd3bda9fd34
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|a3350207e8d5d0f4598fd8e110578fde9b59dbbd
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|dcbe2edbdee79bf4eeeba8e68ab06554cd0a04bd
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|6f9dc3367d757ae081ad6d9b712775270629902f
+vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|7d738bb6f63afca7c35b5accdf1d953a3b2d3d20
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|a9f5e13ad10580ecb66dc93f89ffde54a599e75a
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|851db5940d5e9e4330e16221be114aef14f52325
 vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a87050a8cd6c93
