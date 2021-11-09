@@ -65,6 +65,3 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 -vendor/lib64/libthermalclient.so
 vendor/bin/thermal-engine
 vendor/lib64/libthermalfeature.so
-
-# Wi-Fi - from tissot-user-9-PKQ1.180917.001-V10.0.20.0.PDHMIXM-release-keys
-vendor/bin/wcnss_service
