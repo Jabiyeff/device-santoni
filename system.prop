@@ -1,10 +1,82 @@
 #system.prop for msm8937
 
+# Audio
+audio.offload.disable=true
+persist.audio.dirac.speaker=true
+vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
+
+# Bluetooth
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
+
+# Boot
+sys.vendor.shutdown.waittime=500
+
+# BPF
+ro.kernel.ebpf.supported=true
+
+# Camera
+media.camera.ts.monotonic=1
+persist.camera.gyro.android=0
+persist.camera.gyro.disable=1
+persist.camera.imglib.cac3=2
+persist.camera.isp.clock.optmz=0
+persist.camera.HAL3.enabled=1
+persist.camera.mct.debug=0
+persist.camera.iface.logs=0
+persist.camera.imglib.logs=0
+persist.camera.isp.debug=0
+persist.camera.sensor.debug=0
+
+# Charger
+ro.charger.disable_init_blank=true
+ro.charger.enable_suspend=true
+
 # Disable Surface Blur
 persist.sys.sf.disable_blurs=1
 
+# Display
+persist.demo.hdmirotationlock=false
+persist.hwc.enable_vds=1
+persist.hwc.mdpcomp.enable=true
+ro.qualcomm.cabl=0
+ro.qualcomm.svi=0
+sdm.debug.disable_skip_validate=1
+
+# DPM
+persist.vendor.dpm.feature=0
+
+# Fingerprint
+persist.qfp=false
+fingerprint.nocleanup=true
+
+# FM
+ro.fm.transmitter=false
+
+# GPS
+persist.gps.qc_nlp_in_use=1
+persist.loc.nlp_name=com.qualcomm.location
+
+# Media
+media.aac_51_output_enabled=true
+media.msm8956hw=0
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.stagefright.audio.sink=280
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+vendor.mm.enable.qcom_parser=1048575
+vendor.video.disable.ubwc=1
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
+
+# Radio (IMS)
+service.qti.ims.enabled=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugDataPathLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableSigHandler=1
+persist.vendor.ims.disableQXDMLogs=1
 
 # SurfaceFlinger
 ro.surface_flinger.protected_contents=true
@@ -33,6 +105,7 @@ ro.telephony.default_network=22,22
 ro.telephony.use_old_mnc_mcc_format=true
 
 # Time
+persist.backup.ntpServer=0.pool.ntp.org
 persist.timed.enable=true
 
 # Zygote preforking

@@ -5,11 +5,9 @@ ro.hardware.egl=adreno
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
-audio.offload.disable=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
 ro.vendor.audio.sdk.fluencetype=none
-persist.audio.dirac.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
@@ -35,7 +33,6 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=192
 vendor.audio.hal.boot.timeout.ms=20000
-vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 vendor.voice.conc.fallbackpath=deep-buffer
 vendor.voice.path.for.pcm.voip=true
 vendor.voice.playback.conc.disabled=true
@@ -56,45 +53,23 @@ persist.vendor.audio.calfile5=/vendor/etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD
 persist.vendor.audio.calfile6=/vendor/etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Handset_cal.acdb
 
 # Bluetooth
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
 persist.vendor.qcom.bluetooth.enable.splita2dp=false
 persist.vendor.bt.enable.splita2dp=false
 persist.bluetooth.a2dp_offload.disabled=true
 persist.vendor.bluetooth.modem_nv_support=true
 vendor.qcom.bluetooth.soc=smd
 
-# Boot
-sys.vendor.shutdown.waittime=500
-
-# BPF
-ro.kernel.ebpf.supported=true
-
 # Camera
 camera.disable_zsl_mode=1
 vendor.camera.hal1.packagelist=com.facebook.katana,com.instagram.android,com.snapchat.android
-persist.camera.gyro.android=0
-persist.camera.gyro.disable=1
-persist.camera.imglib.cac3=2
-persist.camera.isp.clock.optmz=0
 vendor.vidc.enc.narrow.searchrange=1
 vendor.camera.lowpower.record.enable=1
 persist.vendor.camera.display.lmax=1280x720
 persist.vendor.camera.display.umax=1920x1080
-media.camera.ts.monotonic=1
 persist.camera.HAL3.enabled=1
-persist.camera.mct.debug=0
-persist.camera.iface.logs=0
-persist.camera.imglib.logs=0
-persist.camera.isp.debug=0
-persist.camera.sensor.debug=0
 
-# Charger
-ro.charger.disable_init_blank=true
-ro.charger.enable_suspend=true
-
-# CNE/DPM
+# CNE
 persist.vendor.cne.feature=1
-persist.vendor.dpm.feature=0
 persist.vendor.sys.cnd.iwlan=1
 
 # Dalvik
@@ -114,19 +89,13 @@ debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.egl.hw=0
 debug.sf.disable_backpressure=1
-persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
-persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
-sdm.debug.disable_skip_validate=1
 debug.sf.recomputecrop=0
 ro.opengles.version=196610
-ro.qualcomm.cabl=0
-ro.qualcomm.svi=0
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 persist.debug.wfd.enable=1
-persist.hwc.enable_vds=1
 vendor.display.disable_rotator_downscale=1
 vendor.display.disable_skip_validate=1
 vendor.display.rotator_downscale=1
@@ -143,12 +112,7 @@ drm.service.enabled=true
 persist.qfp=false
 fingerprint.nocleanup=true
 
-# FM
-ro.fm.transmitter=false
-
 # GPS
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
 # LMKD
@@ -166,15 +130,8 @@ ro.lmk.use_minfree_levels=true
 # Media
 debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
-media.msm8956hw=0
-mm.enable.smoothstreaming=true
-mmp.enable.3g2=true
-media.aac_51_output_enabled=true
-media.stagefright.audio.sink=280
-vendor.mm.enable.qcom_parser=1048575
 vendor.vidc.debug.level=0
 vendor.vidc.disable.split.mode=1
-vendor.video.disable.ubwc=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
@@ -201,16 +158,9 @@ rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 # Radio (IMS)
-service.qti.ims.enabled=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-persist.vendor.ims.disableIMSLogs=1
-persist.vendor.ims.disableADBLogs=1
-persist.vendor.ims.disableDebugDataPathLogs=1
-persist.vendor.ims.disableDebugLogs=1
-persist.vendor.ims.disableSigHandler=1
-persist.vendor.ims.disableQXDMLogs=1
 
 # Soc
 ro.soc.manufacturer=QTI
@@ -227,7 +177,6 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000
 
 # Time Servicess
-persist.backup.ntpServer=0.pool.ntp.org
 persist.timed.enable=true
 
 # Tcp
