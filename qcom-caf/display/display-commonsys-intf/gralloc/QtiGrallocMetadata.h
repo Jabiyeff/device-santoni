@@ -188,9 +188,9 @@ struct qti_ycbcr {
 #define HAL_CSC_ITU_R_601 0
 #define HAL_CSC_ITU_R_601_FR 1
 #define HAL_CSC_ITU_R_709 2
-#define HAL_CSC_ITU_R_709_FR 3
-#define HAL_CSC_ITU_R_2020 4
-#define HAL_CSC_ITU_R_2020_FR 5
+#define HAL_CSC_ITU_R_2020 3
+#define HAL_CSC_ITU_R_2020_FR 4
+#define HAL_CSC_ITU_R_709_FR 5
 
 #define METADATA_SET_SIZE 512
 
