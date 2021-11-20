@@ -51,9 +51,9 @@ enum ColorSpace_t {
   ITU_R_601,
   ITU_R_601_FR,
   ITU_R_709,
-  ITU_R_709_FR,
   ITU_R_2020,
   ITU_R_2020_FR,
+  ITU_R_709_FR,
 };
 
 struct BufferDim_t {
