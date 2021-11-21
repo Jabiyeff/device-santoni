@@ -71,6 +71,9 @@ function blob_fixup() {
 	vendor/lib/libmmcamera2_stats_modules.so | vendor/lib/libmmcamera_ppeiscore.so )
         "${PATCHELF}" --replace-needed "libgui.so" "android.frameworks.displayservice@1.0.so" "${2}"
         ;;
+	vendor/lib/sensors.ssc.so | vendor/lib64/sensors.ssc.so )
+        "${PATCHELF}" --remove-needed "liblocationservice.so" "${2}"
+        ;;
         esac
 }
 
