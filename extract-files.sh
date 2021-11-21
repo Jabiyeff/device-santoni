@@ -77,6 +77,9 @@ function blob_fixup() {
 	vendor/lib/hw/sound_trigger.primary.msm8937.so )
         sed -i "s|msm8937|msm8953|g" "${2}"
         ;;
+	vendor/lib/sensors.ssc.so | vendor/lib64/sensors.ssc.so )
+        "${PATCHELF}" --remove-needed "liblocationservice.so" "${2}"
+        ;;
         esac
 }
 

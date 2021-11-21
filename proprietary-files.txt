@@ -304,6 +304,6 @@ etc/firmware/DE.o.msm8937:vendor/firmware/DE.o.msm8937
 # USB
 etc/firmware/ice40.bin:vendor/firmware/ice40.bin
 
-# Sensors
-vendor/lib/sensors.ssc.so
-vendor/lib64/sensors.ssc.so
+# Sensors - from santoni
+vendor/lib/sensors.ssc.so|729db9c631271db83846a857035adb9e6a1bf5e0
+vendor/lib64/sensors.ssc.so|7f1b05081af1a196748d50b4213d4ae23e148e65
