@@ -211,9 +211,9 @@ BLOCK_BASED_OTA := true
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-ifeq ($(PRODUCT_NAME), lineage_santoni)
-BOARD_POWER_CUSTOM_BOARD_LIB := libpower_8937
-endif
+#ifeq ($(PRODUCT_NAME), lineage_santoni)
+#BOARD_POWER_CUSTOM_BOARD_LIB := libpower_8937
+#endif
 TARGET_USES_INTERACTION_BOOST := true
 
 # Qualcomm
