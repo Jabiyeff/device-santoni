@@ -43,6 +43,27 @@ ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=6
 ro.config.media_vol_steps=20
 
+# Audio dynamic feature flags
+vendor.audio.feature.afe_proxy.enable=true
+vendor.audio.feature.anc_headset.enable=true
+vendor.audio.feature.compress_meta_data.enable=false
+vendor.audio.feature.compr_voip.enable=true
+vendor.audio.feature.custom_stereo.enable=true
+vendor.audio.feature.fluence.enable=true
+vendor.audio.feature.fm.enable=true
+vendor.audio.feature.hdmi_edid.enable=true
+vendor.audio.feature.hfp.enable=true
+vendor.audio.feature.hifi_audio.enable=true
+vendor.audio.feature.incall_music.enable=true
+vendor.audio.feature.multi_voice_session.enable=true
+vendor.audio.feature.kpi_optimize.enable=true
+vendor.audio.feature.src_trkn.enable=true
+vendor.audio.feature.spkr_prot.enable=true
+vendor.audio.feature.ssrec.enable=true
+vendor.audio.feature.vbat.enable=true
+vendor.audio.feature.wsa.enable=true
+vendor.audio.feature.snd_mon.enable=true
+
 # Audio ACDB
 persist.vendor.audio.calfile0=/vendor/etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Speaker_cal.acdb
 persist.vendor.audio.calfile1=/vendor/etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Headset_cal.acdb
