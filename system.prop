@@ -102,7 +102,7 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ril.subscription.types=NV,RUIM
 ro.telephony.call_ring.multiple=false
 ro.telephony.default_network=22,22
-ro.telephony.use_old_mnc_mcc_format=true
+telephony.lteOnCdmaDevice=1
 
 # Time
 persist.backup.ntpServer=0.pool.ntp.org
