@@ -3,4 +3,11 @@ set_prop(netmgrd, vendor_default_prop)
 allow netmgrd netutils_wrapper:process noatsecure;
 allow netmgrd kernel:system module_request;
 allow netmgrd diag_device:chr_file { ioctl open read write };
-allow netmgrd system_file:file rw_file_perms;
+allow netmgrd netmgr_data_file:dir w_dir_perms;
+allow netmgrd netmgr_data_file:file create_file_perms;
+
+#Allow set persist.vendor.data.shs_ko_load
+#Allow set persist.vendor.data.shsusr_load
+#Allow set persist.vendor.data.perf_ko_load
+#Allow set persist.vendor.data.qmipriod_load
+set_prop(netmgrd, vendor_radio_prop)

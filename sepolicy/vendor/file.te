@@ -16,6 +16,9 @@ type keylayout_file_sysfs, fs_type, sysfs_type;
 # FPS Info
 type sysfs_fps, sysfs_type, fs_type;
 
+# Netmgr
+type netmgr_data_file, file_type, data_file_type;
+
 # /proc
 type proc_swap, fs_type;
 
