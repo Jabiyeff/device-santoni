@@ -7,7 +7,7 @@ allow mm-qcamerad persist_sensors_file:file rw_file_perms;
 allow mm-qcamerad sysfs:file { getattr open read };
 allow mm-qcamerad system_data_file:file { getattr read };
 allow mm-qcamerad init:unix_stream_socket connectto;
-get_prop(mm-qcamerad, camera_prop)
+get_prop(mm-qcamerad, vendor_camera_prop)
 get_prop(mm-qcamerad, default_prop)
 
 dontaudit mm-qcamerad property_socket:sock_file write;
