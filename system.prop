@@ -56,6 +56,9 @@ ro.fm.transmitter=false
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 
+# Iorapd
+ro.iorapd.enable=false
+
 # Media
 media.aac_51_output_enabled=true
 media.msm8956hw=0
