@@ -1,2 +1,1 @@
 allow location kernel:system module_request;
-hal_client_domain(location, vendor_qccsyshal);
