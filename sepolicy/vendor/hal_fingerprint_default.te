@@ -14,7 +14,6 @@ get_prop(hal_fingerprint_default, boot_status_prop)
 # Add services
 allow hal_fingerprint_default gx_fpd_service:service_manager find;
 allow hal_fingerprint_default fingerprint_service:service_manager find;
-allow hal_fingerprint_default default_android_vndservice:service_manager find;
 
 typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
 
