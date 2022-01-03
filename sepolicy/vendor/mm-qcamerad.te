@@ -10,6 +10,6 @@ allow mm-qcamerad sysfs_graphics:file { getattr open read };
 allow mm-qcamerad system_data_file:file { getattr read };
 allow mm-qcamerad init:unix_stream_socket connectto;
 get_prop(mm-qcamerad, vendor_camera_prop)
-get_prop(mm-qcamerad, default_prop)
+set_prop(mm-qcamerad, vendor_camera_prop)
 
 dontaudit mm-qcamerad property_socket:sock_file write;

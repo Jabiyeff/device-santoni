@@ -6,9 +6,7 @@ allow vendor_init proc_dirty_ratio:file { write };
 allow vendor_init proc_dirty:file { write };
 allow vendor_init proc_swap:file { open write };
 allow vendor_init self:capability kill;
-get_prop(vendor_init, default_prop)
 get_prop(vendor_init, vendor_tee_listener_prop)
-set_prop(vendor_init, bootloader_prop)
 
 allow vendor_init {
   bluetooth_data_file

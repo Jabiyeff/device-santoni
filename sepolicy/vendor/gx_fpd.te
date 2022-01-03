@@ -4,7 +4,6 @@ type gx_fpd_exec, exec_type, vendor_file_type, file_type;
 # gx_fpd
 init_daemon_domain(gx_fpd)
 binder_call(gx_fpd, hal_fingerprint_default)
-get_prop(gx_fpd, default_prop)
 
 # Allow Binder communication
 vndbinder_use(gx_fpd)
@@ -55,9 +54,6 @@ allow hal_perf_default proc_meminfo:file { getattr open read };
 
 add_service(gx_fpd, gx_fpd_service);
 allow gx_fpd mnt_user_file:dir search;
-
-# Allow read/write property
-set_prop(gx_fpd, system_prop)
 
 # Ignore all logging requests
 dontaudit gx_fpd storage_file:dir search;

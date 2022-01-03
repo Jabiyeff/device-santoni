@@ -2,5 +2,3 @@ allow hal_audio_default sysfs:dir r_dir_perms;
 allow hal_audio_default diag_device:chr_file { ioctl open read write getattr };
 get_prop(hal_audio_default, dirac_prop)
 set_prop(hal_audio_default, dirac_prop)
-get_prop(hal_audio_default, audio_prop)
-get_prop(hal_audio_default, default_prop)
