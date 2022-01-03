@@ -50,3 +50,5 @@ allow hal_fingerprint_default mnt_user_file:dir { search };
 allow hal_fingerprint_default mnt_user_file:lnk_file { read };
 allow hal_fingerprint_default sdcardfs:dir { search };
 allow hal_fingerprint_default sdcardfs:file { getattr };
+
+dontaudit hal_fingerprint_default default_android_vndservice:service_manager find;
