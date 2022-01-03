@@ -13,3 +13,4 @@ get_prop(mm-qcamerad, vendor_camera_prop)
 set_prop(mm-qcamerad, vendor_camera_prop)
 
 dontaudit mm-qcamerad property_socket:sock_file write;
+dontaudit mm-qcamerad default_prop:file read;

@@ -48,3 +48,4 @@ allow hal_fingerprint_default sdcardfs:dir { search };
 allow hal_fingerprint_default sdcardfs:file { getattr };
 
 dontaudit hal_fingerprint_default default_android_vndservice:service_manager find;
+dontaudit hal_fingerprint_default default_prop:file read;
