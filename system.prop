@@ -36,6 +36,7 @@ persist.sys.sf.disable_blurs=1
 
 # Display
 persist.demo.hdmirotationlock=false
+persist.debug.wfd.enable=1
 persist.hwc.enable_vds=1
 persist.hwc.mdpcomp.enable=true
 ro.qualcomm.cabl=0
@@ -55,6 +56,7 @@ ro.fm.transmitter=false
 # GPS
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
+ro.gps.agps_provider=1
 
 # Iorapd
 ro.iorapd.enable=false
