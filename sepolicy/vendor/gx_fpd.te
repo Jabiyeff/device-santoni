@@ -55,5 +55,8 @@ allow hal_perf_default proc_meminfo:file { getattr open read };
 add_service(gx_fpd, gx_fpd_service);
 allow gx_fpd mnt_user_file:dir search;
 
+# Allow read/write property
+set_prop(gx_fpd, vendor_fingerprint_prop)
+
 # Ignore all logging requests
 dontaudit gx_fpd storage_file:dir search;

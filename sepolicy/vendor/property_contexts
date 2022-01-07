@@ -4,5 +4,10 @@ persist.vendor.camera.dbglog    u:object_r:vendor_camera_prop:s0
 # Dirac
 persist.audio.dirac             u:object_r:dirac_prop:s0
 
+# Fingerprint
+persist.sys.fp.                 u:object_r:vendor_fingerprint_prop:s0
+ro.boot.fpsensor                u:object_r:vendor_fingerprint_prop:s0
+ro.hardware.fingerprint         u:object_r:vendor_fingerprint_prop:s0
+
 # WiFi
 wifi.active.interface           u:object_r:wifi_prop:s0
