@@ -188,6 +188,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 ifeq ($(PRODUCT_NAME), lineage_santoni)
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-lineage/vendor
 endif
+BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
 
 # Treble
 BOARD_VNDK_VERSION := current
