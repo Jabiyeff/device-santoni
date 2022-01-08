@@ -1,3 +1,6 @@
+# Baseband
+gsm.version.baseband            u:object_r:baseband_prop:s0
+
 # Camera
 persist.vendor.camera.dbglog    u:object_r:vendor_camera_prop:s0
 
