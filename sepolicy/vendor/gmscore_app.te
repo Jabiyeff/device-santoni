@@ -4,3 +4,6 @@ dontaudit gmscore_app traced_producer_socket:sock_file getattr;
 
 binder_call(gmscore_app, hal_memtrack_default);
 binder_call(gmscore_app, hal_memtrack_hwservice);
+
+# Baseband (without this, device will freeze)
+get_prop(gmscore_app, baseband_prop)
