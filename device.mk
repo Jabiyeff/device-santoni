@@ -492,7 +492,6 @@ PRODUCT_PACKAGES += \
     libcld80211 \
     libwpa_client \
     hostapd \
-    wcnss_service \
     wificond \
     TetheringConfigOverlay \
     WifiOverlay \
