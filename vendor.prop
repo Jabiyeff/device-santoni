@@ -187,9 +187,6 @@ persist.dbg.wfc_avail_ovr=1
 ro.soc.manufacturer=QTI
 ro.soc.model=MSM8937
 
-# System
-persist.sys.binary_xml=false
-
 # SurfaceFlinger
 debug.sf.early_phase_offset_ns=11600000
 debug.sf.early_app_phase_offset_ns=11600000
