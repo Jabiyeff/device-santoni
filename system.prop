@@ -18,6 +18,11 @@ vendor.debug.enable.lm=true
 ro.lmk.enable_userspace_lmk=false
 vendor.perf.gestureflingboost.enable=true
 
+# Iorapd
+ro.iorapd.enable=true
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
