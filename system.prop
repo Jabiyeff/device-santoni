@@ -59,7 +59,9 @@ persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
 # Iorapd
-ro.iorapd.enable=false
+ro.iorapd.enable=true
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
 
 # Media
 media.aac_51_output_enabled=true
