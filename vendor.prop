@@ -203,6 +203,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf.scroll_opt=true
 
 # Netmgrd
 ro.vendor.use_data_netmgrd=true
