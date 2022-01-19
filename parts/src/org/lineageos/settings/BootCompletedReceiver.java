@@ -34,7 +34,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
     int gain = Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 0);
         SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
         SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
