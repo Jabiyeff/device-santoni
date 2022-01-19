@@ -12,7 +12,6 @@ android_app {
     certificate: "platform",
     platform_apis: true,
     privileged: true,
-    overrides: ["AudioFX"],
 
     static_libs: [
         "org.lineageos.settings.resources",
