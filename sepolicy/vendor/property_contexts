@@ -16,4 +16,5 @@ ro.hardware.fingerprint         u:object_r:vendor_fingerprint_prop:s0
 persist.radio.psensor.rawdata   u:object_r:persist_sensors_radio_prop:s0
 
 # WiFi
+vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
 wifi.active.interface           u:object_r:wifi_prop:s0

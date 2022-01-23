@@ -2,3 +2,5 @@ dontaudit wcnss_service serialno_prop:file { read getattr open };
 
 allow wcnss_service property_socket:sock_file write;
 allow wcnss_service init:unix_stream_socket connectto;
+
+set_prop(wcnss_service, vendor_wifi_prop)
