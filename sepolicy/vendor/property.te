@@ -14,6 +14,7 @@ vendor_internal_prop(vendor_fingerprint_prop)
 vendor_internal_prop(vendor_init_prop)
 
 # Radio
+vendor_restricted_prop(vendor_imsradio_prop)
 vendor_internal_prop(persist_sensors_radio_prop)
 
 # Wlan
