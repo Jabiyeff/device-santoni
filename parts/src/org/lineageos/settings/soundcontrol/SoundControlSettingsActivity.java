@@ -16,36 +16,28 @@
 
 package org.lineageos.settings.soundcontrol;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class SoundControlSettingsActivity extends Activity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class SoundControlSettingsActivity extends CollapsingToolbarBaseActivity {
 
     private SoundControlSettings mSoundControlSettingsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
-        if (fragment == null) {
-            mSoundControlSettingsFragment = new SoundControlSettings();
-            getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, mSoundControlSettingsFragment)
-                    .commit();
-        } else {
-            mSoundControlSettingsFragment = (SoundControlSettings) fragment;
-        }
+        getFragmentManager().beginTransaction()
+                .replace(R.id.content_frame,  new SoundControlSettings())
+                .commit();
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            finish();
+            onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);
