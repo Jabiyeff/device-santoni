@@ -2,12 +2,22 @@
 gsm.version.baseband            u:object_r:baseband_prop:s0
 
 # Camera
+camera.                         u:object_r:vendor_camera_prop:s0
+cameradaemon.                   u:object_r:vendor_camera_prop:s0
+cpp.set.clock                   u:object_r:vendor_camera_prop:s0
+disable.cpp.power.collapse      u:object_r:vendor_camera_prop:s0
+persist.camera.                 u:object_r:vendor_camera_prop:s0
+persist.cam.pp.feat.mask        u:object_r:vendor_camera_prop:s0
+persist.debug.sf.showfps        u:object_r:vendor_camera_prop:s0
+persist.partial.skip            u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.dbglog    u:object_r:vendor_camera_prop:s0
+ro.camera.                      u:object_r:vendor_camera_prop:s0
 
 # Dirac
 persist.audio.dirac             u:object_r:dirac_prop:s0
 
 # Fingerprint
+goodix.fp.                      u:object_r:vendor_fingerprint_prop:s0
 persist.sys.fp.                 u:object_r:vendor_fingerprint_prop:s0
 ro.boot.fpsensor                u:object_r:vendor_fingerprint_prop:s0
 ro.hardware.fingerprint         u:object_r:vendor_fingerprint_prop:s0
