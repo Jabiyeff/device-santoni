@@ -272,12 +272,10 @@ system_ext/lib/vendor.display.color@1.0.so|c8698d4d3e2ed9e4aefa9f8e099a27f3b1b03
 system_ext/lib/vendor.display.color@1.1.so|9441fbcc5a2e598ad868bf9051b49b2865631ba0
 system_ext/lib/vendor.display.color@1.2.so|6d1936be930bf2143038ee1073bbbd2c16cd98ff
 system_ext/lib/vendor.display.postproc@1.0.so|44ec913f4668fb88421fbcae389cac9b7e95bd61
-system_ext/lib/vendor.qti.hardware.qdutils_disp@1.0.so|8d7a4055cca1253761640de9b48d52d002bfad39
 system_ext/lib64/vendor.display.color@1.0.so|52adec02fa72e7b6048d1d7e239c9d10a59610b9
 system_ext/lib64/vendor.display.color@1.1.so|4623238be00a5e5a4d5fd746ab46850b36bff334
 system_ext/lib64/vendor.display.color@1.2.so|31f8df7c80bbb038a583f3b024738dca5cd03771
 system_ext/lib64/vendor.display.postproc@1.0.so|9b0f34d6d28cdfbf000e94006860963006eb8034
-system_ext/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|8fe831ad2d98c14d1712bb73d84cf9f90099b990
 vendor/bin/hw/vendor.display.color@1.0-service|815cc36f3722fbfb5fdd52f6678309d207888038
 vendor/bin/mm-pp-dpps|719a0a8eb49b871c897758656536c88a4e740caa
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -286,13 +284,11 @@ vendor/lib/vendor.display.color@1.0.so|280612152201811832da141f8a3928263647595e
 vendor/lib/vendor.display.color@1.1.so|c359f03f967591d6d302ab3448c3487e14d7e741
 vendor/lib/vendor.display.color@1.2.so|420dc0081157ed4c715faf684c3d55072b941827
 vendor/lib/vendor.display.postproc@1.0.so|1c36008936599824860baba440a3a87f362b76dc
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|7fdaf4e7463120696faa5afb5ed3bef6296d4ac6
 vendor/lib64/libdisp-aba.so|59f5599f4909e838f592d7f6cdd8d4d402111774
 vendor/lib64/vendor.display.color@1.0.so|b3fbf71939683411efe9a21ddcb05899f9d327e2
 vendor/lib64/vendor.display.color@1.1.so|50f0d80053d6af7755a7caf11e0fbaa595773061
 vendor/lib64/vendor.display.color@1.2.so|e365e72afc764c1c5d9ff3c190200e7b9212b733
 vendor/lib64/vendor.display.postproc@1.0.so|dcbc58c6afa58aac39558a6c752854441d5874d7
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|8775cdf7b23570079c53b323add2127179c41c22
 
 # Graphics (SDM) - from LA.UM.9.6.3.r1-04400-89xx.0
 -vendor/lib/libsdm-disp-vndapis.so|7bc8ae0bb731344312358edca4559a215dfa0f06
