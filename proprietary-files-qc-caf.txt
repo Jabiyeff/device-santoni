@@ -410,8 +410,6 @@ vendor/lib64/libdiag.so|35818f0fe8086752bd7292fb6be83dfa90d5de55
 # QMI (shared dependencies) - from LA.UM.9.6.3.r1-04400-89xx.0
 -vendor/lib/libqmiservices.so|75a7ce77d65fb7344a465356b2fc9512d78ce12e
 -vendor/lib64/libqmiservices.so|52770edf3e35f5376f3d0a131636f3213c9e59fa
-system/etc/permissions/privapp-permissions-qti.xml|937752129fb20114d4c36f251ee4d2571132990c
-system/etc/sysconfig/qti_whitelist.xml|4b32a1f25aad9ba025d79ad3a3a7c51d02767fbf
 vendor/etc/qmi_fw.conf|7aa8186a05b3e1ac6ce556bb6e9ae613df0e82c1
 vendor/lib/libdsi_netctrl.so|7893cdd6d0f656f9d5f1193fa074713ac0d8682f
 vendor/lib/libdsutils.so|6395b4702d3bfcf705b16318f5d0adcce24f90e1
@@ -447,7 +445,6 @@ vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 # Radio - from LA.UM.9.6.3.r1-04400-89xx.0
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|60af440aae61fcd6939af56a0b94d9b9ef5ebd55
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
