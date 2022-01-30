@@ -372,9 +372,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0.vendor \
     vendor.qti.hardware.perf@2.1.vendor
 
-# Permissions
-PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=log
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
