@@ -12,6 +12,7 @@ persist.debug.sf.showfps        u:object_r:vendor_camera_prop:s0
 persist.partial.skip            u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.dbglog    u:object_r:vendor_camera_prop:s0
 ro.camera.                      u:object_r:vendor_camera_prop:s0
+vendor.camera.                  u:object_r:vendor_camera_prop:s0
 
 # Dirac
 persist.audio.dirac             u:object_r:dirac_prop:s0
