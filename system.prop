@@ -68,6 +68,7 @@ media.aac_51_output_enabled=true
 media.msm8956hw=0
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.audio.sink=280
+media.wfd.max_resolution=6
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 vendor.mm.enable.qcom_parser=1048575
