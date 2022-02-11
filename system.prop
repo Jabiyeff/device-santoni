@@ -35,10 +35,13 @@ ro.charger.enable_suspend=true
 persist.sys.sf.disable_blurs=1
 
 # Display
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
 persist.demo.hdmirotationlock=false
 persist.debug.wfd.enable=1
 persist.hwc.enable_vds=1
 persist.hwc.mdpcomp.enable=true
+renderthread.skia.reduceopstasksplitting=true
 ro.qualcomm.cabl=0
 ro.qualcomm.svi=0
 sdm.debug.disable_skip_validate=1
