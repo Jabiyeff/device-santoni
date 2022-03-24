@@ -27,7 +27,7 @@
 
 get_prop(vendor_qtelephony, vendor_radio_prop)
 get_prop(vendor_qtelephony, vendor_qcom_ims_prop)
-get_prop(vendor_qtelephony, vendor_persist_camera_prop)
+get_prop(vendor_qtelephony, vendor_persist_camera2_prop)
 get_prop(vendor_qtelephony, vendor_audio_prop)
 get_prop(vendor_qtelephony, vendor_video_prop)
 

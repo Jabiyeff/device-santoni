@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #allow platform_app to read vendor_camera_prop
-get_prop(platform_app, vendor_persist_camera_prop)
+get_prop(platform_app, vendor_persist_camera2_prop)
 # Allow cneservice to be found
 allow platform_app vendor_cne_service:service_manager find;
 

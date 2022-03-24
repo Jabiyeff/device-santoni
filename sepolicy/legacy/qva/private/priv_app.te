@@ -25,7 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-get_prop(priv_app, vendor_persist_camera_prop)
+get_prop(priv_app, vendor_persist_camera2_prop)
 allow priv_app vendor_dpmtcm_socket:sock_file w_file_perms;
 allow priv_app vendor_dpmd:unix_stream_socket connectto;
 # QVA app need to find soundtrigger_middleware_service

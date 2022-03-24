@@ -25,6 +25,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-get_prop(cameraserver, vendor_persist_camera_prop)
+get_prop(cameraserver, vendor_persist_camera2_prop)
 #access to cameraservice apis by faceauth
 hal_client_domain(cameraserver, hal_face)
