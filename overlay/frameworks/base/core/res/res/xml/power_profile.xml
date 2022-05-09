@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="screen.on">100</item>
-    <item name="screen.full">205</item>
+    <item name="screen.on.display0">100</item>
+    <item name="screen.full.display0">205</item>
     <array name="cpu.clusters.cores">
         <value>4</value>
         <value>4</value>
