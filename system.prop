@@ -140,5 +140,8 @@ telephony.lteOnCdmaDevice=1
 persist.backup.ntpServer=0.pool.ntp.org
 persist.timed.enable=true
 
+# Watchdog
+ro.hw_timeout_multiplier=3
+
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
