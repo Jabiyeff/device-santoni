@@ -416,10 +416,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh
 
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # Recovery Override
 PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
 
