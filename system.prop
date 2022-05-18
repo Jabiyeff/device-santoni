@@ -2,7 +2,6 @@
 
 # Audio
 audio.offload.disable=true
-persist.audio.dirac.speaker=true
 vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 
 # Bluetooth

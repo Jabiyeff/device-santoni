@@ -2,11 +2,6 @@
 system/lib64/libaptXHD_encoder.so
 system/lib64/libaptX_encoder.so
 
-# Dirac
-vendor/etc/diracmobile.config
-vendor/lib/soundfx/libdirac.so
-vendor/lib/libDiracAPI_SHARED.so
-
 # DRM - from Redmi/lmi/lmi:11/RKQ1.200826.002/20.10.19:user/release-keys
 vendor/lib64/libops.so
 vendor/lib64/libspl.so
