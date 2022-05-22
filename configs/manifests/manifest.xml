@@ -271,4 +271,15 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IQtiVoicePrintService/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>com.qualcomm.qti.wifidisplayhal</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDSManager/wifidisplaydshal</fqname>
+        <fqname>@1.0::IHDCPSession/wifidisplayhdcphal</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.sigma_miracast</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::Isigma_miracast/sigmahal</fqname>
+    </hal>
 </manifest>

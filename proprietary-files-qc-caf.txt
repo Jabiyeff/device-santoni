@@ -584,12 +584,6 @@ vendor/lib64/librcc.so|f5a6a1f8cdec5f71ce3a0396cf2d9ef16dc3aa0d
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|beeb9324900da6582f92ffab225cc0d314bf71bd
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
-# RTP Libs - from LA.UM.9.6.3.r1-04400-89xx.0
-system/lib/libmmrtpdecoder.so|bb6999ede9fafc626c673ee6e3aa85c4b627f4e2
-system/lib/libmmrtpencoder.so|4438e64636e41c3fadbecfdd0ead9e2a6b88016d
-system/lib64/libmmrtpdecoder.so|676500ac807a7584efbb55e6806b17d4c9bb4bf9
-system/lib64/libmmrtpencoder.so|e71305597ac1944c577b7493935fc6040c40dd7b
-
 # Sensors - from LA.UM.9.6.3.r1-04400-89xx.0
 system_ext/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|b719ca0af1acb0df59f7adb6553862bb7683c8ed
 system_ext/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|1ae3092dc14f59e02f4f1abe3a9befd6f351e444
@@ -617,3 +611,45 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|3551ef9cda906b123b0263d8f902521
 
 # Wi-Fi - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc
+
+# WiFi Display - from LA.UM.10.6.2.r1-01600-89xx.0
+-system/framework/WfdCommon.jar|49f6d1f69bdaafb81e61faea2593d9ee3b6bc6a9
+-system/priv-app/WfdService/WfdService.apk|38165cd39bcbeba85c9cef808ec36ab7a48751aa
+system/bin/wfdservice|971ba7b54421770cd6428d9a4ad3a0bb3b08db56
+system/etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+system/etc/wfdconfig.xml|d07f6b0441c0aa8913865100239490fa8687a020
+system/etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
+system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|b7a44c57561bef61cc4a466955f28bc159e21f46
+system/lib/libmmrtpdecoder.so|eec6fa9afcb37ccb4ff556b84374a683a6467b93
+system/lib/libmmrtpencoder.so|fe17e6d6fbfce7903a28484649f1ce3ce131edf6
+system/lib/libwfdavenhancements.so|e2094cf8f2cbbd90617c4c82d0db51db48108276
+system/lib/libwfdclient.so|4c67f6ff80306efe1003b139dccf99dba7026880
+system/lib/libwfdcodecv4l2.so|823ca9d1b27079130429cc95d66510e5bc1a031c
+system/lib/libwfdcommonutils.so|42ac30d8ad8cb7ec8e14989f7bf045ffc4962ac4
+system/lib/libwfdconfigutils.so|20942c0aa092a70e2bcc07a6f07c66d2710605fd
+system/lib/libwfddisplayconfig.so|6a07950a93d9fd015b27a522ecd6192837cf4b79
+system/lib/libwfdmminterface.so|d79dc3f96ff56ff74686fdb4149f9d4eb8e61d5b
+system/lib/libwfdmmsink.so|36a305b12e8973bb9538d9ae1a45f2772bea043b
+system/lib/libwfdmmsrc.so|6057f7acc14106818307f39a4ec100b053e72234
+system/lib/libwfdnative.so|9a4301a0c73dadb20024064828f2a0cb3af8f522
+system/lib/libwfdrtsp.so|452172a1c07196a929644bd2f2235e96753c3609
+system/lib/libwfdservice.so|8a4b8b5dacf2ab96fd13791337db4c2d3aeebf84
+system/lib/libwfdsm.so|dd79ad104fe7319c2eb07604aafa5f91cc5c5c5f
+system/lib/libwfduibcinterface.so|ce921c2d44b23c510f8b47691b92f4246cc1496d
+system/lib/libwfduibcsink.so|5ad8e2f63f1a4852174760e1c59633461420dc78
+system/lib/libwfduibcsinkinterface.so|d9bd134deb320fd3ff7271500f14d6eeef37ae85
+system/lib/libwfduibcsrc.so|490a9fcc46fabdb52ea46d7718296f8702e9277c
+system/lib/libwfduibcsrcinterface.so|119b9a8f5349367db2190cf28ada8aa8eff521f9
+system/lib64/libmmrtpdecoder.so|f0ff49a9556fe9dc48f397c2e5c445a57446c6ec
+system/lib64/libmmrtpencoder.so|c10870ffbc19a5ce4c8834a1b7803f7271613ad0
+system/lib64/libwfdclient.so|faa2174a6e2940b478e95fb828a5c653eca2599e
+system/lib64/libwfdnative.so|804e5f73d2ae360d965783def5339109a65b9f13
+vendor/lib/libmiracast.so|7ae15146f0f607e94f1a3d0aed097693b59ca640
+vendor/lib/libwfdcommonutils_proprietary.so|1db199210e74b18c7b1f18f27279444e11469486
+vendor/lib/libwfddisplayconfig_proprietary.so|7a4157ae830234f3c73b220fd5d6b6c8ba7f1967
+vendor/lib/libwfdhaldsmanager.so|57256cf61a4b3e2e84e24e8a0cd56d47b6b2b444
+vendor/lib/libwfdhdcpcp.so|33bf1a258a95ebabe89a79343bc622f404f95d5c
+vendor/lib/libwfdmmservice.so|7c3e5c9186469493234357bf6b11ce71e9005c3e
+vendor/lib/libwfdmodulehdcpsession.so|a577402a39b9a8757cd1f987160684ac05b9014b
+vendor/lib64/libmiracast.so|4350d4d03985ad997b217665e7de0650730357bb
+vendor/lib64/libwfdhdcpcp.so|05b5bb1d1bd20e597d1b0ef39f3794957142f417
