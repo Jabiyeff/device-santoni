@@ -617,6 +617,3 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|3551ef9cda906b123b0263d8f902521
 
 # Wi-Fi - from LA.UM.9.6.3.r1-04400-89xx.0
 vendor/bin/wcnss_service|48e4a96a9de69bd83791a3b0b2134f5ab1205adc
-
-# Wi-Fi - from sweet V13.0.2.0.SKFMIXM
-vendor/bin/nv_mac|207d44cfbced7d7ae2c9f8cb98779b89dfe5c16a
