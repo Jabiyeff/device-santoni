@@ -109,6 +109,7 @@ debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.egl.hw=0
 debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
 debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
 debug.enable.sglscale=1
