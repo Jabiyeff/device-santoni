@@ -123,6 +123,10 @@ vendor.display.enable_default_color_mode=0
 vendor.video.disable.ubwc=1
 debug.sdm.support_writeback=0
 
+# Dolby
+persist.vendor.audio_fx.current=dolby
+ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
+
 # DRM
 drm.service.enabled=true
 
@@ -147,7 +151,7 @@ ro.lmk.use_minfree_levels=true
 
 # Media
 debug.stagefright.omx_default_rank=0
-debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank.sw-audio=16
 vendor.vidc.debug.level=0
 vendor.vidc.disable.split.mode=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
