@@ -106,6 +106,9 @@ persist.vendor.ims.disableQXDMLogs=1
 # ScalarConfig
 vendor.display.disable_scaler=1
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # Skia
 renderthread.skia.reduceopstasksplitting=true
 
