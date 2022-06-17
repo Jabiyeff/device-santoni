@@ -27,6 +27,9 @@ persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
+# Render
+debug.cpurend.vsync=false
+
 # RIL
 DEVICE_PROVISIONED=1
 persist.rild.nitz_long_ons_0=
