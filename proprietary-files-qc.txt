@@ -1,3 +1,28 @@
+# Audio libraries - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/soundfx/libqcbassboost.so|42b8b9bc68ac518170f5569a8f428a3cd827bb06
+vendor/lib/soundfx/libqcreverb.so|d4dfe0f501370eaa6d8a3784b5aaeffb2c8a6fde
+vendor/lib/soundfx/libqcvirt.so|0d615e698b41aa6a066b62e560c27eb16b0ed056
+vendor/lib/libacdb-fts.so|ce5d9ee6188712bb55658fc00548aef96ec0ff17
+vendor/lib/libacdbloader.so|f1b1f6918e4839344ec3f5a5bb31b44183569747
+vendor/lib/libacdbrtac.so|58e01597eb162cc5783d9ca6da54e46cf67ad638
+vendor/lib/libadiertac.so|d7d70e99afaad0de116bf757b0621b9bb4dcd93d
+vendor/lib/libadm.so|a5e6c65b7133440b4550234db4454e4c81627f66
+vendor/lib/libaudcal.so|d26f30b1b692b51153d9606bf11aa417b9ab8e6c
+vendor/lib/libaudioalsa.so|58feb2c5cbc4ac6e23ef4896c87785bed8db3c80
+vendor/lib/libdrc.so|303d67b5bfea162ae994d3817de317258035c42a
+vendor/lib/libqtigef.so|fbb307c0da385bf09cbdef714e8fc1ecfc7ba6fd
+vendor/lib/libsurround_3mic_proc.so|84a4d84fcf567554fb5174fc6d41310d864e5f8e
+vendor/lib64/soundfx/libqcbassboost.so|d88e34cafa68958666760c88657ec55547d734a2
+vendor/lib64/soundfx/libqcreverb.so|7a97a71b39e127f7bed1eb36d0c0a156a258053a
+vendor/lib64/soundfx/libqcvirt.so|ef6f49257c435bd2c1875ef12b0d3fb1939cce73
+vendor/lib64/libacdb-fts.so|8bf7d9173cdf503ffa240be382d8bfb06c6dfdb5
+vendor/lib64/libacdbloader.so|0e20d501f0351b1bf16163ef38f102376bdd11c0
+vendor/lib64/libacdbrtac.so|8975cdf11a072bd10c9c8aaf41612a072376ab3c
+vendor/lib64/libadiertac.so|e6cddad2fe64c4b6fb667c95b918d235dd6da01d
+vendor/lib64/libaudcal.so|2371c71996d9fcbef59347b364447c4ba257e34c
+vendor/lib64/libaudioalsa.so|534d4dc07fecea0611273c745721b1ed2015a3a3
+vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
+
 # Bluetooth (aptX) - from Nokia/Deadpool_00WW/DPL_sprout:11/RKQ1.200928.002/00WW_3_140:user/release-keys
 system/lib64/libaptXHD_encoder.so
 system/lib64/libaptX_encoder.so
@@ -6,6 +31,25 @@ system/lib64/libaptX_encoder.so
 vendor/etc/diracmobile.config
 vendor/lib/soundfx/libdirac.so
 vendor/lib/libDiracAPI_SHARED.so
+
+# DRM - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/bin/qseecomd|80c97092e609e00057e4037da490c54b09205be0
+vendor/lib/libQSEEComAPI.so|90a357a7068c37d0dd1b6428981b27243f6f0c28
+vendor/lib64/libGPreqcancel.so|d3278679f75371f7d6813f69ee04cda66e46b445
+vendor/lib64/libGPreqcancel_svc.so|817fced1daa7913b363fdbebf2e0587e1f34b8eb
+vendor/lib64/libQSEEComAPI.so|5d10cbc93360fbb8fce662e2e7c787441f978b26
+vendor/lib64/libSecureUILib.so|f490abdef04ca0806ebcc9efde7acab628294178
+vendor/lib64/libStDrvInt.so|add517206707a8bd7f116b6b1554a16c51fe6668
+vendor/lib64/libcpion.so|388b27050e97bdfdee0d98428f223611b761f252
+vendor/lib64/libdrmfs.so|071f9238bfa70ebd9d28748a21f6bb3297057d49
+vendor/lib64/libdrmtime.so|2d53dd4f3d0ee920263a89f6e6d4acad837ca672
+vendor/lib64/libhdcpsrm.so|85c4b0f714b3946d94d32811d4c85ad2dd244d65
+vendor/lib64/liboemcrypto.so|2cd64ac318250f46e0c7671ff6fbee3c01c8f1fd
+vendor/lib64/libqisl.so|e9c402aed643ee094daaf495f1a3a1f29542d602
+vendor/lib64/librpmb.so|9a9e747080c33f14bc0457e7d65e3c09fa5bff87
+vendor/lib64/libsecureui.so|226528da5a2a2caf64ad6cab536b370f974333b8
+vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
+vendor/lib64/libssd.so|9c7850a06f6caf5b3dc6ac1269a5b0be9f4fcde7
 
 # DRM - from Redmi/lmi/lmi:11/RKQ1.200826.002/20.10.19:user/release-keys
 vendor/lib64/libops.so
@@ -16,6 +60,22 @@ vendor/lib64/libspl.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|6b00f42dc85becc58f303bc4588331239c5c83aa
 vendor/lib64/libwvhidl.so
+
+# Gatekeeper - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/hw/gatekeeper.msm8937.so|6569776d73f57c9a213a38707351db6e8ffa68a6
+vendor/lib64/hw/gatekeeper.msm8937.so|9a7297653a3b7af0a5922ac93c554e4f13e6958f
+
+# Keymaster - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/libkeymasterdeviceutils.so|6ffe42276f90038f8cf2b028946034d54765c618
+vendor/lib/libkeymasterprovision.so|493e8fae8809887c963eed6a0638b7a589aff374
+vendor/lib/libkeymasterutils.so|f4272fbd9055ad44858f26d8aa7bc7cf0b1742ac
+vendor/lib64/libkeymasterdeviceutils.so|c75744b552b6b94861be72a66ebee26e3b8c14f0
+vendor/lib64/libkeymasterprovision.so|b961af6561ba191647dda8b555ce1d15f8f68974
+vendor/lib64/libkeymasterutils.so|db21b2fec8e5808c562665746d0394575004070b
+
+# Keystore - from LA.UM.9.6.2.r1-04200-89xx.0
+vendor/lib/hw/keystore.msm8937.so|620b5080bc7c17f2c5ef76832ef915edd3ce30fa
+vendor/lib64/hw/keystore.msm8937.so|03786c28112bb9e67958ee72ec1b3852bc9c6b9f
 
 # Perf - from LA.UM.8.6.2.r1-08600-89xx.0
 system/lib/libqti-at.so:system_ext/lib/libqti-at.so
