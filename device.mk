@@ -514,8 +514,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # WiFi Display
+ifdef CR_VERSION
 PRODUCT_BOOT_JARS += \
    WfdCommon
+endif
 
 PRODUCT_PACKAGES += \
     libwfdaac_vendor \
