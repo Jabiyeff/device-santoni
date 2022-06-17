@@ -19,9 +19,10 @@ ro.lmk.enable_userspace_lmk=false
 vendor.perf.gestureflingboost.enable=true
 
 # Iorapd
-ro.iorapd.enable=true
-iorapd.perfetto.enable=true
-iorapd.readahead.enable=true
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
