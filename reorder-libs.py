@@ -12,7 +12,7 @@ from pathlib import Path
 FILES = [Path(file) for file in [
     "proprietary-files.txt",
     "proprietary-files-qc.txt",
-    "proprietary-files-qc-caf.txt",
+    "proprietary-files-qc-new.txt",
 ]]
 
 setlocale(LC_ALL, "C")
