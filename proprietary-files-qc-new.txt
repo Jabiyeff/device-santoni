@@ -114,9 +114,6 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|000e0d2ac4450c0ad8baca06985bc
 vendor/lib64/vendor.qti.latency@2.0.so|60ab3143325e855f8c72e3f603c28efe2e7227b9
 vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 
-# Charger - from LA.UM.9.6.3.r1-06200-89xx.0
-vendor/bin/hvdcp_opti|a3dec23a6e594838ef137e744998c5cdfccfb3f1
-
 # DPM - from LA.UM.9.6.3.r1-06200-89xx.0
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|9f988ff6a8c6676172d3d3740bd0b8616b7dc125
 system_ext/bin/dpmd|237503867e6b5eb2995d0e4fb44f4db9d527eae2
