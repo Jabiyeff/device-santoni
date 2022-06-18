@@ -1,7 +1,3 @@
--keep class org.lineageos.settings.soundcontrol.* {
-  *;
-}
-
 -keep class org.lineageos.settings.dirac.* {
   *;
 }

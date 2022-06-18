@@ -23,8 +23,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.provider.Settings;
 
-import org.lineageos.settings.soundcontrol.SoundControlSettings;
-import org.lineageos.settings.soundcontrol.SoundControlFileUtils;
 import org.lineageos.settings.dirac.DiracUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -34,11 +32,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-    int gain = Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_HEADPHONE_GAIN, 0);
-        SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
-        SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
         new DiracUtils(context).onBootCompleted();;
     }
 }

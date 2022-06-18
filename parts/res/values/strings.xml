@@ -14,13 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="advanced_settings">Audio Amplification</string>
-    <string name="advanced_summary">Control audio gain</string>
-
-    <!-- Audio amplification -->
-    <string name="headphone_gain">Headphone and Speaker gain</string>
-    <string name="microphone_gain">Microphone gain</string>
-
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Default</string>
