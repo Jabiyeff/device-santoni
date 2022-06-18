@@ -27,6 +27,9 @@ vendor/lib64/libqtigef.so|b3f1cb946809bfe20a4afced73b4fd24c5591421
 system/lib64/libaptXHD_encoder.so
 system/lib64/libaptX_encoder.so
 
+# Charger - from LA.UM.9.6.3.r1-04200-89xx.0
+vendor/bin/hvdcp_opti|722b3ff247db5fe45c7faa9a8fa6e82d3179d279
+
 # Dolby - from sofiap_ao_eea-user-11-RPR31.Q4U-20-26-2-a10bb-release-keys
 -system_ext/app/MotoDolbyV3/MotoDolbyV3.apk|f6c483f79d9b8713ff03f475dad7bcf2c3e63ba5
 -system_ext/priv-app/daxService/daxService.apk|14c00b94bad99462135cfe8f3da1bc71d8f72518

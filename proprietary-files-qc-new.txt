@@ -113,9 +113,6 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|000e0d2ac4450c0ad8baca06985bc
 vendor/lib64/vendor.qti.latency@2.0.so|60ab3143325e855f8c72e3f603c28efe2e7227b9
 vendor/lib64/vendor.qti.latency@2.1.so|47f0d25338274af94764be9d39eabef8cf5ca790
 
-# Charger - from LA.UM.9.6.3.r1-06200-89xx.0
-vendor/bin/hvdcp_opti|a3dec23a6e594838ef137e744998c5cdfccfb3f1
-
 # DSP - from LA.UM.9.6.3.r1-06200-89xx.0
 system_ext/lib/vendor.qti.hardware.dsp@1.0.so|4a5b835bc386a71f1922b6ffa7a58947e4930c19
 system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|cb00ecf199d18de8e2ce3ca4e75e2042504fa772
