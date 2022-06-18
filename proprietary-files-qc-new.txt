@@ -160,6 +160,7 @@ vendor/lib64/liblowi_client.so|aadd09b327bcabcc3020c4a2c598b45a4d032fdc
 vendor/lib64/liblowi_wifihal.so|eae23a08ce10b85c580cdf1e08cc41b710505096
 vendor/lib64/libpal_net_if.so|25ce6487bc8b4000f51049d3f460e11d76a570bb
 vendor/lib64/libqcc_file_agent.so|cd70ce305d5036a027060aa989b0dcbcfab8edb6
+vendor/lib64/libsys_info_cache.so|6749ad36366ea3b2c35420afa17e2838c5fe7505
 vendor/lib64/libxtadapter.so|15a1c4cf298faf1fba6d745647dc95d62f015b66
 vendor/lib64/vendor.qti.gnss@1.0.so|5cc0d0c8e7a8083f5892eb303ab1e6d4c9d66639
 vendor/lib64/vendor.qti.gnss@1.1.so|9a516f4b1b55798f0ec1ebead0c653ad65546517
