@@ -35,7 +35,6 @@ persist.sys.sf.disable_blurs=1
 
 # Display
 debug.hwui.renderer=skiagl
-debug.renderengine.backend=skiaglthreaded
 persist.demo.hdmirotationlock=false
 persist.debug.wfd.enable=1
 persist.hwc.enable_vds=1
