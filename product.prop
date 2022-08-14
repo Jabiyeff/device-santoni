@@ -3,3 +3,6 @@ persist.sys.io.scheduler=bfq
 
 # Gboard
 ro.com.google.ime.kb_pad_port_b=1
+
+# Radio
+persist.vendor.qti.telephony.vt_cam_interface=2
