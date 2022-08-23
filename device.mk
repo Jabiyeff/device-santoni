@@ -117,6 +117,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl:32 \
     android.hardware.audio.effect@7.0 \
     android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.broadcastradio@1.0-impl
 
 # Audio features
@@ -149,7 +150,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
     vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
