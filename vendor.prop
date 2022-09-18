@@ -104,7 +104,6 @@ dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
 # Display
-debug.renderengine.backend=threaded
 debug.sf.enable_hwc_vds=0
 debug.sf.hw=0
 debug.sf.latch_unsignaled=0
