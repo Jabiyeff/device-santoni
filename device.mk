@@ -91,7 +91,6 @@ PRODUCT_COPY_FILES += \
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library \
     libantradio
 
 # Audio
@@ -171,7 +170,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5:64 \
     android.hardware.camera.provider@2.6:64 \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     libdng_sdk.vendor \
     libstdc++.vendor \
     libgui_vendor
@@ -184,14 +183,6 @@ PRODUCT_COPY_FILES += \
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
-
-# Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
-
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -207,8 +198,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libvulkan \
     libqdMetaData \
-    libqdMetaData.system \
-    liboverlay \
     libtinyxml \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0
@@ -305,6 +294,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
+
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -430,7 +424,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
-    libcnefeatureconfig \
     librmnetctl \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
@@ -518,7 +511,6 @@ PRODUCT_BOOT_JARS += \
 endif
 
 PRODUCT_PACKAGES += \
-    libwfdaac_vendor \
     libnl
 
 # Do not spin up a separate process for the network stack, use an in-process APK.
