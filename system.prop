@@ -33,6 +33,9 @@ ro.charger.enable_suspend=true
 # Disable Surface Blur
 persist.sys.sf.disable_blurs=1
 
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+
 # Display
 debug.hwui.renderer=skiagl
 debug.hwui.skia_atrace_enabled=false
